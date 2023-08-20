@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure name="Binary counter" type="Pseudocode">
+	<pseudocode size="7">
+		<element id="0" value=" 1  Increment( counter ):" />
+		<element id="1" value=" 2    i = 0;" />
+		<element id="2" value=" 3    WHILE ((i &#60; k) &#38;&#38; (counter[i] == 1)) {" />
+		<element id="3" value=" 4      counter[i] = 0;" />
+		<element id="4" value=" 5      i = i+1;" />
+		<element id="5" value=" 6    }" />
+		<element id="6" value=" 7    IF (i &#60; k) counter[i] = 1;" />
+	</pseudocode>
+</structure>

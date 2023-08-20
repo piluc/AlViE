@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure name="Binary strings generation" type="Pseudocode">
+	<pseudocode size="9">
+		<element id="0" value=" 1  GenerateBinaries( A, b )" />
+		<element id="1" value=" 2    IF (b == 0) {" />
+		<element id="2" value=" 3      Elaborate( A );" />
+		<element id="3" value=" 4    } ELSE {" />
+		<element id="4" value=" 5      A[b-1] = 0;" />
+		<element id="5" value=" 6      GenerateBinaries( A, b-1 );" />
+		<element id="6" value=" 7      A[b-1] = 1;" />
+		<element id="7" value=" 8      GenerateBinaries( A, b-1 );" />
+		<element id="8" value=" 9    }" />
+	</pseudocode>
+</structure>

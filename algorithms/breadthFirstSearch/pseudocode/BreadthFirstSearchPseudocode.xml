@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure name="Breadth First search" type="Pseudocode">
+	<pseudocode size="14">
+		<element id="0" value=" 1  BreadthFirstSearch( s )" />
+		<element id="1" value=" 2    FOR (u = 0; u &#60; n; u = u + 1)" />
+		<element id="2" value=" 3      reached[u] = FALSE;" />
+		<element id="3" value=" 4    Q.enqueue( s );" />
+		<element id="4" value=" 5    WHILE (!Q.Empty( )) {" />
+		<element id="5" value=" 6      u = Q.Dequeue(  );" />
+		<element id="6" value=" 7      IF (!reached[u]) {" />
+		<element id="7" value=" 8        reached[u] = TRUE;" />
+		<element id="8"
+			value=" 9        FOR (x = adjList[u].begin; x != null; x=x.succ) {" />
+		<element id="9" value="10          v = x.data;" />
+		<element id="10" value="11          Q.Enqueue( v );" />
+		<element id="11" value="12        }" />
+		<element id="12" value="13      }" />
+		<element id="13" value="14    }" />
+	</pseudocode>
+</structure>

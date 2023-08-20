@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure name="Bellman-Ford" type="Pseudocode">
+	<pseudocode type="StringInformation" size="17">
+		<element id="0" value=" 1  Bellman-Ford( s )" />
+		<element id="1" value=" 2    FOR (u = 0; u &#60; n; u = u + 1) {" />
+		<element id="2" value=" 3      pred[u] = -1;" />
+		<element id="3" value=" 4      dist[u] = +oo;" />
+		<element id="4" value=" 5    }" />
+		<element id="5" value=" 6    pred[s] = s;" />
+		<element id="6" value=" 7    dist[s] = 0;" />
+		<element id="7" value=" 8    FOR (i = 0; i &#60; n; i = i + 1)" />
+		<element id="8" value=" 9      FOR (v = 0; v &#60; n; v = v + 1) {" />
+		<element id="9" value="10        FOR (x = adjacencyList[v].begin; x != null; x = x.succ) {" />
+		<element id="10" value="11          u = x.data;" />
+		<element id="11" value="12          IF (dist[u] > dist[v] + x.weight) {" />
+		<element id="12" value="13            dist[u] = dist[v] + x.weight;" />
+		<element id="13" value="14            pred[u] = v;" />
+		<element id="14" value="15          }" />
+		<element id="15" value="16        }" />
+		<element id="16" value="17      }" />
+	</pseudocode>
+</structure>

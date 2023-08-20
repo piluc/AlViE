@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure name="Grafo" type="Graph">
+	<graph isOriented="false" type="IntInformation"
+		arcLabelType="IntInformation">
+		<node value="0" id="0" x="100" y="70" />
+		<node value="1" id="1" x="0" y="20" />
+		<node value="2" id="2" x="0" y="120" />
+		<node value="3" id="3" x="100" y="170" />
+		<node value="4" id="4" x="300" y="170" />
+		<node value="5" id="5" x="300" y="70" />
+		<node value="6" id="6" x="200" y="120" />
+		<node value="7" id="7" x="400" y="120" />
+		<arc id="0" idFirstNode="0" idSecondNode="1" />
+		<arc id="1" idFirstNode="0" idSecondNode="2" />
+		<arc id="2" idFirstNode="0" idSecondNode="3" />
+		<arc id="3" idFirstNode="0" idSecondNode="5" />
+		<arc id="4" idFirstNode="1" idSecondNode="2" />
+		<arc id="5" idFirstNode="3" idSecondNode="4" />
+		<arc id="6" idFirstNode="3" idSecondNode="6" />
+		<arc id="7" idFirstNode="4" idSecondNode="5" />
+		<arc id="8" idFirstNode="4" idSecondNode="7" />
+		<arc id="9" idFirstNode="5" idSecondNode="6" />
+		<arc id="10" idFirstNode="5" idSecondNode="7" />
+		<arc id="11" idSecondNode="0" idFirstNode="1" />
+		<arc id="12" idSecondNode="0" idFirstNode="2" />
+		<arc id="13" idSecondNode="0" idFirstNode="3" />
+		<arc id="14" idSecondNode="0" idFirstNode="5" />
+		<arc id="15" idSecondNode="1" idFirstNode="2" />
+		<arc id="16" idSecondNode="3" idFirstNode="4" />
+		<arc id="17" idSecondNode="3" idFirstNode="6" />
+		<arc id="18" idSecondNode="4" idFirstNode="5" />
+		<arc id="19" idSecondNode="4" idFirstNode="7" />
+		<arc id="20" idSecondNode="5" idFirstNode="6" />
+		<arc id="21" idSecondNode="5" idFirstNode="7" />
+	</graph>
+</structure>

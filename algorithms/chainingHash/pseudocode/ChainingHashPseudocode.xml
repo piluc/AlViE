@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure name="Chaining Hash" type = "Pseudocode">
+<pseudocode size="14">
+	<element id="0"   value=" 1  Search( table, u ):"/>
+	<element id="1"   value=" 2    h = Hash(u);"/>
+	<element id="2"   value=" 3    p = table[u].Retrieve( u );"/>
+	<element id="3"   value=" 4    IF (p != null) RETURN TRUE ELSE RETURN FALSE;"/>
+	<element id="4"   value=" 1  Insert( table, u ):"/>
+	<element id="5"   value=" 2    IF (!Search( table, u )) {"/>
+	<element id="6"   value=" 3      h = Hash( u );"/>
+	<element id="7"   value=" 4      table[h].TailInsert( u );"/>
+	<element id="8"   value=" 5    }"/>
+	<element id="9"   value=" 1  Delete( table, u ):"/>
+	<element id="10"  value=" 2     IF (Search( table, u )) {"/>
+	<element id="11"  value=" 3        h = Hash(u);"/>
+	<element id="12"  value=" 4        table[h].Delete( u );"/>
+	<element id="13"  value=" 5      }"/>
+</pseudocode>
+</structure>

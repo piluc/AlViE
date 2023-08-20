@@ -1,0 +1,1444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm name="Binary string generation">
+<step number="0">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="1" type="StringInformation">
+<element id="0" value="X;X;X"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShape="Rectangular" defaultShapeHeight="50.0" defaultShapeWidth="50.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="900" originY="200">
+</visualBinaryTree>
+<message content="Initial empty sequence (filled with X symbols) where the binary strings will be generated.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="9">
+<element id="0" value=" 1  GenerateBinaries( A, b )"/>
+<element id="1" value=" 2    IF (b == 0) {"/>
+<element id="2" value=" 3      Elaborate( A );"/>
+<element id="3" value=" 4    } ELSE {"/>
+<element id="4" value=" 5      A[b-1] = 0;"/>
+<element id="5" value=" 6      GenerateBinaries( A, b-1 );"/>
+<element id="6" value=" 7      A[b-1] = 1;"/>
+<element id="7" value=" 8      GenerateBinaries( A, b-1 );"/>
+<element id="8" value=" 9    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShapeHeight="30.0" defaultShapeWidth="400.0" originX="20" originY="50">
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="1">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="1" type="StringInformation">
+<element id="0" value="X;X;X"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShape="Rectangular" defaultShapeHeight="50.0" defaultShapeWidth="50.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="900" originY="200">
+<visualLinkedElement id="0" color="FFFF00" font="Monospaced-PLAIN-20" shape="Rectangular" shapeHeight="50.0" shapeWidth="50.0"/>
+</visualBinaryTree>
+<message content="The execution continues by invoking the recursive function with the number of currently undetermined bits equal to the number of Xs.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="9">
+<element id="0" value=" 1  GenerateBinaries( A, b )"/>
+<element id="1" value=" 2    IF (b == 0) {"/>
+<element id="2" value=" 3      Elaborate( A );"/>
+<element id="3" value=" 4    } ELSE {"/>
+<element id="4" value=" 5      A[b-1] = 0;"/>
+<element id="5" value=" 6      GenerateBinaries( A, b-1 );"/>
+<element id="6" value=" 7      A[b-1] = 1;"/>
+<element id="7" value=" 8      GenerateBinaries( A, b-1 );"/>
+<element id="8" value=" 9    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShapeHeight="30.0" defaultShapeWidth="400.0" originX="20" originY="50">
+<visualMalleableElement id="0" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="2">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="2" type="StringInformation">
+<element id="0" value="X;X;X"/>
+<element id="1" value="X;X;0"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShape="Rectangular" defaultShapeHeight="50.0" defaultShapeWidth="50.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="900" originY="200">
+</visualBinaryTree>
+<message content="The algorithm recursively continues after having set to 0 the rightmost X symbol.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="9">
+<element id="0" value=" 1  GenerateBinaries( A, b )"/>
+<element id="1" value=" 2    IF (b == 0) {"/>
+<element id="2" value=" 3      Elaborate( A );"/>
+<element id="3" value=" 4    } ELSE {"/>
+<element id="4" value=" 5      A[b-1] = 0;"/>
+<element id="5" value=" 6      GenerateBinaries( A, b-1 );"/>
+<element id="6" value=" 7      A[b-1] = 1;"/>
+<element id="7" value=" 8      GenerateBinaries( A, b-1 );"/>
+<element id="8" value=" 9    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShapeHeight="30.0" defaultShapeWidth="400.0" originX="20" originY="50">
+<visualMalleableElement id="4" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+<visualMalleableElement id="5" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="3">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="2" type="StringInformation">
+<element id="0" value="X;X;X"/>
+<element id="1" value="X;X;0"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShape="Rectangular" defaultShapeHeight="50.0" defaultShapeWidth="50.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="900" originY="200">
+<visualLinkedElement id="1" color="FFFF00" font="Monospaced-PLAIN-20" shape="Rectangular" shapeHeight="50.0" shapeWidth="50.0"/>
+</visualBinaryTree>
+<message content="The execution continues by invoking the recursive function with the number of currently undetermined bits equal to the number of Xs.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="9">
+<element id="0" value=" 1  GenerateBinaries( A, b )"/>
+<element id="1" value=" 2    IF (b == 0) {"/>
+<element id="2" value=" 3      Elaborate( A );"/>
+<element id="3" value=" 4    } ELSE {"/>
+<element id="4" value=" 5      A[b-1] = 0;"/>
+<element id="5" value=" 6      GenerateBinaries( A, b-1 );"/>
+<element id="6" value=" 7      A[b-1] = 1;"/>
+<element id="7" value=" 8      GenerateBinaries( A, b-1 );"/>
+<element id="8" value=" 9    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShapeHeight="30.0" defaultShapeWidth="400.0" originX="20" originY="50">
+<visualMalleableElement id="0" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="4">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="2" type="StringInformation">
+<element id="0" value="X;X;X"/>
+<element id="1" value="X;X;0"/>
+<element id="3" value="X;0;0"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShape="Rectangular" defaultShapeHeight="50.0" defaultShapeWidth="50.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="900" originY="200">
+</visualBinaryTree>
+<message content="The algorithm recursively continues after having set to 0 the rightmost X symbol.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="9">
+<element id="0" value=" 1  GenerateBinaries( A, b )"/>
+<element id="1" value=" 2    IF (b == 0) {"/>
+<element id="2" value=" 3      Elaborate( A );"/>
+<element id="3" value=" 4    } ELSE {"/>
+<element id="4" value=" 5      A[b-1] = 0;"/>
+<element id="5" value=" 6      GenerateBinaries( A, b-1 );"/>
+<element id="6" value=" 7      A[b-1] = 1;"/>
+<element id="7" value=" 8      GenerateBinaries( A, b-1 );"/>
+<element id="8" value=" 9    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShapeHeight="30.0" defaultShapeWidth="400.0" originX="20" originY="50">
+<visualMalleableElement id="4" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+<visualMalleableElement id="5" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="5">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="2" type="StringInformation">
+<element id="0" value="X;X;X"/>
+<element id="1" value="X;X;0"/>
+<element id="3" value="X;0;0"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShape="Rectangular" defaultShapeHeight="50.0" defaultShapeWidth="50.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="900" originY="200">
+<visualLinkedElement id="3" color="FFFF00" font="Monospaced-PLAIN-20" shape="Rectangular" shapeHeight="50.0" shapeWidth="50.0"/>
+</visualBinaryTree>
+<message content="The execution continues by invoking the recursive function with the number of currently undetermined bits equal to the number of Xs.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="9">
+<element id="0" value=" 1  GenerateBinaries( A, b )"/>
+<element id="1" value=" 2    IF (b == 0) {"/>
+<element id="2" value=" 3      Elaborate( A );"/>
+<element id="3" value=" 4    } ELSE {"/>
+<element id="4" value=" 5      A[b-1] = 0;"/>
+<element id="5" value=" 6      GenerateBinaries( A, b-1 );"/>
+<element id="6" value=" 7      A[b-1] = 1;"/>
+<element id="7" value=" 8      GenerateBinaries( A, b-1 );"/>
+<element id="8" value=" 9    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShapeHeight="30.0" defaultShapeWidth="400.0" originX="20" originY="50">
+<visualMalleableElement id="0" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="6">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="2" type="StringInformation">
+<element id="0" value="X;X;X"/>
+<element id="1" value="X;X;0"/>
+<element id="3" value="X;0;0"/>
+<element id="7" value="0;0;0"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShape="Rectangular" defaultShapeHeight="50.0" defaultShapeWidth="50.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="900" originY="200">
+</visualBinaryTree>
+<message content="The algorithm recursively continues after having set to 0 the rightmost X symbol.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="9">
+<element id="0" value=" 1  GenerateBinaries( A, b )"/>
+<element id="1" value=" 2    IF (b == 0) {"/>
+<element id="2" value=" 3      Elaborate( A );"/>
+<element id="3" value=" 4    } ELSE {"/>
+<element id="4" value=" 5      A[b-1] = 0;"/>
+<element id="5" value=" 6      GenerateBinaries( A, b-1 );"/>
+<element id="6" value=" 7      A[b-1] = 1;"/>
+<element id="7" value=" 8      GenerateBinaries( A, b-1 );"/>
+<element id="8" value=" 9    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShapeHeight="30.0" defaultShapeWidth="400.0" originX="20" originY="50">
+<visualMalleableElement id="4" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+<visualMalleableElement id="5" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="7">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="2" type="StringInformation">
+<element id="0" value="X;X;X"/>
+<element id="1" value="X;X;0"/>
+<element id="3" value="X;0;0"/>
+<element id="7" value="0;0;0"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShape="Rectangular" defaultShapeHeight="50.0" defaultShapeWidth="50.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="900" originY="200">
+<visualLinkedElement id="7" color="FFFF00" font="Monospaced-PLAIN-20" shape="Rectangular" shapeHeight="50.0" shapeWidth="50.0"/>
+</visualBinaryTree>
+<message content="The execution continues by invoking the recursive function with the number of currently undetermined bits equal to the number of Xs.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="9">
+<element id="0" value=" 1  GenerateBinaries( A, b )"/>
+<element id="1" value=" 2    IF (b == 0) {"/>
+<element id="2" value=" 3      Elaborate( A );"/>
+<element id="3" value=" 4    } ELSE {"/>
+<element id="4" value=" 5      A[b-1] = 0;"/>
+<element id="5" value=" 6      GenerateBinaries( A, b-1 );"/>
+<element id="6" value=" 7      A[b-1] = 1;"/>
+<element id="7" value=" 8      GenerateBinaries( A, b-1 );"/>
+<element id="8" value=" 9    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShapeHeight="30.0" defaultShapeWidth="400.0" originX="20" originY="50">
+<visualMalleableElement id="0" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="8">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="2" type="StringInformation">
+<element id="0" value="X;X;X"/>
+<element id="1" value="X;X;0"/>
+<element id="3" value="X;0;0"/>
+<element id="7" value="0;0;0"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShape="Rectangular" defaultShapeHeight="50.0" defaultShapeWidth="50.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="900" originY="200">
+<visualLinkedElement id="7" color="FFFF00" font="Monospaced-PLAIN-20" shape="Rectangular" shapeHeight="50.0" shapeWidth="50.0"/>
+</visualBinaryTree>
+<message content="A new binary string (in yellow) has been generated and can be elaborated.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="9">
+<element id="0" value=" 1  GenerateBinaries( A, b )"/>
+<element id="1" value=" 2    IF (b == 0) {"/>
+<element id="2" value=" 3      Elaborate( A );"/>
+<element id="3" value=" 4    } ELSE {"/>
+<element id="4" value=" 5      A[b-1] = 0;"/>
+<element id="5" value=" 6      GenerateBinaries( A, b-1 );"/>
+<element id="6" value=" 7      A[b-1] = 1;"/>
+<element id="7" value=" 8      GenerateBinaries( A, b-1 );"/>
+<element id="8" value=" 9    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShapeHeight="30.0" defaultShapeWidth="400.0" originX="20" originY="50">
+<visualMalleableElement id="2" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="9">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="2" type="StringInformation">
+<element id="0" value="X;X;X"/>
+<element id="1" value="X;X;0"/>
+<element id="3" value="X;0;0"/>
+<element id="7" value="0;0;0"/>
+<element id="8" value="1;0;0"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShape="Rectangular" defaultShapeHeight="50.0" defaultShapeWidth="50.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="900" originY="200">
+</visualBinaryTree>
+<message content="The algorithm recursively continues after having set to 1 the rightmost X symbol.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="9">
+<element id="0" value=" 1  GenerateBinaries( A, b )"/>
+<element id="1" value=" 2    IF (b == 0) {"/>
+<element id="2" value=" 3      Elaborate( A );"/>
+<element id="3" value=" 4    } ELSE {"/>
+<element id="4" value=" 5      A[b-1] = 0;"/>
+<element id="5" value=" 6      GenerateBinaries( A, b-1 );"/>
+<element id="6" value=" 7      A[b-1] = 1;"/>
+<element id="7" value=" 8      GenerateBinaries( A, b-1 );"/>
+<element id="8" value=" 9    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShapeHeight="30.0" defaultShapeWidth="400.0" originX="20" originY="50">
+<visualMalleableElement id="6" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+<visualMalleableElement id="7" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="10">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="2" type="StringInformation">
+<element id="0" value="X;X;X"/>
+<element id="1" value="X;X;0"/>
+<element id="3" value="X;0;0"/>
+<element id="7" value="0;0;0"/>
+<element id="8" value="1;0;0"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShape="Rectangular" defaultShapeHeight="50.0" defaultShapeWidth="50.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="900" originY="200">
+<visualLinkedElement id="8" color="FFFF00" font="Monospaced-PLAIN-20" shape="Rectangular" shapeHeight="50.0" shapeWidth="50.0"/>
+</visualBinaryTree>
+<message content="The execution continues by invoking the recursive function with the number of currently undetermined bits equal to the number of Xs.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="9">
+<element id="0" value=" 1  GenerateBinaries( A, b )"/>
+<element id="1" value=" 2    IF (b == 0) {"/>
+<element id="2" value=" 3      Elaborate( A );"/>
+<element id="3" value=" 4    } ELSE {"/>
+<element id="4" value=" 5      A[b-1] = 0;"/>
+<element id="5" value=" 6      GenerateBinaries( A, b-1 );"/>
+<element id="6" value=" 7      A[b-1] = 1;"/>
+<element id="7" value=" 8      GenerateBinaries( A, b-1 );"/>
+<element id="8" value=" 9    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShapeHeight="30.0" defaultShapeWidth="400.0" originX="20" originY="50">
+<visualMalleableElement id="0" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="11">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="2" type="StringInformation">
+<element id="0" value="X;X;X"/>
+<element id="1" value="X;X;0"/>
+<element id="3" value="X;0;0"/>
+<element id="7" value="0;0;0"/>
+<element id="8" value="1;0;0"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShape="Rectangular" defaultShapeHeight="50.0" defaultShapeWidth="50.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="900" originY="200">
+<visualLinkedElement id="8" color="FFFF00" font="Monospaced-PLAIN-20" shape="Rectangular" shapeHeight="50.0" shapeWidth="50.0"/>
+</visualBinaryTree>
+<message content="A new binary string (in yellow) has been generated and can be elaborated.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="9">
+<element id="0" value=" 1  GenerateBinaries( A, b )"/>
+<element id="1" value=" 2    IF (b == 0) {"/>
+<element id="2" value=" 3      Elaborate( A );"/>
+<element id="3" value=" 4    } ELSE {"/>
+<element id="4" value=" 5      A[b-1] = 0;"/>
+<element id="5" value=" 6      GenerateBinaries( A, b-1 );"/>
+<element id="6" value=" 7      A[b-1] = 1;"/>
+<element id="7" value=" 8      GenerateBinaries( A, b-1 );"/>
+<element id="8" value=" 9    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShapeHeight="30.0" defaultShapeWidth="400.0" originX="20" originY="50">
+<visualMalleableElement id="2" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="12">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="2" type="StringInformation">
+<element id="0" value="X;X;X"/>
+<element id="1" value="X;X;0"/>
+<element id="3" value="X;0;0"/>
+<element id="7" value="0;0;0"/>
+<element id="8" value="1;0;0"/>
+<element id="4" value="X;1;0"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShape="Rectangular" defaultShapeHeight="50.0" defaultShapeWidth="50.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="900" originY="200">
+</visualBinaryTree>
+<message content="The algorithm recursively continues after having set to 1 the rightmost X symbol.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="9">
+<element id="0" value=" 1  GenerateBinaries( A, b )"/>
+<element id="1" value=" 2    IF (b == 0) {"/>
+<element id="2" value=" 3      Elaborate( A );"/>
+<element id="3" value=" 4    } ELSE {"/>
+<element id="4" value=" 5      A[b-1] = 0;"/>
+<element id="5" value=" 6      GenerateBinaries( A, b-1 );"/>
+<element id="6" value=" 7      A[b-1] = 1;"/>
+<element id="7" value=" 8      GenerateBinaries( A, b-1 );"/>
+<element id="8" value=" 9    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShapeHeight="30.0" defaultShapeWidth="400.0" originX="20" originY="50">
+<visualMalleableElement id="6" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+<visualMalleableElement id="7" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="13">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="2" type="StringInformation">
+<element id="0" value="X;X;X"/>
+<element id="1" value="X;X;0"/>
+<element id="3" value="X;0;0"/>
+<element id="7" value="0;0;0"/>
+<element id="8" value="1;0;0"/>
+<element id="4" value="X;1;0"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShape="Rectangular" defaultShapeHeight="50.0" defaultShapeWidth="50.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="900" originY="200">
+<visualLinkedElement id="4" color="FFFF00" font="Monospaced-PLAIN-20" shape="Rectangular" shapeHeight="50.0" shapeWidth="50.0"/>
+</visualBinaryTree>
+<message content="The execution continues by invoking the recursive function with the number of currently undetermined bits equal to the number of Xs.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="9">
+<element id="0" value=" 1  GenerateBinaries( A, b )"/>
+<element id="1" value=" 2    IF (b == 0) {"/>
+<element id="2" value=" 3      Elaborate( A );"/>
+<element id="3" value=" 4    } ELSE {"/>
+<element id="4" value=" 5      A[b-1] = 0;"/>
+<element id="5" value=" 6      GenerateBinaries( A, b-1 );"/>
+<element id="6" value=" 7      A[b-1] = 1;"/>
+<element id="7" value=" 8      GenerateBinaries( A, b-1 );"/>
+<element id="8" value=" 9    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShapeHeight="30.0" defaultShapeWidth="400.0" originX="20" originY="50">
+<visualMalleableElement id="0" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="14">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="2" type="StringInformation">
+<element id="0" value="X;X;X"/>
+<element id="1" value="X;X;0"/>
+<element id="3" value="X;0;0"/>
+<element id="7" value="0;0;0"/>
+<element id="8" value="1;0;0"/>
+<element id="4" value="X;1;0"/>
+<element id="9" value="0;1;0"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShape="Rectangular" defaultShapeHeight="50.0" defaultShapeWidth="50.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="900" originY="200">
+</visualBinaryTree>
+<message content="The algorithm recursively continues after having set to 0 the rightmost X symbol.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="9">
+<element id="0" value=" 1  GenerateBinaries( A, b )"/>
+<element id="1" value=" 2    IF (b == 0) {"/>
+<element id="2" value=" 3      Elaborate( A );"/>
+<element id="3" value=" 4    } ELSE {"/>
+<element id="4" value=" 5      A[b-1] = 0;"/>
+<element id="5" value=" 6      GenerateBinaries( A, b-1 );"/>
+<element id="6" value=" 7      A[b-1] = 1;"/>
+<element id="7" value=" 8      GenerateBinaries( A, b-1 );"/>
+<element id="8" value=" 9    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShapeHeight="30.0" defaultShapeWidth="400.0" originX="20" originY="50">
+<visualMalleableElement id="4" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+<visualMalleableElement id="5" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="15">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="2" type="StringInformation">
+<element id="0" value="X;X;X"/>
+<element id="1" value="X;X;0"/>
+<element id="3" value="X;0;0"/>
+<element id="7" value="0;0;0"/>
+<element id="8" value="1;0;0"/>
+<element id="4" value="X;1;0"/>
+<element id="9" value="0;1;0"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShape="Rectangular" defaultShapeHeight="50.0" defaultShapeWidth="50.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="900" originY="200">
+<visualLinkedElement id="9" color="FFFF00" font="Monospaced-PLAIN-20" shape="Rectangular" shapeHeight="50.0" shapeWidth="50.0"/>
+</visualBinaryTree>
+<message content="The execution continues by invoking the recursive function with the number of currently undetermined bits equal to the number of Xs.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="9">
+<element id="0" value=" 1  GenerateBinaries( A, b )"/>
+<element id="1" value=" 2    IF (b == 0) {"/>
+<element id="2" value=" 3      Elaborate( A );"/>
+<element id="3" value=" 4    } ELSE {"/>
+<element id="4" value=" 5      A[b-1] = 0;"/>
+<element id="5" value=" 6      GenerateBinaries( A, b-1 );"/>
+<element id="6" value=" 7      A[b-1] = 1;"/>
+<element id="7" value=" 8      GenerateBinaries( A, b-1 );"/>
+<element id="8" value=" 9    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShapeHeight="30.0" defaultShapeWidth="400.0" originX="20" originY="50">
+<visualMalleableElement id="0" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="16">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="2" type="StringInformation">
+<element id="0" value="X;X;X"/>
+<element id="1" value="X;X;0"/>
+<element id="3" value="X;0;0"/>
+<element id="7" value="0;0;0"/>
+<element id="8" value="1;0;0"/>
+<element id="4" value="X;1;0"/>
+<element id="9" value="0;1;0"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShape="Rectangular" defaultShapeHeight="50.0" defaultShapeWidth="50.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="900" originY="200">
+<visualLinkedElement id="9" color="FFFF00" font="Monospaced-PLAIN-20" shape="Rectangular" shapeHeight="50.0" shapeWidth="50.0"/>
+</visualBinaryTree>
+<message content="A new binary string (in yellow) has been generated and can be elaborated.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="9">
+<element id="0" value=" 1  GenerateBinaries( A, b )"/>
+<element id="1" value=" 2    IF (b == 0) {"/>
+<element id="2" value=" 3      Elaborate( A );"/>
+<element id="3" value=" 4    } ELSE {"/>
+<element id="4" value=" 5      A[b-1] = 0;"/>
+<element id="5" value=" 6      GenerateBinaries( A, b-1 );"/>
+<element id="6" value=" 7      A[b-1] = 1;"/>
+<element id="7" value=" 8      GenerateBinaries( A, b-1 );"/>
+<element id="8" value=" 9    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShapeHeight="30.0" defaultShapeWidth="400.0" originX="20" originY="50">
+<visualMalleableElement id="2" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="17">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="2" type="StringInformation">
+<element id="0" value="X;X;X"/>
+<element id="1" value="X;X;0"/>
+<element id="3" value="X;0;0"/>
+<element id="7" value="0;0;0"/>
+<element id="8" value="1;0;0"/>
+<element id="4" value="X;1;0"/>
+<element id="9" value="0;1;0"/>
+<element id="10" value="1;1;0"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShape="Rectangular" defaultShapeHeight="50.0" defaultShapeWidth="50.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="900" originY="200">
+</visualBinaryTree>
+<message content="The algorithm recursively continues after having set to 1 the rightmost X symbol.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="9">
+<element id="0" value=" 1  GenerateBinaries( A, b )"/>
+<element id="1" value=" 2    IF (b == 0) {"/>
+<element id="2" value=" 3      Elaborate( A );"/>
+<element id="3" value=" 4    } ELSE {"/>
+<element id="4" value=" 5      A[b-1] = 0;"/>
+<element id="5" value=" 6      GenerateBinaries( A, b-1 );"/>
+<element id="6" value=" 7      A[b-1] = 1;"/>
+<element id="7" value=" 8      GenerateBinaries( A, b-1 );"/>
+<element id="8" value=" 9    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShapeHeight="30.0" defaultShapeWidth="400.0" originX="20" originY="50">
+<visualMalleableElement id="6" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+<visualMalleableElement id="7" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="18">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="2" type="StringInformation">
+<element id="0" value="X;X;X"/>
+<element id="1" value="X;X;0"/>
+<element id="3" value="X;0;0"/>
+<element id="7" value="0;0;0"/>
+<element id="8" value="1;0;0"/>
+<element id="4" value="X;1;0"/>
+<element id="9" value="0;1;0"/>
+<element id="10" value="1;1;0"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShape="Rectangular" defaultShapeHeight="50.0" defaultShapeWidth="50.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="900" originY="200">
+<visualLinkedElement id="10" color="FFFF00" font="Monospaced-PLAIN-20" shape="Rectangular" shapeHeight="50.0" shapeWidth="50.0"/>
+</visualBinaryTree>
+<message content="The execution continues by invoking the recursive function with the number of currently undetermined bits equal to the number of Xs.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="9">
+<element id="0" value=" 1  GenerateBinaries( A, b )"/>
+<element id="1" value=" 2    IF (b == 0) {"/>
+<element id="2" value=" 3      Elaborate( A );"/>
+<element id="3" value=" 4    } ELSE {"/>
+<element id="4" value=" 5      A[b-1] = 0;"/>
+<element id="5" value=" 6      GenerateBinaries( A, b-1 );"/>
+<element id="6" value=" 7      A[b-1] = 1;"/>
+<element id="7" value=" 8      GenerateBinaries( A, b-1 );"/>
+<element id="8" value=" 9    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShapeHeight="30.0" defaultShapeWidth="400.0" originX="20" originY="50">
+<visualMalleableElement id="0" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="19">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="2" type="StringInformation">
+<element id="0" value="X;X;X"/>
+<element id="1" value="X;X;0"/>
+<element id="3" value="X;0;0"/>
+<element id="7" value="0;0;0"/>
+<element id="8" value="1;0;0"/>
+<element id="4" value="X;1;0"/>
+<element id="9" value="0;1;0"/>
+<element id="10" value="1;1;0"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShape="Rectangular" defaultShapeHeight="50.0" defaultShapeWidth="50.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="900" originY="200">
+<visualLinkedElement id="10" color="FFFF00" font="Monospaced-PLAIN-20" shape="Rectangular" shapeHeight="50.0" shapeWidth="50.0"/>
+</visualBinaryTree>
+<message content="A new binary string (in yellow) has been generated and can be elaborated.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="9">
+<element id="0" value=" 1  GenerateBinaries( A, b )"/>
+<element id="1" value=" 2    IF (b == 0) {"/>
+<element id="2" value=" 3      Elaborate( A );"/>
+<element id="3" value=" 4    } ELSE {"/>
+<element id="4" value=" 5      A[b-1] = 0;"/>
+<element id="5" value=" 6      GenerateBinaries( A, b-1 );"/>
+<element id="6" value=" 7      A[b-1] = 1;"/>
+<element id="7" value=" 8      GenerateBinaries( A, b-1 );"/>
+<element id="8" value=" 9    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShapeHeight="30.0" defaultShapeWidth="400.0" originX="20" originY="50">
+<visualMalleableElement id="2" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="20">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="7" type="StringInformation">
+<element id="0" value="X;X;X"/>
+<element id="1" value="X;X;0"/>
+<element id="3" value="X;0;0"/>
+<element id="7" value="0;0;0"/>
+<element id="8" value="1;0;0"/>
+<element id="4" value="X;1;0"/>
+<element id="9" value="0;1;0"/>
+<element id="10" value="1;1;0"/>
+<element id="2" value="X;X;1"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShape="Rectangular" defaultShapeHeight="50.0" defaultShapeWidth="50.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="900" originY="200">
+</visualBinaryTree>
+<message content="The algorithm recursively continues after having set to 1 the rightmost X symbol.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="9">
+<element id="0" value=" 1  GenerateBinaries( A, b )"/>
+<element id="1" value=" 2    IF (b == 0) {"/>
+<element id="2" value=" 3      Elaborate( A );"/>
+<element id="3" value=" 4    } ELSE {"/>
+<element id="4" value=" 5      A[b-1] = 0;"/>
+<element id="5" value=" 6      GenerateBinaries( A, b-1 );"/>
+<element id="6" value=" 7      A[b-1] = 1;"/>
+<element id="7" value=" 8      GenerateBinaries( A, b-1 );"/>
+<element id="8" value=" 9    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShapeHeight="30.0" defaultShapeWidth="400.0" originX="20" originY="50">
+<visualMalleableElement id="6" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+<visualMalleableElement id="7" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="21">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="7" type="StringInformation">
+<element id="0" value="X;X;X"/>
+<element id="1" value="X;X;0"/>
+<element id="3" value="X;0;0"/>
+<element id="7" value="0;0;0"/>
+<element id="8" value="1;0;0"/>
+<element id="4" value="X;1;0"/>
+<element id="9" value="0;1;0"/>
+<element id="10" value="1;1;0"/>
+<element id="2" value="X;X;1"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShape="Rectangular" defaultShapeHeight="50.0" defaultShapeWidth="50.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="900" originY="200">
+<visualLinkedElement id="2" color="FFFF00" font="Monospaced-PLAIN-20" shape="Rectangular" shapeHeight="50.0" shapeWidth="50.0"/>
+</visualBinaryTree>
+<message content="The execution continues by invoking the recursive function with the number of currently undetermined bits equal to the number of Xs.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="9">
+<element id="0" value=" 1  GenerateBinaries( A, b )"/>
+<element id="1" value=" 2    IF (b == 0) {"/>
+<element id="2" value=" 3      Elaborate( A );"/>
+<element id="3" value=" 4    } ELSE {"/>
+<element id="4" value=" 5      A[b-1] = 0;"/>
+<element id="5" value=" 6      GenerateBinaries( A, b-1 );"/>
+<element id="6" value=" 7      A[b-1] = 1;"/>
+<element id="7" value=" 8      GenerateBinaries( A, b-1 );"/>
+<element id="8" value=" 9    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShapeHeight="30.0" defaultShapeWidth="400.0" originX="20" originY="50">
+<visualMalleableElement id="0" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="22">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="7" type="StringInformation">
+<element id="0" value="X;X;X"/>
+<element id="1" value="X;X;0"/>
+<element id="3" value="X;0;0"/>
+<element id="7" value="0;0;0"/>
+<element id="8" value="1;0;0"/>
+<element id="4" value="X;1;0"/>
+<element id="9" value="0;1;0"/>
+<element id="10" value="1;1;0"/>
+<element id="2" value="X;X;1"/>
+<element id="5" value="X;0;1"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShape="Rectangular" defaultShapeHeight="50.0" defaultShapeWidth="50.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="900" originY="200">
+</visualBinaryTree>
+<message content="The algorithm recursively continues after having set to 0 the rightmost X symbol.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="9">
+<element id="0" value=" 1  GenerateBinaries( A, b )"/>
+<element id="1" value=" 2    IF (b == 0) {"/>
+<element id="2" value=" 3      Elaborate( A );"/>
+<element id="3" value=" 4    } ELSE {"/>
+<element id="4" value=" 5      A[b-1] = 0;"/>
+<element id="5" value=" 6      GenerateBinaries( A, b-1 );"/>
+<element id="6" value=" 7      A[b-1] = 1;"/>
+<element id="7" value=" 8      GenerateBinaries( A, b-1 );"/>
+<element id="8" value=" 9    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShapeHeight="30.0" defaultShapeWidth="400.0" originX="20" originY="50">
+<visualMalleableElement id="4" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+<visualMalleableElement id="5" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="23">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="7" type="StringInformation">
+<element id="0" value="X;X;X"/>
+<element id="1" value="X;X;0"/>
+<element id="3" value="X;0;0"/>
+<element id="7" value="0;0;0"/>
+<element id="8" value="1;0;0"/>
+<element id="4" value="X;1;0"/>
+<element id="9" value="0;1;0"/>
+<element id="10" value="1;1;0"/>
+<element id="2" value="X;X;1"/>
+<element id="5" value="X;0;1"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShape="Rectangular" defaultShapeHeight="50.0" defaultShapeWidth="50.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="900" originY="200">
+<visualLinkedElement id="5" color="FFFF00" font="Monospaced-PLAIN-20" shape="Rectangular" shapeHeight="50.0" shapeWidth="50.0"/>
+</visualBinaryTree>
+<message content="The execution continues by invoking the recursive function with the number of currently undetermined bits equal to the number of Xs.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="9">
+<element id="0" value=" 1  GenerateBinaries( A, b )"/>
+<element id="1" value=" 2    IF (b == 0) {"/>
+<element id="2" value=" 3      Elaborate( A );"/>
+<element id="3" value=" 4    } ELSE {"/>
+<element id="4" value=" 5      A[b-1] = 0;"/>
+<element id="5" value=" 6      GenerateBinaries( A, b-1 );"/>
+<element id="6" value=" 7      A[b-1] = 1;"/>
+<element id="7" value=" 8      GenerateBinaries( A, b-1 );"/>
+<element id="8" value=" 9    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShapeHeight="30.0" defaultShapeWidth="400.0" originX="20" originY="50">
+<visualMalleableElement id="0" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="24">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="7" type="StringInformation">
+<element id="0" value="X;X;X"/>
+<element id="1" value="X;X;0"/>
+<element id="3" value="X;0;0"/>
+<element id="7" value="0;0;0"/>
+<element id="8" value="1;0;0"/>
+<element id="4" value="X;1;0"/>
+<element id="9" value="0;1;0"/>
+<element id="10" value="1;1;0"/>
+<element id="2" value="X;X;1"/>
+<element id="5" value="X;0;1"/>
+<element id="11" value="0;0;1"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShape="Rectangular" defaultShapeHeight="50.0" defaultShapeWidth="50.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="900" originY="200">
+</visualBinaryTree>
+<message content="The algorithm recursively continues after having set to 0 the rightmost X symbol.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="9">
+<element id="0" value=" 1  GenerateBinaries( A, b )"/>
+<element id="1" value=" 2    IF (b == 0) {"/>
+<element id="2" value=" 3      Elaborate( A );"/>
+<element id="3" value=" 4    } ELSE {"/>
+<element id="4" value=" 5      A[b-1] = 0;"/>
+<element id="5" value=" 6      GenerateBinaries( A, b-1 );"/>
+<element id="6" value=" 7      A[b-1] = 1;"/>
+<element id="7" value=" 8      GenerateBinaries( A, b-1 );"/>
+<element id="8" value=" 9    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShapeHeight="30.0" defaultShapeWidth="400.0" originX="20" originY="50">
+<visualMalleableElement id="4" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+<visualMalleableElement id="5" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="25">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="7" type="StringInformation">
+<element id="0" value="X;X;X"/>
+<element id="1" value="X;X;0"/>
+<element id="3" value="X;0;0"/>
+<element id="7" value="0;0;0"/>
+<element id="8" value="1;0;0"/>
+<element id="4" value="X;1;0"/>
+<element id="9" value="0;1;0"/>
+<element id="10" value="1;1;0"/>
+<element id="2" value="X;X;1"/>
+<element id="5" value="X;0;1"/>
+<element id="11" value="0;0;1"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShape="Rectangular" defaultShapeHeight="50.0" defaultShapeWidth="50.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="900" originY="200">
+<visualLinkedElement id="11" color="FFFF00" font="Monospaced-PLAIN-20" shape="Rectangular" shapeHeight="50.0" shapeWidth="50.0"/>
+</visualBinaryTree>
+<message content="The execution continues by invoking the recursive function with the number of currently undetermined bits equal to the number of Xs.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="9">
+<element id="0" value=" 1  GenerateBinaries( A, b )"/>
+<element id="1" value=" 2    IF (b == 0) {"/>
+<element id="2" value=" 3      Elaborate( A );"/>
+<element id="3" value=" 4    } ELSE {"/>
+<element id="4" value=" 5      A[b-1] = 0;"/>
+<element id="5" value=" 6      GenerateBinaries( A, b-1 );"/>
+<element id="6" value=" 7      A[b-1] = 1;"/>
+<element id="7" value=" 8      GenerateBinaries( A, b-1 );"/>
+<element id="8" value=" 9    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShapeHeight="30.0" defaultShapeWidth="400.0" originX="20" originY="50">
+<visualMalleableElement id="0" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="26">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="7" type="StringInformation">
+<element id="0" value="X;X;X"/>
+<element id="1" value="X;X;0"/>
+<element id="3" value="X;0;0"/>
+<element id="7" value="0;0;0"/>
+<element id="8" value="1;0;0"/>
+<element id="4" value="X;1;0"/>
+<element id="9" value="0;1;0"/>
+<element id="10" value="1;1;0"/>
+<element id="2" value="X;X;1"/>
+<element id="5" value="X;0;1"/>
+<element id="11" value="0;0;1"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShape="Rectangular" defaultShapeHeight="50.0" defaultShapeWidth="50.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="900" originY="200">
+<visualLinkedElement id="11" color="FFFF00" font="Monospaced-PLAIN-20" shape="Rectangular" shapeHeight="50.0" shapeWidth="50.0"/>
+</visualBinaryTree>
+<message content="A new binary string (in yellow) has been generated and can be elaborated.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="9">
+<element id="0" value=" 1  GenerateBinaries( A, b )"/>
+<element id="1" value=" 2    IF (b == 0) {"/>
+<element id="2" value=" 3      Elaborate( A );"/>
+<element id="3" value=" 4    } ELSE {"/>
+<element id="4" value=" 5      A[b-1] = 0;"/>
+<element id="5" value=" 6      GenerateBinaries( A, b-1 );"/>
+<element id="6" value=" 7      A[b-1] = 1;"/>
+<element id="7" value=" 8      GenerateBinaries( A, b-1 );"/>
+<element id="8" value=" 9    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShapeHeight="30.0" defaultShapeWidth="400.0" originX="20" originY="50">
+<visualMalleableElement id="2" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="27">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="7" type="StringInformation">
+<element id="0" value="X;X;X"/>
+<element id="1" value="X;X;0"/>
+<element id="3" value="X;0;0"/>
+<element id="7" value="0;0;0"/>
+<element id="8" value="1;0;0"/>
+<element id="4" value="X;1;0"/>
+<element id="9" value="0;1;0"/>
+<element id="10" value="1;1;0"/>
+<element id="2" value="X;X;1"/>
+<element id="5" value="X;0;1"/>
+<element id="11" value="0;0;1"/>
+<element id="12" value="1;0;1"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShape="Rectangular" defaultShapeHeight="50.0" defaultShapeWidth="50.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="900" originY="200">
+</visualBinaryTree>
+<message content="The algorithm recursively continues after having set to 1 the rightmost X symbol.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="9">
+<element id="0" value=" 1  GenerateBinaries( A, b )"/>
+<element id="1" value=" 2    IF (b == 0) {"/>
+<element id="2" value=" 3      Elaborate( A );"/>
+<element id="3" value=" 4    } ELSE {"/>
+<element id="4" value=" 5      A[b-1] = 0;"/>
+<element id="5" value=" 6      GenerateBinaries( A, b-1 );"/>
+<element id="6" value=" 7      A[b-1] = 1;"/>
+<element id="7" value=" 8      GenerateBinaries( A, b-1 );"/>
+<element id="8" value=" 9    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShapeHeight="30.0" defaultShapeWidth="400.0" originX="20" originY="50">
+<visualMalleableElement id="6" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+<visualMalleableElement id="7" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="28">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="7" type="StringInformation">
+<element id="0" value="X;X;X"/>
+<element id="1" value="X;X;0"/>
+<element id="3" value="X;0;0"/>
+<element id="7" value="0;0;0"/>
+<element id="8" value="1;0;0"/>
+<element id="4" value="X;1;0"/>
+<element id="9" value="0;1;0"/>
+<element id="10" value="1;1;0"/>
+<element id="2" value="X;X;1"/>
+<element id="5" value="X;0;1"/>
+<element id="11" value="0;0;1"/>
+<element id="12" value="1;0;1"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShape="Rectangular" defaultShapeHeight="50.0" defaultShapeWidth="50.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="900" originY="200">
+<visualLinkedElement id="12" color="FFFF00" font="Monospaced-PLAIN-20" shape="Rectangular" shapeHeight="50.0" shapeWidth="50.0"/>
+</visualBinaryTree>
+<message content="The execution continues by invoking the recursive function with the number of currently undetermined bits equal to the number of Xs.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="9">
+<element id="0" value=" 1  GenerateBinaries( A, b )"/>
+<element id="1" value=" 2    IF (b == 0) {"/>
+<element id="2" value=" 3      Elaborate( A );"/>
+<element id="3" value=" 4    } ELSE {"/>
+<element id="4" value=" 5      A[b-1] = 0;"/>
+<element id="5" value=" 6      GenerateBinaries( A, b-1 );"/>
+<element id="6" value=" 7      A[b-1] = 1;"/>
+<element id="7" value=" 8      GenerateBinaries( A, b-1 );"/>
+<element id="8" value=" 9    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShapeHeight="30.0" defaultShapeWidth="400.0" originX="20" originY="50">
+<visualMalleableElement id="0" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="29">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="7" type="StringInformation">
+<element id="0" value="X;X;X"/>
+<element id="1" value="X;X;0"/>
+<element id="3" value="X;0;0"/>
+<element id="7" value="0;0;0"/>
+<element id="8" value="1;0;0"/>
+<element id="4" value="X;1;0"/>
+<element id="9" value="0;1;0"/>
+<element id="10" value="1;1;0"/>
+<element id="2" value="X;X;1"/>
+<element id="5" value="X;0;1"/>
+<element id="11" value="0;0;1"/>
+<element id="12" value="1;0;1"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShape="Rectangular" defaultShapeHeight="50.0" defaultShapeWidth="50.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="900" originY="200">
+<visualLinkedElement id="12" color="FFFF00" font="Monospaced-PLAIN-20" shape="Rectangular" shapeHeight="50.0" shapeWidth="50.0"/>
+</visualBinaryTree>
+<message content="A new binary string (in yellow) has been generated and can be elaborated.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="9">
+<element id="0" value=" 1  GenerateBinaries( A, b )"/>
+<element id="1" value=" 2    IF (b == 0) {"/>
+<element id="2" value=" 3      Elaborate( A );"/>
+<element id="3" value=" 4    } ELSE {"/>
+<element id="4" value=" 5      A[b-1] = 0;"/>
+<element id="5" value=" 6      GenerateBinaries( A, b-1 );"/>
+<element id="6" value=" 7      A[b-1] = 1;"/>
+<element id="7" value=" 8      GenerateBinaries( A, b-1 );"/>
+<element id="8" value=" 9    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShapeHeight="30.0" defaultShapeWidth="400.0" originX="20" originY="50">
+<visualMalleableElement id="2" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="30">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="7" type="StringInformation">
+<element id="0" value="X;X;X"/>
+<element id="1" value="X;X;0"/>
+<element id="3" value="X;0;0"/>
+<element id="7" value="0;0;0"/>
+<element id="8" value="1;0;0"/>
+<element id="4" value="X;1;0"/>
+<element id="9" value="0;1;0"/>
+<element id="10" value="1;1;0"/>
+<element id="2" value="X;X;1"/>
+<element id="5" value="X;0;1"/>
+<element id="11" value="0;0;1"/>
+<element id="12" value="1;0;1"/>
+<element id="6" value="X;1;1"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShape="Rectangular" defaultShapeHeight="50.0" defaultShapeWidth="50.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="900" originY="200">
+</visualBinaryTree>
+<message content="The algorithm recursively continues after having set to 1 the rightmost X symbol.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="9">
+<element id="0" value=" 1  GenerateBinaries( A, b )"/>
+<element id="1" value=" 2    IF (b == 0) {"/>
+<element id="2" value=" 3      Elaborate( A );"/>
+<element id="3" value=" 4    } ELSE {"/>
+<element id="4" value=" 5      A[b-1] = 0;"/>
+<element id="5" value=" 6      GenerateBinaries( A, b-1 );"/>
+<element id="6" value=" 7      A[b-1] = 1;"/>
+<element id="7" value=" 8      GenerateBinaries( A, b-1 );"/>
+<element id="8" value=" 9    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShapeHeight="30.0" defaultShapeWidth="400.0" originX="20" originY="50">
+<visualMalleableElement id="6" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+<visualMalleableElement id="7" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="31">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="7" type="StringInformation">
+<element id="0" value="X;X;X"/>
+<element id="1" value="X;X;0"/>
+<element id="3" value="X;0;0"/>
+<element id="7" value="0;0;0"/>
+<element id="8" value="1;0;0"/>
+<element id="4" value="X;1;0"/>
+<element id="9" value="0;1;0"/>
+<element id="10" value="1;1;0"/>
+<element id="2" value="X;X;1"/>
+<element id="5" value="X;0;1"/>
+<element id="11" value="0;0;1"/>
+<element id="12" value="1;0;1"/>
+<element id="6" value="X;1;1"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShape="Rectangular" defaultShapeHeight="50.0" defaultShapeWidth="50.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="900" originY="200">
+<visualLinkedElement id="6" color="FFFF00" font="Monospaced-PLAIN-20" shape="Rectangular" shapeHeight="50.0" shapeWidth="50.0"/>
+</visualBinaryTree>
+<message content="The execution continues by invoking the recursive function with the number of currently undetermined bits equal to the number of Xs.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="9">
+<element id="0" value=" 1  GenerateBinaries( A, b )"/>
+<element id="1" value=" 2    IF (b == 0) {"/>
+<element id="2" value=" 3      Elaborate( A );"/>
+<element id="3" value=" 4    } ELSE {"/>
+<element id="4" value=" 5      A[b-1] = 0;"/>
+<element id="5" value=" 6      GenerateBinaries( A, b-1 );"/>
+<element id="6" value=" 7      A[b-1] = 1;"/>
+<element id="7" value=" 8      GenerateBinaries( A, b-1 );"/>
+<element id="8" value=" 9    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShapeHeight="30.0" defaultShapeWidth="400.0" originX="20" originY="50">
+<visualMalleableElement id="0" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="32">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="7" type="StringInformation">
+<element id="0" value="X;X;X"/>
+<element id="1" value="X;X;0"/>
+<element id="3" value="X;0;0"/>
+<element id="7" value="0;0;0"/>
+<element id="8" value="1;0;0"/>
+<element id="4" value="X;1;0"/>
+<element id="9" value="0;1;0"/>
+<element id="10" value="1;1;0"/>
+<element id="2" value="X;X;1"/>
+<element id="5" value="X;0;1"/>
+<element id="11" value="0;0;1"/>
+<element id="12" value="1;0;1"/>
+<element id="6" value="X;1;1"/>
+<element id="13" value="0;1;1"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShape="Rectangular" defaultShapeHeight="50.0" defaultShapeWidth="50.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="900" originY="200">
+</visualBinaryTree>
+<message content="The algorithm recursively continues after having set to 0 the rightmost X symbol.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="9">
+<element id="0" value=" 1  GenerateBinaries( A, b )"/>
+<element id="1" value=" 2    IF (b == 0) {"/>
+<element id="2" value=" 3      Elaborate( A );"/>
+<element id="3" value=" 4    } ELSE {"/>
+<element id="4" value=" 5      A[b-1] = 0;"/>
+<element id="5" value=" 6      GenerateBinaries( A, b-1 );"/>
+<element id="6" value=" 7      A[b-1] = 1;"/>
+<element id="7" value=" 8      GenerateBinaries( A, b-1 );"/>
+<element id="8" value=" 9    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShapeHeight="30.0" defaultShapeWidth="400.0" originX="20" originY="50">
+<visualMalleableElement id="4" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+<visualMalleableElement id="5" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="33">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="7" type="StringInformation">
+<element id="0" value="X;X;X"/>
+<element id="1" value="X;X;0"/>
+<element id="3" value="X;0;0"/>
+<element id="7" value="0;0;0"/>
+<element id="8" value="1;0;0"/>
+<element id="4" value="X;1;0"/>
+<element id="9" value="0;1;0"/>
+<element id="10" value="1;1;0"/>
+<element id="2" value="X;X;1"/>
+<element id="5" value="X;0;1"/>
+<element id="11" value="0;0;1"/>
+<element id="12" value="1;0;1"/>
+<element id="6" value="X;1;1"/>
+<element id="13" value="0;1;1"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShape="Rectangular" defaultShapeHeight="50.0" defaultShapeWidth="50.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="900" originY="200">
+<visualLinkedElement id="13" color="FFFF00" font="Monospaced-PLAIN-20" shape="Rectangular" shapeHeight="50.0" shapeWidth="50.0"/>
+</visualBinaryTree>
+<message content="The execution continues by invoking the recursive function with the number of currently undetermined bits equal to the number of Xs.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="9">
+<element id="0" value=" 1  GenerateBinaries( A, b )"/>
+<element id="1" value=" 2    IF (b == 0) {"/>
+<element id="2" value=" 3      Elaborate( A );"/>
+<element id="3" value=" 4    } ELSE {"/>
+<element id="4" value=" 5      A[b-1] = 0;"/>
+<element id="5" value=" 6      GenerateBinaries( A, b-1 );"/>
+<element id="6" value=" 7      A[b-1] = 1;"/>
+<element id="7" value=" 8      GenerateBinaries( A, b-1 );"/>
+<element id="8" value=" 9    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShapeHeight="30.0" defaultShapeWidth="400.0" originX="20" originY="50">
+<visualMalleableElement id="0" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="34">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="7" type="StringInformation">
+<element id="0" value="X;X;X"/>
+<element id="1" value="X;X;0"/>
+<element id="3" value="X;0;0"/>
+<element id="7" value="0;0;0"/>
+<element id="8" value="1;0;0"/>
+<element id="4" value="X;1;0"/>
+<element id="9" value="0;1;0"/>
+<element id="10" value="1;1;0"/>
+<element id="2" value="X;X;1"/>
+<element id="5" value="X;0;1"/>
+<element id="11" value="0;0;1"/>
+<element id="12" value="1;0;1"/>
+<element id="6" value="X;1;1"/>
+<element id="13" value="0;1;1"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShape="Rectangular" defaultShapeHeight="50.0" defaultShapeWidth="50.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="900" originY="200">
+<visualLinkedElement id="13" color="FFFF00" font="Monospaced-PLAIN-20" shape="Rectangular" shapeHeight="50.0" shapeWidth="50.0"/>
+</visualBinaryTree>
+<message content="A new binary string (in yellow) has been generated and can be elaborated.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="9">
+<element id="0" value=" 1  GenerateBinaries( A, b )"/>
+<element id="1" value=" 2    IF (b == 0) {"/>
+<element id="2" value=" 3      Elaborate( A );"/>
+<element id="3" value=" 4    } ELSE {"/>
+<element id="4" value=" 5      A[b-1] = 0;"/>
+<element id="5" value=" 6      GenerateBinaries( A, b-1 );"/>
+<element id="6" value=" 7      A[b-1] = 1;"/>
+<element id="7" value=" 8      GenerateBinaries( A, b-1 );"/>
+<element id="8" value=" 9    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShapeHeight="30.0" defaultShapeWidth="400.0" originX="20" originY="50">
+<visualMalleableElement id="2" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="35">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="7" type="StringInformation">
+<element id="0" value="X;X;X"/>
+<element id="1" value="X;X;0"/>
+<element id="3" value="X;0;0"/>
+<element id="7" value="0;0;0"/>
+<element id="8" value="1;0;0"/>
+<element id="4" value="X;1;0"/>
+<element id="9" value="0;1;0"/>
+<element id="10" value="1;1;0"/>
+<element id="2" value="X;X;1"/>
+<element id="5" value="X;0;1"/>
+<element id="11" value="0;0;1"/>
+<element id="12" value="1;0;1"/>
+<element id="6" value="X;1;1"/>
+<element id="13" value="0;1;1"/>
+<element id="14" value="1;1;1"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShape="Rectangular" defaultShapeHeight="50.0" defaultShapeWidth="50.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="900" originY="200">
+</visualBinaryTree>
+<message content="The algorithm recursively continues after having set to 1 the rightmost X symbol.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="9">
+<element id="0" value=" 1  GenerateBinaries( A, b )"/>
+<element id="1" value=" 2    IF (b == 0) {"/>
+<element id="2" value=" 3      Elaborate( A );"/>
+<element id="3" value=" 4    } ELSE {"/>
+<element id="4" value=" 5      A[b-1] = 0;"/>
+<element id="5" value=" 6      GenerateBinaries( A, b-1 );"/>
+<element id="6" value=" 7      A[b-1] = 1;"/>
+<element id="7" value=" 8      GenerateBinaries( A, b-1 );"/>
+<element id="8" value=" 9    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShapeHeight="30.0" defaultShapeWidth="400.0" originX="20" originY="50">
+<visualMalleableElement id="6" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+<visualMalleableElement id="7" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="36">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="7" type="StringInformation">
+<element id="0" value="X;X;X"/>
+<element id="1" value="X;X;0"/>
+<element id="3" value="X;0;0"/>
+<element id="7" value="0;0;0"/>
+<element id="8" value="1;0;0"/>
+<element id="4" value="X;1;0"/>
+<element id="9" value="0;1;0"/>
+<element id="10" value="1;1;0"/>
+<element id="2" value="X;X;1"/>
+<element id="5" value="X;0;1"/>
+<element id="11" value="0;0;1"/>
+<element id="12" value="1;0;1"/>
+<element id="6" value="X;1;1"/>
+<element id="13" value="0;1;1"/>
+<element id="14" value="1;1;1"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShape="Rectangular" defaultShapeHeight="50.0" defaultShapeWidth="50.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="900" originY="200">
+<visualLinkedElement id="14" color="FFFF00" font="Monospaced-PLAIN-20" shape="Rectangular" shapeHeight="50.0" shapeWidth="50.0"/>
+</visualBinaryTree>
+<message content="The execution continues by invoking the recursive function with the number of currently undetermined bits equal to the number of Xs.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="9">
+<element id="0" value=" 1  GenerateBinaries( A, b )"/>
+<element id="1" value=" 2    IF (b == 0) {"/>
+<element id="2" value=" 3      Elaborate( A );"/>
+<element id="3" value=" 4    } ELSE {"/>
+<element id="4" value=" 5      A[b-1] = 0;"/>
+<element id="5" value=" 6      GenerateBinaries( A, b-1 );"/>
+<element id="6" value=" 7      A[b-1] = 1;"/>
+<element id="7" value=" 8      GenerateBinaries( A, b-1 );"/>
+<element id="8" value=" 9    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShapeHeight="30.0" defaultShapeWidth="400.0" originX="20" originY="50">
+<visualMalleableElement id="0" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="37">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="7" type="StringInformation">
+<element id="0" value="X;X;X"/>
+<element id="1" value="X;X;0"/>
+<element id="3" value="X;0;0"/>
+<element id="7" value="0;0;0"/>
+<element id="8" value="1;0;0"/>
+<element id="4" value="X;1;0"/>
+<element id="9" value="0;1;0"/>
+<element id="10" value="1;1;0"/>
+<element id="2" value="X;X;1"/>
+<element id="5" value="X;0;1"/>
+<element id="11" value="0;0;1"/>
+<element id="12" value="1;0;1"/>
+<element id="6" value="X;1;1"/>
+<element id="13" value="0;1;1"/>
+<element id="14" value="1;1;1"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShape="Rectangular" defaultShapeHeight="50.0" defaultShapeWidth="50.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="900" originY="200">
+<visualLinkedElement id="14" color="FFFF00" font="Monospaced-PLAIN-20" shape="Rectangular" shapeHeight="50.0" shapeWidth="50.0"/>
+</visualBinaryTree>
+<message content="A new binary string (in yellow) has been generated and can be elaborated.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="9">
+<element id="0" value=" 1  GenerateBinaries( A, b )"/>
+<element id="1" value=" 2    IF (b == 0) {"/>
+<element id="2" value=" 3      Elaborate( A );"/>
+<element id="3" value=" 4    } ELSE {"/>
+<element id="4" value=" 5      A[b-1] = 0;"/>
+<element id="5" value=" 6      GenerateBinaries( A, b-1 );"/>
+<element id="6" value=" 7      A[b-1] = 1;"/>
+<element id="7" value=" 8      GenerateBinaries( A, b-1 );"/>
+<element id="8" value=" 9    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShapeHeight="30.0" defaultShapeWidth="400.0" originX="20" originY="50">
+<visualMalleableElement id="2" color="CCCCCC" font="Monospaced-PLAIN-20" shapeHeight="30" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="38">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="7" type="StringInformation">
+<element id="0" value="X;X;X"/>
+<element id="1" value="X;X;0"/>
+<element id="3" value="X;0;0"/>
+<element id="7" value="0;0;0"/>
+<element id="8" value="1;0;0"/>
+<element id="4" value="X;1;0"/>
+<element id="9" value="0;1;0"/>
+<element id="10" value="1;1;0"/>
+<element id="2" value="X;X;1"/>
+<element id="5" value="X;0;1"/>
+<element id="11" value="0;0;1"/>
+<element id="12" value="1;0;1"/>
+<element id="6" value="X;1;1"/>
+<element id="13" value="0;1;1"/>
+<element id="14" value="1;1;1"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-20" defaultShape="Rectangular" defaultShapeHeight="50.0" defaultShapeWidth="50.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="900" originY="200">
+</visualBinaryTree>
+<message content="All binary strings have been generated and elaborated.">
+</message>
+</structure>
+</step>
+</algorithm>
