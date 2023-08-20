@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure name="Selection Sort" type="Pseudocode">
+	<pseudocode size="13">
+		<element id="0" value=" 1  SelectionSort( a )" />
+		<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {" />
+		<element id="2" value=" 3      minimum = a[i];" />
+		<element id="3" value=" 4      minIndex = i;" />
+		<element id="4" value=" 5      FOR (j = i+1; j &#60; n; j = j + 1) {" />
+		<element id="5" value=" 6        IF (a[j] &#60; minimum) {" />
+		<element id="6" value=" 7          minimum = a[j];" />
+		<element id="7" value=" 8          minIndex = j;" />
+		<element id="8" value=" 9        }" />
+		<element id="9" value="10      }" />
+		<element id="10" value="11      a[minIndex] = a[i];" />
+		<element id="11" value="12      a[i] = minimum;" />
+		<element id="12" value="13    }" />
+	</pseudocode>
+</structure>

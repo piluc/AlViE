@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure name="Segment Sum" type="Pseudocode">
+	<pseudocode size="12">
+		<element id="0" value=" 1  MaxSum3( a )" />
+		<element id="1" value=" 2    max = 0;" />
+		<element id="2" value=" 3    sum = max;" />
+		<element id="3" value=" 4    FOR (j = 0; j &#60; n; j = j + 1) {" />
+		<element id="4" value=" 5      IF (sum > 0) {" />
+		<element id="5" value=" 6        sum = sum + a[j];" />
+		<element id="6" value=" 7      } ELSE {" />
+		<element id="7" value=" 8        sum = a[j];" />
+		<element id="8" value=" 9      }" />
+		<element id="9" value="10      IF (sum > max) max = sum;" />
+		<element id="10" value="11    }" />
+		<element id="11" value="12    RETURN max;" />
+	</pseudocode>
+</structure>

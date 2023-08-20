@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure name="Array" type="Array">
+	<array size="12" type="IntInformation">
+		<element id="0" value="31" />
+		<element id="1" value="-41" />
+		<element id="2" value="59" />
+		<element id="3" value="26" />
+		<element id="4" value="-53" />
+		<element id="5" value="58" />
+		<element id="6" value="97" />
+		<element id="7" value="-93" />
+		<element id="8" value="-95" />
+		<element id="9" value="14" />
+		<element id="10" value="-10" />
+		<element id="11" value="20" />
+	</array>
+</structure>

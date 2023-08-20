@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure name="Number of keys, minimum key, maximum key, and key to be searched" type="Array">
+	<array size="4" type="IntInformation">
+		<element id="0" value="7" />
+		<element id="1" value="1" />
+		<element id="2" value="7" />
+		<element id="3" value="5" />
+	</array>
+</structure>

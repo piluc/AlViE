@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure name="Topological Sort" type="Pseudocode">
+	<pseudocode size="15">
+		<element id="0" value=" 1  TopologicalSort( )" />
+		<element id="1" value=" 2    FOR (s = 0; s &#60; n; s = s + 1)" />
+		<element id="2" value=" 3      reached[s] = FALSE;" />
+		<element id="3" value=" 4    counter = n - 1;" />
+		<element id="4" value=" 5    FOR (s = 0; s &#60; n; s = s + 1)" />
+		<element id="5" value=" 6      IF (!reached[s]) RecursiveDepthFirstSearchSort( s );" />
+		<element id="6" value=" 7    }" />
+		<element id="7" value=" 1  RecursiveDepthFirstSearchSort( u ):" />
+		<element id="8" value=" 2    reached[u] = TRUE;" />
+		<element id="9" value=" 3    FOR (x = adjacencyList[u].begin; x != null; x = x.succ) {" />
+		<element id="10" value=" 4      v = x.data;" />
+		<element id="11" value=" 5      IF (!reached[v]) RecursiveDepthFirstSearchSort( v );" />
+		<element id="12" value=" 6    }" />
+		<element id="13" value=" 7    eta[u] = counter;" />
+		<element id="14" value=" 8    counter = counter - 1;" />
+	</pseudocode>
+</structure>

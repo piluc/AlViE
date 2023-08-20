@@ -1,0 +1,1734 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm name="Selection sort">
+<step number="0">
+<structure name="a" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="5"/>
+<element id="1" value="3"/>
+<element id="2" value="6"/>
+<element id="3" value="2"/>
+<element id="4" value="7"/>
+<element id="5" value="1"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="Initial array that we want to sort by means of the selection sort algorithm.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="13">
+<element id="0" value=" 1  SelectionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      minimum = a[i];"/>
+<element id="3" value=" 4      minIndex = i;"/>
+<element id="4" value=" 5      FOR (j = i+1; j &#60; n; j = j + 1) {"/>
+<element id="5" value=" 6        IF (a[j] &#60; minimum) {"/>
+<element id="6" value=" 7          minimum = a[j];"/>
+<element id="7" value=" 8          minIndex = j;"/>
+<element id="8" value=" 9        }"/>
+<element id="9" value="10      }"/>
+<element id="10" value="11      a[minIndex] = a[i];"/>
+<element id="11" value="12      a[i] = minimum;"/>
+<element id="12" value="13    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="1">
+<structure name="a" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="5"/>
+<element id="1" value="3"/>
+<element id="2" value="6"/>
+<element id="3" value="2"/>
+<element id="4" value="7"/>
+<element id="5" value="1"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The green elements (if any) are sorted. The red element is the current minimum among the other ones.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="13">
+<element id="0" value=" 1  SelectionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      minimum = a[i];"/>
+<element id="3" value=" 4      minIndex = i;"/>
+<element id="4" value=" 5      FOR (j = i+1; j &#60; n; j = j + 1) {"/>
+<element id="5" value=" 6        IF (a[j] &#60; minimum) {"/>
+<element id="6" value=" 7          minimum = a[j];"/>
+<element id="7" value=" 8          minIndex = j;"/>
+<element id="8" value=" 9        }"/>
+<element id="9" value="10      }"/>
+<element id="10" value="11      a[minIndex] = a[i];"/>
+<element id="11" value="12      a[i] = minimum;"/>
+<element id="12" value="13    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="2" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="3" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="2">
+<structure name="a" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="5"/>
+<element id="1" value="3"/>
+<element id="2" value="6"/>
+<element id="3" value="2"/>
+<element id="4" value="7"/>
+<element id="5" value="1"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The green elements (if any) are sorted. The red element is the current minimum among the other ones.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="13">
+<element id="0" value=" 1  SelectionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      minimum = a[i];"/>
+<element id="3" value=" 4      minIndex = i;"/>
+<element id="4" value=" 5      FOR (j = i+1; j &#60; n; j = j + 1) {"/>
+<element id="5" value=" 6        IF (a[j] &#60; minimum) {"/>
+<element id="6" value=" 7          minimum = a[j];"/>
+<element id="7" value=" 8          minIndex = j;"/>
+<element id="8" value=" 9        }"/>
+<element id="9" value="10      }"/>
+<element id="10" value="11      a[minIndex] = a[i];"/>
+<element id="11" value="12      a[i] = minimum;"/>
+<element id="12" value="13    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="6" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="7" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="3">
+<structure name="a" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="5"/>
+<element id="1" value="3"/>
+<element id="2" value="6"/>
+<element id="3" value="2"/>
+<element id="4" value="7"/>
+<element id="5" value="1"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The green elements (if any) are sorted. The red element is the current minimum among the other ones.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="13">
+<element id="0" value=" 1  SelectionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      minimum = a[i];"/>
+<element id="3" value=" 4      minIndex = i;"/>
+<element id="4" value=" 5      FOR (j = i+1; j &#60; n; j = j + 1) {"/>
+<element id="5" value=" 6        IF (a[j] &#60; minimum) {"/>
+<element id="6" value=" 7          minimum = a[j];"/>
+<element id="7" value=" 8          minIndex = j;"/>
+<element id="8" value=" 9        }"/>
+<element id="9" value="10      }"/>
+<element id="10" value="11      a[minIndex] = a[i];"/>
+<element id="11" value="12      a[i] = minimum;"/>
+<element id="12" value="13    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="6" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="7" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="4">
+<structure name="a" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="5"/>
+<element id="1" value="3"/>
+<element id="2" value="6"/>
+<element id="3" value="2"/>
+<element id="4" value="7"/>
+<element id="5" value="1"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The green elements (if any) are sorted. The red element is the current minimum among the other ones.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="13">
+<element id="0" value=" 1  SelectionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      minimum = a[i];"/>
+<element id="3" value=" 4      minIndex = i;"/>
+<element id="4" value=" 5      FOR (j = i+1; j &#60; n; j = j + 1) {"/>
+<element id="5" value=" 6        IF (a[j] &#60; minimum) {"/>
+<element id="6" value=" 7          minimum = a[j];"/>
+<element id="7" value=" 8          minIndex = j;"/>
+<element id="8" value=" 9        }"/>
+<element id="9" value="10      }"/>
+<element id="10" value="11      a[minIndex] = a[i];"/>
+<element id="11" value="12      a[i] = minimum;"/>
+<element id="12" value="13    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="6" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="7" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="5">
+<structure name="a" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="5"/>
+<element id="1" value="3"/>
+<element id="2" value="6"/>
+<element id="3" value="2"/>
+<element id="4" value="7"/>
+<element id="5" value="1"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The new minimum has been selected and the red element must be positioned immediately after the green ones (if any).">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="13">
+<element id="0" value=" 1  SelectionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      minimum = a[i];"/>
+<element id="3" value=" 4      minIndex = i;"/>
+<element id="4" value=" 5      FOR (j = i+1; j &#60; n; j = j + 1) {"/>
+<element id="5" value=" 6        IF (a[j] &#60; minimum) {"/>
+<element id="6" value=" 7          minimum = a[j];"/>
+<element id="7" value=" 8          minIndex = j;"/>
+<element id="8" value=" 9        }"/>
+<element id="9" value="10      }"/>
+<element id="10" value="11      a[minIndex] = a[i];"/>
+<element id="11" value="12      a[i] = minimum;"/>
+<element id="12" value="13    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="10" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="11" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="6">
+<structure name="a" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="1"/>
+<element id="1" value="3"/>
+<element id="2" value="6"/>
+<element id="3" value="2"/>
+<element id="4" value="7"/>
+<element id="5" value="5"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The green elements are sorted.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="13">
+<element id="0" value=" 1  SelectionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      minimum = a[i];"/>
+<element id="3" value=" 4      minIndex = i;"/>
+<element id="4" value=" 5      FOR (j = i+1; j &#60; n; j = j + 1) {"/>
+<element id="5" value=" 6        IF (a[j] &#60; minimum) {"/>
+<element id="6" value=" 7          minimum = a[j];"/>
+<element id="7" value=" 8          minIndex = j;"/>
+<element id="8" value=" 9        }"/>
+<element id="9" value="10      }"/>
+<element id="10" value="11      a[minIndex] = a[i];"/>
+<element id="11" value="12      a[i] = minimum;"/>
+<element id="12" value="13    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="1" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="12" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="7">
+<structure name="a" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="1"/>
+<element id="1" value="3"/>
+<element id="2" value="6"/>
+<element id="3" value="2"/>
+<element id="4" value="7"/>
+<element id="5" value="5"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The green elements (if any) are sorted. The red element is the current minimum among the other ones.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="13">
+<element id="0" value=" 1  SelectionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      minimum = a[i];"/>
+<element id="3" value=" 4      minIndex = i;"/>
+<element id="4" value=" 5      FOR (j = i+1; j &#60; n; j = j + 1) {"/>
+<element id="5" value=" 6        IF (a[j] &#60; minimum) {"/>
+<element id="6" value=" 7          minimum = a[j];"/>
+<element id="7" value=" 8          minIndex = j;"/>
+<element id="8" value=" 9        }"/>
+<element id="9" value="10      }"/>
+<element id="10" value="11      a[minIndex] = a[i];"/>
+<element id="11" value="12      a[i] = minimum;"/>
+<element id="12" value="13    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="2" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="3" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="8">
+<structure name="a" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="1"/>
+<element id="1" value="3"/>
+<element id="2" value="6"/>
+<element id="3" value="2"/>
+<element id="4" value="7"/>
+<element id="5" value="5"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The green elements (if any) are sorted. The red element is the current minimum among the other ones.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="13">
+<element id="0" value=" 1  SelectionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      minimum = a[i];"/>
+<element id="3" value=" 4      minIndex = i;"/>
+<element id="4" value=" 5      FOR (j = i+1; j &#60; n; j = j + 1) {"/>
+<element id="5" value=" 6        IF (a[j] &#60; minimum) {"/>
+<element id="6" value=" 7          minimum = a[j];"/>
+<element id="7" value=" 8          minIndex = j;"/>
+<element id="8" value=" 9        }"/>
+<element id="9" value="10      }"/>
+<element id="10" value="11      a[minIndex] = a[i];"/>
+<element id="11" value="12      a[i] = minimum;"/>
+<element id="12" value="13    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="6" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="7" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="9">
+<structure name="a" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="1"/>
+<element id="1" value="3"/>
+<element id="2" value="6"/>
+<element id="3" value="2"/>
+<element id="4" value="7"/>
+<element id="5" value="5"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The new minimum has been selected and the red element must be positioned immediately after the green ones (if any).">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="13">
+<element id="0" value=" 1  SelectionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      minimum = a[i];"/>
+<element id="3" value=" 4      minIndex = i;"/>
+<element id="4" value=" 5      FOR (j = i+1; j &#60; n; j = j + 1) {"/>
+<element id="5" value=" 6        IF (a[j] &#60; minimum) {"/>
+<element id="6" value=" 7          minimum = a[j];"/>
+<element id="7" value=" 8          minIndex = j;"/>
+<element id="8" value=" 9        }"/>
+<element id="9" value="10      }"/>
+<element id="10" value="11      a[minIndex] = a[i];"/>
+<element id="11" value="12      a[i] = minimum;"/>
+<element id="12" value="13    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="10" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="11" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="10">
+<structure name="a" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="1"/>
+<element id="1" value="2"/>
+<element id="2" value="6"/>
+<element id="3" value="3"/>
+<element id="4" value="7"/>
+<element id="5" value="5"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The green elements are sorted.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="13">
+<element id="0" value=" 1  SelectionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      minimum = a[i];"/>
+<element id="3" value=" 4      minIndex = i;"/>
+<element id="4" value=" 5      FOR (j = i+1; j &#60; n; j = j + 1) {"/>
+<element id="5" value=" 6        IF (a[j] &#60; minimum) {"/>
+<element id="6" value=" 7          minimum = a[j];"/>
+<element id="7" value=" 8          minIndex = j;"/>
+<element id="8" value=" 9        }"/>
+<element id="9" value="10      }"/>
+<element id="10" value="11      a[minIndex] = a[i];"/>
+<element id="11" value="12      a[i] = minimum;"/>
+<element id="12" value="13    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="1" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="12" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="11">
+<structure name="a" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="1"/>
+<element id="1" value="2"/>
+<element id="2" value="6"/>
+<element id="3" value="3"/>
+<element id="4" value="7"/>
+<element id="5" value="5"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The green elements (if any) are sorted. The red element is the current minimum among the other ones.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="13">
+<element id="0" value=" 1  SelectionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      minimum = a[i];"/>
+<element id="3" value=" 4      minIndex = i;"/>
+<element id="4" value=" 5      FOR (j = i+1; j &#60; n; j = j + 1) {"/>
+<element id="5" value=" 6        IF (a[j] &#60; minimum) {"/>
+<element id="6" value=" 7          minimum = a[j];"/>
+<element id="7" value=" 8          minIndex = j;"/>
+<element id="8" value=" 9        }"/>
+<element id="9" value="10      }"/>
+<element id="10" value="11      a[minIndex] = a[i];"/>
+<element id="11" value="12      a[i] = minimum;"/>
+<element id="12" value="13    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="2" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="3" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="12">
+<structure name="a" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="1"/>
+<element id="1" value="2"/>
+<element id="2" value="6"/>
+<element id="3" value="3"/>
+<element id="4" value="7"/>
+<element id="5" value="5"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The green elements (if any) are sorted. The red element is the current minimum among the other ones.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="13">
+<element id="0" value=" 1  SelectionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      minimum = a[i];"/>
+<element id="3" value=" 4      minIndex = i;"/>
+<element id="4" value=" 5      FOR (j = i+1; j &#60; n; j = j + 1) {"/>
+<element id="5" value=" 6        IF (a[j] &#60; minimum) {"/>
+<element id="6" value=" 7          minimum = a[j];"/>
+<element id="7" value=" 8          minIndex = j;"/>
+<element id="8" value=" 9        }"/>
+<element id="9" value="10      }"/>
+<element id="10" value="11      a[minIndex] = a[i];"/>
+<element id="11" value="12      a[i] = minimum;"/>
+<element id="12" value="13    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="6" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="7" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="13">
+<structure name="a" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="1"/>
+<element id="1" value="2"/>
+<element id="2" value="6"/>
+<element id="3" value="3"/>
+<element id="4" value="7"/>
+<element id="5" value="5"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The new minimum has been selected and the red element must be positioned immediately after the green ones (if any).">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="13">
+<element id="0" value=" 1  SelectionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      minimum = a[i];"/>
+<element id="3" value=" 4      minIndex = i;"/>
+<element id="4" value=" 5      FOR (j = i+1; j &#60; n; j = j + 1) {"/>
+<element id="5" value=" 6        IF (a[j] &#60; minimum) {"/>
+<element id="6" value=" 7          minimum = a[j];"/>
+<element id="7" value=" 8          minIndex = j;"/>
+<element id="8" value=" 9        }"/>
+<element id="9" value="10      }"/>
+<element id="10" value="11      a[minIndex] = a[i];"/>
+<element id="11" value="12      a[i] = minimum;"/>
+<element id="12" value="13    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="10" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="11" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="14">
+<structure name="a" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="1"/>
+<element id="1" value="2"/>
+<element id="2" value="3"/>
+<element id="3" value="6"/>
+<element id="4" value="7"/>
+<element id="5" value="5"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The green elements are sorted.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="13">
+<element id="0" value=" 1  SelectionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      minimum = a[i];"/>
+<element id="3" value=" 4      minIndex = i;"/>
+<element id="4" value=" 5      FOR (j = i+1; j &#60; n; j = j + 1) {"/>
+<element id="5" value=" 6        IF (a[j] &#60; minimum) {"/>
+<element id="6" value=" 7          minimum = a[j];"/>
+<element id="7" value=" 8          minIndex = j;"/>
+<element id="8" value=" 9        }"/>
+<element id="9" value="10      }"/>
+<element id="10" value="11      a[minIndex] = a[i];"/>
+<element id="11" value="12      a[i] = minimum;"/>
+<element id="12" value="13    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="1" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="12" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="15">
+<structure name="a" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="1"/>
+<element id="1" value="2"/>
+<element id="2" value="3"/>
+<element id="3" value="6"/>
+<element id="4" value="7"/>
+<element id="5" value="5"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The green elements (if any) are sorted. The red element is the current minimum among the other ones.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="13">
+<element id="0" value=" 1  SelectionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      minimum = a[i];"/>
+<element id="3" value=" 4      minIndex = i;"/>
+<element id="4" value=" 5      FOR (j = i+1; j &#60; n; j = j + 1) {"/>
+<element id="5" value=" 6        IF (a[j] &#60; minimum) {"/>
+<element id="6" value=" 7          minimum = a[j];"/>
+<element id="7" value=" 8          minIndex = j;"/>
+<element id="8" value=" 9        }"/>
+<element id="9" value="10      }"/>
+<element id="10" value="11      a[minIndex] = a[i];"/>
+<element id="11" value="12      a[i] = minimum;"/>
+<element id="12" value="13    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="2" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="3" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="16">
+<structure name="a" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="1"/>
+<element id="1" value="2"/>
+<element id="2" value="3"/>
+<element id="3" value="6"/>
+<element id="4" value="7"/>
+<element id="5" value="5"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The green elements (if any) are sorted. The red element is the current minimum among the other ones.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="13">
+<element id="0" value=" 1  SelectionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      minimum = a[i];"/>
+<element id="3" value=" 4      minIndex = i;"/>
+<element id="4" value=" 5      FOR (j = i+1; j &#60; n; j = j + 1) {"/>
+<element id="5" value=" 6        IF (a[j] &#60; minimum) {"/>
+<element id="6" value=" 7          minimum = a[j];"/>
+<element id="7" value=" 8          minIndex = j;"/>
+<element id="8" value=" 9        }"/>
+<element id="9" value="10      }"/>
+<element id="10" value="11      a[minIndex] = a[i];"/>
+<element id="11" value="12      a[i] = minimum;"/>
+<element id="12" value="13    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="6" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="7" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="17">
+<structure name="a" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="1"/>
+<element id="1" value="2"/>
+<element id="2" value="3"/>
+<element id="3" value="6"/>
+<element id="4" value="7"/>
+<element id="5" value="5"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The green elements (if any) are sorted. The red element is the current minimum among the other ones.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="13">
+<element id="0" value=" 1  SelectionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      minimum = a[i];"/>
+<element id="3" value=" 4      minIndex = i;"/>
+<element id="4" value=" 5      FOR (j = i+1; j &#60; n; j = j + 1) {"/>
+<element id="5" value=" 6        IF (a[j] &#60; minimum) {"/>
+<element id="6" value=" 7          minimum = a[j];"/>
+<element id="7" value=" 8          minIndex = j;"/>
+<element id="8" value=" 9        }"/>
+<element id="9" value="10      }"/>
+<element id="10" value="11      a[minIndex] = a[i];"/>
+<element id="11" value="12      a[i] = minimum;"/>
+<element id="12" value="13    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="6" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="7" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="18">
+<structure name="a" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="1"/>
+<element id="1" value="2"/>
+<element id="2" value="3"/>
+<element id="3" value="6"/>
+<element id="4" value="7"/>
+<element id="5" value="5"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The new minimum has been selected and the red element must be positioned immediately after the green ones (if any).">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="13">
+<element id="0" value=" 1  SelectionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      minimum = a[i];"/>
+<element id="3" value=" 4      minIndex = i;"/>
+<element id="4" value=" 5      FOR (j = i+1; j &#60; n; j = j + 1) {"/>
+<element id="5" value=" 6        IF (a[j] &#60; minimum) {"/>
+<element id="6" value=" 7          minimum = a[j];"/>
+<element id="7" value=" 8          minIndex = j;"/>
+<element id="8" value=" 9        }"/>
+<element id="9" value="10      }"/>
+<element id="10" value="11      a[minIndex] = a[i];"/>
+<element id="11" value="12      a[i] = minimum;"/>
+<element id="12" value="13    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="10" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="11" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="19">
+<structure name="a" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="1"/>
+<element id="1" value="2"/>
+<element id="2" value="3"/>
+<element id="3" value="4"/>
+<element id="4" value="7"/>
+<element id="5" value="5"/>
+<element id="6" value="8"/>
+<element id="7" value="6"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The green elements are sorted.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="13">
+<element id="0" value=" 1  SelectionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      minimum = a[i];"/>
+<element id="3" value=" 4      minIndex = i;"/>
+<element id="4" value=" 5      FOR (j = i+1; j &#60; n; j = j + 1) {"/>
+<element id="5" value=" 6        IF (a[j] &#60; minimum) {"/>
+<element id="6" value=" 7          minimum = a[j];"/>
+<element id="7" value=" 8          minIndex = j;"/>
+<element id="8" value=" 9        }"/>
+<element id="9" value="10      }"/>
+<element id="10" value="11      a[minIndex] = a[i];"/>
+<element id="11" value="12      a[i] = minimum;"/>
+<element id="12" value="13    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="1" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="12" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="20">
+<structure name="a" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="1"/>
+<element id="1" value="2"/>
+<element id="2" value="3"/>
+<element id="3" value="4"/>
+<element id="4" value="7"/>
+<element id="5" value="5"/>
+<element id="6" value="8"/>
+<element id="7" value="6"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The green elements (if any) are sorted. The red element is the current minimum among the other ones.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="13">
+<element id="0" value=" 1  SelectionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      minimum = a[i];"/>
+<element id="3" value=" 4      minIndex = i;"/>
+<element id="4" value=" 5      FOR (j = i+1; j &#60; n; j = j + 1) {"/>
+<element id="5" value=" 6        IF (a[j] &#60; minimum) {"/>
+<element id="6" value=" 7          minimum = a[j];"/>
+<element id="7" value=" 8          minIndex = j;"/>
+<element id="8" value=" 9        }"/>
+<element id="9" value="10      }"/>
+<element id="10" value="11      a[minIndex] = a[i];"/>
+<element id="11" value="12      a[i] = minimum;"/>
+<element id="12" value="13    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="2" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="3" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="21">
+<structure name="a" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="1"/>
+<element id="1" value="2"/>
+<element id="2" value="3"/>
+<element id="3" value="4"/>
+<element id="4" value="7"/>
+<element id="5" value="5"/>
+<element id="6" value="8"/>
+<element id="7" value="6"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The green elements (if any) are sorted. The red element is the current minimum among the other ones.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="13">
+<element id="0" value=" 1  SelectionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      minimum = a[i];"/>
+<element id="3" value=" 4      minIndex = i;"/>
+<element id="4" value=" 5      FOR (j = i+1; j &#60; n; j = j + 1) {"/>
+<element id="5" value=" 6        IF (a[j] &#60; minimum) {"/>
+<element id="6" value=" 7          minimum = a[j];"/>
+<element id="7" value=" 8          minIndex = j;"/>
+<element id="8" value=" 9        }"/>
+<element id="9" value="10      }"/>
+<element id="10" value="11      a[minIndex] = a[i];"/>
+<element id="11" value="12      a[i] = minimum;"/>
+<element id="12" value="13    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="6" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="7" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="22">
+<structure name="a" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="1"/>
+<element id="1" value="2"/>
+<element id="2" value="3"/>
+<element id="3" value="4"/>
+<element id="4" value="7"/>
+<element id="5" value="5"/>
+<element id="6" value="8"/>
+<element id="7" value="6"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The new minimum has been selected and the red element must be positioned immediately after the green ones (if any).">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="13">
+<element id="0" value=" 1  SelectionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      minimum = a[i];"/>
+<element id="3" value=" 4      minIndex = i;"/>
+<element id="4" value=" 5      FOR (j = i+1; j &#60; n; j = j + 1) {"/>
+<element id="5" value=" 6        IF (a[j] &#60; minimum) {"/>
+<element id="6" value=" 7          minimum = a[j];"/>
+<element id="7" value=" 8          minIndex = j;"/>
+<element id="8" value=" 9        }"/>
+<element id="9" value="10      }"/>
+<element id="10" value="11      a[minIndex] = a[i];"/>
+<element id="11" value="12      a[i] = minimum;"/>
+<element id="12" value="13    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="10" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="11" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="23">
+<structure name="a" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="1"/>
+<element id="1" value="2"/>
+<element id="2" value="3"/>
+<element id="3" value="4"/>
+<element id="4" value="5"/>
+<element id="5" value="7"/>
+<element id="6" value="8"/>
+<element id="7" value="6"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The green elements are sorted.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="13">
+<element id="0" value=" 1  SelectionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      minimum = a[i];"/>
+<element id="3" value=" 4      minIndex = i;"/>
+<element id="4" value=" 5      FOR (j = i+1; j &#60; n; j = j + 1) {"/>
+<element id="5" value=" 6        IF (a[j] &#60; minimum) {"/>
+<element id="6" value=" 7          minimum = a[j];"/>
+<element id="7" value=" 8          minIndex = j;"/>
+<element id="8" value=" 9        }"/>
+<element id="9" value="10      }"/>
+<element id="10" value="11      a[minIndex] = a[i];"/>
+<element id="11" value="12      a[i] = minimum;"/>
+<element id="12" value="13    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="1" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="12" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="24">
+<structure name="a" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="1"/>
+<element id="1" value="2"/>
+<element id="2" value="3"/>
+<element id="3" value="4"/>
+<element id="4" value="5"/>
+<element id="5" value="7"/>
+<element id="6" value="8"/>
+<element id="7" value="6"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The green elements (if any) are sorted. The red element is the current minimum among the other ones.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="13">
+<element id="0" value=" 1  SelectionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      minimum = a[i];"/>
+<element id="3" value=" 4      minIndex = i;"/>
+<element id="4" value=" 5      FOR (j = i+1; j &#60; n; j = j + 1) {"/>
+<element id="5" value=" 6        IF (a[j] &#60; minimum) {"/>
+<element id="6" value=" 7          minimum = a[j];"/>
+<element id="7" value=" 8          minIndex = j;"/>
+<element id="8" value=" 9        }"/>
+<element id="9" value="10      }"/>
+<element id="10" value="11      a[minIndex] = a[i];"/>
+<element id="11" value="12      a[i] = minimum;"/>
+<element id="12" value="13    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="2" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="3" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="25">
+<structure name="a" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="1"/>
+<element id="1" value="2"/>
+<element id="2" value="3"/>
+<element id="3" value="4"/>
+<element id="4" value="5"/>
+<element id="5" value="7"/>
+<element id="6" value="8"/>
+<element id="7" value="6"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The green elements (if any) are sorted. The red element is the current minimum among the other ones.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="13">
+<element id="0" value=" 1  SelectionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      minimum = a[i];"/>
+<element id="3" value=" 4      minIndex = i;"/>
+<element id="4" value=" 5      FOR (j = i+1; j &#60; n; j = j + 1) {"/>
+<element id="5" value=" 6        IF (a[j] &#60; minimum) {"/>
+<element id="6" value=" 7          minimum = a[j];"/>
+<element id="7" value=" 8          minIndex = j;"/>
+<element id="8" value=" 9        }"/>
+<element id="9" value="10      }"/>
+<element id="10" value="11      a[minIndex] = a[i];"/>
+<element id="11" value="12      a[i] = minimum;"/>
+<element id="12" value="13    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="6" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="7" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="26">
+<structure name="a" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="1"/>
+<element id="1" value="2"/>
+<element id="2" value="3"/>
+<element id="3" value="4"/>
+<element id="4" value="5"/>
+<element id="5" value="7"/>
+<element id="6" value="8"/>
+<element id="7" value="6"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The new minimum has been selected and the red element must be positioned immediately after the green ones (if any).">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="13">
+<element id="0" value=" 1  SelectionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      minimum = a[i];"/>
+<element id="3" value=" 4      minIndex = i;"/>
+<element id="4" value=" 5      FOR (j = i+1; j &#60; n; j = j + 1) {"/>
+<element id="5" value=" 6        IF (a[j] &#60; minimum) {"/>
+<element id="6" value=" 7          minimum = a[j];"/>
+<element id="7" value=" 8          minIndex = j;"/>
+<element id="8" value=" 9        }"/>
+<element id="9" value="10      }"/>
+<element id="10" value="11      a[minIndex] = a[i];"/>
+<element id="11" value="12      a[i] = minimum;"/>
+<element id="12" value="13    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="10" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="11" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="27">
+<structure name="a" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="1"/>
+<element id="1" value="2"/>
+<element id="2" value="3"/>
+<element id="3" value="4"/>
+<element id="4" value="5"/>
+<element id="5" value="6"/>
+<element id="6" value="8"/>
+<element id="7" value="7"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The green elements are sorted.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="13">
+<element id="0" value=" 1  SelectionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      minimum = a[i];"/>
+<element id="3" value=" 4      minIndex = i;"/>
+<element id="4" value=" 5      FOR (j = i+1; j &#60; n; j = j + 1) {"/>
+<element id="5" value=" 6        IF (a[j] &#60; minimum) {"/>
+<element id="6" value=" 7          minimum = a[j];"/>
+<element id="7" value=" 8          minIndex = j;"/>
+<element id="8" value=" 9        }"/>
+<element id="9" value="10      }"/>
+<element id="10" value="11      a[minIndex] = a[i];"/>
+<element id="11" value="12      a[i] = minimum;"/>
+<element id="12" value="13    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="1" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="12" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="28">
+<structure name="a" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="1"/>
+<element id="1" value="2"/>
+<element id="2" value="3"/>
+<element id="3" value="4"/>
+<element id="4" value="5"/>
+<element id="5" value="6"/>
+<element id="6" value="8"/>
+<element id="7" value="7"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The green elements (if any) are sorted. The red element is the current minimum among the other ones.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="13">
+<element id="0" value=" 1  SelectionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      minimum = a[i];"/>
+<element id="3" value=" 4      minIndex = i;"/>
+<element id="4" value=" 5      FOR (j = i+1; j &#60; n; j = j + 1) {"/>
+<element id="5" value=" 6        IF (a[j] &#60; minimum) {"/>
+<element id="6" value=" 7          minimum = a[j];"/>
+<element id="7" value=" 8          minIndex = j;"/>
+<element id="8" value=" 9        }"/>
+<element id="9" value="10      }"/>
+<element id="10" value="11      a[minIndex] = a[i];"/>
+<element id="11" value="12      a[i] = minimum;"/>
+<element id="12" value="13    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="2" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="3" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="29">
+<structure name="a" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="1"/>
+<element id="1" value="2"/>
+<element id="2" value="3"/>
+<element id="3" value="4"/>
+<element id="4" value="5"/>
+<element id="5" value="6"/>
+<element id="6" value="8"/>
+<element id="7" value="7"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The green elements (if any) are sorted. The red element is the current minimum among the other ones.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="13">
+<element id="0" value=" 1  SelectionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      minimum = a[i];"/>
+<element id="3" value=" 4      minIndex = i;"/>
+<element id="4" value=" 5      FOR (j = i+1; j &#60; n; j = j + 1) {"/>
+<element id="5" value=" 6        IF (a[j] &#60; minimum) {"/>
+<element id="6" value=" 7          minimum = a[j];"/>
+<element id="7" value=" 8          minIndex = j;"/>
+<element id="8" value=" 9        }"/>
+<element id="9" value="10      }"/>
+<element id="10" value="11      a[minIndex] = a[i];"/>
+<element id="11" value="12      a[i] = minimum;"/>
+<element id="12" value="13    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="6" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="7" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="30">
+<structure name="a" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="1"/>
+<element id="1" value="2"/>
+<element id="2" value="3"/>
+<element id="3" value="4"/>
+<element id="4" value="5"/>
+<element id="5" value="6"/>
+<element id="6" value="8"/>
+<element id="7" value="7"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The new minimum has been selected and the red element must be positioned immediately after the green ones (if any).">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="13">
+<element id="0" value=" 1  SelectionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      minimum = a[i];"/>
+<element id="3" value=" 4      minIndex = i;"/>
+<element id="4" value=" 5      FOR (j = i+1; j &#60; n; j = j + 1) {"/>
+<element id="5" value=" 6        IF (a[j] &#60; minimum) {"/>
+<element id="6" value=" 7          minimum = a[j];"/>
+<element id="7" value=" 8          minIndex = j;"/>
+<element id="8" value=" 9        }"/>
+<element id="9" value="10      }"/>
+<element id="10" value="11      a[minIndex] = a[i];"/>
+<element id="11" value="12      a[i] = minimum;"/>
+<element id="12" value="13    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="10" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="11" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="31">
+<structure name="a" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="1"/>
+<element id="1" value="2"/>
+<element id="2" value="3"/>
+<element id="3" value="4"/>
+<element id="4" value="5"/>
+<element id="5" value="6"/>
+<element id="6" value="7"/>
+<element id="7" value="8"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The green elements are sorted.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="13">
+<element id="0" value=" 1  SelectionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      minimum = a[i];"/>
+<element id="3" value=" 4      minIndex = i;"/>
+<element id="4" value=" 5      FOR (j = i+1; j &#60; n; j = j + 1) {"/>
+<element id="5" value=" 6        IF (a[j] &#60; minimum) {"/>
+<element id="6" value=" 7          minimum = a[j];"/>
+<element id="7" value=" 8          minIndex = j;"/>
+<element id="8" value=" 9        }"/>
+<element id="9" value="10      }"/>
+<element id="10" value="11      a[minIndex] = a[i];"/>
+<element id="11" value="12      a[i] = minimum;"/>
+<element id="12" value="13    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="1" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="12" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="32">
+<structure name="a" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="1"/>
+<element id="1" value="2"/>
+<element id="2" value="3"/>
+<element id="3" value="4"/>
+<element id="4" value="5"/>
+<element id="5" value="6"/>
+<element id="6" value="7"/>
+<element id="7" value="8"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The green elements (if any) are sorted. The red element is the current minimum among the other ones.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="13">
+<element id="0" value=" 1  SelectionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      minimum = a[i];"/>
+<element id="3" value=" 4      minIndex = i;"/>
+<element id="4" value=" 5      FOR (j = i+1; j &#60; n; j = j + 1) {"/>
+<element id="5" value=" 6        IF (a[j] &#60; minimum) {"/>
+<element id="6" value=" 7          minimum = a[j];"/>
+<element id="7" value=" 8          minIndex = j;"/>
+<element id="8" value=" 9        }"/>
+<element id="9" value="10      }"/>
+<element id="10" value="11      a[minIndex] = a[i];"/>
+<element id="11" value="12      a[i] = minimum;"/>
+<element id="12" value="13    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="2" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="3" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="33">
+<structure name="a" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="1"/>
+<element id="1" value="2"/>
+<element id="2" value="3"/>
+<element id="3" value="4"/>
+<element id="4" value="5"/>
+<element id="5" value="6"/>
+<element id="6" value="7"/>
+<element id="7" value="8"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The new minimum has been selected and the red element must be positioned immediately after the green ones (if any).">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="13">
+<element id="0" value=" 1  SelectionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      minimum = a[i];"/>
+<element id="3" value=" 4      minIndex = i;"/>
+<element id="4" value=" 5      FOR (j = i+1; j &#60; n; j = j + 1) {"/>
+<element id="5" value=" 6        IF (a[j] &#60; minimum) {"/>
+<element id="6" value=" 7          minimum = a[j];"/>
+<element id="7" value=" 8          minIndex = j;"/>
+<element id="8" value=" 9        }"/>
+<element id="9" value="10      }"/>
+<element id="10" value="11      a[minIndex] = a[i];"/>
+<element id="11" value="12      a[i] = minimum;"/>
+<element id="12" value="13    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="10" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="11" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="34">
+<structure name="a" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="1"/>
+<element id="1" value="2"/>
+<element id="2" value="3"/>
+<element id="3" value="4"/>
+<element id="4" value="5"/>
+<element id="5" value="6"/>
+<element id="6" value="7"/>
+<element id="7" value="8"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The green elements are sorted.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="13">
+<element id="0" value=" 1  SelectionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      minimum = a[i];"/>
+<element id="3" value=" 4      minIndex = i;"/>
+<element id="4" value=" 5      FOR (j = i+1; j &#60; n; j = j + 1) {"/>
+<element id="5" value=" 6        IF (a[j] &#60; minimum) {"/>
+<element id="6" value=" 7          minimum = a[j];"/>
+<element id="7" value=" 8          minIndex = j;"/>
+<element id="8" value=" 9        }"/>
+<element id="9" value="10      }"/>
+<element id="10" value="11      a[minIndex] = a[i];"/>
+<element id="11" value="12      a[i] = minimum;"/>
+<element id="12" value="13    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="1" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="12" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="35">
+<structure name="a" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="1"/>
+<element id="1" value="2"/>
+<element id="2" value="3"/>
+<element id="3" value="4"/>
+<element id="4" value="5"/>
+<element id="5" value="6"/>
+<element id="6" value="7"/>
+<element id="7" value="8"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+</visualArray>
+<message content="The array has been sorted.">
+</message>
+</structure>
+</step>
+</algorithm>

@@ -1,0 +1,1819 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm name="Skip lists">
+<step number="0">
+<structure name="Skip list" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="1" value="L0" x="10" y="10"/>
+<node id="2" value="L0" x="85" y="10"/>
+<arc id="0" idFirstNode="1" idSecondNode="2"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="30">
+</visualGraph>
+<message content="Initial skip list formed only by the guards. The levels will be painted from top to bottom.">
+</message>
+</structure>
+</step>
+<step number="1">
+<structure name="Skip list" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="1" value="L0" x="10" y="10"/>
+<node id="2" value="L0" x="85" y="10"/>
+<arc id="0" idFirstNode="1" idSecondNode="2"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="30">
+</visualGraph>
+<message content="The algorithm starts the insertion of the element 1.">
+</message>
+</structure>
+</step>
+<step number="2">
+<structure name="Skip list" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="1" value="L0" x="10" y="10"/>
+<node id="2" value="L0" x="85" y="10"/>
+<arc id="0" idFirstNode="1" idSecondNode="2"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="30">
+<visualNode id="1" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The red nodes are the predecessors of the element to be inserted, that is 1.">
+</message>
+</structure>
+</step>
+<step number="3">
+<structure name="Skip list" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="1" value="L0" x="10" y="10"/>
+<node id="2" value="L0" x="85" y="10"/>
+<arc id="0" idFirstNode="1" idSecondNode="2"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="30">
+<visualNode id="1" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="It has been stated to randomly insert 1 copy of the element 1.">
+</message>
+</structure>
+</step>
+<step number="4">
+<structure name="Skip list" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="1" value="L0" x="10" y="10"/>
+<node id="2" value="1" x="85" y="10"/>
+<node id="4" value="L0" x="160" y="10"/>
+<arc id="0" idFirstNode="1" idSecondNode="2"/>
+<arc id="1" idFirstNode="2" idSecondNode="4"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="30">
+<visualNode id="1" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFF00" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="It has been inserted a new copy of the element 1.">
+</message>
+</structure>
+</step>
+<step number="5">
+<structure name="Skip list" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="1" value="L0" x="10" y="10"/>
+<node id="2" value="1" x="85" y="10"/>
+<node id="4" value="L0" x="160" y="10"/>
+<arc id="0" idFirstNode="1" idSecondNode="2"/>
+<arc id="1" idFirstNode="2" idSecondNode="4"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="30">
+</visualGraph>
+<message content="The algorithm completed the insertion of the element 1.">
+</message>
+</structure>
+</step>
+<step number="6">
+<structure name="Skip list" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="1" value="L0" x="10" y="10"/>
+<node id="2" value="1" x="85" y="10"/>
+<node id="4" value="L0" x="160" y="10"/>
+<arc id="0" idFirstNode="1" idSecondNode="2"/>
+<arc id="1" idFirstNode="2" idSecondNode="4"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="30">
+</visualGraph>
+<message content="The algorithm starts the insertion of the element 4.">
+</message>
+</structure>
+</step>
+<step number="7">
+<structure name="Skip list" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="1" value="L0" x="10" y="10"/>
+<node id="2" value="1" x="85" y="10"/>
+<node id="4" value="L0" x="160" y="10"/>
+<arc id="0" idFirstNode="1" idSecondNode="2"/>
+<arc id="1" idFirstNode="2" idSecondNode="4"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="30">
+<visualNode id="1" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The red nodes are the predecessors of the element to be inserted, that is 4.">
+</message>
+</structure>
+</step>
+<step number="8">
+<structure name="Skip list" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="1" value="L0" x="10" y="10"/>
+<node id="2" value="1" x="85" y="10"/>
+<node id="4" value="L0" x="160" y="10"/>
+<arc id="0" idFirstNode="1" idSecondNode="2"/>
+<arc id="1" idFirstNode="2" idSecondNode="4"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="30">
+<visualNode id="1" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="It has been stated to randomly insert 1 copy of the element 4.">
+</message>
+</structure>
+</step>
+<step number="9">
+<structure name="Skip list" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="1" value="L0" x="10" y="10"/>
+<node id="2" value="1" x="85" y="10"/>
+<node id="4" value="4" x="160" y="10"/>
+<node id="7" value="L0" x="235" y="10"/>
+<arc id="0" idFirstNode="1" idSecondNode="2"/>
+<arc id="1" idFirstNode="2" idSecondNode="4"/>
+<arc id="2" idFirstNode="4" idSecondNode="7"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="30">
+<visualNode id="1" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFF00" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="7" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="It has been inserted a new copy of the element 4.">
+</message>
+</structure>
+</step>
+<step number="10">
+<structure name="Skip list" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="1" value="L0" x="10" y="10"/>
+<node id="2" value="1" x="85" y="10"/>
+<node id="4" value="4" x="160" y="10"/>
+<node id="7" value="L0" x="235" y="10"/>
+<arc id="0" idFirstNode="1" idSecondNode="2"/>
+<arc id="1" idFirstNode="2" idSecondNode="4"/>
+<arc id="2" idFirstNode="4" idSecondNode="7"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="30">
+</visualGraph>
+<message content="The algorithm completed the insertion of the element 4.">
+</message>
+</structure>
+</step>
+<step number="11">
+<structure name="Skip list" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="1" value="L0" x="10" y="10"/>
+<node id="2" value="1" x="85" y="10"/>
+<node id="4" value="4" x="160" y="10"/>
+<node id="7" value="L0" x="235" y="10"/>
+<arc id="0" idFirstNode="1" idSecondNode="2"/>
+<arc id="1" idFirstNode="2" idSecondNode="4"/>
+<arc id="2" idFirstNode="4" idSecondNode="7"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="30">
+</visualGraph>
+<message content="The algorithm starts the insertion of the element 3.">
+</message>
+</structure>
+</step>
+<step number="12">
+<structure name="Skip list" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="1" value="L0" x="10" y="10"/>
+<node id="2" value="1" x="85" y="10"/>
+<node id="4" value="4" x="160" y="10"/>
+<node id="7" value="L0" x="235" y="10"/>
+<arc id="0" idFirstNode="1" idSecondNode="2"/>
+<arc id="1" idFirstNode="2" idSecondNode="4"/>
+<arc id="2" idFirstNode="4" idSecondNode="7"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="30">
+<visualNode id="1" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="7" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The red nodes are the predecessors of the element to be inserted, that is 3.">
+</message>
+</structure>
+</step>
+<step number="13">
+<structure name="Skip list" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="1" value="L0" x="10" y="10"/>
+<node id="2" value="1" x="85" y="10"/>
+<node id="4" value="4" x="160" y="10"/>
+<node id="7" value="L0" x="235" y="10"/>
+<arc id="0" idFirstNode="1" idSecondNode="2"/>
+<arc id="1" idFirstNode="2" idSecondNode="4"/>
+<arc id="2" idFirstNode="4" idSecondNode="7"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="30">
+<visualNode id="1" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="7" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="It has been stated to randomly insert 2 copies of the element 3.">
+</message>
+</structure>
+</step>
+<step number="14">
+<structure name="Skip list" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="1" value="L0" x="10" y="10"/>
+<node id="2" value="1" x="85" y="10"/>
+<node id="4" value="3" x="160" y="10"/>
+<node id="7" value="4" x="235" y="10"/>
+<node id="11" value="L0" x="310" y="10"/>
+<arc id="0" idFirstNode="1" idSecondNode="2"/>
+<arc id="1" idFirstNode="2" idSecondNode="4"/>
+<arc id="2" idFirstNode="4" idSecondNode="7"/>
+<arc id="3" idFirstNode="7" idSecondNode="11"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="30">
+<visualNode id="1" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFF00" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="7" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="11" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="It has been inserted a new copy of the element 3.">
+</message>
+</structure>
+</step>
+<step number="15">
+<structure name="Skip list" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="1" value="L0" x="10" y="10"/>
+<node id="17" value="L1" x="310" y="85"/>
+<node id="2" value="1" x="85" y="10"/>
+<node id="3" value="L1" x="10" y="85"/>
+<node id="4" value="3" x="160" y="10"/>
+<node id="7" value="4" x="235" y="10"/>
+<node id="8" value="3" x="160" y="85"/>
+<node id="11" value="L0" x="310" y="10"/>
+<arc id="0" idFirstNode="1" idSecondNode="2"/>
+<arc id="1" idFirstNode="2" idSecondNode="4"/>
+<arc id="4" idFirstNode="3" idSecondNode="8"/>
+<arc id="2" idFirstNode="4" idSecondNode="7"/>
+<arc id="3" idFirstNode="7" idSecondNode="11"/>
+<arc id="6" idFirstNode="8" idSecondNode="17"/>
+<arc id="5" idFirstNode="8" idSecondNode="4"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="30">
+<visualNode id="1" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="17" color="FFFF00" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFF00" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="7" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="8" color="FFFF00" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="11" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="A new list has been added.">
+</message>
+</structure>
+</step>
+<step number="16">
+<structure name="Skip list" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="1" value="L0" x="10" y="10"/>
+<node id="17" value="L1" x="310" y="85"/>
+<node id="2" value="1" x="85" y="10"/>
+<node id="3" value="L1" x="10" y="85"/>
+<node id="4" value="3" x="160" y="10"/>
+<node id="7" value="4" x="235" y="10"/>
+<node id="8" value="3" x="160" y="85"/>
+<node id="11" value="L0" x="310" y="10"/>
+<arc id="0" idFirstNode="1" idSecondNode="2"/>
+<arc id="1" idFirstNode="2" idSecondNode="4"/>
+<arc id="4" idFirstNode="3" idSecondNode="8"/>
+<arc id="2" idFirstNode="4" idSecondNode="7"/>
+<arc id="3" idFirstNode="7" idSecondNode="11"/>
+<arc id="6" idFirstNode="8" idSecondNode="17"/>
+<arc id="5" idFirstNode="8" idSecondNode="4"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="30">
+</visualGraph>
+<message content="The algorithm completed the insertion of the element 3.">
+</message>
+</structure>
+</step>
+<step number="17">
+<structure name="Skip list" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="1" value="L0" x="10" y="10"/>
+<node id="17" value="L1" x="310" y="85"/>
+<node id="2" value="1" x="85" y="10"/>
+<node id="3" value="L1" x="10" y="85"/>
+<node id="4" value="3" x="160" y="10"/>
+<node id="7" value="4" x="235" y="10"/>
+<node id="8" value="3" x="160" y="85"/>
+<node id="11" value="L0" x="310" y="10"/>
+<arc id="0" idFirstNode="1" idSecondNode="2"/>
+<arc id="1" idFirstNode="2" idSecondNode="4"/>
+<arc id="4" idFirstNode="3" idSecondNode="8"/>
+<arc id="2" idFirstNode="4" idSecondNode="7"/>
+<arc id="3" idFirstNode="7" idSecondNode="11"/>
+<arc id="6" idFirstNode="8" idSecondNode="17"/>
+<arc id="5" idFirstNode="8" idSecondNode="4"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="30">
+</visualGraph>
+<message content="The algorithm starts the insertion of the element 6.">
+</message>
+</structure>
+</step>
+<step number="18">
+<structure name="Skip list" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="1" value="L0" x="10" y="10"/>
+<node id="17" value="L1" x="310" y="85"/>
+<node id="2" value="1" x="85" y="10"/>
+<node id="3" value="L1" x="10" y="85"/>
+<node id="4" value="3" x="160" y="10"/>
+<node id="7" value="4" x="235" y="10"/>
+<node id="8" value="3" x="160" y="85"/>
+<node id="11" value="L0" x="310" y="10"/>
+<arc id="0" idFirstNode="1" idSecondNode="2"/>
+<arc id="1" idFirstNode="2" idSecondNode="4"/>
+<arc id="4" idFirstNode="3" idSecondNode="8"/>
+<arc id="2" idFirstNode="4" idSecondNode="7"/>
+<arc id="3" idFirstNode="7" idSecondNode="11"/>
+<arc id="6" idFirstNode="8" idSecondNode="17"/>
+<arc id="5" idFirstNode="8" idSecondNode="4"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="30">
+<visualNode id="1" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="17" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="7" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="8" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="11" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The red nodes are the predecessors of the element to be inserted, that is 6.">
+</message>
+</structure>
+</step>
+<step number="19">
+<structure name="Skip list" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="1" value="L0" x="10" y="10"/>
+<node id="17" value="L1" x="310" y="85"/>
+<node id="2" value="1" x="85" y="10"/>
+<node id="3" value="L1" x="10" y="85"/>
+<node id="4" value="3" x="160" y="10"/>
+<node id="7" value="4" x="235" y="10"/>
+<node id="8" value="3" x="160" y="85"/>
+<node id="11" value="L0" x="310" y="10"/>
+<arc id="0" idFirstNode="1" idSecondNode="2"/>
+<arc id="1" idFirstNode="2" idSecondNode="4"/>
+<arc id="4" idFirstNode="3" idSecondNode="8"/>
+<arc id="2" idFirstNode="4" idSecondNode="7"/>
+<arc id="3" idFirstNode="7" idSecondNode="11"/>
+<arc id="6" idFirstNode="8" idSecondNode="17"/>
+<arc id="5" idFirstNode="8" idSecondNode="4"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="30">
+<visualNode id="1" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="17" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="7" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="8" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="11" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="It has been stated to randomly insert 3 copies of the element 6.">
+</message>
+</structure>
+</step>
+<step number="20">
+<structure name="Skip list" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="16" value="L0" x="385" y="10"/>
+<node id="1" value="L0" x="10" y="10"/>
+<node id="2" value="1" x="85" y="10"/>
+<node id="3" value="L1" x="10" y="85"/>
+<node id="4" value="3" x="160" y="10"/>
+<node id="7" value="4" x="235" y="10"/>
+<node id="23" value="L1" x="385" y="85"/>
+<node id="8" value="3" x="160" y="85"/>
+<node id="11" value="6" x="310" y="10"/>
+<arc id="0" idFirstNode="1" idSecondNode="2"/>
+<arc id="1" idFirstNode="2" idSecondNode="4"/>
+<arc id="5" idFirstNode="3" idSecondNode="8"/>
+<arc id="2" idFirstNode="4" idSecondNode="7"/>
+<arc id="3" idFirstNode="7" idSecondNode="11"/>
+<arc id="6" idFirstNode="8" idSecondNode="4"/>
+<arc id="7" idFirstNode="8" idSecondNode="23"/>
+<arc id="4" idFirstNode="11" idSecondNode="16"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="30">
+<visualNode id="16" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="7" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="23" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="8" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="11" color="FFFF00" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="It has been inserted a new copy of the element 6.">
+</message>
+</structure>
+</step>
+<step number="21">
+<structure name="Skip list" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="16" value="L0" x="385" y="10"/>
+<node id="1" value="L0" x="10" y="10"/>
+<node id="17" value="6" x="310" y="85"/>
+<node id="2" value="1" x="85" y="10"/>
+<node id="3" value="L1" x="10" y="85"/>
+<node id="4" value="3" x="160" y="10"/>
+<node id="7" value="4" x="235" y="10"/>
+<node id="23" value="L1" x="385" y="85"/>
+<node id="8" value="3" x="160" y="85"/>
+<node id="11" value="6" x="310" y="10"/>
+<arc id="0" idFirstNode="1" idSecondNode="2"/>
+<arc id="9" idFirstNode="17" idSecondNode="23"/>
+<arc id="8" idFirstNode="17" idSecondNode="11"/>
+<arc id="1" idFirstNode="2" idSecondNode="4"/>
+<arc id="5" idFirstNode="3" idSecondNode="8"/>
+<arc id="2" idFirstNode="4" idSecondNode="7"/>
+<arc id="3" idFirstNode="7" idSecondNode="11"/>
+<arc id="7" idFirstNode="8" idSecondNode="17"/>
+<arc id="6" idFirstNode="8" idSecondNode="4"/>
+<arc id="4" idFirstNode="11" idSecondNode="16"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="30">
+<visualNode id="16" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="17" color="FFFF00" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="7" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="23" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="8" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="11" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="It has been inserted a new copy of the element 6.">
+</message>
+</structure>
+</step>
+<step number="22">
+<structure name="Skip list" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="1" value="L0" x="10" y="10"/>
+<node id="2" value="1" x="85" y="10"/>
+<node id="3" value="L1" x="10" y="85"/>
+<node id="4" value="3" x="160" y="10"/>
+<node id="6" value="L2" x="10" y="160"/>
+<node id="7" value="4" x="235" y="10"/>
+<node id="8" value="3" x="160" y="85"/>
+<node id="11" value="6" x="310" y="10"/>
+<node id="16" value="L0" x="385" y="10"/>
+<node id="17" value="6" x="310" y="85"/>
+<node id="23" value="L1" x="385" y="85"/>
+<node id="24" value="6" x="310" y="160"/>
+<node id="31" value="L2" x="385" y="160"/>
+<arc id="0" idFirstNode="1" idSecondNode="2"/>
+<arc id="1" idFirstNode="2" idSecondNode="4"/>
+<arc id="5" idFirstNode="3" idSecondNode="8"/>
+<arc id="2" idFirstNode="4" idSecondNode="7"/>
+<arc id="10" idFirstNode="6" idSecondNode="24"/>
+<arc id="3" idFirstNode="7" idSecondNode="11"/>
+<arc id="7" idFirstNode="8" idSecondNode="17"/>
+<arc id="6" idFirstNode="8" idSecondNode="4"/>
+<arc id="4" idFirstNode="11" idSecondNode="16"/>
+<arc id="9" idFirstNode="17" idSecondNode="23"/>
+<arc id="8" idFirstNode="17" idSecondNode="11"/>
+<arc id="11" idFirstNode="24" idSecondNode="17"/>
+<arc id="12" idFirstNode="24" idSecondNode="31"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="30">
+<visualNode id="1" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="6" color="FFFF00" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="7" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="8" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="11" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="16" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="17" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="23" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="24" color="FFFF00" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="31" color="FFFF00" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="A new list has been added.">
+</message>
+</structure>
+</step>
+<step number="23">
+<structure name="Skip list" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="1" value="L0" x="10" y="10"/>
+<node id="2" value="1" x="85" y="10"/>
+<node id="3" value="L1" x="10" y="85"/>
+<node id="4" value="3" x="160" y="10"/>
+<node id="6" value="L2" x="10" y="160"/>
+<node id="7" value="4" x="235" y="10"/>
+<node id="8" value="3" x="160" y="85"/>
+<node id="11" value="6" x="310" y="10"/>
+<node id="16" value="L0" x="385" y="10"/>
+<node id="17" value="6" x="310" y="85"/>
+<node id="23" value="L1" x="385" y="85"/>
+<node id="24" value="6" x="310" y="160"/>
+<node id="31" value="L2" x="385" y="160"/>
+<arc id="0" idFirstNode="1" idSecondNode="2"/>
+<arc id="1" idFirstNode="2" idSecondNode="4"/>
+<arc id="5" idFirstNode="3" idSecondNode="8"/>
+<arc id="2" idFirstNode="4" idSecondNode="7"/>
+<arc id="10" idFirstNode="6" idSecondNode="24"/>
+<arc id="3" idFirstNode="7" idSecondNode="11"/>
+<arc id="7" idFirstNode="8" idSecondNode="17"/>
+<arc id="6" idFirstNode="8" idSecondNode="4"/>
+<arc id="4" idFirstNode="11" idSecondNode="16"/>
+<arc id="9" idFirstNode="17" idSecondNode="23"/>
+<arc id="8" idFirstNode="17" idSecondNode="11"/>
+<arc id="11" idFirstNode="24" idSecondNode="17"/>
+<arc id="12" idFirstNode="24" idSecondNode="31"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="30">
+</visualGraph>
+<message content="The algorithm completed the insertion of the element 6.">
+</message>
+</structure>
+</step>
+<step number="24">
+<structure name="Skip list" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="1" value="L0" x="10" y="10"/>
+<node id="2" value="1" x="85" y="10"/>
+<node id="3" value="L1" x="10" y="85"/>
+<node id="4" value="3" x="160" y="10"/>
+<node id="6" value="L2" x="10" y="160"/>
+<node id="7" value="4" x="235" y="10"/>
+<node id="8" value="3" x="160" y="85"/>
+<node id="11" value="6" x="310" y="10"/>
+<node id="16" value="L0" x="385" y="10"/>
+<node id="17" value="6" x="310" y="85"/>
+<node id="23" value="L1" x="385" y="85"/>
+<node id="24" value="6" x="310" y="160"/>
+<node id="31" value="L2" x="385" y="160"/>
+<arc id="0" idFirstNode="1" idSecondNode="2"/>
+<arc id="1" idFirstNode="2" idSecondNode="4"/>
+<arc id="5" idFirstNode="3" idSecondNode="8"/>
+<arc id="2" idFirstNode="4" idSecondNode="7"/>
+<arc id="10" idFirstNode="6" idSecondNode="24"/>
+<arc id="3" idFirstNode="7" idSecondNode="11"/>
+<arc id="7" idFirstNode="8" idSecondNode="17"/>
+<arc id="6" idFirstNode="8" idSecondNode="4"/>
+<arc id="4" idFirstNode="11" idSecondNode="16"/>
+<arc id="9" idFirstNode="17" idSecondNode="23"/>
+<arc id="8" idFirstNode="17" idSecondNode="11"/>
+<arc id="11" idFirstNode="24" idSecondNode="17"/>
+<arc id="12" idFirstNode="24" idSecondNode="31"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="30">
+</visualGraph>
+<message content="The algorithm starts the insertion of the element 7.">
+</message>
+</structure>
+</step>
+<step number="25">
+<structure name="Skip list" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="1" value="L0" x="10" y="10"/>
+<node id="2" value="1" x="85" y="10"/>
+<node id="3" value="L1" x="10" y="85"/>
+<node id="4" value="3" x="160" y="10"/>
+<node id="6" value="L2" x="10" y="160"/>
+<node id="7" value="4" x="235" y="10"/>
+<node id="8" value="3" x="160" y="85"/>
+<node id="11" value="6" x="310" y="10"/>
+<node id="16" value="L0" x="385" y="10"/>
+<node id="17" value="6" x="310" y="85"/>
+<node id="23" value="L1" x="385" y="85"/>
+<node id="24" value="6" x="310" y="160"/>
+<node id="31" value="L2" x="385" y="160"/>
+<arc id="0" idFirstNode="1" idSecondNode="2"/>
+<arc id="1" idFirstNode="2" idSecondNode="4"/>
+<arc id="5" idFirstNode="3" idSecondNode="8"/>
+<arc id="2" idFirstNode="4" idSecondNode="7"/>
+<arc id="10" idFirstNode="6" idSecondNode="24"/>
+<arc id="3" idFirstNode="7" idSecondNode="11"/>
+<arc id="7" idFirstNode="8" idSecondNode="17"/>
+<arc id="6" idFirstNode="8" idSecondNode="4"/>
+<arc id="4" idFirstNode="11" idSecondNode="16"/>
+<arc id="9" idFirstNode="17" idSecondNode="23"/>
+<arc id="8" idFirstNode="17" idSecondNode="11"/>
+<arc id="11" idFirstNode="24" idSecondNode="17"/>
+<arc id="12" idFirstNode="24" idSecondNode="31"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="30">
+<visualNode id="1" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="6" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="7" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="8" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="11" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="16" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="17" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="23" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="24" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="31" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The red nodes are the predecessors of the element to be inserted, that is 7.">
+</message>
+</structure>
+</step>
+<step number="26">
+<structure name="Skip list" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="1" value="L0" x="10" y="10"/>
+<node id="2" value="1" x="85" y="10"/>
+<node id="3" value="L1" x="10" y="85"/>
+<node id="4" value="3" x="160" y="10"/>
+<node id="6" value="L2" x="10" y="160"/>
+<node id="7" value="4" x="235" y="10"/>
+<node id="8" value="3" x="160" y="85"/>
+<node id="11" value="6" x="310" y="10"/>
+<node id="16" value="L0" x="385" y="10"/>
+<node id="17" value="6" x="310" y="85"/>
+<node id="23" value="L1" x="385" y="85"/>
+<node id="24" value="6" x="310" y="160"/>
+<node id="31" value="L2" x="385" y="160"/>
+<arc id="0" idFirstNode="1" idSecondNode="2"/>
+<arc id="1" idFirstNode="2" idSecondNode="4"/>
+<arc id="5" idFirstNode="3" idSecondNode="8"/>
+<arc id="2" idFirstNode="4" idSecondNode="7"/>
+<arc id="10" idFirstNode="6" idSecondNode="24"/>
+<arc id="3" idFirstNode="7" idSecondNode="11"/>
+<arc id="7" idFirstNode="8" idSecondNode="17"/>
+<arc id="6" idFirstNode="8" idSecondNode="4"/>
+<arc id="4" idFirstNode="11" idSecondNode="16"/>
+<arc id="9" idFirstNode="17" idSecondNode="23"/>
+<arc id="8" idFirstNode="17" idSecondNode="11"/>
+<arc id="11" idFirstNode="24" idSecondNode="17"/>
+<arc id="12" idFirstNode="24" idSecondNode="31"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="30">
+<visualNode id="1" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="6" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="7" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="8" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="11" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="16" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="17" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="23" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="24" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="31" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="It has been stated to randomly insert 1 copy of the element 7.">
+</message>
+</structure>
+</step>
+<step number="27">
+<structure name="Skip list" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="1" value="L0" x="10" y="10"/>
+<node id="2" value="1" x="85" y="10"/>
+<node id="3" value="L1" x="10" y="85"/>
+<node id="4" value="3" x="160" y="10"/>
+<node id="6" value="L2" x="10" y="160"/>
+<node id="7" value="4" x="235" y="10"/>
+<node id="39" value="L2" x="460" y="160"/>
+<node id="8" value="3" x="160" y="85"/>
+<node id="11" value="6" x="310" y="10"/>
+<node id="16" value="7" x="385" y="10"/>
+<node id="17" value="6" x="310" y="85"/>
+<node id="22" value="L0" x="460" y="10"/>
+<node id="24" value="6" x="310" y="160"/>
+<node id="30" value="L1" x="460" y="85"/>
+<arc id="0" idFirstNode="1" idSecondNode="2"/>
+<arc id="1" idFirstNode="2" idSecondNode="4"/>
+<arc id="6" idFirstNode="3" idSecondNode="8"/>
+<arc id="2" idFirstNode="4" idSecondNode="7"/>
+<arc id="11" idFirstNode="6" idSecondNode="24"/>
+<arc id="3" idFirstNode="7" idSecondNode="11"/>
+<arc id="8" idFirstNode="8" idSecondNode="17"/>
+<arc id="7" idFirstNode="8" idSecondNode="4"/>
+<arc id="4" idFirstNode="11" idSecondNode="16"/>
+<arc id="5" idFirstNode="16" idSecondNode="22"/>
+<arc id="9" idFirstNode="17" idSecondNode="11"/>
+<arc id="10" idFirstNode="17" idSecondNode="30"/>
+<arc id="12" idFirstNode="24" idSecondNode="17"/>
+<arc id="13" idFirstNode="24" idSecondNode="39"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="30">
+<visualNode id="1" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="6" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="7" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="39" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="8" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="11" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="16" color="FFFF00" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="17" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="22" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="24" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="30" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="It has been inserted a new copy of the element 7.">
+</message>
+</structure>
+</step>
+<step number="28">
+<structure name="Skip list" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="1" value="L0" x="10" y="10"/>
+<node id="2" value="1" x="85" y="10"/>
+<node id="3" value="L1" x="10" y="85"/>
+<node id="4" value="3" x="160" y="10"/>
+<node id="6" value="L2" x="10" y="160"/>
+<node id="7" value="4" x="235" y="10"/>
+<node id="39" value="L2" x="460" y="160"/>
+<node id="8" value="3" x="160" y="85"/>
+<node id="11" value="6" x="310" y="10"/>
+<node id="16" value="7" x="385" y="10"/>
+<node id="17" value="6" x="310" y="85"/>
+<node id="22" value="L0" x="460" y="10"/>
+<node id="24" value="6" x="310" y="160"/>
+<node id="30" value="L1" x="460" y="85"/>
+<arc id="0" idFirstNode="1" idSecondNode="2"/>
+<arc id="1" idFirstNode="2" idSecondNode="4"/>
+<arc id="6" idFirstNode="3" idSecondNode="8"/>
+<arc id="2" idFirstNode="4" idSecondNode="7"/>
+<arc id="11" idFirstNode="6" idSecondNode="24"/>
+<arc id="3" idFirstNode="7" idSecondNode="11"/>
+<arc id="8" idFirstNode="8" idSecondNode="17"/>
+<arc id="7" idFirstNode="8" idSecondNode="4"/>
+<arc id="4" idFirstNode="11" idSecondNode="16"/>
+<arc id="5" idFirstNode="16" idSecondNode="22"/>
+<arc id="9" idFirstNode="17" idSecondNode="11"/>
+<arc id="10" idFirstNode="17" idSecondNode="30"/>
+<arc id="12" idFirstNode="24" idSecondNode="17"/>
+<arc id="13" idFirstNode="24" idSecondNode="39"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="30">
+</visualGraph>
+<message content="The algorithm completed the insertion of the element 7.">
+</message>
+</structure>
+</step>
+<step number="29">
+<structure name="Skip list" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="1" value="L0" x="10" y="10"/>
+<node id="2" value="1" x="85" y="10"/>
+<node id="3" value="L1" x="10" y="85"/>
+<node id="4" value="3" x="160" y="10"/>
+<node id="6" value="L2" x="10" y="160"/>
+<node id="7" value="4" x="235" y="10"/>
+<node id="39" value="L2" x="460" y="160"/>
+<node id="8" value="3" x="160" y="85"/>
+<node id="11" value="6" x="310" y="10"/>
+<node id="16" value="7" x="385" y="10"/>
+<node id="17" value="6" x="310" y="85"/>
+<node id="22" value="L0" x="460" y="10"/>
+<node id="24" value="6" x="310" y="160"/>
+<node id="30" value="L1" x="460" y="85"/>
+<arc id="0" idFirstNode="1" idSecondNode="2"/>
+<arc id="1" idFirstNode="2" idSecondNode="4"/>
+<arc id="6" idFirstNode="3" idSecondNode="8"/>
+<arc id="2" idFirstNode="4" idSecondNode="7"/>
+<arc id="11" idFirstNode="6" idSecondNode="24"/>
+<arc id="3" idFirstNode="7" idSecondNode="11"/>
+<arc id="8" idFirstNode="8" idSecondNode="17"/>
+<arc id="7" idFirstNode="8" idSecondNode="4"/>
+<arc id="4" idFirstNode="11" idSecondNode="16"/>
+<arc id="5" idFirstNode="16" idSecondNode="22"/>
+<arc id="9" idFirstNode="17" idSecondNode="11"/>
+<arc id="10" idFirstNode="17" idSecondNode="30"/>
+<arc id="12" idFirstNode="24" idSecondNode="17"/>
+<arc id="13" idFirstNode="24" idSecondNode="39"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="30">
+</visualGraph>
+<message content="The algorithm starts the insertion of the element 5.">
+</message>
+</structure>
+</step>
+<step number="30">
+<structure name="Skip list" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="1" value="L0" x="10" y="10"/>
+<node id="2" value="1" x="85" y="10"/>
+<node id="3" value="L1" x="10" y="85"/>
+<node id="4" value="3" x="160" y="10"/>
+<node id="6" value="L2" x="10" y="160"/>
+<node id="7" value="4" x="235" y="10"/>
+<node id="39" value="L2" x="460" y="160"/>
+<node id="8" value="3" x="160" y="85"/>
+<node id="11" value="6" x="310" y="10"/>
+<node id="16" value="7" x="385" y="10"/>
+<node id="17" value="6" x="310" y="85"/>
+<node id="22" value="L0" x="460" y="10"/>
+<node id="24" value="6" x="310" y="160"/>
+<node id="30" value="L1" x="460" y="85"/>
+<arc id="0" idFirstNode="1" idSecondNode="2"/>
+<arc id="1" idFirstNode="2" idSecondNode="4"/>
+<arc id="6" idFirstNode="3" idSecondNode="8"/>
+<arc id="2" idFirstNode="4" idSecondNode="7"/>
+<arc id="11" idFirstNode="6" idSecondNode="24"/>
+<arc id="3" idFirstNode="7" idSecondNode="11"/>
+<arc id="8" idFirstNode="8" idSecondNode="17"/>
+<arc id="7" idFirstNode="8" idSecondNode="4"/>
+<arc id="4" idFirstNode="11" idSecondNode="16"/>
+<arc id="5" idFirstNode="16" idSecondNode="22"/>
+<arc id="9" idFirstNode="17" idSecondNode="11"/>
+<arc id="10" idFirstNode="17" idSecondNode="30"/>
+<arc id="12" idFirstNode="24" idSecondNode="17"/>
+<arc id="13" idFirstNode="24" idSecondNode="39"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="30">
+<visualNode id="1" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="6" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="7" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="39" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="8" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="11" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="16" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="17" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="22" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="24" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="30" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The red nodes are the predecessors of the element to be inserted, that is 5.">
+</message>
+</structure>
+</step>
+<step number="31">
+<structure name="Skip list" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="1" value="L0" x="10" y="10"/>
+<node id="2" value="1" x="85" y="10"/>
+<node id="3" value="L1" x="10" y="85"/>
+<node id="4" value="3" x="160" y="10"/>
+<node id="6" value="L2" x="10" y="160"/>
+<node id="7" value="4" x="235" y="10"/>
+<node id="39" value="L2" x="460" y="160"/>
+<node id="8" value="3" x="160" y="85"/>
+<node id="11" value="6" x="310" y="10"/>
+<node id="16" value="7" x="385" y="10"/>
+<node id="17" value="6" x="310" y="85"/>
+<node id="22" value="L0" x="460" y="10"/>
+<node id="24" value="6" x="310" y="160"/>
+<node id="30" value="L1" x="460" y="85"/>
+<arc id="0" idFirstNode="1" idSecondNode="2"/>
+<arc id="1" idFirstNode="2" idSecondNode="4"/>
+<arc id="6" idFirstNode="3" idSecondNode="8"/>
+<arc id="2" idFirstNode="4" idSecondNode="7"/>
+<arc id="11" idFirstNode="6" idSecondNode="24"/>
+<arc id="3" idFirstNode="7" idSecondNode="11"/>
+<arc id="8" idFirstNode="8" idSecondNode="17"/>
+<arc id="7" idFirstNode="8" idSecondNode="4"/>
+<arc id="4" idFirstNode="11" idSecondNode="16"/>
+<arc id="5" idFirstNode="16" idSecondNode="22"/>
+<arc id="9" idFirstNode="17" idSecondNode="11"/>
+<arc id="10" idFirstNode="17" idSecondNode="30"/>
+<arc id="12" idFirstNode="24" idSecondNode="17"/>
+<arc id="13" idFirstNode="24" idSecondNode="39"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="30">
+<visualNode id="1" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="6" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="7" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="39" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="8" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="11" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="16" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="17" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="22" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="24" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="30" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="It has been stated to randomly insert 1 copy of the element 5.">
+</message>
+</structure>
+</step>
+<step number="32">
+<structure name="Skip list" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="1" value="L0" x="10" y="10"/>
+<node id="2" value="1" x="85" y="10"/>
+<node id="3" value="L1" x="10" y="85"/>
+<node id="4" value="3" x="160" y="10"/>
+<node id="38" value="L1" x="535" y="85"/>
+<node id="6" value="L2" x="10" y="160"/>
+<node id="7" value="4" x="235" y="10"/>
+<node id="8" value="3" x="160" y="85"/>
+<node id="11" value="5" x="310" y="10"/>
+<node id="16" value="6" x="385" y="10"/>
+<node id="48" value="L2" x="535" y="160"/>
+<node id="22" value="7" x="460" y="10"/>
+<node id="23" value="6" x="385" y="85"/>
+<node id="29" value="L0" x="535" y="10"/>
+<node id="31" value="6" x="385" y="160"/>
+<arc id="0" idFirstNode="1" idSecondNode="2"/>
+<arc id="1" idFirstNode="2" idSecondNode="4"/>
+<arc id="7" idFirstNode="3" idSecondNode="8"/>
+<arc id="2" idFirstNode="4" idSecondNode="7"/>
+<arc id="12" idFirstNode="6" idSecondNode="31"/>
+<arc id="3" idFirstNode="7" idSecondNode="11"/>
+<arc id="8" idFirstNode="8" idSecondNode="4"/>
+<arc id="9" idFirstNode="8" idSecondNode="23"/>
+<arc id="4" idFirstNode="11" idSecondNode="16"/>
+<arc id="5" idFirstNode="16" idSecondNode="22"/>
+<arc id="6" idFirstNode="22" idSecondNode="29"/>
+<arc id="10" idFirstNode="23" idSecondNode="16"/>
+<arc id="11" idFirstNode="23" idSecondNode="38"/>
+<arc id="14" idFirstNode="31" idSecondNode="48"/>
+<arc id="13" idFirstNode="31" idSecondNode="23"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="30">
+<visualNode id="1" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="38" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="6" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="7" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="8" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="11" color="FFFF00" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="16" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="48" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="22" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="23" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="29" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="31" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="It has been inserted a new copy of the element 5.">
+</message>
+</structure>
+</step>
+<step number="33">
+<structure name="Skip list" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="1" value="L0" x="10" y="10"/>
+<node id="2" value="1" x="85" y="10"/>
+<node id="3" value="L1" x="10" y="85"/>
+<node id="4" value="3" x="160" y="10"/>
+<node id="38" value="L1" x="535" y="85"/>
+<node id="6" value="L2" x="10" y="160"/>
+<node id="7" value="4" x="235" y="10"/>
+<node id="8" value="3" x="160" y="85"/>
+<node id="11" value="5" x="310" y="10"/>
+<node id="16" value="6" x="385" y="10"/>
+<node id="48" value="L2" x="535" y="160"/>
+<node id="22" value="7" x="460" y="10"/>
+<node id="23" value="6" x="385" y="85"/>
+<node id="29" value="L0" x="535" y="10"/>
+<node id="31" value="6" x="385" y="160"/>
+<arc id="0" idFirstNode="1" idSecondNode="2"/>
+<arc id="1" idFirstNode="2" idSecondNode="4"/>
+<arc id="7" idFirstNode="3" idSecondNode="8"/>
+<arc id="2" idFirstNode="4" idSecondNode="7"/>
+<arc id="12" idFirstNode="6" idSecondNode="31"/>
+<arc id="3" idFirstNode="7" idSecondNode="11"/>
+<arc id="8" idFirstNode="8" idSecondNode="4"/>
+<arc id="9" idFirstNode="8" idSecondNode="23"/>
+<arc id="4" idFirstNode="11" idSecondNode="16"/>
+<arc id="5" idFirstNode="16" idSecondNode="22"/>
+<arc id="6" idFirstNode="22" idSecondNode="29"/>
+<arc id="10" idFirstNode="23" idSecondNode="16"/>
+<arc id="11" idFirstNode="23" idSecondNode="38"/>
+<arc id="14" idFirstNode="31" idSecondNode="48"/>
+<arc id="13" idFirstNode="31" idSecondNode="23"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="30">
+</visualGraph>
+<message content="The algorithm completed the insertion of the element 5.">
+</message>
+</structure>
+</step>
+<step number="34">
+<structure name="Skip list" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="1" value="L0" x="10" y="10"/>
+<node id="2" value="1" x="85" y="10"/>
+<node id="3" value="L1" x="10" y="85"/>
+<node id="4" value="3" x="160" y="10"/>
+<node id="38" value="L1" x="535" y="85"/>
+<node id="6" value="L2" x="10" y="160"/>
+<node id="7" value="4" x="235" y="10"/>
+<node id="8" value="3" x="160" y="85"/>
+<node id="11" value="5" x="310" y="10"/>
+<node id="16" value="6" x="385" y="10"/>
+<node id="48" value="L2" x="535" y="160"/>
+<node id="22" value="7" x="460" y="10"/>
+<node id="23" value="6" x="385" y="85"/>
+<node id="29" value="L0" x="535" y="10"/>
+<node id="31" value="6" x="385" y="160"/>
+<arc id="0" idFirstNode="1" idSecondNode="2"/>
+<arc id="1" idFirstNode="2" idSecondNode="4"/>
+<arc id="7" idFirstNode="3" idSecondNode="8"/>
+<arc id="2" idFirstNode="4" idSecondNode="7"/>
+<arc id="12" idFirstNode="6" idSecondNode="31"/>
+<arc id="3" idFirstNode="7" idSecondNode="11"/>
+<arc id="8" idFirstNode="8" idSecondNode="4"/>
+<arc id="9" idFirstNode="8" idSecondNode="23"/>
+<arc id="4" idFirstNode="11" idSecondNode="16"/>
+<arc id="5" idFirstNode="16" idSecondNode="22"/>
+<arc id="6" idFirstNode="22" idSecondNode="29"/>
+<arc id="10" idFirstNode="23" idSecondNode="16"/>
+<arc id="11" idFirstNode="23" idSecondNode="38"/>
+<arc id="14" idFirstNode="31" idSecondNode="48"/>
+<arc id="13" idFirstNode="31" idSecondNode="23"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="30">
+</visualGraph>
+<message content="The algorithm starts the insertion of the element 2.">
+</message>
+</structure>
+</step>
+<step number="35">
+<structure name="Skip list" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="1" value="L0" x="10" y="10"/>
+<node id="2" value="1" x="85" y="10"/>
+<node id="3" value="L1" x="10" y="85"/>
+<node id="4" value="3" x="160" y="10"/>
+<node id="38" value="L1" x="535" y="85"/>
+<node id="6" value="L2" x="10" y="160"/>
+<node id="7" value="4" x="235" y="10"/>
+<node id="8" value="3" x="160" y="85"/>
+<node id="11" value="5" x="310" y="10"/>
+<node id="16" value="6" x="385" y="10"/>
+<node id="48" value="L2" x="535" y="160"/>
+<node id="22" value="7" x="460" y="10"/>
+<node id="23" value="6" x="385" y="85"/>
+<node id="29" value="L0" x="535" y="10"/>
+<node id="31" value="6" x="385" y="160"/>
+<arc id="0" idFirstNode="1" idSecondNode="2"/>
+<arc id="1" idFirstNode="2" idSecondNode="4"/>
+<arc id="7" idFirstNode="3" idSecondNode="8"/>
+<arc id="2" idFirstNode="4" idSecondNode="7"/>
+<arc id="12" idFirstNode="6" idSecondNode="31"/>
+<arc id="3" idFirstNode="7" idSecondNode="11"/>
+<arc id="8" idFirstNode="8" idSecondNode="4"/>
+<arc id="9" idFirstNode="8" idSecondNode="23"/>
+<arc id="4" idFirstNode="11" idSecondNode="16"/>
+<arc id="5" idFirstNode="16" idSecondNode="22"/>
+<arc id="6" idFirstNode="22" idSecondNode="29"/>
+<arc id="10" idFirstNode="23" idSecondNode="16"/>
+<arc id="11" idFirstNode="23" idSecondNode="38"/>
+<arc id="14" idFirstNode="31" idSecondNode="48"/>
+<arc id="13" idFirstNode="31" idSecondNode="23"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="30">
+<visualNode id="1" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="38" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="6" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="7" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="8" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="11" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="16" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="48" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="22" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="23" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="29" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="31" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The red nodes are the predecessors of the element to be inserted, that is 2.">
+</message>
+</structure>
+</step>
+<step number="36">
+<structure name="Skip list" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="1" value="L0" x="10" y="10"/>
+<node id="2" value="1" x="85" y="10"/>
+<node id="3" value="L1" x="10" y="85"/>
+<node id="4" value="3" x="160" y="10"/>
+<node id="38" value="L1" x="535" y="85"/>
+<node id="6" value="L2" x="10" y="160"/>
+<node id="7" value="4" x="235" y="10"/>
+<node id="8" value="3" x="160" y="85"/>
+<node id="11" value="5" x="310" y="10"/>
+<node id="16" value="6" x="385" y="10"/>
+<node id="48" value="L2" x="535" y="160"/>
+<node id="22" value="7" x="460" y="10"/>
+<node id="23" value="6" x="385" y="85"/>
+<node id="29" value="L0" x="535" y="10"/>
+<node id="31" value="6" x="385" y="160"/>
+<arc id="0" idFirstNode="1" idSecondNode="2"/>
+<arc id="1" idFirstNode="2" idSecondNode="4"/>
+<arc id="7" idFirstNode="3" idSecondNode="8"/>
+<arc id="2" idFirstNode="4" idSecondNode="7"/>
+<arc id="12" idFirstNode="6" idSecondNode="31"/>
+<arc id="3" idFirstNode="7" idSecondNode="11"/>
+<arc id="8" idFirstNode="8" idSecondNode="4"/>
+<arc id="9" idFirstNode="8" idSecondNode="23"/>
+<arc id="4" idFirstNode="11" idSecondNode="16"/>
+<arc id="5" idFirstNode="16" idSecondNode="22"/>
+<arc id="6" idFirstNode="22" idSecondNode="29"/>
+<arc id="10" idFirstNode="23" idSecondNode="16"/>
+<arc id="11" idFirstNode="23" idSecondNode="38"/>
+<arc id="14" idFirstNode="31" idSecondNode="48"/>
+<arc id="13" idFirstNode="31" idSecondNode="23"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="30">
+<visualNode id="1" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="38" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="6" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="7" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="8" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="11" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="16" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="48" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="22" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="23" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="29" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="31" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="It has been stated to randomly insert 1 copy of the element 2.">
+</message>
+</structure>
+</step>
+<step number="37">
+<structure name="Skip list" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="1" value="L0" x="10" y="10"/>
+<node id="2" value="1" x="85" y="10"/>
+<node id="3" value="L1" x="10" y="85"/>
+<node id="4" value="2" x="160" y="10"/>
+<node id="37" value="L0" x="610" y="10"/>
+<node id="6" value="L2" x="10" y="160"/>
+<node id="7" value="3" x="235" y="10"/>
+<node id="39" value="6" x="460" y="160"/>
+<node id="11" value="4" x="310" y="10"/>
+<node id="12" value="3" x="235" y="85"/>
+<node id="47" value="L1" x="610" y="85"/>
+<node id="16" value="5" x="385" y="10"/>
+<node id="22" value="6" x="460" y="10"/>
+<node id="58" value="L2" x="610" y="160"/>
+<node id="29" value="7" x="535" y="10"/>
+<node id="30" value="6" x="460" y="85"/>
+<arc id="0" idFirstNode="1" idSecondNode="2"/>
+<arc id="1" idFirstNode="2" idSecondNode="4"/>
+<arc id="8" idFirstNode="3" idSecondNode="12"/>
+<arc id="2" idFirstNode="4" idSecondNode="7"/>
+<arc id="13" idFirstNode="6" idSecondNode="39"/>
+<arc id="3" idFirstNode="7" idSecondNode="11"/>
+<arc id="15" idFirstNode="39" idSecondNode="58"/>
+<arc id="14" idFirstNode="39" idSecondNode="30"/>
+<arc id="4" idFirstNode="11" idSecondNode="16"/>
+<arc id="9" idFirstNode="12" idSecondNode="7"/>
+<arc id="10" idFirstNode="12" idSecondNode="30"/>
+<arc id="5" idFirstNode="16" idSecondNode="22"/>
+<arc id="6" idFirstNode="22" idSecondNode="29"/>
+<arc id="7" idFirstNode="29" idSecondNode="37"/>
+<arc id="11" idFirstNode="30" idSecondNode="22"/>
+<arc id="12" idFirstNode="30" idSecondNode="47"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="30">
+<visualNode id="1" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFF00" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="37" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="6" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="7" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="39" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="11" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="12" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="47" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="16" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="22" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="58" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="29" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="30" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="It has been inserted a new copy of the element 2.">
+</message>
+</structure>
+</step>
+<step number="38">
+<structure name="Skip list" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="1" value="L0" x="10" y="10"/>
+<node id="2" value="1" x="85" y="10"/>
+<node id="3" value="L1" x="10" y="85"/>
+<node id="4" value="2" x="160" y="10"/>
+<node id="37" value="L0" x="610" y="10"/>
+<node id="6" value="L2" x="10" y="160"/>
+<node id="7" value="3" x="235" y="10"/>
+<node id="39" value="6" x="460" y="160"/>
+<node id="11" value="4" x="310" y="10"/>
+<node id="12" value="3" x="235" y="85"/>
+<node id="47" value="L1" x="610" y="85"/>
+<node id="16" value="5" x="385" y="10"/>
+<node id="22" value="6" x="460" y="10"/>
+<node id="58" value="L2" x="610" y="160"/>
+<node id="29" value="7" x="535" y="10"/>
+<node id="30" value="6" x="460" y="85"/>
+<arc id="0" idFirstNode="1" idSecondNode="2"/>
+<arc id="1" idFirstNode="2" idSecondNode="4"/>
+<arc id="8" idFirstNode="3" idSecondNode="12"/>
+<arc id="2" idFirstNode="4" idSecondNode="7"/>
+<arc id="13" idFirstNode="6" idSecondNode="39"/>
+<arc id="3" idFirstNode="7" idSecondNode="11"/>
+<arc id="15" idFirstNode="39" idSecondNode="58"/>
+<arc id="14" idFirstNode="39" idSecondNode="30"/>
+<arc id="4" idFirstNode="11" idSecondNode="16"/>
+<arc id="9" idFirstNode="12" idSecondNode="7"/>
+<arc id="10" idFirstNode="12" idSecondNode="30"/>
+<arc id="5" idFirstNode="16" idSecondNode="22"/>
+<arc id="6" idFirstNode="22" idSecondNode="29"/>
+<arc id="7" idFirstNode="29" idSecondNode="37"/>
+<arc id="11" idFirstNode="30" idSecondNode="22"/>
+<arc id="12" idFirstNode="30" idSecondNode="47"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="30">
+</visualGraph>
+<message content="The algorithm completed the insertion of the element 2.">
+</message>
+</structure>
+</step>
+<step number="39">
+<structure name="Skip list" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="1" value="L0" x="10" y="10"/>
+<node id="2" value="1" x="85" y="10"/>
+<node id="3" value="L1" x="10" y="85"/>
+<node id="4" value="2" x="160" y="10"/>
+<node id="37" value="L0" x="610" y="10"/>
+<node id="6" value="L2" x="10" y="160"/>
+<node id="7" value="3" x="235" y="10"/>
+<node id="39" value="6" x="460" y="160"/>
+<node id="11" value="4" x="310" y="10"/>
+<node id="12" value="3" x="235" y="85"/>
+<node id="47" value="L1" x="610" y="85"/>
+<node id="16" value="5" x="385" y="10"/>
+<node id="22" value="6" x="460" y="10"/>
+<node id="58" value="L2" x="610" y="160"/>
+<node id="29" value="7" x="535" y="10"/>
+<node id="30" value="6" x="460" y="85"/>
+<arc id="0" idFirstNode="1" idSecondNode="2"/>
+<arc id="1" idFirstNode="2" idSecondNode="4"/>
+<arc id="8" idFirstNode="3" idSecondNode="12"/>
+<arc id="2" idFirstNode="4" idSecondNode="7"/>
+<arc id="13" idFirstNode="6" idSecondNode="39"/>
+<arc id="3" idFirstNode="7" idSecondNode="11"/>
+<arc id="15" idFirstNode="39" idSecondNode="58"/>
+<arc id="14" idFirstNode="39" idSecondNode="30"/>
+<arc id="4" idFirstNode="11" idSecondNode="16"/>
+<arc id="9" idFirstNode="12" idSecondNode="7"/>
+<arc id="10" idFirstNode="12" idSecondNode="30"/>
+<arc id="5" idFirstNode="16" idSecondNode="22"/>
+<arc id="6" idFirstNode="22" idSecondNode="29"/>
+<arc id="7" idFirstNode="29" idSecondNode="37"/>
+<arc id="11" idFirstNode="30" idSecondNode="22"/>
+<arc id="12" idFirstNode="30" idSecondNode="47"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="30">
+<visualNode id="1" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="37" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="6" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="7" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="39" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="11" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="12" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="47" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="16" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="22" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="58" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="29" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="30" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="From the red node, the algorithm starts looking for the value 5.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="9">
+<element id="0" value=" 1  SkipListScan( k ):"/>
+<element id="1" value=" 2    p = L[h];"/>
+<element id="2" value=" 3    WHILE (p != null) {"/>
+<element id="3" value=" 4      WHILE (p.succ.key &#60;= k)"/>
+<element id="4" value=" 5        p = p.succ;"/>
+<element id="5" value=" 6      predecessor = p;"/>
+<element id="6" value=" 7      p = p.inf;"/>
+<element id="7" value=" 8    }"/>
+<element id="8" value=" 9    RETURN predecessor;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="450.0" originX="700" originY="30">
+<visualMalleableElement id="1" color="FFFF00" font="Times-PLAIN-12" shapeHeight="20" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="40">
+<structure name="Skip list" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="1" value="L0" x="10" y="10"/>
+<node id="2" value="1" x="85" y="10"/>
+<node id="3" value="L1" x="10" y="85"/>
+<node id="4" value="2" x="160" y="10"/>
+<node id="37" value="L0" x="610" y="10"/>
+<node id="6" value="L2" x="10" y="160"/>
+<node id="7" value="3" x="235" y="10"/>
+<node id="39" value="6" x="460" y="160"/>
+<node id="11" value="4" x="310" y="10"/>
+<node id="12" value="3" x="235" y="85"/>
+<node id="47" value="L1" x="610" y="85"/>
+<node id="16" value="5" x="385" y="10"/>
+<node id="22" value="6" x="460" y="10"/>
+<node id="58" value="L2" x="610" y="160"/>
+<node id="29" value="7" x="535" y="10"/>
+<node id="30" value="6" x="460" y="85"/>
+<arc id="0" idFirstNode="1" idSecondNode="2"/>
+<arc id="1" idFirstNode="2" idSecondNode="4"/>
+<arc id="8" idFirstNode="3" idSecondNode="12"/>
+<arc id="2" idFirstNode="4" idSecondNode="7"/>
+<arc id="13" idFirstNode="6" idSecondNode="39"/>
+<arc id="3" idFirstNode="7" idSecondNode="11"/>
+<arc id="15" idFirstNode="39" idSecondNode="58"/>
+<arc id="14" idFirstNode="39" idSecondNode="30"/>
+<arc id="4" idFirstNode="11" idSecondNode="16"/>
+<arc id="9" idFirstNode="12" idSecondNode="7"/>
+<arc id="10" idFirstNode="12" idSecondNode="30"/>
+<arc id="5" idFirstNode="16" idSecondNode="22"/>
+<arc id="6" idFirstNode="22" idSecondNode="29"/>
+<arc id="7" idFirstNode="29" idSecondNode="37"/>
+<arc id="11" idFirstNode="30" idSecondNode="22"/>
+<arc id="12" idFirstNode="30" idSecondNode="47"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="30">
+<visualNode id="1" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="37" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="6" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="7" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="39" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="11" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="12" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="47" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="16" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="22" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="58" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="29" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="30" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The search of the element moved to the previous level.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="9">
+<element id="0" value=" 1  SkipListScan( k ):"/>
+<element id="1" value=" 2    p = L[h];"/>
+<element id="2" value=" 3    WHILE (p != null) {"/>
+<element id="3" value=" 4      WHILE (p.succ.key &#60;= k)"/>
+<element id="4" value=" 5        p = p.succ;"/>
+<element id="5" value=" 6      predecessor = p;"/>
+<element id="6" value=" 7      p = p.inf;"/>
+<element id="7" value=" 8    }"/>
+<element id="8" value=" 9    RETURN predecessor;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="450.0" originX="700" originY="30">
+<visualMalleableElement id="5" color="FFFF00" font="Times-PLAIN-12" shapeHeight="20" shapeWidth="450"/>
+<visualMalleableElement id="6" color="FFFF00" font="Times-PLAIN-12" shapeHeight="20" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="41">
+<structure name="Skip list" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="1" value="L0" x="10" y="10"/>
+<node id="2" value="1" x="85" y="10"/>
+<node id="3" value="L1" x="10" y="85"/>
+<node id="4" value="2" x="160" y="10"/>
+<node id="37" value="L0" x="610" y="10"/>
+<node id="6" value="L2" x="10" y="160"/>
+<node id="7" value="3" x="235" y="10"/>
+<node id="39" value="6" x="460" y="160"/>
+<node id="11" value="4" x="310" y="10"/>
+<node id="12" value="3" x="235" y="85"/>
+<node id="47" value="L1" x="610" y="85"/>
+<node id="16" value="5" x="385" y="10"/>
+<node id="22" value="6" x="460" y="10"/>
+<node id="58" value="L2" x="610" y="160"/>
+<node id="29" value="7" x="535" y="10"/>
+<node id="30" value="6" x="460" y="85"/>
+<arc id="0" idFirstNode="1" idSecondNode="2"/>
+<arc id="1" idFirstNode="2" idSecondNode="4"/>
+<arc id="8" idFirstNode="3" idSecondNode="12"/>
+<arc id="2" idFirstNode="4" idSecondNode="7"/>
+<arc id="13" idFirstNode="6" idSecondNode="39"/>
+<arc id="3" idFirstNode="7" idSecondNode="11"/>
+<arc id="15" idFirstNode="39" idSecondNode="58"/>
+<arc id="14" idFirstNode="39" idSecondNode="30"/>
+<arc id="4" idFirstNode="11" idSecondNode="16"/>
+<arc id="9" idFirstNode="12" idSecondNode="7"/>
+<arc id="10" idFirstNode="12" idSecondNode="30"/>
+<arc id="5" idFirstNode="16" idSecondNode="22"/>
+<arc id="6" idFirstNode="22" idSecondNode="29"/>
+<arc id="7" idFirstNode="29" idSecondNode="37"/>
+<arc id="11" idFirstNode="30" idSecondNode="22"/>
+<arc id="12" idFirstNode="30" idSecondNode="47"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="30">
+<visualNode id="1" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="37" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="6" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="7" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="39" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="11" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="12" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="47" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="16" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="22" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="58" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="29" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="30" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The research moved one step ahead in the same level.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="9">
+<element id="0" value=" 1  SkipListScan( k ):"/>
+<element id="1" value=" 2    p = L[h];"/>
+<element id="2" value=" 3    WHILE (p != null) {"/>
+<element id="3" value=" 4      WHILE (p.succ.key &#60;= k)"/>
+<element id="4" value=" 5        p = p.succ;"/>
+<element id="5" value=" 6      predecessor = p;"/>
+<element id="6" value=" 7      p = p.inf;"/>
+<element id="7" value=" 8    }"/>
+<element id="8" value=" 9    RETURN predecessor;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="450.0" originX="700" originY="30">
+<visualMalleableElement id="4" color="FFFF00" font="Times-PLAIN-12" shapeHeight="20" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="42">
+<structure name="Skip list" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="1" value="L0" x="10" y="10"/>
+<node id="2" value="1" x="85" y="10"/>
+<node id="3" value="L1" x="10" y="85"/>
+<node id="4" value="2" x="160" y="10"/>
+<node id="37" value="L0" x="610" y="10"/>
+<node id="6" value="L2" x="10" y="160"/>
+<node id="7" value="3" x="235" y="10"/>
+<node id="39" value="6" x="460" y="160"/>
+<node id="11" value="4" x="310" y="10"/>
+<node id="12" value="3" x="235" y="85"/>
+<node id="47" value="L1" x="610" y="85"/>
+<node id="16" value="5" x="385" y="10"/>
+<node id="22" value="6" x="460" y="10"/>
+<node id="58" value="L2" x="610" y="160"/>
+<node id="29" value="7" x="535" y="10"/>
+<node id="30" value="6" x="460" y="85"/>
+<arc id="0" idFirstNode="1" idSecondNode="2"/>
+<arc id="1" idFirstNode="2" idSecondNode="4"/>
+<arc id="8" idFirstNode="3" idSecondNode="12"/>
+<arc id="2" idFirstNode="4" idSecondNode="7"/>
+<arc id="13" idFirstNode="6" idSecondNode="39"/>
+<arc id="3" idFirstNode="7" idSecondNode="11"/>
+<arc id="15" idFirstNode="39" idSecondNode="58"/>
+<arc id="14" idFirstNode="39" idSecondNode="30"/>
+<arc id="4" idFirstNode="11" idSecondNode="16"/>
+<arc id="9" idFirstNode="12" idSecondNode="7"/>
+<arc id="10" idFirstNode="12" idSecondNode="30"/>
+<arc id="5" idFirstNode="16" idSecondNode="22"/>
+<arc id="6" idFirstNode="22" idSecondNode="29"/>
+<arc id="7" idFirstNode="29" idSecondNode="37"/>
+<arc id="11" idFirstNode="30" idSecondNode="22"/>
+<arc id="12" idFirstNode="30" idSecondNode="47"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="30">
+<visualNode id="1" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="37" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="6" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="7" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="39" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="11" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="12" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="47" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="16" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="22" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="58" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="29" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="30" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The search of the element moved to the previous level.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="9">
+<element id="0" value=" 1  SkipListScan( k ):"/>
+<element id="1" value=" 2    p = L[h];"/>
+<element id="2" value=" 3    WHILE (p != null) {"/>
+<element id="3" value=" 4      WHILE (p.succ.key &#60;= k)"/>
+<element id="4" value=" 5        p = p.succ;"/>
+<element id="5" value=" 6      predecessor = p;"/>
+<element id="6" value=" 7      p = p.inf;"/>
+<element id="7" value=" 8    }"/>
+<element id="8" value=" 9    RETURN predecessor;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="450.0" originX="700" originY="30">
+<visualMalleableElement id="5" color="FFFF00" font="Times-PLAIN-12" shapeHeight="20" shapeWidth="450"/>
+<visualMalleableElement id="6" color="FFFF00" font="Times-PLAIN-12" shapeHeight="20" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="43">
+<structure name="Skip list" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="1" value="L0" x="10" y="10"/>
+<node id="2" value="1" x="85" y="10"/>
+<node id="3" value="L1" x="10" y="85"/>
+<node id="4" value="2" x="160" y="10"/>
+<node id="37" value="L0" x="610" y="10"/>
+<node id="6" value="L2" x="10" y="160"/>
+<node id="7" value="3" x="235" y="10"/>
+<node id="39" value="6" x="460" y="160"/>
+<node id="11" value="4" x="310" y="10"/>
+<node id="12" value="3" x="235" y="85"/>
+<node id="47" value="L1" x="610" y="85"/>
+<node id="16" value="5" x="385" y="10"/>
+<node id="22" value="6" x="460" y="10"/>
+<node id="58" value="L2" x="610" y="160"/>
+<node id="29" value="7" x="535" y="10"/>
+<node id="30" value="6" x="460" y="85"/>
+<arc id="0" idFirstNode="1" idSecondNode="2"/>
+<arc id="1" idFirstNode="2" idSecondNode="4"/>
+<arc id="8" idFirstNode="3" idSecondNode="12"/>
+<arc id="2" idFirstNode="4" idSecondNode="7"/>
+<arc id="13" idFirstNode="6" idSecondNode="39"/>
+<arc id="3" idFirstNode="7" idSecondNode="11"/>
+<arc id="15" idFirstNode="39" idSecondNode="58"/>
+<arc id="14" idFirstNode="39" idSecondNode="30"/>
+<arc id="4" idFirstNode="11" idSecondNode="16"/>
+<arc id="9" idFirstNode="12" idSecondNode="7"/>
+<arc id="10" idFirstNode="12" idSecondNode="30"/>
+<arc id="5" idFirstNode="16" idSecondNode="22"/>
+<arc id="6" idFirstNode="22" idSecondNode="29"/>
+<arc id="7" idFirstNode="29" idSecondNode="37"/>
+<arc id="11" idFirstNode="30" idSecondNode="22"/>
+<arc id="12" idFirstNode="30" idSecondNode="47"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="30">
+<visualNode id="1" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="37" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="6" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="7" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="39" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="11" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="12" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="47" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="16" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="22" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="58" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="29" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="30" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The research moved one step ahead in the same level.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="9">
+<element id="0" value=" 1  SkipListScan( k ):"/>
+<element id="1" value=" 2    p = L[h];"/>
+<element id="2" value=" 3    WHILE (p != null) {"/>
+<element id="3" value=" 4      WHILE (p.succ.key &#60;= k)"/>
+<element id="4" value=" 5        p = p.succ;"/>
+<element id="5" value=" 6      predecessor = p;"/>
+<element id="6" value=" 7      p = p.inf;"/>
+<element id="7" value=" 8    }"/>
+<element id="8" value=" 9    RETURN predecessor;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="450.0" originX="700" originY="30">
+<visualMalleableElement id="4" color="FFFF00" font="Times-PLAIN-12" shapeHeight="20" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="44">
+<structure name="Skip list" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="1" value="L0" x="10" y="10"/>
+<node id="2" value="1" x="85" y="10"/>
+<node id="3" value="L1" x="10" y="85"/>
+<node id="4" value="2" x="160" y="10"/>
+<node id="37" value="L0" x="610" y="10"/>
+<node id="6" value="L2" x="10" y="160"/>
+<node id="7" value="3" x="235" y="10"/>
+<node id="39" value="6" x="460" y="160"/>
+<node id="11" value="4" x="310" y="10"/>
+<node id="12" value="3" x="235" y="85"/>
+<node id="47" value="L1" x="610" y="85"/>
+<node id="16" value="5" x="385" y="10"/>
+<node id="22" value="6" x="460" y="10"/>
+<node id="58" value="L2" x="610" y="160"/>
+<node id="29" value="7" x="535" y="10"/>
+<node id="30" value="6" x="460" y="85"/>
+<arc id="0" idFirstNode="1" idSecondNode="2"/>
+<arc id="1" idFirstNode="2" idSecondNode="4"/>
+<arc id="8" idFirstNode="3" idSecondNode="12"/>
+<arc id="2" idFirstNode="4" idSecondNode="7"/>
+<arc id="13" idFirstNode="6" idSecondNode="39"/>
+<arc id="3" idFirstNode="7" idSecondNode="11"/>
+<arc id="15" idFirstNode="39" idSecondNode="58"/>
+<arc id="14" idFirstNode="39" idSecondNode="30"/>
+<arc id="4" idFirstNode="11" idSecondNode="16"/>
+<arc id="9" idFirstNode="12" idSecondNode="7"/>
+<arc id="10" idFirstNode="12" idSecondNode="30"/>
+<arc id="5" idFirstNode="16" idSecondNode="22"/>
+<arc id="6" idFirstNode="22" idSecondNode="29"/>
+<arc id="7" idFirstNode="29" idSecondNode="37"/>
+<arc id="11" idFirstNode="30" idSecondNode="22"/>
+<arc id="12" idFirstNode="30" idSecondNode="47"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="30">
+<visualNode id="1" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="37" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="6" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="7" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="39" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="11" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="12" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="47" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="16" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="22" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="58" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="29" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="30" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The research moved one step ahead in the same level.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="9">
+<element id="0" value=" 1  SkipListScan( k ):"/>
+<element id="1" value=" 2    p = L[h];"/>
+<element id="2" value=" 3    WHILE (p != null) {"/>
+<element id="3" value=" 4      WHILE (p.succ.key &#60;= k)"/>
+<element id="4" value=" 5        p = p.succ;"/>
+<element id="5" value=" 6      predecessor = p;"/>
+<element id="6" value=" 7      p = p.inf;"/>
+<element id="7" value=" 8    }"/>
+<element id="8" value=" 9    RETURN predecessor;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="450.0" originX="700" originY="30">
+<visualMalleableElement id="4" color="FFFF00" font="Times-PLAIN-12" shapeHeight="20" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="45">
+<structure name="Skip list" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="1" value="L0" x="10" y="10"/>
+<node id="2" value="1" x="85" y="10"/>
+<node id="3" value="L1" x="10" y="85"/>
+<node id="4" value="2" x="160" y="10"/>
+<node id="37" value="L0" x="610" y="10"/>
+<node id="6" value="L2" x="10" y="160"/>
+<node id="7" value="3" x="235" y="10"/>
+<node id="39" value="6" x="460" y="160"/>
+<node id="11" value="4" x="310" y="10"/>
+<node id="12" value="3" x="235" y="85"/>
+<node id="47" value="L1" x="610" y="85"/>
+<node id="16" value="5" x="385" y="10"/>
+<node id="22" value="6" x="460" y="10"/>
+<node id="58" value="L2" x="610" y="160"/>
+<node id="29" value="7" x="535" y="10"/>
+<node id="30" value="6" x="460" y="85"/>
+<arc id="0" idFirstNode="1" idSecondNode="2"/>
+<arc id="1" idFirstNode="2" idSecondNode="4"/>
+<arc id="8" idFirstNode="3" idSecondNode="12"/>
+<arc id="2" idFirstNode="4" idSecondNode="7"/>
+<arc id="13" idFirstNode="6" idSecondNode="39"/>
+<arc id="3" idFirstNode="7" idSecondNode="11"/>
+<arc id="15" idFirstNode="39" idSecondNode="58"/>
+<arc id="14" idFirstNode="39" idSecondNode="30"/>
+<arc id="4" idFirstNode="11" idSecondNode="16"/>
+<arc id="9" idFirstNode="12" idSecondNode="7"/>
+<arc id="10" idFirstNode="12" idSecondNode="30"/>
+<arc id="5" idFirstNode="16" idSecondNode="22"/>
+<arc id="6" idFirstNode="22" idSecondNode="29"/>
+<arc id="7" idFirstNode="29" idSecondNode="37"/>
+<arc id="11" idFirstNode="30" idSecondNode="22"/>
+<arc id="12" idFirstNode="30" idSecondNode="47"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="30">
+<visualNode id="1" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="37" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="6" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="7" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="39" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="11" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="12" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="47" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="16" color="FF0000" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="22" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="58" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="29" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="30" color="FFFFFF" font="Times-PLAIN-12" shape="Rectangular" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The research of the value 5 has travelled through the red nodes and terminated with a success.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="9">
+<element id="0" value=" 1  SkipListScan( k ):"/>
+<element id="1" value=" 2    p = L[h];"/>
+<element id="2" value=" 3    WHILE (p != null) {"/>
+<element id="3" value=" 4      WHILE (p.succ.key &#60;= k)"/>
+<element id="4" value=" 5        p = p.succ;"/>
+<element id="5" value=" 6      predecessor = p;"/>
+<element id="6" value=" 7      p = p.inf;"/>
+<element id="7" value=" 8    }"/>
+<element id="8" value=" 9    RETURN predecessor;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Times-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="450.0" originX="700" originY="30">
+<visualMalleableElement id="8" color="FFFF00" font="Times-PLAIN-12" shapeHeight="20" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+</algorithm>

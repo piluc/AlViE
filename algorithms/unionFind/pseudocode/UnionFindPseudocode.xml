@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure name="Union find" type="Pseudocode">
+	<pseudocode size="23">
+		<element id="0" value=" 1  Create( x ):" />
+		<element id="1" value=" 2    list.begin = list.end = x;" />
+		<element id="2" value=" 3    list.length = 1;" />
+		<element id="3" value=" 4    x.list = list;" />
+		<element id="4" value=" 5    x.succ = null;;" />
+		<element id="5" value=" 1  Belong( x, y ):" />
+		<element id="6" value=" 2    RETURN (x.list == y.list);" />
+		<element id="7" value=" 1  Unify( x, y ):" />
+		<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {" />
+		<element id="9" value=" 3      short = x.list;" />
+		<element id="10" value=" 4      long = y.list;" />
+		<element id="11" value=" 5    } ELSE {" />
+		<element id="12" value=" 6      short = y.list;" />
+		<element id="13" value=" 7      long = x.list;" />
+		<element id="14" value=" 8    }" />
+		<element id="15" value=" 9    z = short.begin;" />
+		<element id="16" value="10    WHILE (z != null) {" />
+		<element id="17" value="11      z.list = long;" />
+		<element id="18" value="12      z = z.succ;" />
+		<element id="19" value="13    }" />
+		<element id="20" value="14    long.end.succ = short.begin;" />
+		<element id="21" value="15    long.end = short.end;" />
+		<element id="22" value="16    long.length = short.length + long.length;" />
+	</pseudocode>
+</structure>

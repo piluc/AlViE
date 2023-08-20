@@ -1,0 +1,1686 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm name="Segment sum">
+<step number="0">
+<structure name="a" type="Array">
+<array size="12" type="IntInformation">
+<element id="0" value="31"/>
+<element id="1" value="-41"/>
+<element id="2" value="59"/>
+<element id="3" value="26"/>
+<element id="4" value="-53"/>
+<element id="5" value="58"/>
+<element id="6" value="97"/>
+<element id="7" value="-93"/>
+<element id="8" value="-95"/>
+<element id="9" value="14"/>
+<element id="10" value="-10"/>
+<element id="11" value="20"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="11" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="Initial array of which we want to find the maximum sum segment.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="12">
+<element id="0" value=" 1  MaxSum3( a )"/>
+<element id="1" value=" 2    max = 0;"/>
+<element id="2" value=" 3    sum = max;"/>
+<element id="3" value=" 4    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="4" value=" 5      IF (sum > 0) {"/>
+<element id="5" value=" 6        sum = sum + a[j];"/>
+<element id="6" value=" 7      } ELSE {"/>
+<element id="7" value=" 8        sum = a[j];"/>
+<element id="8" value=" 9      }"/>
+<element id="9" value="10      IF (sum > max) max = sum;"/>
+<element id="10" value="11    }"/>
+<element id="11" value="12    RETURN max;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="1">
+<structure name="a" type="Array">
+<array size="12" type="IntInformation">
+<element id="0" value="31"/>
+<element id="1" value="-41"/>
+<element id="2" value="59"/>
+<element id="3" value="26"/>
+<element id="4" value="-53"/>
+<element id="5" value="58"/>
+<element id="6" value="97"/>
+<element id="7" value="-93"/>
+<element id="8" value="-95"/>
+<element id="9" value="14"/>
+<element id="10" value="-10"/>
+<element id="11" value="20"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="11" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The sum of the current segment (in yellow) is not positive (0) so that we discard the current segment and consider a new segment starting from the green element.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="12">
+<element id="0" value=" 1  MaxSum3( a )"/>
+<element id="1" value=" 2    max = 0;"/>
+<element id="2" value=" 3    sum = max;"/>
+<element id="3" value=" 4    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="4" value=" 5      IF (sum > 0) {"/>
+<element id="5" value=" 6        sum = sum + a[j];"/>
+<element id="6" value=" 7      } ELSE {"/>
+<element id="7" value=" 8        sum = a[j];"/>
+<element id="8" value=" 9      }"/>
+<element id="9" value="10      IF (sum > max) max = sum;"/>
+<element id="10" value="11    }"/>
+<element id="11" value="12    RETURN max;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="7" color="CCCCCC" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="2">
+<structure name="a" type="Array">
+<array size="12" type="IntInformation">
+<element id="0" value="31"/>
+<element id="1" value="-41"/>
+<element id="2" value="59"/>
+<element id="3" value="26"/>
+<element id="4" value="-53"/>
+<element id="5" value="58"/>
+<element id="6" value="97"/>
+<element id="7" value="-93"/>
+<element id="8" value="-95"/>
+<element id="9" value="14"/>
+<element id="10" value="-10"/>
+<element id="11" value="20"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="11" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The sum of the current segment (in yellow) is 31 while the current maximum sum is 0.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="12">
+<element id="0" value=" 1  MaxSum3( a )"/>
+<element id="1" value=" 2    max = 0;"/>
+<element id="2" value=" 3    sum = max;"/>
+<element id="3" value=" 4    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="4" value=" 5      IF (sum > 0) {"/>
+<element id="5" value=" 6        sum = sum + a[j];"/>
+<element id="6" value=" 7      } ELSE {"/>
+<element id="7" value=" 8        sum = a[j];"/>
+<element id="8" value=" 9      }"/>
+<element id="9" value="10      IF (sum > max) max = sum;"/>
+<element id="10" value="11    }"/>
+<element id="11" value="12    RETURN max;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="9" color="CCCCCC" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="3">
+<structure name="a" type="Array">
+<array size="12" type="IntInformation">
+<element id="0" value="31"/>
+<element id="1" value="-41"/>
+<element id="2" value="59"/>
+<element id="3" value="26"/>
+<element id="4" value="-53"/>
+<element id="5" value="58"/>
+<element id="6" value="97"/>
+<element id="7" value="-93"/>
+<element id="8" value="-95"/>
+<element id="9" value="14"/>
+<element id="10" value="-10"/>
+<element id="11" value="20"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="11" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The sum of the current segment is greater than the current maximum sum, then the current maximum sum has been updated (the azure segment is the new maximum sum segment).">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="12">
+<element id="0" value=" 1  MaxSum3( a )"/>
+<element id="1" value=" 2    max = 0;"/>
+<element id="2" value=" 3    sum = max;"/>
+<element id="3" value=" 4    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="4" value=" 5      IF (sum > 0) {"/>
+<element id="5" value=" 6        sum = sum + a[j];"/>
+<element id="6" value=" 7      } ELSE {"/>
+<element id="7" value=" 8        sum = a[j];"/>
+<element id="8" value=" 9      }"/>
+<element id="9" value="10      IF (sum > max) max = sum;"/>
+<element id="10" value="11    }"/>
+<element id="11" value="12    RETURN max;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="9" color="CCCCCC" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="4">
+<structure name="a" type="Array">
+<array size="12" type="IntInformation">
+<element id="0" value="31"/>
+<element id="1" value="-41"/>
+<element id="2" value="59"/>
+<element id="3" value="26"/>
+<element id="4" value="-53"/>
+<element id="5" value="58"/>
+<element id="6" value="97"/>
+<element id="7" value="-93"/>
+<element id="8" value="-95"/>
+<element id="9" value="14"/>
+<element id="10" value="-10"/>
+<element id="11" value="20"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="11" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The sum of the current segment (in yellow) is positive (31) so that we can try to extend the segment with the green element.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="12">
+<element id="0" value=" 1  MaxSum3( a )"/>
+<element id="1" value=" 2    max = 0;"/>
+<element id="2" value=" 3    sum = max;"/>
+<element id="3" value=" 4    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="4" value=" 5      IF (sum > 0) {"/>
+<element id="5" value=" 6        sum = sum + a[j];"/>
+<element id="6" value=" 7      } ELSE {"/>
+<element id="7" value=" 8        sum = a[j];"/>
+<element id="8" value=" 9      }"/>
+<element id="9" value="10      IF (sum > max) max = sum;"/>
+<element id="10" value="11    }"/>
+<element id="11" value="12    RETURN max;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="5" color="CCCCCC" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="5">
+<structure name="a" type="Array">
+<array size="12" type="IntInformation">
+<element id="0" value="31"/>
+<element id="1" value="-41"/>
+<element id="2" value="59"/>
+<element id="3" value="26"/>
+<element id="4" value="-53"/>
+<element id="5" value="58"/>
+<element id="6" value="97"/>
+<element id="7" value="-93"/>
+<element id="8" value="-95"/>
+<element id="9" value="14"/>
+<element id="10" value="-10"/>
+<element id="11" value="20"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="11" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The sum of the current segment (in yellow) is -10 while the current maximum sum is 31.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="12">
+<element id="0" value=" 1  MaxSum3( a )"/>
+<element id="1" value=" 2    max = 0;"/>
+<element id="2" value=" 3    sum = max;"/>
+<element id="3" value=" 4    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="4" value=" 5      IF (sum > 0) {"/>
+<element id="5" value=" 6        sum = sum + a[j];"/>
+<element id="6" value=" 7      } ELSE {"/>
+<element id="7" value=" 8        sum = a[j];"/>
+<element id="8" value=" 9      }"/>
+<element id="9" value="10      IF (sum > max) max = sum;"/>
+<element id="10" value="11    }"/>
+<element id="11" value="12    RETURN max;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="9" color="CCCCCC" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="6">
+<structure name="a" type="Array">
+<array size="12" type="IntInformation">
+<element id="0" value="31"/>
+<element id="1" value="-41"/>
+<element id="2" value="59"/>
+<element id="3" value="26"/>
+<element id="4" value="-53"/>
+<element id="5" value="58"/>
+<element id="6" value="97"/>
+<element id="7" value="-93"/>
+<element id="8" value="-95"/>
+<element id="9" value="14"/>
+<element id="10" value="-10"/>
+<element id="11" value="20"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="11" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The sum of the current segment (in yellow) is not positive (-10) so that we discard the current segment and consider a new segment starting from the green element.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="12">
+<element id="0" value=" 1  MaxSum3( a )"/>
+<element id="1" value=" 2    max = 0;"/>
+<element id="2" value=" 3    sum = max;"/>
+<element id="3" value=" 4    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="4" value=" 5      IF (sum > 0) {"/>
+<element id="5" value=" 6        sum = sum + a[j];"/>
+<element id="6" value=" 7      } ELSE {"/>
+<element id="7" value=" 8        sum = a[j];"/>
+<element id="8" value=" 9      }"/>
+<element id="9" value="10      IF (sum > max) max = sum;"/>
+<element id="10" value="11    }"/>
+<element id="11" value="12    RETURN max;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="7" color="CCCCCC" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="7">
+<structure name="a" type="Array">
+<array size="12" type="IntInformation">
+<element id="0" value="31"/>
+<element id="1" value="-41"/>
+<element id="2" value="59"/>
+<element id="3" value="26"/>
+<element id="4" value="-53"/>
+<element id="5" value="58"/>
+<element id="6" value="97"/>
+<element id="7" value="-93"/>
+<element id="8" value="-95"/>
+<element id="9" value="14"/>
+<element id="10" value="-10"/>
+<element id="11" value="20"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="11" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The sum of the current segment (in yellow) is 59 while the current maximum sum is 31.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="12">
+<element id="0" value=" 1  MaxSum3( a )"/>
+<element id="1" value=" 2    max = 0;"/>
+<element id="2" value=" 3    sum = max;"/>
+<element id="3" value=" 4    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="4" value=" 5      IF (sum > 0) {"/>
+<element id="5" value=" 6        sum = sum + a[j];"/>
+<element id="6" value=" 7      } ELSE {"/>
+<element id="7" value=" 8        sum = a[j];"/>
+<element id="8" value=" 9      }"/>
+<element id="9" value="10      IF (sum > max) max = sum;"/>
+<element id="10" value="11    }"/>
+<element id="11" value="12    RETURN max;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="9" color="CCCCCC" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="8">
+<structure name="a" type="Array">
+<array size="12" type="IntInformation">
+<element id="0" value="31"/>
+<element id="1" value="-41"/>
+<element id="2" value="59"/>
+<element id="3" value="26"/>
+<element id="4" value="-53"/>
+<element id="5" value="58"/>
+<element id="6" value="97"/>
+<element id="7" value="-93"/>
+<element id="8" value="-95"/>
+<element id="9" value="14"/>
+<element id="10" value="-10"/>
+<element id="11" value="20"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="11" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The sum of the current segment is greater than the current maximum sum, then the current maximum sum has been updated (the azure segment is the new maximum sum segment).">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="12">
+<element id="0" value=" 1  MaxSum3( a )"/>
+<element id="1" value=" 2    max = 0;"/>
+<element id="2" value=" 3    sum = max;"/>
+<element id="3" value=" 4    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="4" value=" 5      IF (sum > 0) {"/>
+<element id="5" value=" 6        sum = sum + a[j];"/>
+<element id="6" value=" 7      } ELSE {"/>
+<element id="7" value=" 8        sum = a[j];"/>
+<element id="8" value=" 9      }"/>
+<element id="9" value="10      IF (sum > max) max = sum;"/>
+<element id="10" value="11    }"/>
+<element id="11" value="12    RETURN max;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="9" color="CCCCCC" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="9">
+<structure name="a" type="Array">
+<array size="12" type="IntInformation">
+<element id="0" value="31"/>
+<element id="1" value="-41"/>
+<element id="2" value="59"/>
+<element id="3" value="26"/>
+<element id="4" value="-53"/>
+<element id="5" value="58"/>
+<element id="6" value="97"/>
+<element id="7" value="-93"/>
+<element id="8" value="-95"/>
+<element id="9" value="14"/>
+<element id="10" value="-10"/>
+<element id="11" value="20"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="11" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The sum of the current segment (in yellow) is positive (59) so that we can try to extend the segment with the green element.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="12">
+<element id="0" value=" 1  MaxSum3( a )"/>
+<element id="1" value=" 2    max = 0;"/>
+<element id="2" value=" 3    sum = max;"/>
+<element id="3" value=" 4    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="4" value=" 5      IF (sum > 0) {"/>
+<element id="5" value=" 6        sum = sum + a[j];"/>
+<element id="6" value=" 7      } ELSE {"/>
+<element id="7" value=" 8        sum = a[j];"/>
+<element id="8" value=" 9      }"/>
+<element id="9" value="10      IF (sum > max) max = sum;"/>
+<element id="10" value="11    }"/>
+<element id="11" value="12    RETURN max;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="5" color="CCCCCC" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="10">
+<structure name="a" type="Array">
+<array size="12" type="IntInformation">
+<element id="0" value="31"/>
+<element id="1" value="-41"/>
+<element id="2" value="59"/>
+<element id="3" value="26"/>
+<element id="4" value="-53"/>
+<element id="5" value="58"/>
+<element id="6" value="97"/>
+<element id="7" value="-93"/>
+<element id="8" value="-95"/>
+<element id="9" value="14"/>
+<element id="10" value="-10"/>
+<element id="11" value="20"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="11" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The sum of the current segment (in yellow) is 85 while the current maximum sum is 59.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="12">
+<element id="0" value=" 1  MaxSum3( a )"/>
+<element id="1" value=" 2    max = 0;"/>
+<element id="2" value=" 3    sum = max;"/>
+<element id="3" value=" 4    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="4" value=" 5      IF (sum > 0) {"/>
+<element id="5" value=" 6        sum = sum + a[j];"/>
+<element id="6" value=" 7      } ELSE {"/>
+<element id="7" value=" 8        sum = a[j];"/>
+<element id="8" value=" 9      }"/>
+<element id="9" value="10      IF (sum > max) max = sum;"/>
+<element id="10" value="11    }"/>
+<element id="11" value="12    RETURN max;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="9" color="CCCCCC" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="11">
+<structure name="a" type="Array">
+<array size="12" type="IntInformation">
+<element id="0" value="31"/>
+<element id="1" value="-41"/>
+<element id="2" value="59"/>
+<element id="3" value="26"/>
+<element id="4" value="-53"/>
+<element id="5" value="58"/>
+<element id="6" value="97"/>
+<element id="7" value="-93"/>
+<element id="8" value="-95"/>
+<element id="9" value="14"/>
+<element id="10" value="-10"/>
+<element id="11" value="20"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="11" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The sum of the current segment is greater than the current maximum sum, then the current maximum sum has been updated (the azure segment is the new maximum sum segment).">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="12">
+<element id="0" value=" 1  MaxSum3( a )"/>
+<element id="1" value=" 2    max = 0;"/>
+<element id="2" value=" 3    sum = max;"/>
+<element id="3" value=" 4    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="4" value=" 5      IF (sum > 0) {"/>
+<element id="5" value=" 6        sum = sum + a[j];"/>
+<element id="6" value=" 7      } ELSE {"/>
+<element id="7" value=" 8        sum = a[j];"/>
+<element id="8" value=" 9      }"/>
+<element id="9" value="10      IF (sum > max) max = sum;"/>
+<element id="10" value="11    }"/>
+<element id="11" value="12    RETURN max;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="9" color="CCCCCC" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="12">
+<structure name="a" type="Array">
+<array size="12" type="IntInformation">
+<element id="0" value="31"/>
+<element id="1" value="-41"/>
+<element id="2" value="59"/>
+<element id="3" value="26"/>
+<element id="4" value="-53"/>
+<element id="5" value="58"/>
+<element id="6" value="97"/>
+<element id="7" value="-93"/>
+<element id="8" value="-95"/>
+<element id="9" value="14"/>
+<element id="10" value="-10"/>
+<element id="11" value="20"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="11" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The sum of the current segment (in yellow) is positive (85) so that we can try to extend the segment with the green element.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="12">
+<element id="0" value=" 1  MaxSum3( a )"/>
+<element id="1" value=" 2    max = 0;"/>
+<element id="2" value=" 3    sum = max;"/>
+<element id="3" value=" 4    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="4" value=" 5      IF (sum > 0) {"/>
+<element id="5" value=" 6        sum = sum + a[j];"/>
+<element id="6" value=" 7      } ELSE {"/>
+<element id="7" value=" 8        sum = a[j];"/>
+<element id="8" value=" 9      }"/>
+<element id="9" value="10      IF (sum > max) max = sum;"/>
+<element id="10" value="11    }"/>
+<element id="11" value="12    RETURN max;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="5" color="CCCCCC" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="13">
+<structure name="a" type="Array">
+<array size="12" type="IntInformation">
+<element id="0" value="31"/>
+<element id="1" value="-41"/>
+<element id="2" value="59"/>
+<element id="3" value="26"/>
+<element id="4" value="-53"/>
+<element id="5" value="58"/>
+<element id="6" value="97"/>
+<element id="7" value="-93"/>
+<element id="8" value="-95"/>
+<element id="9" value="14"/>
+<element id="10" value="-10"/>
+<element id="11" value="20"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="11" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The sum of the current segment (in yellow) is 32 while the current maximum sum is 85.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="12">
+<element id="0" value=" 1  MaxSum3( a )"/>
+<element id="1" value=" 2    max = 0;"/>
+<element id="2" value=" 3    sum = max;"/>
+<element id="3" value=" 4    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="4" value=" 5      IF (sum > 0) {"/>
+<element id="5" value=" 6        sum = sum + a[j];"/>
+<element id="6" value=" 7      } ELSE {"/>
+<element id="7" value=" 8        sum = a[j];"/>
+<element id="8" value=" 9      }"/>
+<element id="9" value="10      IF (sum > max) max = sum;"/>
+<element id="10" value="11    }"/>
+<element id="11" value="12    RETURN max;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="9" color="CCCCCC" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="14">
+<structure name="a" type="Array">
+<array size="12" type="IntInformation">
+<element id="0" value="31"/>
+<element id="1" value="-41"/>
+<element id="2" value="59"/>
+<element id="3" value="26"/>
+<element id="4" value="-53"/>
+<element id="5" value="58"/>
+<element id="6" value="97"/>
+<element id="7" value="-93"/>
+<element id="8" value="-95"/>
+<element id="9" value="14"/>
+<element id="10" value="-10"/>
+<element id="11" value="20"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="11" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The sum of the current segment (in yellow) is positive (32) so that we can try to extend the segment with the green element.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="12">
+<element id="0" value=" 1  MaxSum3( a )"/>
+<element id="1" value=" 2    max = 0;"/>
+<element id="2" value=" 3    sum = max;"/>
+<element id="3" value=" 4    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="4" value=" 5      IF (sum > 0) {"/>
+<element id="5" value=" 6        sum = sum + a[j];"/>
+<element id="6" value=" 7      } ELSE {"/>
+<element id="7" value=" 8        sum = a[j];"/>
+<element id="8" value=" 9      }"/>
+<element id="9" value="10      IF (sum > max) max = sum;"/>
+<element id="10" value="11    }"/>
+<element id="11" value="12    RETURN max;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="5" color="CCCCCC" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="15">
+<structure name="a" type="Array">
+<array size="12" type="IntInformation">
+<element id="0" value="31"/>
+<element id="1" value="-41"/>
+<element id="2" value="59"/>
+<element id="3" value="26"/>
+<element id="4" value="-53"/>
+<element id="5" value="58"/>
+<element id="6" value="97"/>
+<element id="7" value="-93"/>
+<element id="8" value="-95"/>
+<element id="9" value="14"/>
+<element id="10" value="-10"/>
+<element id="11" value="20"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="11" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The sum of the current segment (in yellow) is 90 while the current maximum sum is 85.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="12">
+<element id="0" value=" 1  MaxSum3( a )"/>
+<element id="1" value=" 2    max = 0;"/>
+<element id="2" value=" 3    sum = max;"/>
+<element id="3" value=" 4    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="4" value=" 5      IF (sum > 0) {"/>
+<element id="5" value=" 6        sum = sum + a[j];"/>
+<element id="6" value=" 7      } ELSE {"/>
+<element id="7" value=" 8        sum = a[j];"/>
+<element id="8" value=" 9      }"/>
+<element id="9" value="10      IF (sum > max) max = sum;"/>
+<element id="10" value="11    }"/>
+<element id="11" value="12    RETURN max;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="9" color="CCCCCC" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="16">
+<structure name="a" type="Array">
+<array size="12" type="IntInformation">
+<element id="0" value="31"/>
+<element id="1" value="-41"/>
+<element id="2" value="59"/>
+<element id="3" value="26"/>
+<element id="4" value="-53"/>
+<element id="5" value="58"/>
+<element id="6" value="97"/>
+<element id="7" value="-93"/>
+<element id="8" value="-95"/>
+<element id="9" value="14"/>
+<element id="10" value="-10"/>
+<element id="11" value="20"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="00FFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="00FFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="11" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The sum of the current segment is greater than the current maximum sum, then the current maximum sum has been updated (the azure segment is the new maximum sum segment).">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="12">
+<element id="0" value=" 1  MaxSum3( a )"/>
+<element id="1" value=" 2    max = 0;"/>
+<element id="2" value=" 3    sum = max;"/>
+<element id="3" value=" 4    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="4" value=" 5      IF (sum > 0) {"/>
+<element id="5" value=" 6        sum = sum + a[j];"/>
+<element id="6" value=" 7      } ELSE {"/>
+<element id="7" value=" 8        sum = a[j];"/>
+<element id="8" value=" 9      }"/>
+<element id="9" value="10      IF (sum > max) max = sum;"/>
+<element id="10" value="11    }"/>
+<element id="11" value="12    RETURN max;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="9" color="CCCCCC" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="17">
+<structure name="a" type="Array">
+<array size="12" type="IntInformation">
+<element id="0" value="31"/>
+<element id="1" value="-41"/>
+<element id="2" value="59"/>
+<element id="3" value="26"/>
+<element id="4" value="-53"/>
+<element id="5" value="58"/>
+<element id="6" value="97"/>
+<element id="7" value="-93"/>
+<element id="8" value="-95"/>
+<element id="9" value="14"/>
+<element id="10" value="-10"/>
+<element id="11" value="20"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="11" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The sum of the current segment (in yellow) is positive (90) so that we can try to extend the segment with the green element.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="12">
+<element id="0" value=" 1  MaxSum3( a )"/>
+<element id="1" value=" 2    max = 0;"/>
+<element id="2" value=" 3    sum = max;"/>
+<element id="3" value=" 4    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="4" value=" 5      IF (sum > 0) {"/>
+<element id="5" value=" 6        sum = sum + a[j];"/>
+<element id="6" value=" 7      } ELSE {"/>
+<element id="7" value=" 8        sum = a[j];"/>
+<element id="8" value=" 9      }"/>
+<element id="9" value="10      IF (sum > max) max = sum;"/>
+<element id="10" value="11    }"/>
+<element id="11" value="12    RETURN max;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="5" color="CCCCCC" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="18">
+<structure name="a" type="Array">
+<array size="12" type="IntInformation">
+<element id="0" value="31"/>
+<element id="1" value="-41"/>
+<element id="2" value="59"/>
+<element id="3" value="26"/>
+<element id="4" value="-53"/>
+<element id="5" value="58"/>
+<element id="6" value="97"/>
+<element id="7" value="-93"/>
+<element id="8" value="-95"/>
+<element id="9" value="14"/>
+<element id="10" value="-10"/>
+<element id="11" value="20"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="11" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The sum of the current segment (in yellow) is 187 while the current maximum sum is 90.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="12">
+<element id="0" value=" 1  MaxSum3( a )"/>
+<element id="1" value=" 2    max = 0;"/>
+<element id="2" value=" 3    sum = max;"/>
+<element id="3" value=" 4    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="4" value=" 5      IF (sum > 0) {"/>
+<element id="5" value=" 6        sum = sum + a[j];"/>
+<element id="6" value=" 7      } ELSE {"/>
+<element id="7" value=" 8        sum = a[j];"/>
+<element id="8" value=" 9      }"/>
+<element id="9" value="10      IF (sum > max) max = sum;"/>
+<element id="10" value="11    }"/>
+<element id="11" value="12    RETURN max;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="9" color="CCCCCC" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="19">
+<structure name="a" type="Array">
+<array size="12" type="IntInformation">
+<element id="0" value="31"/>
+<element id="1" value="-41"/>
+<element id="2" value="59"/>
+<element id="3" value="26"/>
+<element id="4" value="-53"/>
+<element id="5" value="58"/>
+<element id="6" value="97"/>
+<element id="7" value="-93"/>
+<element id="8" value="-95"/>
+<element id="9" value="14"/>
+<element id="10" value="-10"/>
+<element id="11" value="20"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="00FFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="00FFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="00FFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="11" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The sum of the current segment is greater than the current maximum sum, then the current maximum sum has been updated (the azure segment is the new maximum sum segment).">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="12">
+<element id="0" value=" 1  MaxSum3( a )"/>
+<element id="1" value=" 2    max = 0;"/>
+<element id="2" value=" 3    sum = max;"/>
+<element id="3" value=" 4    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="4" value=" 5      IF (sum > 0) {"/>
+<element id="5" value=" 6        sum = sum + a[j];"/>
+<element id="6" value=" 7      } ELSE {"/>
+<element id="7" value=" 8        sum = a[j];"/>
+<element id="8" value=" 9      }"/>
+<element id="9" value="10      IF (sum > max) max = sum;"/>
+<element id="10" value="11    }"/>
+<element id="11" value="12    RETURN max;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="9" color="CCCCCC" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="20">
+<structure name="a" type="Array">
+<array size="12" type="IntInformation">
+<element id="0" value="31"/>
+<element id="1" value="-41"/>
+<element id="2" value="59"/>
+<element id="3" value="26"/>
+<element id="4" value="-53"/>
+<element id="5" value="58"/>
+<element id="6" value="97"/>
+<element id="7" value="-93"/>
+<element id="8" value="-95"/>
+<element id="9" value="14"/>
+<element id="10" value="-10"/>
+<element id="11" value="20"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="11" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The sum of the current segment (in yellow) is positive (187) so that we can try to extend the segment with the green element.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="12">
+<element id="0" value=" 1  MaxSum3( a )"/>
+<element id="1" value=" 2    max = 0;"/>
+<element id="2" value=" 3    sum = max;"/>
+<element id="3" value=" 4    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="4" value=" 5      IF (sum > 0) {"/>
+<element id="5" value=" 6        sum = sum + a[j];"/>
+<element id="6" value=" 7      } ELSE {"/>
+<element id="7" value=" 8        sum = a[j];"/>
+<element id="8" value=" 9      }"/>
+<element id="9" value="10      IF (sum > max) max = sum;"/>
+<element id="10" value="11    }"/>
+<element id="11" value="12    RETURN max;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="5" color="CCCCCC" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="21">
+<structure name="a" type="Array">
+<array size="12" type="IntInformation">
+<element id="0" value="31"/>
+<element id="1" value="-41"/>
+<element id="2" value="59"/>
+<element id="3" value="26"/>
+<element id="4" value="-53"/>
+<element id="5" value="58"/>
+<element id="6" value="97"/>
+<element id="7" value="-93"/>
+<element id="8" value="-95"/>
+<element id="9" value="14"/>
+<element id="10" value="-10"/>
+<element id="11" value="20"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="11" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The sum of the current segment (in yellow) is 94 while the current maximum sum is 187.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="12">
+<element id="0" value=" 1  MaxSum3( a )"/>
+<element id="1" value=" 2    max = 0;"/>
+<element id="2" value=" 3    sum = max;"/>
+<element id="3" value=" 4    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="4" value=" 5      IF (sum > 0) {"/>
+<element id="5" value=" 6        sum = sum + a[j];"/>
+<element id="6" value=" 7      } ELSE {"/>
+<element id="7" value=" 8        sum = a[j];"/>
+<element id="8" value=" 9      }"/>
+<element id="9" value="10      IF (sum > max) max = sum;"/>
+<element id="10" value="11    }"/>
+<element id="11" value="12    RETURN max;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="9" color="CCCCCC" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="22">
+<structure name="a" type="Array">
+<array size="12" type="IntInformation">
+<element id="0" value="31"/>
+<element id="1" value="-41"/>
+<element id="2" value="59"/>
+<element id="3" value="26"/>
+<element id="4" value="-53"/>
+<element id="5" value="58"/>
+<element id="6" value="97"/>
+<element id="7" value="-93"/>
+<element id="8" value="-95"/>
+<element id="9" value="14"/>
+<element id="10" value="-10"/>
+<element id="11" value="20"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="11" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The sum of the current segment (in yellow) is positive (94) so that we can try to extend the segment with the green element.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="12">
+<element id="0" value=" 1  MaxSum3( a )"/>
+<element id="1" value=" 2    max = 0;"/>
+<element id="2" value=" 3    sum = max;"/>
+<element id="3" value=" 4    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="4" value=" 5      IF (sum > 0) {"/>
+<element id="5" value=" 6        sum = sum + a[j];"/>
+<element id="6" value=" 7      } ELSE {"/>
+<element id="7" value=" 8        sum = a[j];"/>
+<element id="8" value=" 9      }"/>
+<element id="9" value="10      IF (sum > max) max = sum;"/>
+<element id="10" value="11    }"/>
+<element id="11" value="12    RETURN max;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="5" color="CCCCCC" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="23">
+<structure name="a" type="Array">
+<array size="12" type="IntInformation">
+<element id="0" value="31"/>
+<element id="1" value="-41"/>
+<element id="2" value="59"/>
+<element id="3" value="26"/>
+<element id="4" value="-53"/>
+<element id="5" value="58"/>
+<element id="6" value="97"/>
+<element id="7" value="-93"/>
+<element id="8" value="-95"/>
+<element id="9" value="14"/>
+<element id="10" value="-10"/>
+<element id="11" value="20"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="11" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The sum of the current segment (in yellow) is -1 while the current maximum sum is 187.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="12">
+<element id="0" value=" 1  MaxSum3( a )"/>
+<element id="1" value=" 2    max = 0;"/>
+<element id="2" value=" 3    sum = max;"/>
+<element id="3" value=" 4    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="4" value=" 5      IF (sum > 0) {"/>
+<element id="5" value=" 6        sum = sum + a[j];"/>
+<element id="6" value=" 7      } ELSE {"/>
+<element id="7" value=" 8        sum = a[j];"/>
+<element id="8" value=" 9      }"/>
+<element id="9" value="10      IF (sum > max) max = sum;"/>
+<element id="10" value="11    }"/>
+<element id="11" value="12    RETURN max;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="9" color="CCCCCC" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="24">
+<structure name="a" type="Array">
+<array size="12" type="IntInformation">
+<element id="0" value="31"/>
+<element id="1" value="-41"/>
+<element id="2" value="59"/>
+<element id="3" value="26"/>
+<element id="4" value="-53"/>
+<element id="5" value="58"/>
+<element id="6" value="97"/>
+<element id="7" value="-93"/>
+<element id="8" value="-95"/>
+<element id="9" value="14"/>
+<element id="10" value="-10"/>
+<element id="11" value="20"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="11" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The sum of the current segment (in yellow) is not positive (-1) so that we discard the current segment and consider a new segment starting from the green element.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="12">
+<element id="0" value=" 1  MaxSum3( a )"/>
+<element id="1" value=" 2    max = 0;"/>
+<element id="2" value=" 3    sum = max;"/>
+<element id="3" value=" 4    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="4" value=" 5      IF (sum > 0) {"/>
+<element id="5" value=" 6        sum = sum + a[j];"/>
+<element id="6" value=" 7      } ELSE {"/>
+<element id="7" value=" 8        sum = a[j];"/>
+<element id="8" value=" 9      }"/>
+<element id="9" value="10      IF (sum > max) max = sum;"/>
+<element id="10" value="11    }"/>
+<element id="11" value="12    RETURN max;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="7" color="CCCCCC" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="25">
+<structure name="a" type="Array">
+<array size="12" type="IntInformation">
+<element id="0" value="31"/>
+<element id="1" value="-41"/>
+<element id="2" value="59"/>
+<element id="3" value="26"/>
+<element id="4" value="-53"/>
+<element id="5" value="58"/>
+<element id="6" value="97"/>
+<element id="7" value="-93"/>
+<element id="8" value="-95"/>
+<element id="9" value="14"/>
+<element id="10" value="-10"/>
+<element id="11" value="20"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="11" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The sum of the current segment (in yellow) is 14 while the current maximum sum is 187.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="12">
+<element id="0" value=" 1  MaxSum3( a )"/>
+<element id="1" value=" 2    max = 0;"/>
+<element id="2" value=" 3    sum = max;"/>
+<element id="3" value=" 4    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="4" value=" 5      IF (sum > 0) {"/>
+<element id="5" value=" 6        sum = sum + a[j];"/>
+<element id="6" value=" 7      } ELSE {"/>
+<element id="7" value=" 8        sum = a[j];"/>
+<element id="8" value=" 9      }"/>
+<element id="9" value="10      IF (sum > max) max = sum;"/>
+<element id="10" value="11    }"/>
+<element id="11" value="12    RETURN max;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="9" color="CCCCCC" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="26">
+<structure name="a" type="Array">
+<array size="12" type="IntInformation">
+<element id="0" value="31"/>
+<element id="1" value="-41"/>
+<element id="2" value="59"/>
+<element id="3" value="26"/>
+<element id="4" value="-53"/>
+<element id="5" value="58"/>
+<element id="6" value="97"/>
+<element id="7" value="-93"/>
+<element id="8" value="-95"/>
+<element id="9" value="14"/>
+<element id="10" value="-10"/>
+<element id="11" value="20"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="11" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The sum of the current segment (in yellow) is positive (14) so that we can try to extend the segment with the green element.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="12">
+<element id="0" value=" 1  MaxSum3( a )"/>
+<element id="1" value=" 2    max = 0;"/>
+<element id="2" value=" 3    sum = max;"/>
+<element id="3" value=" 4    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="4" value=" 5      IF (sum > 0) {"/>
+<element id="5" value=" 6        sum = sum + a[j];"/>
+<element id="6" value=" 7      } ELSE {"/>
+<element id="7" value=" 8        sum = a[j];"/>
+<element id="8" value=" 9      }"/>
+<element id="9" value="10      IF (sum > max) max = sum;"/>
+<element id="10" value="11    }"/>
+<element id="11" value="12    RETURN max;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="5" color="CCCCCC" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="27">
+<structure name="a" type="Array">
+<array size="12" type="IntInformation">
+<element id="0" value="31"/>
+<element id="1" value="-41"/>
+<element id="2" value="59"/>
+<element id="3" value="26"/>
+<element id="4" value="-53"/>
+<element id="5" value="58"/>
+<element id="6" value="97"/>
+<element id="7" value="-93"/>
+<element id="8" value="-95"/>
+<element id="9" value="14"/>
+<element id="10" value="-10"/>
+<element id="11" value="20"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="11" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The sum of the current segment (in yellow) is 4 while the current maximum sum is 187.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="12">
+<element id="0" value=" 1  MaxSum3( a )"/>
+<element id="1" value=" 2    max = 0;"/>
+<element id="2" value=" 3    sum = max;"/>
+<element id="3" value=" 4    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="4" value=" 5      IF (sum > 0) {"/>
+<element id="5" value=" 6        sum = sum + a[j];"/>
+<element id="6" value=" 7      } ELSE {"/>
+<element id="7" value=" 8        sum = a[j];"/>
+<element id="8" value=" 9      }"/>
+<element id="9" value="10      IF (sum > max) max = sum;"/>
+<element id="10" value="11    }"/>
+<element id="11" value="12    RETURN max;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="9" color="CCCCCC" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="28">
+<structure name="a" type="Array">
+<array size="12" type="IntInformation">
+<element id="0" value="31"/>
+<element id="1" value="-41"/>
+<element id="2" value="59"/>
+<element id="3" value="26"/>
+<element id="4" value="-53"/>
+<element id="5" value="58"/>
+<element id="6" value="97"/>
+<element id="7" value="-93"/>
+<element id="8" value="-95"/>
+<element id="9" value="14"/>
+<element id="10" value="-10"/>
+<element id="11" value="20"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="11" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The sum of the current segment (in yellow) is positive (4) so that we can try to extend the segment with the green element.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="12">
+<element id="0" value=" 1  MaxSum3( a )"/>
+<element id="1" value=" 2    max = 0;"/>
+<element id="2" value=" 3    sum = max;"/>
+<element id="3" value=" 4    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="4" value=" 5      IF (sum > 0) {"/>
+<element id="5" value=" 6        sum = sum + a[j];"/>
+<element id="6" value=" 7      } ELSE {"/>
+<element id="7" value=" 8        sum = a[j];"/>
+<element id="8" value=" 9      }"/>
+<element id="9" value="10      IF (sum > max) max = sum;"/>
+<element id="10" value="11    }"/>
+<element id="11" value="12    RETURN max;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="5" color="CCCCCC" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="29">
+<structure name="a" type="Array">
+<array size="12" type="IntInformation">
+<element id="0" value="31"/>
+<element id="1" value="-41"/>
+<element id="2" value="59"/>
+<element id="3" value="26"/>
+<element id="4" value="-53"/>
+<element id="5" value="58"/>
+<element id="6" value="97"/>
+<element id="7" value="-93"/>
+<element id="8" value="-95"/>
+<element id="9" value="14"/>
+<element id="10" value="-10"/>
+<element id="11" value="20"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="11" color="FFFF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The sum of the current segment (in yellow) is 24 while the current maximum sum is 187.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="12">
+<element id="0" value=" 1  MaxSum3( a )"/>
+<element id="1" value=" 2    max = 0;"/>
+<element id="2" value=" 3    sum = max;"/>
+<element id="3" value=" 4    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="4" value=" 5      IF (sum > 0) {"/>
+<element id="5" value=" 6        sum = sum + a[j];"/>
+<element id="6" value=" 7      } ELSE {"/>
+<element id="7" value=" 8        sum = a[j];"/>
+<element id="8" value=" 9      }"/>
+<element id="9" value="10      IF (sum > max) max = sum;"/>
+<element id="10" value="11    }"/>
+<element id="11" value="12    RETURN max;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="100">
+<visualMalleableElement id="9" color="CCCCCC" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="30">
+<structure name="a" type="Array">
+<array size="12" type="IntInformation">
+<element id="0" value="31"/>
+<element id="1" value="-41"/>
+<element id="2" value="59"/>
+<element id="3" value="26"/>
+<element id="4" value="-53"/>
+<element id="5" value="58"/>
+<element id="6" value="97"/>
+<element id="7" value="-93"/>
+<element id="8" value="-95"/>
+<element id="9" value="14"/>
+<element id="10" value="-10"/>
+<element id="11" value="20"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="00FFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="00FFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="00FFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="11" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The maximum sum segment is shown in azure and its sum is equal to 187">
+</message>
+</structure>
+</step>
+</algorithm>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure name="Quick Sort" type="Pseudocode">
+	<pseudocode size="7">
+		<element id="0" value=" 1  QuickSort( a, left, right )" />
+		<element id="1" value=" 2    IF (left &#60; right) {" />
+		<element id="2" value=" 3      select pivot in the interval [left...right];" />
+		<element id="3" value=" 4      center = Distribution( a, left, pivot, right );" />
+		<element id="4" value=" 5      QuickSort( a, left, pivot-1 );" />
+		<element id="5" value=" 6      QuickSort( a, pivot+1, right );" />
+		<element id="6" value=" 7    }" />
+	</pseudocode>
+</structure>

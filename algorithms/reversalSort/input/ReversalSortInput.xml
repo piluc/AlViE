@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure name="Array" type="Array">
+	<array size="32" type="IntInformation">
+		<element id="0" value="0" />
+		<element id="1" value="2" />
+		<element id="2" value="4" />
+		<element id="3" value="3" />
+		<element id="4" value="1" />
+		<element id="5" value="5" />
+		<element id="6" value="8" />
+		<element id="7" value="9" />
+		<element id="8" value="6" />
+		<element id="9" value="7" />
+		<element id="10" value="10" />
+		<element id="11" value="12" />
+		<element id="12" value="13" />
+		<element id="13" value="11" />
+		<element id="14" value="14" />
+		<element id="15" value="17" />
+		<element id="16" value="16" />
+		<element id="17" value="15" />
+		<element id="18" value="19" />
+		<element id="19" value="18" />
+		<element id="20" value="30" />
+		<element id="21" value="24" />
+		<element id="22" value="25" />
+		<element id="23" value="22" />
+		<element id="24" value="23" />
+		<element id="25" value="26" />
+		<element id="26" value="27" />
+		<element id="27" value="29" />
+		<element id="28" value="28" />
+		<element id="29" value="20" />
+		<element id="30" value="21" />
+		<element id="31" value="31" />
+	</array>
+</structure>

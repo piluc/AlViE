@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure name="Sorting by reversal" type="Pseudocode">
+	<pseudocode size="12">
+		<element id="0" value=" GreedyReversalSort( pi ):" />
+		<element id="1" value=" 1    WHILE b(pi) > 0" />
+		<element id="2" value=" 2      compute invpi;" />
+		<element id="3" value=" 3      search for a reversal that removes two breakpoints;" />
+		<element id="4" value=" 4      IF none exists" />
+		<element id="5" value=" 5        compute down and up;" />
+		<element id="6" value=" 6        search for a reversal that removes one breakpoint and leaves a decreasing strip;" />
+		<element id="7" value=" 7        IF none exists" />
+		<element id="8" value=" 8          search for a reversal that just removes one breakpoint;" />
+		<element id="9" value=" 9          IF none exists " />
+		<element id="10" value="10            bring the least out of place element into position;" />
+		<element id="11" value="11    RETURN" />
+	</pseudocode>
+</structure>

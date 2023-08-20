@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure name="Sudoku 4x4" type="Matrix">
+<matrix height="4" width="4" type="StringInformation">
+	<element id="0" value=" "/>
+	<element id="1" value=" "/>
+	<element id="2" value="3"/>
+	<element id="3" value=" "/>
+	<element id="4" value=" "/>
+	<element id="5" value=" "/>
+	<element id="6" value=" "/>
+	<element id="7" value=" "/>
+	<element id="8" value=" "/>
+	<element id="9" value="2"/>
+	<element id="10" value=" "/>
+	<element id="11" value=" "/>
+	<element id="12" value=" "/>
+	<element id="13" value="1"/>
+	<element id="14" value="4"/>
+	<element id="15" value=" "/>
+</matrix>
+</structure>

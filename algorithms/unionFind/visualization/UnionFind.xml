@@ -1,0 +1,3566 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm name="Union/find">
+<step number="0">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="10" y="105"/>
+<node id="4" value="4" x="10" y="140"/>
+<node id="5" value="5" x="10" y="175"/>
+<node id="6" value="6" x="10" y="210"/>
+<node id="7" value="7" x="10" y="245"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="10" y="315"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+</visualGraph>
+<message content="Initial lists with one element each.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="1" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+<visualMalleableElement id="2" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+<visualMalleableElement id="3" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+<visualMalleableElement id="4" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="1">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="10" y="105"/>
+<node id="4" value="4" x="10" y="140"/>
+<node id="5" value="5" x="10" y="175"/>
+<node id="6" value="6" x="10" y="210"/>
+<node id="7" value="7" x="10" y="245"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="10" y="315"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="3" color="00FFFF" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="0" color="00FFFF" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The two blue elements belong to different lists and, hence, the union has to be executed.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="6" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="2">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="10" y="105"/>
+<node id="4" value="4" x="10" y="140"/>
+<node id="5" value="5" x="10" y="175"/>
+<node id="6" value="6" x="10" y="210"/>
+<node id="7" value="7" x="10" y="245"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="10" y="315"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="3" color="00FFFF" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="0" color="00FFFF" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The union of the two lists to which the blue elements belong starts.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="7" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="3">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="10" y="105"/>
+<node id="4" value="4" x="10" y="140"/>
+<node id="5" value="5" x="10" y="175"/>
+<node id="6" value="6" x="10" y="210"/>
+<node id="7" value="7" x="10" y="245"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="10" y="315"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="3" color="00FF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="0" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The green list is not longer than the yellow one and, hence, must be appended to it. ">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="15" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="4">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="10" y="105"/>
+<node id="4" value="4" x="10" y="140"/>
+<node id="5" value="5" x="10" y="175"/>
+<node id="6" value="6" x="10" y="210"/>
+<node id="7" value="7" x="10" y="245"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="10" y="315"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="3" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="0" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The rightmost yellow element in the shorter list has been moved to the longer list.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="17" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+<visualMalleableElement id="18" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="5">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="10" y="105"/>
+<node id="4" value="4" x="10" y="140"/>
+<node id="5" value="5" x="10" y="175"/>
+<node id="6" value="6" x="10" y="210"/>
+<node id="7" value="7" x="10" y="245"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="10" y="315"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="3" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="0" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The shorter yellow list has to be appended to the longer yellow one.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="20" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+<visualMalleableElement id="21" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+<visualMalleableElement id="22" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="6">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="10" y="140"/>
+<node id="5" value="5" x="10" y="175"/>
+<node id="6" value="6" x="10" y="210"/>
+<node id="7" value="7" x="10" y="245"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="10" y="315"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="3" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="0" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The shorter list has been appended to the longer one.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="20" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+<visualMalleableElement id="21" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+<visualMalleableElement id="22" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="7">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="10" y="140"/>
+<node id="5" value="5" x="10" y="175"/>
+<node id="6" value="6" x="10" y="210"/>
+<node id="7" value="7" x="10" y="245"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="10" y="315"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+</visualGraph>
+<message content="The list union ended.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="8">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="10" y="140"/>
+<node id="5" value="5" x="10" y="175"/>
+<node id="6" value="6" x="10" y="210"/>
+<node id="7" value="7" x="10" y="245"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="10" y="315"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="9" color="00FFFF" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="7" color="00FFFF" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The two blue elements belong to different lists and, hence, the union has to be executed.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="6" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="9">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="10" y="140"/>
+<node id="5" value="5" x="10" y="175"/>
+<node id="6" value="6" x="10" y="210"/>
+<node id="7" value="7" x="10" y="245"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="10" y="315"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="9" color="00FFFF" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="7" color="00FFFF" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The union of the two lists to which the blue elements belong starts.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="7" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="10">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="10" y="140"/>
+<node id="5" value="5" x="10" y="175"/>
+<node id="6" value="6" x="10" y="210"/>
+<node id="7" value="7" x="10" y="245"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="10" y="315"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="9" color="00FF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="7" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The green list is not longer than the yellow one and, hence, must be appended to it. ">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="15" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="11">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="10" y="140"/>
+<node id="5" value="5" x="10" y="175"/>
+<node id="6" value="6" x="10" y="210"/>
+<node id="7" value="7" x="10" y="245"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="10" y="315"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="9" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="7" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The rightmost yellow element in the shorter list has been moved to the longer list.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="17" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+<visualMalleableElement id="18" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="12">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="10" y="140"/>
+<node id="5" value="5" x="10" y="175"/>
+<node id="6" value="6" x="10" y="210"/>
+<node id="7" value="7" x="10" y="245"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="10" y="315"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="9" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="7" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The shorter yellow list has to be appended to the longer yellow one.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="20" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+<visualMalleableElement id="21" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+<visualMalleableElement id="22" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="13">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="10" y="140"/>
+<node id="5" value="5" x="10" y="175"/>
+<node id="6" value="6" x="10" y="210"/>
+<node id="7" value="7" x="10" y="245"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="90" y="245"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="1" idFirstNode="7" idSecondNode="9"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="9" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="7" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The shorter list has been appended to the longer one.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="20" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+<visualMalleableElement id="21" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+<visualMalleableElement id="22" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="14">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="10" y="140"/>
+<node id="5" value="5" x="10" y="175"/>
+<node id="6" value="6" x="10" y="210"/>
+<node id="7" value="7" x="10" y="245"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="90" y="245"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="1" idFirstNode="7" idSecondNode="9"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+</visualGraph>
+<message content="The list union ended.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="15">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="10" y="140"/>
+<node id="5" value="5" x="10" y="175"/>
+<node id="6" value="6" x="10" y="210"/>
+<node id="7" value="7" x="10" y="245"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="90" y="245"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="1" idFirstNode="7" idSecondNode="9"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="6" color="00FFFF" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="00FFFF" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The two blue elements belong to different lists and, hence, the union has to be executed.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="6" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="16">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="10" y="140"/>
+<node id="5" value="5" x="10" y="175"/>
+<node id="6" value="6" x="10" y="210"/>
+<node id="7" value="7" x="10" y="245"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="90" y="245"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="1" idFirstNode="7" idSecondNode="9"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="6" color="00FFFF" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="00FFFF" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The union of the two lists to which the blue elements belong starts.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="7" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="17">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="10" y="140"/>
+<node id="5" value="5" x="10" y="175"/>
+<node id="6" value="6" x="10" y="210"/>
+<node id="7" value="7" x="10" y="245"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="90" y="245"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="1" idFirstNode="7" idSecondNode="9"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="6" color="00FF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="0" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The green list is not longer than the yellow one and, hence, must be appended to it. ">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="15" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="18">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="10" y="140"/>
+<node id="5" value="5" x="10" y="175"/>
+<node id="6" value="6" x="10" y="210"/>
+<node id="7" value="7" x="10" y="245"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="90" y="245"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="1" idFirstNode="7" idSecondNode="9"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="6" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="0" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The rightmost yellow element in the shorter list has been moved to the longer list.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="17" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+<visualMalleableElement id="18" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="19">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="10" y="140"/>
+<node id="5" value="5" x="10" y="175"/>
+<node id="6" value="6" x="10" y="210"/>
+<node id="7" value="7" x="10" y="245"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="90" y="245"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="1" idFirstNode="7" idSecondNode="9"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="6" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="0" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The shorter yellow list has to be appended to the longer yellow one.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="20" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+<visualMalleableElement id="21" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+<visualMalleableElement id="22" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="20">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="10" y="140"/>
+<node id="5" value="5" x="10" y="175"/>
+<node id="6" value="6" x="170" y="0"/>
+<node id="7" value="7" x="10" y="245"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="90" y="245"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="2" idFirstNode="3" idSecondNode="6"/>
+<arc id="1" idFirstNode="7" idSecondNode="9"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="6" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="0" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The shorter list has been appended to the longer one.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="20" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+<visualMalleableElement id="21" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+<visualMalleableElement id="22" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="21">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="10" y="140"/>
+<node id="5" value="5" x="10" y="175"/>
+<node id="6" value="6" x="170" y="0"/>
+<node id="7" value="7" x="10" y="245"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="90" y="245"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="2" idFirstNode="3" idSecondNode="6"/>
+<arc id="1" idFirstNode="7" idSecondNode="9"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+</visualGraph>
+<message content="The list union ended.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="22">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="10" y="140"/>
+<node id="5" value="5" x="10" y="175"/>
+<node id="6" value="6" x="170" y="0"/>
+<node id="7" value="7" x="10" y="245"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="90" y="245"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="2" idFirstNode="3" idSecondNode="6"/>
+<arc id="1" idFirstNode="7" idSecondNode="9"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="9" color="00FFFF" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="0" color="00FFFF" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The two blue elements belong to different lists and, hence, the union has to be executed.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="6" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="23">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="10" y="140"/>
+<node id="5" value="5" x="10" y="175"/>
+<node id="6" value="6" x="170" y="0"/>
+<node id="7" value="7" x="10" y="245"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="90" y="245"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="2" idFirstNode="3" idSecondNode="6"/>
+<arc id="1" idFirstNode="7" idSecondNode="9"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="9" color="00FFFF" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="0" color="00FFFF" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The union of the two lists to which the blue elements belong starts.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="7" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="24">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="10" y="140"/>
+<node id="5" value="5" x="10" y="175"/>
+<node id="6" value="6" x="170" y="0"/>
+<node id="7" value="7" x="10" y="245"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="90" y="245"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="2" idFirstNode="3" idSecondNode="6"/>
+<arc id="1" idFirstNode="7" idSecondNode="9"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="7" color="00FF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="9" color="00FF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="0" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="6" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The green list is not longer than the yellow one and, hence, must be appended to it. ">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="15" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="25">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="10" y="140"/>
+<node id="5" value="5" x="10" y="175"/>
+<node id="6" value="6" x="170" y="0"/>
+<node id="7" value="7" x="10" y="245"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="90" y="245"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="2" idFirstNode="3" idSecondNode="6"/>
+<arc id="1" idFirstNode="7" idSecondNode="9"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="7" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="9" color="00FF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="0" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="6" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The rightmost yellow element in the shorter list has been moved to the longer list.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="17" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+<visualMalleableElement id="18" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="26">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="10" y="140"/>
+<node id="5" value="5" x="10" y="175"/>
+<node id="6" value="6" x="170" y="0"/>
+<node id="7" value="7" x="10" y="245"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="90" y="245"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="2" idFirstNode="3" idSecondNode="6"/>
+<arc id="1" idFirstNode="7" idSecondNode="9"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="7" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="9" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="0" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="6" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The rightmost yellow element in the shorter list has been moved to the longer list.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="17" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+<visualMalleableElement id="18" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="27">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="10" y="140"/>
+<node id="5" value="5" x="10" y="175"/>
+<node id="6" value="6" x="170" y="0"/>
+<node id="7" value="7" x="10" y="245"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="90" y="245"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="2" idFirstNode="3" idSecondNode="6"/>
+<arc id="1" idFirstNode="7" idSecondNode="9"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="7" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="9" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="0" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="6" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The shorter yellow list has to be appended to the longer yellow one.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="20" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+<visualMalleableElement id="21" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+<visualMalleableElement id="22" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="28">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="10" y="140"/>
+<node id="5" value="5" x="10" y="175"/>
+<node id="6" value="6" x="170" y="0"/>
+<node id="7" value="7" x="250" y="0"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="330" y="0"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="2" idFirstNode="3" idSecondNode="6"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="1" idFirstNode="7" idSecondNode="9"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="7" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="9" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="0" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="6" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The shorter list has been appended to the longer one.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="20" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+<visualMalleableElement id="21" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+<visualMalleableElement id="22" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="29">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="10" y="140"/>
+<node id="5" value="5" x="10" y="175"/>
+<node id="6" value="6" x="170" y="0"/>
+<node id="7" value="7" x="250" y="0"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="330" y="0"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="2" idFirstNode="3" idSecondNode="6"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="1" idFirstNode="7" idSecondNode="9"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+</visualGraph>
+<message content="The list union ended.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="30">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="10" y="140"/>
+<node id="5" value="5" x="10" y="175"/>
+<node id="6" value="6" x="170" y="0"/>
+<node id="7" value="7" x="250" y="0"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="330" y="0"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="2" idFirstNode="3" idSecondNode="6"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="1" idFirstNode="7" idSecondNode="9"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="5" color="00FFFF" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="00FFFF" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The two blue elements belong to different lists and, hence, the union has to be executed.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="6" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="31">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="10" y="140"/>
+<node id="5" value="5" x="10" y="175"/>
+<node id="6" value="6" x="170" y="0"/>
+<node id="7" value="7" x="250" y="0"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="330" y="0"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="2" idFirstNode="3" idSecondNode="6"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="1" idFirstNode="7" idSecondNode="9"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="5" color="00FFFF" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="00FFFF" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The union of the two lists to which the blue elements belong starts.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="7" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="32">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="10" y="140"/>
+<node id="5" value="5" x="10" y="175"/>
+<node id="6" value="6" x="170" y="0"/>
+<node id="7" value="7" x="250" y="0"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="330" y="0"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="2" idFirstNode="3" idSecondNode="6"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="1" idFirstNode="7" idSecondNode="9"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="5" color="00FF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The green list is not longer than the yellow one and, hence, must be appended to it. ">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="15" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="33">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="10" y="140"/>
+<node id="5" value="5" x="10" y="175"/>
+<node id="6" value="6" x="170" y="0"/>
+<node id="7" value="7" x="250" y="0"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="330" y="0"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="2" idFirstNode="3" idSecondNode="6"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="1" idFirstNode="7" idSecondNode="9"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="5" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The rightmost yellow element in the shorter list has been moved to the longer list.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="17" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+<visualMalleableElement id="18" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="34">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="10" y="140"/>
+<node id="5" value="5" x="10" y="175"/>
+<node id="6" value="6" x="170" y="0"/>
+<node id="7" value="7" x="250" y="0"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="330" y="0"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="2" idFirstNode="3" idSecondNode="6"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="1" idFirstNode="7" idSecondNode="9"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="5" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The shorter yellow list has to be appended to the longer yellow one.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="20" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+<visualMalleableElement id="21" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+<visualMalleableElement id="22" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="35">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="10" y="140"/>
+<node id="5" value="5" x="90" y="140"/>
+<node id="6" value="6" x="170" y="0"/>
+<node id="7" value="7" x="250" y="0"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="330" y="0"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="2" idFirstNode="3" idSecondNode="6"/>
+<arc id="4" idFirstNode="4" idSecondNode="5"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="1" idFirstNode="7" idSecondNode="9"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="5" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The shorter list has been appended to the longer one.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="20" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+<visualMalleableElement id="21" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+<visualMalleableElement id="22" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="36">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="10" y="140"/>
+<node id="5" value="5" x="90" y="140"/>
+<node id="6" value="6" x="170" y="0"/>
+<node id="7" value="7" x="250" y="0"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="330" y="0"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="2" idFirstNode="3" idSecondNode="6"/>
+<arc id="4" idFirstNode="4" idSecondNode="5"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="1" idFirstNode="7" idSecondNode="9"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+</visualGraph>
+<message content="The list union ended.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="37">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="10" y="140"/>
+<node id="5" value="5" x="90" y="140"/>
+<node id="6" value="6" x="170" y="0"/>
+<node id="7" value="7" x="250" y="0"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="330" y="0"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="2" idFirstNode="3" idSecondNode="6"/>
+<arc id="4" idFirstNode="4" idSecondNode="5"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="1" idFirstNode="7" idSecondNode="9"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="6" color="00FFFF" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="00FFFF" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The two blue elements belong to different lists and, hence, the union has to be executed.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="6" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="38">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="10" y="140"/>
+<node id="5" value="5" x="90" y="140"/>
+<node id="6" value="6" x="170" y="0"/>
+<node id="7" value="7" x="250" y="0"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="330" y="0"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="2" idFirstNode="3" idSecondNode="6"/>
+<arc id="4" idFirstNode="4" idSecondNode="5"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="1" idFirstNode="7" idSecondNode="9"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="6" color="00FFFF" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="00FFFF" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The union of the two lists to which the blue elements belong starts.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="7" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="39">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="10" y="140"/>
+<node id="5" value="5" x="90" y="140"/>
+<node id="6" value="6" x="170" y="0"/>
+<node id="7" value="7" x="250" y="0"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="330" y="0"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="2" idFirstNode="3" idSecondNode="6"/>
+<arc id="4" idFirstNode="4" idSecondNode="5"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="1" idFirstNode="7" idSecondNode="9"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="4" color="00FF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="00FF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="0" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="6" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="7" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="9" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The green list is not longer than the yellow one and, hence, must be appended to it. ">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="15" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="40">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="10" y="140"/>
+<node id="5" value="5" x="90" y="140"/>
+<node id="6" value="6" x="170" y="0"/>
+<node id="7" value="7" x="250" y="0"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="330" y="0"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="2" idFirstNode="3" idSecondNode="6"/>
+<arc id="4" idFirstNode="4" idSecondNode="5"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="1" idFirstNode="7" idSecondNode="9"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="4" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="00FF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="0" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="6" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="7" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="9" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The rightmost yellow element in the shorter list has been moved to the longer list.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="17" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+<visualMalleableElement id="18" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="41">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="10" y="140"/>
+<node id="5" value="5" x="90" y="140"/>
+<node id="6" value="6" x="170" y="0"/>
+<node id="7" value="7" x="250" y="0"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="330" y="0"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="2" idFirstNode="3" idSecondNode="6"/>
+<arc id="4" idFirstNode="4" idSecondNode="5"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="1" idFirstNode="7" idSecondNode="9"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="4" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="0" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="6" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="7" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="9" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The rightmost yellow element in the shorter list has been moved to the longer list.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="17" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+<visualMalleableElement id="18" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="42">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="10" y="140"/>
+<node id="5" value="5" x="90" y="140"/>
+<node id="6" value="6" x="170" y="0"/>
+<node id="7" value="7" x="250" y="0"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="330" y="0"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="2" idFirstNode="3" idSecondNode="6"/>
+<arc id="4" idFirstNode="4" idSecondNode="5"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="1" idFirstNode="7" idSecondNode="9"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="4" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="0" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="6" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="7" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="9" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The shorter yellow list has to be appended to the longer yellow one.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="20" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+<visualMalleableElement id="21" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+<visualMalleableElement id="22" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="43">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="410" y="0"/>
+<node id="5" value="5" x="490" y="0"/>
+<node id="6" value="6" x="170" y="0"/>
+<node id="7" value="7" x="250" y="0"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="330" y="0"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="2" idFirstNode="3" idSecondNode="6"/>
+<arc id="4" idFirstNode="4" idSecondNode="5"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="1" idFirstNode="7" idSecondNode="9"/>
+<arc id="5" idFirstNode="9" idSecondNode="4"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="4" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="0" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="6" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="7" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="9" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The shorter list has been appended to the longer one.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="20" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+<visualMalleableElement id="21" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+<visualMalleableElement id="22" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="44">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="410" y="0"/>
+<node id="5" value="5" x="490" y="0"/>
+<node id="6" value="6" x="170" y="0"/>
+<node id="7" value="7" x="250" y="0"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="330" y="0"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="2" idFirstNode="3" idSecondNode="6"/>
+<arc id="4" idFirstNode="4" idSecondNode="5"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="1" idFirstNode="7" idSecondNode="9"/>
+<arc id="5" idFirstNode="9" idSecondNode="4"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+</visualGraph>
+<message content="The list union ended.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="45">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="410" y="0"/>
+<node id="5" value="5" x="490" y="0"/>
+<node id="6" value="6" x="170" y="0"/>
+<node id="7" value="7" x="250" y="0"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="330" y="0"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="2" idFirstNode="3" idSecondNode="6"/>
+<arc id="4" idFirstNode="4" idSecondNode="5"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="1" idFirstNode="7" idSecondNode="9"/>
+<arc id="5" idFirstNode="9" idSecondNode="4"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="1" color="00FFFF" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="00FFFF" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The two blue elements belong to different lists and, hence, the union has to be executed.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="6" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="46">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="410" y="0"/>
+<node id="5" value="5" x="490" y="0"/>
+<node id="6" value="6" x="170" y="0"/>
+<node id="7" value="7" x="250" y="0"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="330" y="0"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="2" idFirstNode="3" idSecondNode="6"/>
+<arc id="4" idFirstNode="4" idSecondNode="5"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="1" idFirstNode="7" idSecondNode="9"/>
+<arc id="5" idFirstNode="9" idSecondNode="4"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="1" color="00FFFF" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="00FFFF" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The union of the two lists to which the blue elements belong starts.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="7" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="47">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="410" y="0"/>
+<node id="5" value="5" x="490" y="0"/>
+<node id="6" value="6" x="170" y="0"/>
+<node id="7" value="7" x="250" y="0"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="330" y="0"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="2" idFirstNode="3" idSecondNode="6"/>
+<arc id="4" idFirstNode="4" idSecondNode="5"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="1" idFirstNode="7" idSecondNode="9"/>
+<arc id="5" idFirstNode="9" idSecondNode="4"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="1" color="00FF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The green list is not longer than the yellow one and, hence, must be appended to it. ">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="15" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="48">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="410" y="0"/>
+<node id="5" value="5" x="490" y="0"/>
+<node id="6" value="6" x="170" y="0"/>
+<node id="7" value="7" x="250" y="0"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="330" y="0"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="2" idFirstNode="3" idSecondNode="6"/>
+<arc id="4" idFirstNode="4" idSecondNode="5"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="1" idFirstNode="7" idSecondNode="9"/>
+<arc id="5" idFirstNode="9" idSecondNode="4"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="1" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The rightmost yellow element in the shorter list has been moved to the longer list.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="17" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+<visualMalleableElement id="18" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="49">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="10" y="35"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="410" y="0"/>
+<node id="5" value="5" x="490" y="0"/>
+<node id="6" value="6" x="170" y="0"/>
+<node id="7" value="7" x="250" y="0"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="330" y="0"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="2" idFirstNode="3" idSecondNode="6"/>
+<arc id="4" idFirstNode="4" idSecondNode="5"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="1" idFirstNode="7" idSecondNode="9"/>
+<arc id="5" idFirstNode="9" idSecondNode="4"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="1" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The shorter yellow list has to be appended to the longer yellow one.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="20" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+<visualMalleableElement id="21" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+<visualMalleableElement id="22" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="50">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="90" y="70"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="410" y="0"/>
+<node id="5" value="5" x="490" y="0"/>
+<node id="6" value="6" x="170" y="0"/>
+<node id="7" value="7" x="250" y="0"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="330" y="0"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="6" idFirstNode="2" idSecondNode="1"/>
+<arc id="2" idFirstNode="3" idSecondNode="6"/>
+<arc id="4" idFirstNode="4" idSecondNode="5"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="1" idFirstNode="7" idSecondNode="9"/>
+<arc id="5" idFirstNode="9" idSecondNode="4"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="1" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The shorter list has been appended to the longer one.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="20" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+<visualMalleableElement id="21" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+<visualMalleableElement id="22" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="51">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="90" y="70"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="410" y="0"/>
+<node id="5" value="5" x="490" y="0"/>
+<node id="6" value="6" x="170" y="0"/>
+<node id="7" value="7" x="250" y="0"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="330" y="0"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="6" idFirstNode="2" idSecondNode="1"/>
+<arc id="2" idFirstNode="3" idSecondNode="6"/>
+<arc id="4" idFirstNode="4" idSecondNode="5"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="1" idFirstNode="7" idSecondNode="9"/>
+<arc id="5" idFirstNode="9" idSecondNode="4"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+</visualGraph>
+<message content="The list union ended.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="52">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="90" y="70"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="410" y="0"/>
+<node id="5" value="5" x="490" y="0"/>
+<node id="6" value="6" x="170" y="0"/>
+<node id="7" value="7" x="250" y="0"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="330" y="0"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="6" idFirstNode="2" idSecondNode="1"/>
+<arc id="2" idFirstNode="3" idSecondNode="6"/>
+<arc id="4" idFirstNode="4" idSecondNode="5"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="1" idFirstNode="7" idSecondNode="9"/>
+<arc id="5" idFirstNode="9" idSecondNode="4"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="2" color="00FFFF" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="8" color="00FFFF" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The two blue elements belong to different lists and, hence, the union has to be executed.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="6" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="53">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="90" y="70"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="410" y="0"/>
+<node id="5" value="5" x="490" y="0"/>
+<node id="6" value="6" x="170" y="0"/>
+<node id="7" value="7" x="250" y="0"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="330" y="0"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="6" idFirstNode="2" idSecondNode="1"/>
+<arc id="2" idFirstNode="3" idSecondNode="6"/>
+<arc id="4" idFirstNode="4" idSecondNode="5"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="1" idFirstNode="7" idSecondNode="9"/>
+<arc id="5" idFirstNode="9" idSecondNode="4"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="2" color="00FFFF" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="8" color="00FFFF" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The union of the two lists to which the blue elements belong starts.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="7" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="54">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="90" y="70"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="410" y="0"/>
+<node id="5" value="5" x="490" y="0"/>
+<node id="6" value="6" x="170" y="0"/>
+<node id="7" value="7" x="250" y="0"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="330" y="0"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="6" idFirstNode="2" idSecondNode="1"/>
+<arc id="2" idFirstNode="3" idSecondNode="6"/>
+<arc id="4" idFirstNode="4" idSecondNode="5"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="1" idFirstNode="7" idSecondNode="9"/>
+<arc id="5" idFirstNode="9" idSecondNode="4"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="8" color="00FF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The green list is not longer than the yellow one and, hence, must be appended to it. ">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="15" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="55">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="90" y="70"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="410" y="0"/>
+<node id="5" value="5" x="490" y="0"/>
+<node id="6" value="6" x="170" y="0"/>
+<node id="7" value="7" x="250" y="0"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="330" y="0"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="6" idFirstNode="2" idSecondNode="1"/>
+<arc id="2" idFirstNode="3" idSecondNode="6"/>
+<arc id="4" idFirstNode="4" idSecondNode="5"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="1" idFirstNode="7" idSecondNode="9"/>
+<arc id="5" idFirstNode="9" idSecondNode="4"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="8" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The rightmost yellow element in the shorter list has been moved to the longer list.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="17" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+<visualMalleableElement id="18" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="56">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="90" y="70"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="410" y="0"/>
+<node id="5" value="5" x="490" y="0"/>
+<node id="6" value="6" x="170" y="0"/>
+<node id="7" value="7" x="250" y="0"/>
+<node id="8" value="8" x="10" y="280"/>
+<node id="9" value="9" x="330" y="0"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="6" idFirstNode="2" idSecondNode="1"/>
+<arc id="2" idFirstNode="3" idSecondNode="6"/>
+<arc id="4" idFirstNode="4" idSecondNode="5"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="1" idFirstNode="7" idSecondNode="9"/>
+<arc id="5" idFirstNode="9" idSecondNode="4"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="8" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The shorter yellow list has to be appended to the longer yellow one.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="20" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+<visualMalleableElement id="21" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+<visualMalleableElement id="22" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="57">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="90" y="70"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="410" y="0"/>
+<node id="5" value="5" x="490" y="0"/>
+<node id="6" value="6" x="170" y="0"/>
+<node id="7" value="7" x="250" y="0"/>
+<node id="8" value="8" x="170" y="70"/>
+<node id="9" value="9" x="330" y="0"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="7" idFirstNode="1" idSecondNode="8"/>
+<arc id="6" idFirstNode="2" idSecondNode="1"/>
+<arc id="2" idFirstNode="3" idSecondNode="6"/>
+<arc id="4" idFirstNode="4" idSecondNode="5"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="1" idFirstNode="7" idSecondNode="9"/>
+<arc id="5" idFirstNode="9" idSecondNode="4"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="8" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="FFFF00" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The shorter list has been appended to the longer one.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="20" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+<visualMalleableElement id="21" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+<visualMalleableElement id="22" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="58">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="90" y="70"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="410" y="0"/>
+<node id="5" value="5" x="490" y="0"/>
+<node id="6" value="6" x="170" y="0"/>
+<node id="7" value="7" x="250" y="0"/>
+<node id="8" value="8" x="170" y="70"/>
+<node id="9" value="9" x="330" y="0"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="7" idFirstNode="1" idSecondNode="8"/>
+<arc id="6" idFirstNode="2" idSecondNode="1"/>
+<arc id="2" idFirstNode="3" idSecondNode="6"/>
+<arc id="4" idFirstNode="4" idSecondNode="5"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="1" idFirstNode="7" idSecondNode="9"/>
+<arc id="5" idFirstNode="9" idSecondNode="4"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+</visualGraph>
+<message content="The list union ended.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="59">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="90" y="70"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="410" y="0"/>
+<node id="5" value="5" x="490" y="0"/>
+<node id="6" value="6" x="170" y="0"/>
+<node id="7" value="7" x="250" y="0"/>
+<node id="8" value="8" x="170" y="70"/>
+<node id="9" value="9" x="330" y="0"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="7" idFirstNode="1" idSecondNode="8"/>
+<arc id="6" idFirstNode="2" idSecondNode="1"/>
+<arc id="2" idFirstNode="3" idSecondNode="6"/>
+<arc id="4" idFirstNode="4" idSecondNode="5"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="1" idFirstNode="7" idSecondNode="9"/>
+<arc id="5" idFirstNode="9" idSecondNode="4"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="3" color="00FFFF" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="6" color="00FFFF" font="Monospaced-PLAIN-12" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The two blue elements belong to the same list and, hence, the union has not to be executed.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="23">
+<element id="0" value=" 1  Create( x ):"/>
+<element id="1" value=" 2    list.begin = list.end = x;"/>
+<element id="2" value=" 3    list.length = 1;"/>
+<element id="3" value=" 4    x.list = list;"/>
+<element id="4" value=" 5    x.succ = null;;"/>
+<element id="5" value=" 1  Belong( x, y ):"/>
+<element id="6" value=" 2    RETURN (x.list == y.list);"/>
+<element id="7" value=" 1  Unify( x, y ):"/>
+<element id="8" value=" 2    IF (x.list.length &#60;= y.list.length) {"/>
+<element id="9" value=" 3      short = x.list;"/>
+<element id="10" value=" 4      long = y.list;"/>
+<element id="11" value=" 5    } ELSE {"/>
+<element id="12" value=" 6      short = y.list;"/>
+<element id="13" value=" 7      long = x.list;"/>
+<element id="14" value=" 8    }"/>
+<element id="15" value=" 9    z = short.begin;"/>
+<element id="16" value="10    WHILE (z != null) {"/>
+<element id="17" value="11      z.list = long;"/>
+<element id="18" value="12      z = z.succ;"/>
+<element id="19" value="13    }"/>
+<element id="20" value="14    long.end.succ = short.begin;"/>
+<element id="21" value="15    long.end = short.end;"/>
+<element id="22" value="16    long.length = short.length + long.length;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="350.0" originX="580" originY="30">
+<visualMalleableElement id="6" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="350"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="60">
+<structure name="Lists" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="StringInformation">
+<node id="0" value="0" x="10" y="0"/>
+<node id="1" value="1" x="90" y="70"/>
+<node id="2" value="2" x="10" y="70"/>
+<node id="3" value="3" x="90" y="0"/>
+<node id="4" value="4" x="410" y="0"/>
+<node id="5" value="5" x="490" y="0"/>
+<node id="6" value="6" x="170" y="0"/>
+<node id="7" value="7" x="250" y="0"/>
+<node id="8" value="8" x="170" y="70"/>
+<node id="9" value="9" x="330" y="0"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="7" idFirstNode="1" idSecondNode="8"/>
+<arc id="6" idFirstNode="2" idSecondNode="1"/>
+<arc id="2" idFirstNode="3" idSecondNode="6"/>
+<arc id="4" idFirstNode="4" idSecondNode="5"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="1" idFirstNode="7" idSecondNode="9"/>
+<arc id="5" idFirstNode="9" idSecondNode="4"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+</visualGraph>
+<message content="Final lists after the execution of all the union operations.">
+</message>
+</structure>
+</step>
+</algorithm>

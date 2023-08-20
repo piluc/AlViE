@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure name="Distribution" type="Pseudocode">
+	<pseudocode size="13">
+		<element id="0" value=" 1  Distribution( a, sx, px, dx ):" />
+		<element id="1" value=" 2    if (px != dx) Swap( px, dx );" />
+		<element id="2" value=" 3    i = sx;" />
+		<element id="3" value=" 4    j = dx-1;" />
+		<element id="4" value=" 5    WHILE (i &#60;= j) {" />
+		<element id="5" value=" 6      WHILE ((i &#60;= j) &#38;&#38; (a[i] &#60;= a[dx]))" />
+		<element id="6" value=" 7        i = i+1;" />
+		<element id="7" value=" 8      WHILE ((i &#60;= j) &#38;&#38; (a[j] => a[dx]))" />
+		<element id="8" value=" 9        j = j-1;" />
+		<element id="9" value="10      if (i &#60; j) Swap( i, j );" />
+		<element id="10" value="11    }" />
+		<element id="11" value="12    if (i != dx) Swap( i, dx );" />
+		<element id="12" value="13    RETURN i;" />
+	</pseudocode>
+</structure>

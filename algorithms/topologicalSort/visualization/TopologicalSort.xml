@@ -1,0 +1,2450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm name="Topological sort ">
+<step number="0">
+<structure name="DAG" type="Graph">
+<graph isOriented="true" type="IntInformation" arcLabelType="IntInformation">
+<node id="0" value="0" x="0" y="100"/>
+<node id="1" value="1" x="100" y="200"/>
+<node id="2" value="2" x="100" y="100"/>
+<node id="3" value="3" x="200" y="0"/>
+<node id="4" value="4" x="100" y="0"/>
+<node id="5" value="5" x="200" y="100"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="1" idFirstNode="2" idSecondNode="1"/>
+<arc id="2" idFirstNode="3" idSecondNode="2"/>
+<arc id="3" idFirstNode="3" idSecondNode="5"/>
+<arc id="4" idFirstNode="4" idSecondNode="2"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+</visualGraph>
+<message content="Directed acyclic graph of which we want to compute the topological sort (shown in the bottom): as soon as a node is reached, it will be drawn as a rectangle.">
+</message>
+</structure>
+<structure name="Eta" type="Array">
+<array size="6" type="LongInformation">
+<element id="0" value="-1"/>
+<element id="1" value="-1"/>
+<element id="2" value="-1"/>
+<element id="3" value="-1"/>
+<element id="4" value="-1"/>
+<element id="5" value="-1"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="300">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="15">
+<element id="0" value=" 1  TopologicalSort( )"/>
+<element id="1" value=" 2    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="2" value=" 3      reached[s] = FALSE;"/>
+<element id="3" value=" 4    counter = n - 1;"/>
+<element id="4" value=" 5    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="5" value=" 6      IF (!reached[s]) RecursiveDepthFirstSearchSort( s );"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  RecursiveDepthFirstSearchSort( u ):"/>
+<element id="8" value=" 2    reached[u] = TRUE;"/>
+<element id="9" value=" 3    FOR (x = adjacencyList[u].begin; x != null; x = x.succ) {"/>
+<element id="10" value=" 4      v = x.data;"/>
+<element id="11" value=" 5      IF (!reached[v]) RecursiveDepthFirstSearchSort( v );"/>
+<element id="12" value=" 6    }"/>
+<element id="13" value=" 7    eta[u] = counter;"/>
+<element id="14" value=" 8    counter = counter - 1;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="500.0" originX="380" originY="20">
+<visualMalleableElement id="1" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+<visualMalleableElement id="2" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+<visualMalleableElement id="3" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="1">
+<structure name="DAG" type="Graph">
+<graph isOriented="true" type="IntInformation" arcLabelType="IntInformation">
+<node id="0" value="0" x="0" y="100"/>
+<node id="1" value="1" x="100" y="200"/>
+<node id="2" value="2" x="100" y="100"/>
+<node id="3" value="3" x="200" y="0"/>
+<node id="4" value="4" x="100" y="0"/>
+<node id="5" value="5" x="200" y="100"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="1" idFirstNode="2" idSecondNode="1"/>
+<arc id="2" idFirstNode="3" idSecondNode="2"/>
+<arc id="3" idFirstNode="3" idSecondNode="5"/>
+<arc id="4" idFirstNode="4" idSecondNode="2"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="0" color="00FFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The blue node is examined in order to determine whether it has not been reached and, if this is the case, to start the depth first visit from it.">
+</message>
+</structure>
+<structure name="Eta" type="Array">
+<array size="6" type="LongInformation">
+<element id="0" value="-1"/>
+<element id="1" value="-1"/>
+<element id="2" value="-1"/>
+<element id="3" value="-1"/>
+<element id="4" value="-1"/>
+<element id="5" value="-1"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="300">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="15">
+<element id="0" value=" 1  TopologicalSort( )"/>
+<element id="1" value=" 2    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="2" value=" 3      reached[s] = FALSE;"/>
+<element id="3" value=" 4    counter = n - 1;"/>
+<element id="4" value=" 5    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="5" value=" 6      IF (!reached[s]) RecursiveDepthFirstSearchSort( s );"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  RecursiveDepthFirstSearchSort( u ):"/>
+<element id="8" value=" 2    reached[u] = TRUE;"/>
+<element id="9" value=" 3    FOR (x = adjacencyList[u].begin; x != null; x = x.succ) {"/>
+<element id="10" value=" 4      v = x.data;"/>
+<element id="11" value=" 5      IF (!reached[v]) RecursiveDepthFirstSearchSort( v );"/>
+<element id="12" value=" 6    }"/>
+<element id="13" value=" 7    eta[u] = counter;"/>
+<element id="14" value=" 8    counter = counter - 1;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="500.0" originX="380" originY="20">
+<visualMalleableElement id="5" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="2">
+<structure name="DAG" type="Graph">
+<graph isOriented="true" type="IntInformation" arcLabelType="IntInformation">
+<node id="0" value="0" x="0" y="100"/>
+<node id="1" value="1" x="100" y="200"/>
+<node id="2" value="2" x="100" y="100"/>
+<node id="3" value="3" x="200" y="0"/>
+<node id="4" value="4" x="100" y="0"/>
+<node id="5" value="5" x="200" y="100"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="1" idFirstNode="2" idSecondNode="1"/>
+<arc id="2" idFirstNode="3" idSecondNode="2"/>
+<arc id="3" idFirstNode="3" idSecondNode="5"/>
+<arc id="4" idFirstNode="4" idSecondNode="2"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="0" color="00FFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The depth first visit starts from the blue node.">
+</message>
+</structure>
+<structure name="Eta" type="Array">
+<array size="6" type="LongInformation">
+<element id="0" value="-1"/>
+<element id="1" value="-1"/>
+<element id="2" value="-1"/>
+<element id="3" value="-1"/>
+<element id="4" value="-1"/>
+<element id="5" value="-1"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="300">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="15">
+<element id="0" value=" 1  TopologicalSort( )"/>
+<element id="1" value=" 2    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="2" value=" 3      reached[s] = FALSE;"/>
+<element id="3" value=" 4    counter = n - 1;"/>
+<element id="4" value=" 5    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="5" value=" 6      IF (!reached[s]) RecursiveDepthFirstSearchSort( s );"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  RecursiveDepthFirstSearchSort( u ):"/>
+<element id="8" value=" 2    reached[u] = TRUE;"/>
+<element id="9" value=" 3    FOR (x = adjacencyList[u].begin; x != null; x = x.succ) {"/>
+<element id="10" value=" 4      v = x.data;"/>
+<element id="11" value=" 5      IF (!reached[v]) RecursiveDepthFirstSearchSort( v );"/>
+<element id="12" value=" 6    }"/>
+<element id="13" value=" 7    eta[u] = counter;"/>
+<element id="14" value=" 8    counter = counter - 1;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="500.0" originX="380" originY="20">
+<visualMalleableElement id="7" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="3">
+<structure name="DAG" type="Graph">
+<graph isOriented="true" type="IntInformation" arcLabelType="IntInformation">
+<node id="0" value="0" x="0" y="100"/>
+<node id="1" value="1" x="100" y="200"/>
+<node id="2" value="2" x="100" y="100"/>
+<node id="3" value="3" x="200" y="0"/>
+<node id="4" value="4" x="100" y="0"/>
+<node id="5" value="5" x="200" y="100"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="1" idFirstNode="2" idSecondNode="1"/>
+<arc id="2" idFirstNode="3" idSecondNode="2"/>
+<arc id="3" idFirstNode="3" idSecondNode="5"/>
+<arc id="4" idFirstNode="4" idSecondNode="2"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="0" color="00FFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The blue node is marked as reached and drawn as a rectangle.">
+</message>
+</structure>
+<structure name="Eta" type="Array">
+<array size="6" type="LongInformation">
+<element id="0" value="-1"/>
+<element id="1" value="-1"/>
+<element id="2" value="-1"/>
+<element id="3" value="-1"/>
+<element id="4" value="-1"/>
+<element id="5" value="-1"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="300">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="15">
+<element id="0" value=" 1  TopologicalSort( )"/>
+<element id="1" value=" 2    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="2" value=" 3      reached[s] = FALSE;"/>
+<element id="3" value=" 4    counter = n - 1;"/>
+<element id="4" value=" 5    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="5" value=" 6      IF (!reached[s]) RecursiveDepthFirstSearchSort( s );"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  RecursiveDepthFirstSearchSort( u ):"/>
+<element id="8" value=" 2    reached[u] = TRUE;"/>
+<element id="9" value=" 3    FOR (x = adjacencyList[u].begin; x != null; x = x.succ) {"/>
+<element id="10" value=" 4      v = x.data;"/>
+<element id="11" value=" 5      IF (!reached[v]) RecursiveDepthFirstSearchSort( v );"/>
+<element id="12" value=" 6    }"/>
+<element id="13" value=" 7    eta[u] = counter;"/>
+<element id="14" value=" 8    counter = counter - 1;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="500.0" originX="380" originY="20">
+<visualMalleableElement id="8" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="4">
+<structure name="DAG" type="Graph">
+<graph isOriented="true" type="IntInformation" arcLabelType="IntInformation">
+<node id="0" value="0" x="0" y="100"/>
+<node id="1" value="1" x="100" y="200"/>
+<node id="2" value="2" x="100" y="100"/>
+<node id="3" value="3" x="200" y="0"/>
+<node id="4" value="4" x="100" y="0"/>
+<node id="5" value="5" x="200" y="100"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="1" idFirstNode="2" idSecondNode="1"/>
+<arc id="2" idFirstNode="3" idSecondNode="2"/>
+<arc id="3" idFirstNode="3" idSecondNode="5"/>
+<arc id="4" idFirstNode="4" idSecondNode="2"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="0" color="00FFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="FFFF00" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The yellow node (neighbor of the blue node) has not bee reached yet, and, hence, the depth first visit starts from it.">
+</message>
+</structure>
+<structure name="Eta" type="Array">
+<array size="6" type="LongInformation">
+<element id="0" value="-1"/>
+<element id="1" value="-1"/>
+<element id="2" value="-1"/>
+<element id="3" value="-1"/>
+<element id="4" value="-1"/>
+<element id="5" value="-1"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="300">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="15">
+<element id="0" value=" 1  TopologicalSort( )"/>
+<element id="1" value=" 2    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="2" value=" 3      reached[s] = FALSE;"/>
+<element id="3" value=" 4    counter = n - 1;"/>
+<element id="4" value=" 5    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="5" value=" 6      IF (!reached[s]) RecursiveDepthFirstSearchSort( s );"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  RecursiveDepthFirstSearchSort( u ):"/>
+<element id="8" value=" 2    reached[u] = TRUE;"/>
+<element id="9" value=" 3    FOR (x = adjacencyList[u].begin; x != null; x = x.succ) {"/>
+<element id="10" value=" 4      v = x.data;"/>
+<element id="11" value=" 5      IF (!reached[v]) RecursiveDepthFirstSearchSort( v );"/>
+<element id="12" value=" 6    }"/>
+<element id="13" value=" 7    eta[u] = counter;"/>
+<element id="14" value=" 8    counter = counter - 1;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="500.0" originX="380" originY="20">
+<visualMalleableElement id="11" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="5">
+<structure name="DAG" type="Graph">
+<graph isOriented="true" type="IntInformation" arcLabelType="IntInformation">
+<node id="0" value="0" x="0" y="100"/>
+<node id="1" value="1" x="100" y="200"/>
+<node id="2" value="2" x="100" y="100"/>
+<node id="3" value="3" x="200" y="0"/>
+<node id="4" value="4" x="100" y="0"/>
+<node id="5" value="5" x="200" y="100"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="1" idFirstNode="2" idSecondNode="1"/>
+<arc id="2" idFirstNode="3" idSecondNode="2"/>
+<arc id="3" idFirstNode="3" idSecondNode="5"/>
+<arc id="4" idFirstNode="4" idSecondNode="2"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="0" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="00FFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The blue node is marked as reached and drawn as a rectangle.">
+</message>
+</structure>
+<structure name="Eta" type="Array">
+<array size="6" type="LongInformation">
+<element id="0" value="-1"/>
+<element id="1" value="-1"/>
+<element id="2" value="-1"/>
+<element id="3" value="-1"/>
+<element id="4" value="-1"/>
+<element id="5" value="-1"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="300">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="15">
+<element id="0" value=" 1  TopologicalSort( )"/>
+<element id="1" value=" 2    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="2" value=" 3      reached[s] = FALSE;"/>
+<element id="3" value=" 4    counter = n - 1;"/>
+<element id="4" value=" 5    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="5" value=" 6      IF (!reached[s]) RecursiveDepthFirstSearchSort( s );"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  RecursiveDepthFirstSearchSort( u ):"/>
+<element id="8" value=" 2    reached[u] = TRUE;"/>
+<element id="9" value=" 3    FOR (x = adjacencyList[u].begin; x != null; x = x.succ) {"/>
+<element id="10" value=" 4      v = x.data;"/>
+<element id="11" value=" 5      IF (!reached[v]) RecursiveDepthFirstSearchSort( v );"/>
+<element id="12" value=" 6    }"/>
+<element id="13" value=" 7    eta[u] = counter;"/>
+<element id="14" value=" 8    counter = counter - 1;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="500.0" originX="380" originY="20">
+<visualMalleableElement id="8" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="6">
+<structure name="DAG" type="Graph">
+<graph isOriented="true" type="IntInformation" arcLabelType="IntInformation">
+<node id="0" value="0" x="0" y="100"/>
+<node id="1" value="1" x="100" y="200"/>
+<node id="2" value="2" x="100" y="100"/>
+<node id="3" value="3" x="200" y="0"/>
+<node id="4" value="4" x="100" y="0"/>
+<node id="5" value="5" x="200" y="100"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="1" idFirstNode="2" idSecondNode="1"/>
+<arc id="2" idFirstNode="3" idSecondNode="2"/>
+<arc id="3" idFirstNode="3" idSecondNode="5"/>
+<arc id="4" idFirstNode="4" idSecondNode="2"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="0" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="00FFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The blue node can now be inserted in the rightmost free position of the topological sort array.">
+</message>
+</structure>
+<structure name="Eta" type="Array">
+<array size="6" type="LongInformation">
+<element id="0" value="-1"/>
+<element id="1" value="-1"/>
+<element id="2" value="-1"/>
+<element id="3" value="-1"/>
+<element id="4" value="-1"/>
+<element id="5" value="-1"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="300">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="15">
+<element id="0" value=" 1  TopologicalSort( )"/>
+<element id="1" value=" 2    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="2" value=" 3      reached[s] = FALSE;"/>
+<element id="3" value=" 4    counter = n - 1;"/>
+<element id="4" value=" 5    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="5" value=" 6      IF (!reached[s]) RecursiveDepthFirstSearchSort( s );"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  RecursiveDepthFirstSearchSort( u ):"/>
+<element id="8" value=" 2    reached[u] = TRUE;"/>
+<element id="9" value=" 3    FOR (x = adjacencyList[u].begin; x != null; x = x.succ) {"/>
+<element id="10" value=" 4      v = x.data;"/>
+<element id="11" value=" 5      IF (!reached[v]) RecursiveDepthFirstSearchSort( v );"/>
+<element id="12" value=" 6    }"/>
+<element id="13" value=" 7    eta[u] = counter;"/>
+<element id="14" value=" 8    counter = counter - 1;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="500.0" originX="380" originY="20">
+<visualMalleableElement id="13" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+<visualMalleableElement id="14" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="7">
+<structure name="DAG" type="Graph">
+<graph isOriented="true" type="IntInformation" arcLabelType="IntInformation">
+<node id="0" value="0" x="0" y="100"/>
+<node id="1" value="1" x="100" y="200"/>
+<node id="2" value="2" x="100" y="100"/>
+<node id="3" value="3" x="200" y="0"/>
+<node id="4" value="4" x="100" y="0"/>
+<node id="5" value="5" x="200" y="100"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="1" idFirstNode="2" idSecondNode="1"/>
+<arc id="2" idFirstNode="3" idSecondNode="2"/>
+<arc id="3" idFirstNode="3" idSecondNode="5"/>
+<arc id="4" idFirstNode="4" idSecondNode="2"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="0" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="00FFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The blue node has been inserted in the topological sort array.">
+</message>
+</structure>
+<structure name="Eta" type="Array">
+<array size="6" type="LongInformation">
+<element id="0" value="-1"/>
+<element id="1" value="-1"/>
+<element id="2" value="-1"/>
+<element id="3" value="-1"/>
+<element id="4" value="-1"/>
+<element id="5" value="1"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="300">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="15">
+<element id="0" value=" 1  TopologicalSort( )"/>
+<element id="1" value=" 2    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="2" value=" 3      reached[s] = FALSE;"/>
+<element id="3" value=" 4    counter = n - 1;"/>
+<element id="4" value=" 5    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="5" value=" 6      IF (!reached[s]) RecursiveDepthFirstSearchSort( s );"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  RecursiveDepthFirstSearchSort( u ):"/>
+<element id="8" value=" 2    reached[u] = TRUE;"/>
+<element id="9" value=" 3    FOR (x = adjacencyList[u].begin; x != null; x = x.succ) {"/>
+<element id="10" value=" 4      v = x.data;"/>
+<element id="11" value=" 5      IF (!reached[v]) RecursiveDepthFirstSearchSort( v );"/>
+<element id="12" value=" 6    }"/>
+<element id="13" value=" 7    eta[u] = counter;"/>
+<element id="14" value=" 8    counter = counter - 1;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="500.0" originX="380" originY="20">
+<visualMalleableElement id="13" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+<visualMalleableElement id="14" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="8">
+<structure name="DAG" type="Graph">
+<graph isOriented="true" type="IntInformation" arcLabelType="IntInformation">
+<node id="0" value="0" x="0" y="100"/>
+<node id="1" value="1" x="100" y="200"/>
+<node id="2" value="2" x="100" y="100"/>
+<node id="3" value="3" x="200" y="0"/>
+<node id="4" value="4" x="100" y="0"/>
+<node id="5" value="5" x="200" y="100"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="1" idFirstNode="2" idSecondNode="1"/>
+<arc id="2" idFirstNode="3" idSecondNode="2"/>
+<arc id="3" idFirstNode="3" idSecondNode="5"/>
+<arc id="4" idFirstNode="4" idSecondNode="2"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="0" color="00FFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="FFFF00" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The recursive depth first visit started from the yellow node (neighbor of the blue node) has terminated.">
+</message>
+</structure>
+<structure name="Eta" type="Array">
+<array size="6" type="LongInformation">
+<element id="0" value="-1"/>
+<element id="1" value="-1"/>
+<element id="2" value="-1"/>
+<element id="3" value="-1"/>
+<element id="4" value="-1"/>
+<element id="5" value="1"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="300">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="15">
+<element id="0" value=" 1  TopologicalSort( )"/>
+<element id="1" value=" 2    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="2" value=" 3      reached[s] = FALSE;"/>
+<element id="3" value=" 4    counter = n - 1;"/>
+<element id="4" value=" 5    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="5" value=" 6      IF (!reached[s]) RecursiveDepthFirstSearchSort( s );"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  RecursiveDepthFirstSearchSort( u ):"/>
+<element id="8" value=" 2    reached[u] = TRUE;"/>
+<element id="9" value=" 3    FOR (x = adjacencyList[u].begin; x != null; x = x.succ) {"/>
+<element id="10" value=" 4      v = x.data;"/>
+<element id="11" value=" 5      IF (!reached[v]) RecursiveDepthFirstSearchSort( v );"/>
+<element id="12" value=" 6    }"/>
+<element id="13" value=" 7    eta[u] = counter;"/>
+<element id="14" value=" 8    counter = counter - 1;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="500.0" originX="380" originY="20">
+<visualMalleableElement id="11" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="9">
+<structure name="DAG" type="Graph">
+<graph isOriented="true" type="IntInformation" arcLabelType="IntInformation">
+<node id="0" value="0" x="0" y="100"/>
+<node id="1" value="1" x="100" y="200"/>
+<node id="2" value="2" x="100" y="100"/>
+<node id="3" value="3" x="200" y="0"/>
+<node id="4" value="4" x="100" y="0"/>
+<node id="5" value="5" x="200" y="100"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="1" idFirstNode="2" idSecondNode="1"/>
+<arc id="2" idFirstNode="3" idSecondNode="2"/>
+<arc id="3" idFirstNode="3" idSecondNode="5"/>
+<arc id="4" idFirstNode="4" idSecondNode="2"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="0" color="00FFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The blue node can now be inserted in the rightmost free position of the topological sort array.">
+</message>
+</structure>
+<structure name="Eta" type="Array">
+<array size="6" type="LongInformation">
+<element id="0" value="-1"/>
+<element id="1" value="-1"/>
+<element id="2" value="-1"/>
+<element id="3" value="-1"/>
+<element id="4" value="-1"/>
+<element id="5" value="1"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="300">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="15">
+<element id="0" value=" 1  TopologicalSort( )"/>
+<element id="1" value=" 2    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="2" value=" 3      reached[s] = FALSE;"/>
+<element id="3" value=" 4    counter = n - 1;"/>
+<element id="4" value=" 5    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="5" value=" 6      IF (!reached[s]) RecursiveDepthFirstSearchSort( s );"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  RecursiveDepthFirstSearchSort( u ):"/>
+<element id="8" value=" 2    reached[u] = TRUE;"/>
+<element id="9" value=" 3    FOR (x = adjacencyList[u].begin; x != null; x = x.succ) {"/>
+<element id="10" value=" 4      v = x.data;"/>
+<element id="11" value=" 5      IF (!reached[v]) RecursiveDepthFirstSearchSort( v );"/>
+<element id="12" value=" 6    }"/>
+<element id="13" value=" 7    eta[u] = counter;"/>
+<element id="14" value=" 8    counter = counter - 1;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="500.0" originX="380" originY="20">
+<visualMalleableElement id="13" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+<visualMalleableElement id="14" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="10">
+<structure name="DAG" type="Graph">
+<graph isOriented="true" type="IntInformation" arcLabelType="IntInformation">
+<node id="0" value="0" x="0" y="100"/>
+<node id="1" value="1" x="100" y="200"/>
+<node id="2" value="2" x="100" y="100"/>
+<node id="3" value="3" x="200" y="0"/>
+<node id="4" value="4" x="100" y="0"/>
+<node id="5" value="5" x="200" y="100"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="1" idFirstNode="2" idSecondNode="1"/>
+<arc id="2" idFirstNode="3" idSecondNode="2"/>
+<arc id="3" idFirstNode="3" idSecondNode="5"/>
+<arc id="4" idFirstNode="4" idSecondNode="2"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="0" color="00FFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The blue node has been inserted in the topological sort array.">
+</message>
+</structure>
+<structure name="Eta" type="Array">
+<array size="6" type="LongInformation">
+<element id="0" value="-1"/>
+<element id="1" value="-1"/>
+<element id="2" value="-1"/>
+<element id="3" value="-1"/>
+<element id="4" value="0"/>
+<element id="5" value="1"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="300">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="15">
+<element id="0" value=" 1  TopologicalSort( )"/>
+<element id="1" value=" 2    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="2" value=" 3      reached[s] = FALSE;"/>
+<element id="3" value=" 4    counter = n - 1;"/>
+<element id="4" value=" 5    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="5" value=" 6      IF (!reached[s]) RecursiveDepthFirstSearchSort( s );"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  RecursiveDepthFirstSearchSort( u ):"/>
+<element id="8" value=" 2    reached[u] = TRUE;"/>
+<element id="9" value=" 3    FOR (x = adjacencyList[u].begin; x != null; x = x.succ) {"/>
+<element id="10" value=" 4      v = x.data;"/>
+<element id="11" value=" 5      IF (!reached[v]) RecursiveDepthFirstSearchSort( v );"/>
+<element id="12" value=" 6    }"/>
+<element id="13" value=" 7    eta[u] = counter;"/>
+<element id="14" value=" 8    counter = counter - 1;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="500.0" originX="380" originY="20">
+<visualMalleableElement id="13" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+<visualMalleableElement id="14" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="11">
+<structure name="DAG" type="Graph">
+<graph isOriented="true" type="IntInformation" arcLabelType="IntInformation">
+<node id="0" value="0" x="0" y="100"/>
+<node id="1" value="1" x="100" y="200"/>
+<node id="2" value="2" x="100" y="100"/>
+<node id="3" value="3" x="200" y="0"/>
+<node id="4" value="4" x="100" y="0"/>
+<node id="5" value="5" x="200" y="100"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="1" idFirstNode="2" idSecondNode="1"/>
+<arc id="2" idFirstNode="3" idSecondNode="2"/>
+<arc id="3" idFirstNode="3" idSecondNode="5"/>
+<arc id="4" idFirstNode="4" idSecondNode="2"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="0" color="00FFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The recursive depth first visit started from the blue node has terminated.">
+</message>
+</structure>
+<structure name="Eta" type="Array">
+<array size="6" type="LongInformation">
+<element id="0" value="-1"/>
+<element id="1" value="-1"/>
+<element id="2" value="-1"/>
+<element id="3" value="-1"/>
+<element id="4" value="0"/>
+<element id="5" value="1"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="300">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="15">
+<element id="0" value=" 1  TopologicalSort( )"/>
+<element id="1" value=" 2    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="2" value=" 3      reached[s] = FALSE;"/>
+<element id="3" value=" 4    counter = n - 1;"/>
+<element id="4" value=" 5    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="5" value=" 6      IF (!reached[s]) RecursiveDepthFirstSearchSort( s );"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  RecursiveDepthFirstSearchSort( u ):"/>
+<element id="8" value=" 2    reached[u] = TRUE;"/>
+<element id="9" value=" 3    FOR (x = adjacencyList[u].begin; x != null; x = x.succ) {"/>
+<element id="10" value=" 4      v = x.data;"/>
+<element id="11" value=" 5      IF (!reached[v]) RecursiveDepthFirstSearchSort( v );"/>
+<element id="12" value=" 6    }"/>
+<element id="13" value=" 7    eta[u] = counter;"/>
+<element id="14" value=" 8    counter = counter - 1;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="500.0" originX="380" originY="20">
+<visualMalleableElement id="5" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="12">
+<structure name="DAG" type="Graph">
+<graph isOriented="true" type="IntInformation" arcLabelType="IntInformation">
+<node id="0" value="0" x="0" y="100"/>
+<node id="1" value="1" x="100" y="200"/>
+<node id="2" value="2" x="100" y="100"/>
+<node id="3" value="3" x="200" y="0"/>
+<node id="4" value="4" x="100" y="0"/>
+<node id="5" value="5" x="200" y="100"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="1" idFirstNode="2" idSecondNode="1"/>
+<arc id="2" idFirstNode="3" idSecondNode="2"/>
+<arc id="3" idFirstNode="3" idSecondNode="5"/>
+<arc id="4" idFirstNode="4" idSecondNode="2"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="0" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="00FFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The blue node is examined in order to determine whether it has not been reached and, if this is the case, to start the depth first visit from it.">
+</message>
+</structure>
+<structure name="Eta" type="Array">
+<array size="6" type="LongInformation">
+<element id="0" value="-1"/>
+<element id="1" value="-1"/>
+<element id="2" value="-1"/>
+<element id="3" value="-1"/>
+<element id="4" value="0"/>
+<element id="5" value="1"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="300">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="15">
+<element id="0" value=" 1  TopologicalSort( )"/>
+<element id="1" value=" 2    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="2" value=" 3      reached[s] = FALSE;"/>
+<element id="3" value=" 4    counter = n - 1;"/>
+<element id="4" value=" 5    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="5" value=" 6      IF (!reached[s]) RecursiveDepthFirstSearchSort( s );"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  RecursiveDepthFirstSearchSort( u ):"/>
+<element id="8" value=" 2    reached[u] = TRUE;"/>
+<element id="9" value=" 3    FOR (x = adjacencyList[u].begin; x != null; x = x.succ) {"/>
+<element id="10" value=" 4      v = x.data;"/>
+<element id="11" value=" 5      IF (!reached[v]) RecursiveDepthFirstSearchSort( v );"/>
+<element id="12" value=" 6    }"/>
+<element id="13" value=" 7    eta[u] = counter;"/>
+<element id="14" value=" 8    counter = counter - 1;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="500.0" originX="380" originY="20">
+<visualMalleableElement id="5" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="13">
+<structure name="DAG" type="Graph">
+<graph isOriented="true" type="IntInformation" arcLabelType="IntInformation">
+<node id="0" value="0" x="0" y="100"/>
+<node id="1" value="1" x="100" y="200"/>
+<node id="2" value="2" x="100" y="100"/>
+<node id="3" value="3" x="200" y="0"/>
+<node id="4" value="4" x="100" y="0"/>
+<node id="5" value="5" x="200" y="100"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="1" idFirstNode="2" idSecondNode="1"/>
+<arc id="2" idFirstNode="3" idSecondNode="2"/>
+<arc id="3" idFirstNode="3" idSecondNode="5"/>
+<arc id="4" idFirstNode="4" idSecondNode="2"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="0" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="00FFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The blue node is examined in order to determine whether it has not been reached and, if this is the case, to start the depth first visit from it.">
+</message>
+</structure>
+<structure name="Eta" type="Array">
+<array size="6" type="LongInformation">
+<element id="0" value="-1"/>
+<element id="1" value="-1"/>
+<element id="2" value="-1"/>
+<element id="3" value="-1"/>
+<element id="4" value="0"/>
+<element id="5" value="1"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="300">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="15">
+<element id="0" value=" 1  TopologicalSort( )"/>
+<element id="1" value=" 2    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="2" value=" 3      reached[s] = FALSE;"/>
+<element id="3" value=" 4    counter = n - 1;"/>
+<element id="4" value=" 5    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="5" value=" 6      IF (!reached[s]) RecursiveDepthFirstSearchSort( s );"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  RecursiveDepthFirstSearchSort( u ):"/>
+<element id="8" value=" 2    reached[u] = TRUE;"/>
+<element id="9" value=" 3    FOR (x = adjacencyList[u].begin; x != null; x = x.succ) {"/>
+<element id="10" value=" 4      v = x.data;"/>
+<element id="11" value=" 5      IF (!reached[v]) RecursiveDepthFirstSearchSort( v );"/>
+<element id="12" value=" 6    }"/>
+<element id="13" value=" 7    eta[u] = counter;"/>
+<element id="14" value=" 8    counter = counter - 1;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="500.0" originX="380" originY="20">
+<visualMalleableElement id="5" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="14">
+<structure name="DAG" type="Graph">
+<graph isOriented="true" type="IntInformation" arcLabelType="IntInformation">
+<node id="0" value="0" x="0" y="100"/>
+<node id="1" value="1" x="100" y="200"/>
+<node id="2" value="2" x="100" y="100"/>
+<node id="3" value="3" x="200" y="0"/>
+<node id="4" value="4" x="100" y="0"/>
+<node id="5" value="5" x="200" y="100"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="1" idFirstNode="2" idSecondNode="1"/>
+<arc id="2" idFirstNode="3" idSecondNode="2"/>
+<arc id="3" idFirstNode="3" idSecondNode="5"/>
+<arc id="4" idFirstNode="4" idSecondNode="2"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="0" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="00FFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The depth first visit starts from the blue node.">
+</message>
+</structure>
+<structure name="Eta" type="Array">
+<array size="6" type="LongInformation">
+<element id="0" value="-1"/>
+<element id="1" value="-1"/>
+<element id="2" value="-1"/>
+<element id="3" value="-1"/>
+<element id="4" value="0"/>
+<element id="5" value="1"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="300">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="15">
+<element id="0" value=" 1  TopologicalSort( )"/>
+<element id="1" value=" 2    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="2" value=" 3      reached[s] = FALSE;"/>
+<element id="3" value=" 4    counter = n - 1;"/>
+<element id="4" value=" 5    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="5" value=" 6      IF (!reached[s]) RecursiveDepthFirstSearchSort( s );"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  RecursiveDepthFirstSearchSort( u ):"/>
+<element id="8" value=" 2    reached[u] = TRUE;"/>
+<element id="9" value=" 3    FOR (x = adjacencyList[u].begin; x != null; x = x.succ) {"/>
+<element id="10" value=" 4      v = x.data;"/>
+<element id="11" value=" 5      IF (!reached[v]) RecursiveDepthFirstSearchSort( v );"/>
+<element id="12" value=" 6    }"/>
+<element id="13" value=" 7    eta[u] = counter;"/>
+<element id="14" value=" 8    counter = counter - 1;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="500.0" originX="380" originY="20">
+<visualMalleableElement id="7" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="15">
+<structure name="DAG" type="Graph">
+<graph isOriented="true" type="IntInformation" arcLabelType="IntInformation">
+<node id="0" value="0" x="0" y="100"/>
+<node id="1" value="1" x="100" y="200"/>
+<node id="2" value="2" x="100" y="100"/>
+<node id="3" value="3" x="200" y="0"/>
+<node id="4" value="4" x="100" y="0"/>
+<node id="5" value="5" x="200" y="100"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="1" idFirstNode="2" idSecondNode="1"/>
+<arc id="2" idFirstNode="3" idSecondNode="2"/>
+<arc id="3" idFirstNode="3" idSecondNode="5"/>
+<arc id="4" idFirstNode="4" idSecondNode="2"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="0" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="00FFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The blue node is marked as reached and drawn as a rectangle.">
+</message>
+</structure>
+<structure name="Eta" type="Array">
+<array size="6" type="LongInformation">
+<element id="0" value="-1"/>
+<element id="1" value="-1"/>
+<element id="2" value="-1"/>
+<element id="3" value="-1"/>
+<element id="4" value="0"/>
+<element id="5" value="1"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="300">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="15">
+<element id="0" value=" 1  TopologicalSort( )"/>
+<element id="1" value=" 2    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="2" value=" 3      reached[s] = FALSE;"/>
+<element id="3" value=" 4    counter = n - 1;"/>
+<element id="4" value=" 5    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="5" value=" 6      IF (!reached[s]) RecursiveDepthFirstSearchSort( s );"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  RecursiveDepthFirstSearchSort( u ):"/>
+<element id="8" value=" 2    reached[u] = TRUE;"/>
+<element id="9" value=" 3    FOR (x = adjacencyList[u].begin; x != null; x = x.succ) {"/>
+<element id="10" value=" 4      v = x.data;"/>
+<element id="11" value=" 5      IF (!reached[v]) RecursiveDepthFirstSearchSort( v );"/>
+<element id="12" value=" 6    }"/>
+<element id="13" value=" 7    eta[u] = counter;"/>
+<element id="14" value=" 8    counter = counter - 1;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="500.0" originX="380" originY="20">
+<visualMalleableElement id="8" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="16">
+<structure name="DAG" type="Graph">
+<graph isOriented="true" type="IntInformation" arcLabelType="IntInformation">
+<node id="0" value="0" x="0" y="100"/>
+<node id="1" value="1" x="100" y="200"/>
+<node id="2" value="2" x="100" y="100"/>
+<node id="3" value="3" x="200" y="0"/>
+<node id="4" value="4" x="100" y="0"/>
+<node id="5" value="5" x="200" y="100"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="1" idFirstNode="2" idSecondNode="1"/>
+<arc id="2" idFirstNode="3" idSecondNode="2"/>
+<arc id="3" idFirstNode="3" idSecondNode="5"/>
+<arc id="4" idFirstNode="4" idSecondNode="2"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="0" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="00FFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The blue node can now be inserted in the rightmost free position of the topological sort array.">
+</message>
+</structure>
+<structure name="Eta" type="Array">
+<array size="6" type="LongInformation">
+<element id="0" value="-1"/>
+<element id="1" value="-1"/>
+<element id="2" value="-1"/>
+<element id="3" value="-1"/>
+<element id="4" value="0"/>
+<element id="5" value="1"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="300">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="15">
+<element id="0" value=" 1  TopologicalSort( )"/>
+<element id="1" value=" 2    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="2" value=" 3      reached[s] = FALSE;"/>
+<element id="3" value=" 4    counter = n - 1;"/>
+<element id="4" value=" 5    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="5" value=" 6      IF (!reached[s]) RecursiveDepthFirstSearchSort( s );"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  RecursiveDepthFirstSearchSort( u ):"/>
+<element id="8" value=" 2    reached[u] = TRUE;"/>
+<element id="9" value=" 3    FOR (x = adjacencyList[u].begin; x != null; x = x.succ) {"/>
+<element id="10" value=" 4      v = x.data;"/>
+<element id="11" value=" 5      IF (!reached[v]) RecursiveDepthFirstSearchSort( v );"/>
+<element id="12" value=" 6    }"/>
+<element id="13" value=" 7    eta[u] = counter;"/>
+<element id="14" value=" 8    counter = counter - 1;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="500.0" originX="380" originY="20">
+<visualMalleableElement id="13" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+<visualMalleableElement id="14" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="17">
+<structure name="DAG" type="Graph">
+<graph isOriented="true" type="IntInformation" arcLabelType="IntInformation">
+<node id="0" value="0" x="0" y="100"/>
+<node id="1" value="1" x="100" y="200"/>
+<node id="2" value="2" x="100" y="100"/>
+<node id="3" value="3" x="200" y="0"/>
+<node id="4" value="4" x="100" y="0"/>
+<node id="5" value="5" x="200" y="100"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="1" idFirstNode="2" idSecondNode="1"/>
+<arc id="2" idFirstNode="3" idSecondNode="2"/>
+<arc id="3" idFirstNode="3" idSecondNode="5"/>
+<arc id="4" idFirstNode="4" idSecondNode="2"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="0" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="00FFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The blue node has been inserted in the topological sort array.">
+</message>
+</structure>
+<structure name="Eta" type="Array">
+<array size="6" type="LongInformation">
+<element id="0" value="-1"/>
+<element id="1" value="-1"/>
+<element id="2" value="-1"/>
+<element id="3" value="2"/>
+<element id="4" value="0"/>
+<element id="5" value="1"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="300">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="15">
+<element id="0" value=" 1  TopologicalSort( )"/>
+<element id="1" value=" 2    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="2" value=" 3      reached[s] = FALSE;"/>
+<element id="3" value=" 4    counter = n - 1;"/>
+<element id="4" value=" 5    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="5" value=" 6      IF (!reached[s]) RecursiveDepthFirstSearchSort( s );"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  RecursiveDepthFirstSearchSort( u ):"/>
+<element id="8" value=" 2    reached[u] = TRUE;"/>
+<element id="9" value=" 3    FOR (x = adjacencyList[u].begin; x != null; x = x.succ) {"/>
+<element id="10" value=" 4      v = x.data;"/>
+<element id="11" value=" 5      IF (!reached[v]) RecursiveDepthFirstSearchSort( v );"/>
+<element id="12" value=" 6    }"/>
+<element id="13" value=" 7    eta[u] = counter;"/>
+<element id="14" value=" 8    counter = counter - 1;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="500.0" originX="380" originY="20">
+<visualMalleableElement id="13" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+<visualMalleableElement id="14" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="18">
+<structure name="DAG" type="Graph">
+<graph isOriented="true" type="IntInformation" arcLabelType="IntInformation">
+<node id="0" value="0" x="0" y="100"/>
+<node id="1" value="1" x="100" y="200"/>
+<node id="2" value="2" x="100" y="100"/>
+<node id="3" value="3" x="200" y="0"/>
+<node id="4" value="4" x="100" y="0"/>
+<node id="5" value="5" x="200" y="100"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="1" idFirstNode="2" idSecondNode="1"/>
+<arc id="2" idFirstNode="3" idSecondNode="2"/>
+<arc id="3" idFirstNode="3" idSecondNode="5"/>
+<arc id="4" idFirstNode="4" idSecondNode="2"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="0" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="00FFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The recursive depth first visit started from the blue node has terminated.">
+</message>
+</structure>
+<structure name="Eta" type="Array">
+<array size="6" type="LongInformation">
+<element id="0" value="-1"/>
+<element id="1" value="-1"/>
+<element id="2" value="-1"/>
+<element id="3" value="2"/>
+<element id="4" value="0"/>
+<element id="5" value="1"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="300">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="15">
+<element id="0" value=" 1  TopologicalSort( )"/>
+<element id="1" value=" 2    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="2" value=" 3      reached[s] = FALSE;"/>
+<element id="3" value=" 4    counter = n - 1;"/>
+<element id="4" value=" 5    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="5" value=" 6      IF (!reached[s]) RecursiveDepthFirstSearchSort( s );"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  RecursiveDepthFirstSearchSort( u ):"/>
+<element id="8" value=" 2    reached[u] = TRUE;"/>
+<element id="9" value=" 3    FOR (x = adjacencyList[u].begin; x != null; x = x.succ) {"/>
+<element id="10" value=" 4      v = x.data;"/>
+<element id="11" value=" 5      IF (!reached[v]) RecursiveDepthFirstSearchSort( v );"/>
+<element id="12" value=" 6    }"/>
+<element id="13" value=" 7    eta[u] = counter;"/>
+<element id="14" value=" 8    counter = counter - 1;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="500.0" originX="380" originY="20">
+<visualMalleableElement id="5" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="19">
+<structure name="DAG" type="Graph">
+<graph isOriented="true" type="IntInformation" arcLabelType="IntInformation">
+<node id="0" value="0" x="0" y="100"/>
+<node id="1" value="1" x="100" y="200"/>
+<node id="2" value="2" x="100" y="100"/>
+<node id="3" value="3" x="200" y="0"/>
+<node id="4" value="4" x="100" y="0"/>
+<node id="5" value="5" x="200" y="100"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="1" idFirstNode="2" idSecondNode="1"/>
+<arc id="2" idFirstNode="3" idSecondNode="2"/>
+<arc id="3" idFirstNode="3" idSecondNode="5"/>
+<arc id="4" idFirstNode="4" idSecondNode="2"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="0" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="00FFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The blue node is examined in order to determine whether it has not been reached and, if this is the case, to start the depth first visit from it.">
+</message>
+</structure>
+<structure name="Eta" type="Array">
+<array size="6" type="LongInformation">
+<element id="0" value="-1"/>
+<element id="1" value="-1"/>
+<element id="2" value="-1"/>
+<element id="3" value="2"/>
+<element id="4" value="0"/>
+<element id="5" value="1"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="300">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="15">
+<element id="0" value=" 1  TopologicalSort( )"/>
+<element id="1" value=" 2    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="2" value=" 3      reached[s] = FALSE;"/>
+<element id="3" value=" 4    counter = n - 1;"/>
+<element id="4" value=" 5    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="5" value=" 6      IF (!reached[s]) RecursiveDepthFirstSearchSort( s );"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  RecursiveDepthFirstSearchSort( u ):"/>
+<element id="8" value=" 2    reached[u] = TRUE;"/>
+<element id="9" value=" 3    FOR (x = adjacencyList[u].begin; x != null; x = x.succ) {"/>
+<element id="10" value=" 4      v = x.data;"/>
+<element id="11" value=" 5      IF (!reached[v]) RecursiveDepthFirstSearchSort( v );"/>
+<element id="12" value=" 6    }"/>
+<element id="13" value=" 7    eta[u] = counter;"/>
+<element id="14" value=" 8    counter = counter - 1;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="500.0" originX="380" originY="20">
+<visualMalleableElement id="5" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="20">
+<structure name="DAG" type="Graph">
+<graph isOriented="true" type="IntInformation" arcLabelType="IntInformation">
+<node id="0" value="0" x="0" y="100"/>
+<node id="1" value="1" x="100" y="200"/>
+<node id="2" value="2" x="100" y="100"/>
+<node id="3" value="3" x="200" y="0"/>
+<node id="4" value="4" x="100" y="0"/>
+<node id="5" value="5" x="200" y="100"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="1" idFirstNode="2" idSecondNode="1"/>
+<arc id="2" idFirstNode="3" idSecondNode="2"/>
+<arc id="3" idFirstNode="3" idSecondNode="5"/>
+<arc id="4" idFirstNode="4" idSecondNode="2"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="0" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="00FFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The depth first visit starts from the blue node.">
+</message>
+</structure>
+<structure name="Eta" type="Array">
+<array size="6" type="LongInformation">
+<element id="0" value="-1"/>
+<element id="1" value="-1"/>
+<element id="2" value="-1"/>
+<element id="3" value="2"/>
+<element id="4" value="0"/>
+<element id="5" value="1"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="300">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="15">
+<element id="0" value=" 1  TopologicalSort( )"/>
+<element id="1" value=" 2    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="2" value=" 3      reached[s] = FALSE;"/>
+<element id="3" value=" 4    counter = n - 1;"/>
+<element id="4" value=" 5    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="5" value=" 6      IF (!reached[s]) RecursiveDepthFirstSearchSort( s );"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  RecursiveDepthFirstSearchSort( u ):"/>
+<element id="8" value=" 2    reached[u] = TRUE;"/>
+<element id="9" value=" 3    FOR (x = adjacencyList[u].begin; x != null; x = x.succ) {"/>
+<element id="10" value=" 4      v = x.data;"/>
+<element id="11" value=" 5      IF (!reached[v]) RecursiveDepthFirstSearchSort( v );"/>
+<element id="12" value=" 6    }"/>
+<element id="13" value=" 7    eta[u] = counter;"/>
+<element id="14" value=" 8    counter = counter - 1;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="500.0" originX="380" originY="20">
+<visualMalleableElement id="7" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="21">
+<structure name="DAG" type="Graph">
+<graph isOriented="true" type="IntInformation" arcLabelType="IntInformation">
+<node id="0" value="0" x="0" y="100"/>
+<node id="1" value="1" x="100" y="200"/>
+<node id="2" value="2" x="100" y="100"/>
+<node id="3" value="3" x="200" y="0"/>
+<node id="4" value="4" x="100" y="0"/>
+<node id="5" value="5" x="200" y="100"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="1" idFirstNode="2" idSecondNode="1"/>
+<arc id="2" idFirstNode="3" idSecondNode="2"/>
+<arc id="3" idFirstNode="3" idSecondNode="5"/>
+<arc id="4" idFirstNode="4" idSecondNode="2"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="0" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="00FFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The blue node is marked as reached and drawn as a rectangle.">
+</message>
+</structure>
+<structure name="Eta" type="Array">
+<array size="6" type="LongInformation">
+<element id="0" value="-1"/>
+<element id="1" value="-1"/>
+<element id="2" value="-1"/>
+<element id="3" value="2"/>
+<element id="4" value="0"/>
+<element id="5" value="1"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="300">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="15">
+<element id="0" value=" 1  TopologicalSort( )"/>
+<element id="1" value=" 2    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="2" value=" 3      reached[s] = FALSE;"/>
+<element id="3" value=" 4    counter = n - 1;"/>
+<element id="4" value=" 5    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="5" value=" 6      IF (!reached[s]) RecursiveDepthFirstSearchSort( s );"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  RecursiveDepthFirstSearchSort( u ):"/>
+<element id="8" value=" 2    reached[u] = TRUE;"/>
+<element id="9" value=" 3    FOR (x = adjacencyList[u].begin; x != null; x = x.succ) {"/>
+<element id="10" value=" 4      v = x.data;"/>
+<element id="11" value=" 5      IF (!reached[v]) RecursiveDepthFirstSearchSort( v );"/>
+<element id="12" value=" 6    }"/>
+<element id="13" value=" 7    eta[u] = counter;"/>
+<element id="14" value=" 8    counter = counter - 1;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="500.0" originX="380" originY="20">
+<visualMalleableElement id="8" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="22">
+<structure name="DAG" type="Graph">
+<graph isOriented="true" type="IntInformation" arcLabelType="IntInformation">
+<node id="0" value="0" x="0" y="100"/>
+<node id="1" value="1" x="100" y="200"/>
+<node id="2" value="2" x="100" y="100"/>
+<node id="3" value="3" x="200" y="0"/>
+<node id="4" value="4" x="100" y="0"/>
+<node id="5" value="5" x="200" y="100"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="1" idFirstNode="2" idSecondNode="1"/>
+<arc id="2" idFirstNode="3" idSecondNode="2"/>
+<arc id="3" idFirstNode="3" idSecondNode="5"/>
+<arc id="4" idFirstNode="4" idSecondNode="2"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="0" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="00FFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="FFFF00" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The yellow node (neighbor of the blue node) has not bee reached yet, and, hence, the depth first visit starts from it.">
+</message>
+</structure>
+<structure name="Eta" type="Array">
+<array size="6" type="LongInformation">
+<element id="0" value="-1"/>
+<element id="1" value="-1"/>
+<element id="2" value="-1"/>
+<element id="3" value="2"/>
+<element id="4" value="0"/>
+<element id="5" value="1"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="300">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="15">
+<element id="0" value=" 1  TopologicalSort( )"/>
+<element id="1" value=" 2    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="2" value=" 3      reached[s] = FALSE;"/>
+<element id="3" value=" 4    counter = n - 1;"/>
+<element id="4" value=" 5    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="5" value=" 6      IF (!reached[s]) RecursiveDepthFirstSearchSort( s );"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  RecursiveDepthFirstSearchSort( u ):"/>
+<element id="8" value=" 2    reached[u] = TRUE;"/>
+<element id="9" value=" 3    FOR (x = adjacencyList[u].begin; x != null; x = x.succ) {"/>
+<element id="10" value=" 4      v = x.data;"/>
+<element id="11" value=" 5      IF (!reached[v]) RecursiveDepthFirstSearchSort( v );"/>
+<element id="12" value=" 6    }"/>
+<element id="13" value=" 7    eta[u] = counter;"/>
+<element id="14" value=" 8    counter = counter - 1;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="500.0" originX="380" originY="20">
+<visualMalleableElement id="11" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="23">
+<structure name="DAG" type="Graph">
+<graph isOriented="true" type="IntInformation" arcLabelType="IntInformation">
+<node id="0" value="0" x="0" y="100"/>
+<node id="1" value="1" x="100" y="200"/>
+<node id="2" value="2" x="100" y="100"/>
+<node id="3" value="3" x="200" y="0"/>
+<node id="4" value="4" x="100" y="0"/>
+<node id="5" value="5" x="200" y="100"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="1" idFirstNode="2" idSecondNode="1"/>
+<arc id="2" idFirstNode="3" idSecondNode="2"/>
+<arc id="3" idFirstNode="3" idSecondNode="5"/>
+<arc id="4" idFirstNode="4" idSecondNode="2"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="0" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="00FFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The blue node is marked as reached and drawn as a rectangle.">
+</message>
+</structure>
+<structure name="Eta" type="Array">
+<array size="6" type="LongInformation">
+<element id="0" value="-1"/>
+<element id="1" value="-1"/>
+<element id="2" value="-1"/>
+<element id="3" value="2"/>
+<element id="4" value="0"/>
+<element id="5" value="1"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="300">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="15">
+<element id="0" value=" 1  TopologicalSort( )"/>
+<element id="1" value=" 2    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="2" value=" 3      reached[s] = FALSE;"/>
+<element id="3" value=" 4    counter = n - 1;"/>
+<element id="4" value=" 5    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="5" value=" 6      IF (!reached[s]) RecursiveDepthFirstSearchSort( s );"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  RecursiveDepthFirstSearchSort( u ):"/>
+<element id="8" value=" 2    reached[u] = TRUE;"/>
+<element id="9" value=" 3    FOR (x = adjacencyList[u].begin; x != null; x = x.succ) {"/>
+<element id="10" value=" 4      v = x.data;"/>
+<element id="11" value=" 5      IF (!reached[v]) RecursiveDepthFirstSearchSort( v );"/>
+<element id="12" value=" 6    }"/>
+<element id="13" value=" 7    eta[u] = counter;"/>
+<element id="14" value=" 8    counter = counter - 1;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="500.0" originX="380" originY="20">
+<visualMalleableElement id="8" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="24">
+<structure name="DAG" type="Graph">
+<graph isOriented="true" type="IntInformation" arcLabelType="IntInformation">
+<node id="0" value="0" x="0" y="100"/>
+<node id="1" value="1" x="100" y="200"/>
+<node id="2" value="2" x="100" y="100"/>
+<node id="3" value="3" x="200" y="0"/>
+<node id="4" value="4" x="100" y="0"/>
+<node id="5" value="5" x="200" y="100"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="1" idFirstNode="2" idSecondNode="1"/>
+<arc id="2" idFirstNode="3" idSecondNode="2"/>
+<arc id="3" idFirstNode="3" idSecondNode="5"/>
+<arc id="4" idFirstNode="4" idSecondNode="2"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="0" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="00FFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The blue node can now be inserted in the rightmost free position of the topological sort array.">
+</message>
+</structure>
+<structure name="Eta" type="Array">
+<array size="6" type="LongInformation">
+<element id="0" value="-1"/>
+<element id="1" value="-1"/>
+<element id="2" value="-1"/>
+<element id="3" value="2"/>
+<element id="4" value="0"/>
+<element id="5" value="1"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="300">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="15">
+<element id="0" value=" 1  TopologicalSort( )"/>
+<element id="1" value=" 2    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="2" value=" 3      reached[s] = FALSE;"/>
+<element id="3" value=" 4    counter = n - 1;"/>
+<element id="4" value=" 5    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="5" value=" 6      IF (!reached[s]) RecursiveDepthFirstSearchSort( s );"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  RecursiveDepthFirstSearchSort( u ):"/>
+<element id="8" value=" 2    reached[u] = TRUE;"/>
+<element id="9" value=" 3    FOR (x = adjacencyList[u].begin; x != null; x = x.succ) {"/>
+<element id="10" value=" 4      v = x.data;"/>
+<element id="11" value=" 5      IF (!reached[v]) RecursiveDepthFirstSearchSort( v );"/>
+<element id="12" value=" 6    }"/>
+<element id="13" value=" 7    eta[u] = counter;"/>
+<element id="14" value=" 8    counter = counter - 1;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="500.0" originX="380" originY="20">
+<visualMalleableElement id="13" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+<visualMalleableElement id="14" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="25">
+<structure name="DAG" type="Graph">
+<graph isOriented="true" type="IntInformation" arcLabelType="IntInformation">
+<node id="0" value="0" x="0" y="100"/>
+<node id="1" value="1" x="100" y="200"/>
+<node id="2" value="2" x="100" y="100"/>
+<node id="3" value="3" x="200" y="0"/>
+<node id="4" value="4" x="100" y="0"/>
+<node id="5" value="5" x="200" y="100"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="1" idFirstNode="2" idSecondNode="1"/>
+<arc id="2" idFirstNode="3" idSecondNode="2"/>
+<arc id="3" idFirstNode="3" idSecondNode="5"/>
+<arc id="4" idFirstNode="4" idSecondNode="2"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="0" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="00FFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The blue node has been inserted in the topological sort array.">
+</message>
+</structure>
+<structure name="Eta" type="Array">
+<array size="6" type="LongInformation">
+<element id="0" value="-1"/>
+<element id="1" value="-1"/>
+<element id="2" value="5"/>
+<element id="3" value="2"/>
+<element id="4" value="0"/>
+<element id="5" value="1"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="300">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="15">
+<element id="0" value=" 1  TopologicalSort( )"/>
+<element id="1" value=" 2    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="2" value=" 3      reached[s] = FALSE;"/>
+<element id="3" value=" 4    counter = n - 1;"/>
+<element id="4" value=" 5    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="5" value=" 6      IF (!reached[s]) RecursiveDepthFirstSearchSort( s );"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  RecursiveDepthFirstSearchSort( u ):"/>
+<element id="8" value=" 2    reached[u] = TRUE;"/>
+<element id="9" value=" 3    FOR (x = adjacencyList[u].begin; x != null; x = x.succ) {"/>
+<element id="10" value=" 4      v = x.data;"/>
+<element id="11" value=" 5      IF (!reached[v]) RecursiveDepthFirstSearchSort( v );"/>
+<element id="12" value=" 6    }"/>
+<element id="13" value=" 7    eta[u] = counter;"/>
+<element id="14" value=" 8    counter = counter - 1;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="500.0" originX="380" originY="20">
+<visualMalleableElement id="13" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+<visualMalleableElement id="14" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="26">
+<structure name="DAG" type="Graph">
+<graph isOriented="true" type="IntInformation" arcLabelType="IntInformation">
+<node id="0" value="0" x="0" y="100"/>
+<node id="1" value="1" x="100" y="200"/>
+<node id="2" value="2" x="100" y="100"/>
+<node id="3" value="3" x="200" y="0"/>
+<node id="4" value="4" x="100" y="0"/>
+<node id="5" value="5" x="200" y="100"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="1" idFirstNode="2" idSecondNode="1"/>
+<arc id="2" idFirstNode="3" idSecondNode="2"/>
+<arc id="3" idFirstNode="3" idSecondNode="5"/>
+<arc id="4" idFirstNode="4" idSecondNode="2"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="0" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="00FFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="FFFF00" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The recursive depth first visit started from the yellow node (neighbor of the blue node) has terminated.">
+</message>
+</structure>
+<structure name="Eta" type="Array">
+<array size="6" type="LongInformation">
+<element id="0" value="-1"/>
+<element id="1" value="-1"/>
+<element id="2" value="5"/>
+<element id="3" value="2"/>
+<element id="4" value="0"/>
+<element id="5" value="1"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="300">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="15">
+<element id="0" value=" 1  TopologicalSort( )"/>
+<element id="1" value=" 2    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="2" value=" 3      reached[s] = FALSE;"/>
+<element id="3" value=" 4    counter = n - 1;"/>
+<element id="4" value=" 5    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="5" value=" 6      IF (!reached[s]) RecursiveDepthFirstSearchSort( s );"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  RecursiveDepthFirstSearchSort( u ):"/>
+<element id="8" value=" 2    reached[u] = TRUE;"/>
+<element id="9" value=" 3    FOR (x = adjacencyList[u].begin; x != null; x = x.succ) {"/>
+<element id="10" value=" 4      v = x.data;"/>
+<element id="11" value=" 5      IF (!reached[v]) RecursiveDepthFirstSearchSort( v );"/>
+<element id="12" value=" 6    }"/>
+<element id="13" value=" 7    eta[u] = counter;"/>
+<element id="14" value=" 8    counter = counter - 1;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="500.0" originX="380" originY="20">
+<visualMalleableElement id="11" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="27">
+<structure name="DAG" type="Graph">
+<graph isOriented="true" type="IntInformation" arcLabelType="IntInformation">
+<node id="0" value="0" x="0" y="100"/>
+<node id="1" value="1" x="100" y="200"/>
+<node id="2" value="2" x="100" y="100"/>
+<node id="3" value="3" x="200" y="0"/>
+<node id="4" value="4" x="100" y="0"/>
+<node id="5" value="5" x="200" y="100"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="1" idFirstNode="2" idSecondNode="1"/>
+<arc id="2" idFirstNode="3" idSecondNode="2"/>
+<arc id="3" idFirstNode="3" idSecondNode="5"/>
+<arc id="4" idFirstNode="4" idSecondNode="2"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="0" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="00FFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The blue node can now be inserted in the rightmost free position of the topological sort array.">
+</message>
+</structure>
+<structure name="Eta" type="Array">
+<array size="6" type="LongInformation">
+<element id="0" value="-1"/>
+<element id="1" value="-1"/>
+<element id="2" value="5"/>
+<element id="3" value="2"/>
+<element id="4" value="0"/>
+<element id="5" value="1"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="300">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="15">
+<element id="0" value=" 1  TopologicalSort( )"/>
+<element id="1" value=" 2    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="2" value=" 3      reached[s] = FALSE;"/>
+<element id="3" value=" 4    counter = n - 1;"/>
+<element id="4" value=" 5    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="5" value=" 6      IF (!reached[s]) RecursiveDepthFirstSearchSort( s );"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  RecursiveDepthFirstSearchSort( u ):"/>
+<element id="8" value=" 2    reached[u] = TRUE;"/>
+<element id="9" value=" 3    FOR (x = adjacencyList[u].begin; x != null; x = x.succ) {"/>
+<element id="10" value=" 4      v = x.data;"/>
+<element id="11" value=" 5      IF (!reached[v]) RecursiveDepthFirstSearchSort( v );"/>
+<element id="12" value=" 6    }"/>
+<element id="13" value=" 7    eta[u] = counter;"/>
+<element id="14" value=" 8    counter = counter - 1;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="500.0" originX="380" originY="20">
+<visualMalleableElement id="13" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+<visualMalleableElement id="14" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="28">
+<structure name="DAG" type="Graph">
+<graph isOriented="true" type="IntInformation" arcLabelType="IntInformation">
+<node id="0" value="0" x="0" y="100"/>
+<node id="1" value="1" x="100" y="200"/>
+<node id="2" value="2" x="100" y="100"/>
+<node id="3" value="3" x="200" y="0"/>
+<node id="4" value="4" x="100" y="0"/>
+<node id="5" value="5" x="200" y="100"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="1" idFirstNode="2" idSecondNode="1"/>
+<arc id="2" idFirstNode="3" idSecondNode="2"/>
+<arc id="3" idFirstNode="3" idSecondNode="5"/>
+<arc id="4" idFirstNode="4" idSecondNode="2"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="0" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="00FFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The blue node has been inserted in the topological sort array.">
+</message>
+</structure>
+<structure name="Eta" type="Array">
+<array size="6" type="LongInformation">
+<element id="0" value="-1"/>
+<element id="1" value="3"/>
+<element id="2" value="5"/>
+<element id="3" value="2"/>
+<element id="4" value="0"/>
+<element id="5" value="1"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="300">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="15">
+<element id="0" value=" 1  TopologicalSort( )"/>
+<element id="1" value=" 2    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="2" value=" 3      reached[s] = FALSE;"/>
+<element id="3" value=" 4    counter = n - 1;"/>
+<element id="4" value=" 5    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="5" value=" 6      IF (!reached[s]) RecursiveDepthFirstSearchSort( s );"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  RecursiveDepthFirstSearchSort( u ):"/>
+<element id="8" value=" 2    reached[u] = TRUE;"/>
+<element id="9" value=" 3    FOR (x = adjacencyList[u].begin; x != null; x = x.succ) {"/>
+<element id="10" value=" 4      v = x.data;"/>
+<element id="11" value=" 5      IF (!reached[v]) RecursiveDepthFirstSearchSort( v );"/>
+<element id="12" value=" 6    }"/>
+<element id="13" value=" 7    eta[u] = counter;"/>
+<element id="14" value=" 8    counter = counter - 1;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="500.0" originX="380" originY="20">
+<visualMalleableElement id="13" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+<visualMalleableElement id="14" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="29">
+<structure name="DAG" type="Graph">
+<graph isOriented="true" type="IntInformation" arcLabelType="IntInformation">
+<node id="0" value="0" x="0" y="100"/>
+<node id="1" value="1" x="100" y="200"/>
+<node id="2" value="2" x="100" y="100"/>
+<node id="3" value="3" x="200" y="0"/>
+<node id="4" value="4" x="100" y="0"/>
+<node id="5" value="5" x="200" y="100"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="1" idFirstNode="2" idSecondNode="1"/>
+<arc id="2" idFirstNode="3" idSecondNode="2"/>
+<arc id="3" idFirstNode="3" idSecondNode="5"/>
+<arc id="4" idFirstNode="4" idSecondNode="2"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="0" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="00FFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The recursive depth first visit started from the blue node has terminated.">
+</message>
+</structure>
+<structure name="Eta" type="Array">
+<array size="6" type="LongInformation">
+<element id="0" value="-1"/>
+<element id="1" value="3"/>
+<element id="2" value="5"/>
+<element id="3" value="2"/>
+<element id="4" value="0"/>
+<element id="5" value="1"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="300">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="15">
+<element id="0" value=" 1  TopologicalSort( )"/>
+<element id="1" value=" 2    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="2" value=" 3      reached[s] = FALSE;"/>
+<element id="3" value=" 4    counter = n - 1;"/>
+<element id="4" value=" 5    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="5" value=" 6      IF (!reached[s]) RecursiveDepthFirstSearchSort( s );"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  RecursiveDepthFirstSearchSort( u ):"/>
+<element id="8" value=" 2    reached[u] = TRUE;"/>
+<element id="9" value=" 3    FOR (x = adjacencyList[u].begin; x != null; x = x.succ) {"/>
+<element id="10" value=" 4      v = x.data;"/>
+<element id="11" value=" 5      IF (!reached[v]) RecursiveDepthFirstSearchSort( v );"/>
+<element id="12" value=" 6    }"/>
+<element id="13" value=" 7    eta[u] = counter;"/>
+<element id="14" value=" 8    counter = counter - 1;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="500.0" originX="380" originY="20">
+<visualMalleableElement id="5" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="30">
+<structure name="DAG" type="Graph">
+<graph isOriented="true" type="IntInformation" arcLabelType="IntInformation">
+<node id="0" value="0" x="0" y="100"/>
+<node id="1" value="1" x="100" y="200"/>
+<node id="2" value="2" x="100" y="100"/>
+<node id="3" value="3" x="200" y="0"/>
+<node id="4" value="4" x="100" y="0"/>
+<node id="5" value="5" x="200" y="100"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="1" idFirstNode="2" idSecondNode="1"/>
+<arc id="2" idFirstNode="3" idSecondNode="2"/>
+<arc id="3" idFirstNode="3" idSecondNode="5"/>
+<arc id="4" idFirstNode="4" idSecondNode="2"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="0" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="00FFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The blue node is examined in order to determine whether it has not been reached and, if this is the case, to start the depth first visit from it.">
+</message>
+</structure>
+<structure name="Eta" type="Array">
+<array size="6" type="LongInformation">
+<element id="0" value="-1"/>
+<element id="1" value="3"/>
+<element id="2" value="5"/>
+<element id="3" value="2"/>
+<element id="4" value="0"/>
+<element id="5" value="1"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="300">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="15">
+<element id="0" value=" 1  TopologicalSort( )"/>
+<element id="1" value=" 2    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="2" value=" 3      reached[s] = FALSE;"/>
+<element id="3" value=" 4    counter = n - 1;"/>
+<element id="4" value=" 5    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="5" value=" 6      IF (!reached[s]) RecursiveDepthFirstSearchSort( s );"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  RecursiveDepthFirstSearchSort( u ):"/>
+<element id="8" value=" 2    reached[u] = TRUE;"/>
+<element id="9" value=" 3    FOR (x = adjacencyList[u].begin; x != null; x = x.succ) {"/>
+<element id="10" value=" 4      v = x.data;"/>
+<element id="11" value=" 5      IF (!reached[v]) RecursiveDepthFirstSearchSort( v );"/>
+<element id="12" value=" 6    }"/>
+<element id="13" value=" 7    eta[u] = counter;"/>
+<element id="14" value=" 8    counter = counter - 1;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="500.0" originX="380" originY="20">
+<visualMalleableElement id="5" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="31">
+<structure name="DAG" type="Graph">
+<graph isOriented="true" type="IntInformation" arcLabelType="IntInformation">
+<node id="0" value="0" x="0" y="100"/>
+<node id="1" value="1" x="100" y="200"/>
+<node id="2" value="2" x="100" y="100"/>
+<node id="3" value="3" x="200" y="0"/>
+<node id="4" value="4" x="100" y="0"/>
+<node id="5" value="5" x="200" y="100"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="1" idFirstNode="2" idSecondNode="1"/>
+<arc id="2" idFirstNode="3" idSecondNode="2"/>
+<arc id="3" idFirstNode="3" idSecondNode="5"/>
+<arc id="4" idFirstNode="4" idSecondNode="2"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="0" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="00FFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The depth first visit starts from the blue node.">
+</message>
+</structure>
+<structure name="Eta" type="Array">
+<array size="6" type="LongInformation">
+<element id="0" value="-1"/>
+<element id="1" value="3"/>
+<element id="2" value="5"/>
+<element id="3" value="2"/>
+<element id="4" value="0"/>
+<element id="5" value="1"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="300">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="15">
+<element id="0" value=" 1  TopologicalSort( )"/>
+<element id="1" value=" 2    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="2" value=" 3      reached[s] = FALSE;"/>
+<element id="3" value=" 4    counter = n - 1;"/>
+<element id="4" value=" 5    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="5" value=" 6      IF (!reached[s]) RecursiveDepthFirstSearchSort( s );"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  RecursiveDepthFirstSearchSort( u ):"/>
+<element id="8" value=" 2    reached[u] = TRUE;"/>
+<element id="9" value=" 3    FOR (x = adjacencyList[u].begin; x != null; x = x.succ) {"/>
+<element id="10" value=" 4      v = x.data;"/>
+<element id="11" value=" 5      IF (!reached[v]) RecursiveDepthFirstSearchSort( v );"/>
+<element id="12" value=" 6    }"/>
+<element id="13" value=" 7    eta[u] = counter;"/>
+<element id="14" value=" 8    counter = counter - 1;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="500.0" originX="380" originY="20">
+<visualMalleableElement id="7" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="32">
+<structure name="DAG" type="Graph">
+<graph isOriented="true" type="IntInformation" arcLabelType="IntInformation">
+<node id="0" value="0" x="0" y="100"/>
+<node id="1" value="1" x="100" y="200"/>
+<node id="2" value="2" x="100" y="100"/>
+<node id="3" value="3" x="200" y="0"/>
+<node id="4" value="4" x="100" y="0"/>
+<node id="5" value="5" x="200" y="100"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="1" idFirstNode="2" idSecondNode="1"/>
+<arc id="2" idFirstNode="3" idSecondNode="2"/>
+<arc id="3" idFirstNode="3" idSecondNode="5"/>
+<arc id="4" idFirstNode="4" idSecondNode="2"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="0" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="00FFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The blue node is marked as reached and drawn as a rectangle.">
+</message>
+</structure>
+<structure name="Eta" type="Array">
+<array size="6" type="LongInformation">
+<element id="0" value="-1"/>
+<element id="1" value="3"/>
+<element id="2" value="5"/>
+<element id="3" value="2"/>
+<element id="4" value="0"/>
+<element id="5" value="1"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="300">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="15">
+<element id="0" value=" 1  TopologicalSort( )"/>
+<element id="1" value=" 2    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="2" value=" 3      reached[s] = FALSE;"/>
+<element id="3" value=" 4    counter = n - 1;"/>
+<element id="4" value=" 5    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="5" value=" 6      IF (!reached[s]) RecursiveDepthFirstSearchSort( s );"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  RecursiveDepthFirstSearchSort( u ):"/>
+<element id="8" value=" 2    reached[u] = TRUE;"/>
+<element id="9" value=" 3    FOR (x = adjacencyList[u].begin; x != null; x = x.succ) {"/>
+<element id="10" value=" 4      v = x.data;"/>
+<element id="11" value=" 5      IF (!reached[v]) RecursiveDepthFirstSearchSort( v );"/>
+<element id="12" value=" 6    }"/>
+<element id="13" value=" 7    eta[u] = counter;"/>
+<element id="14" value=" 8    counter = counter - 1;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="500.0" originX="380" originY="20">
+<visualMalleableElement id="8" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="33">
+<structure name="DAG" type="Graph">
+<graph isOriented="true" type="IntInformation" arcLabelType="IntInformation">
+<node id="0" value="0" x="0" y="100"/>
+<node id="1" value="1" x="100" y="200"/>
+<node id="2" value="2" x="100" y="100"/>
+<node id="3" value="3" x="200" y="0"/>
+<node id="4" value="4" x="100" y="0"/>
+<node id="5" value="5" x="200" y="100"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="1" idFirstNode="2" idSecondNode="1"/>
+<arc id="2" idFirstNode="3" idSecondNode="2"/>
+<arc id="3" idFirstNode="3" idSecondNode="5"/>
+<arc id="4" idFirstNode="4" idSecondNode="2"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="0" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="00FFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The blue node can now be inserted in the rightmost free position of the topological sort array.">
+</message>
+</structure>
+<structure name="Eta" type="Array">
+<array size="6" type="LongInformation">
+<element id="0" value="-1"/>
+<element id="1" value="3"/>
+<element id="2" value="5"/>
+<element id="3" value="2"/>
+<element id="4" value="0"/>
+<element id="5" value="1"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="300">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="15">
+<element id="0" value=" 1  TopologicalSort( )"/>
+<element id="1" value=" 2    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="2" value=" 3      reached[s] = FALSE;"/>
+<element id="3" value=" 4    counter = n - 1;"/>
+<element id="4" value=" 5    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="5" value=" 6      IF (!reached[s]) RecursiveDepthFirstSearchSort( s );"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  RecursiveDepthFirstSearchSort( u ):"/>
+<element id="8" value=" 2    reached[u] = TRUE;"/>
+<element id="9" value=" 3    FOR (x = adjacencyList[u].begin; x != null; x = x.succ) {"/>
+<element id="10" value=" 4      v = x.data;"/>
+<element id="11" value=" 5      IF (!reached[v]) RecursiveDepthFirstSearchSort( v );"/>
+<element id="12" value=" 6    }"/>
+<element id="13" value=" 7    eta[u] = counter;"/>
+<element id="14" value=" 8    counter = counter - 1;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="500.0" originX="380" originY="20">
+<visualMalleableElement id="13" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+<visualMalleableElement id="14" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="34">
+<structure name="DAG" type="Graph">
+<graph isOriented="true" type="IntInformation" arcLabelType="IntInformation">
+<node id="0" value="0" x="0" y="100"/>
+<node id="1" value="1" x="100" y="200"/>
+<node id="2" value="2" x="100" y="100"/>
+<node id="3" value="3" x="200" y="0"/>
+<node id="4" value="4" x="100" y="0"/>
+<node id="5" value="5" x="200" y="100"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="1" idFirstNode="2" idSecondNode="1"/>
+<arc id="2" idFirstNode="3" idSecondNode="2"/>
+<arc id="3" idFirstNode="3" idSecondNode="5"/>
+<arc id="4" idFirstNode="4" idSecondNode="2"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="0" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="00FFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The blue node has been inserted in the topological sort array.">
+</message>
+</structure>
+<structure name="Eta" type="Array">
+<array size="6" type="LongInformation">
+<element id="0" value="4"/>
+<element id="1" value="3"/>
+<element id="2" value="5"/>
+<element id="3" value="2"/>
+<element id="4" value="0"/>
+<element id="5" value="1"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="300">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="15">
+<element id="0" value=" 1  TopologicalSort( )"/>
+<element id="1" value=" 2    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="2" value=" 3      reached[s] = FALSE;"/>
+<element id="3" value=" 4    counter = n - 1;"/>
+<element id="4" value=" 5    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="5" value=" 6      IF (!reached[s]) RecursiveDepthFirstSearchSort( s );"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  RecursiveDepthFirstSearchSort( u ):"/>
+<element id="8" value=" 2    reached[u] = TRUE;"/>
+<element id="9" value=" 3    FOR (x = adjacencyList[u].begin; x != null; x = x.succ) {"/>
+<element id="10" value=" 4      v = x.data;"/>
+<element id="11" value=" 5      IF (!reached[v]) RecursiveDepthFirstSearchSort( v );"/>
+<element id="12" value=" 6    }"/>
+<element id="13" value=" 7    eta[u] = counter;"/>
+<element id="14" value=" 8    counter = counter - 1;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="500.0" originX="380" originY="20">
+<visualMalleableElement id="13" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+<visualMalleableElement id="14" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="35">
+<structure name="DAG" type="Graph">
+<graph isOriented="true" type="IntInformation" arcLabelType="IntInformation">
+<node id="0" value="0" x="0" y="100"/>
+<node id="1" value="1" x="100" y="200"/>
+<node id="2" value="2" x="100" y="100"/>
+<node id="3" value="3" x="200" y="0"/>
+<node id="4" value="4" x="100" y="0"/>
+<node id="5" value="5" x="200" y="100"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="1" idFirstNode="2" idSecondNode="1"/>
+<arc id="2" idFirstNode="3" idSecondNode="2"/>
+<arc id="3" idFirstNode="3" idSecondNode="5"/>
+<arc id="4" idFirstNode="4" idSecondNode="2"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="0" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="00FFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The recursive depth first visit started from the blue node has terminated.">
+</message>
+</structure>
+<structure name="Eta" type="Array">
+<array size="6" type="LongInformation">
+<element id="0" value="4"/>
+<element id="1" value="3"/>
+<element id="2" value="5"/>
+<element id="3" value="2"/>
+<element id="4" value="0"/>
+<element id="5" value="1"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="300">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="15">
+<element id="0" value=" 1  TopologicalSort( )"/>
+<element id="1" value=" 2    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="2" value=" 3      reached[s] = FALSE;"/>
+<element id="3" value=" 4    counter = n - 1;"/>
+<element id="4" value=" 5    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="5" value=" 6      IF (!reached[s]) RecursiveDepthFirstSearchSort( s );"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  RecursiveDepthFirstSearchSort( u ):"/>
+<element id="8" value=" 2    reached[u] = TRUE;"/>
+<element id="9" value=" 3    FOR (x = adjacencyList[u].begin; x != null; x = x.succ) {"/>
+<element id="10" value=" 4      v = x.data;"/>
+<element id="11" value=" 5      IF (!reached[v]) RecursiveDepthFirstSearchSort( v );"/>
+<element id="12" value=" 6    }"/>
+<element id="13" value=" 7    eta[u] = counter;"/>
+<element id="14" value=" 8    counter = counter - 1;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="500.0" originX="380" originY="20">
+<visualMalleableElement id="5" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="36">
+<structure name="DAG" type="Graph">
+<graph isOriented="true" type="IntInformation" arcLabelType="IntInformation">
+<node id="0" value="0" x="0" y="100"/>
+<node id="1" value="1" x="100" y="200"/>
+<node id="2" value="2" x="100" y="100"/>
+<node id="3" value="3" x="200" y="0"/>
+<node id="4" value="4" x="100" y="0"/>
+<node id="5" value="5" x="200" y="100"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="1" idFirstNode="2" idSecondNode="1"/>
+<arc id="2" idFirstNode="3" idSecondNode="2"/>
+<arc id="3" idFirstNode="3" idSecondNode="5"/>
+<arc id="4" idFirstNode="4" idSecondNode="2"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+<visualNode id="0" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="00FFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The blue node is examined in order to determine whether it has not been reached and, if this is the case, to start the depth first visit from it.">
+</message>
+</structure>
+<structure name="Eta" type="Array">
+<array size="6" type="LongInformation">
+<element id="0" value="4"/>
+<element id="1" value="3"/>
+<element id="2" value="5"/>
+<element id="3" value="2"/>
+<element id="4" value="0"/>
+<element id="5" value="1"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="300">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="15">
+<element id="0" value=" 1  TopologicalSort( )"/>
+<element id="1" value=" 2    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="2" value=" 3      reached[s] = FALSE;"/>
+<element id="3" value=" 4    counter = n - 1;"/>
+<element id="4" value=" 5    FOR (s = 0; s &#60; n; s = s + 1)"/>
+<element id="5" value=" 6      IF (!reached[s]) RecursiveDepthFirstSearchSort( s );"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  RecursiveDepthFirstSearchSort( u ):"/>
+<element id="8" value=" 2    reached[u] = TRUE;"/>
+<element id="9" value=" 3    FOR (x = adjacencyList[u].begin; x != null; x = x.succ) {"/>
+<element id="10" value=" 4      v = x.data;"/>
+<element id="11" value=" 5      IF (!reached[v]) RecursiveDepthFirstSearchSort( v );"/>
+<element id="12" value=" 6    }"/>
+<element id="13" value=" 7    eta[u] = counter;"/>
+<element id="14" value=" 8    counter = counter - 1;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="500.0" originX="380" originY="20">
+<visualMalleableElement id="5" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="37">
+<structure name="DAG" type="Graph">
+<graph isOriented="true" type="IntInformation" arcLabelType="IntInformation">
+<node id="0" value="0" x="0" y="100"/>
+<node id="1" value="1" x="100" y="200"/>
+<node id="2" value="2" x="100" y="100"/>
+<node id="3" value="3" x="200" y="0"/>
+<node id="4" value="4" x="100" y="0"/>
+<node id="5" value="5" x="200" y="100"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="1" idFirstNode="2" idSecondNode="1"/>
+<arc id="2" idFirstNode="3" idSecondNode="2"/>
+<arc id="3" idFirstNode="3" idSecondNode="5"/>
+<arc id="4" idFirstNode="4" idSecondNode="2"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="40">
+</visualGraph>
+<message content="The topological sort has been computed.">
+</message>
+</structure>
+<structure name="Eta" type="Array">
+<array size="6" type="LongInformation">
+<element id="0" value="4"/>
+<element id="1" value="3"/>
+<element id="2" value="5"/>
+<element id="3" value="2"/>
+<element id="4" value="0"/>
+<element id="5" value="1"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="300">
+</visualArray>
+<message content="">
+</message>
+</structure>
+</step>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure name="Sudoku" type="Pseudocode">
+	<pseudocode size="11">
+		<element id="0" value=" 1  Sudoku( cell )" />
+		<element id="1"
+			value=" 2    listing = set of the admissible digits per cell;" />
+		<element id="2" value=" 3    FOR (i = 0; i &#60; |listing|; i = i+1) {" />
+		<element id="3" value=" 4      Assign( cell, listing[i] );" />
+		<element id="4"
+			value=" 5      IF (!Last(cell) &#38;&#38; !Sudoku(Succ(cell))) {" />
+		<element id="5" value=" 6        Empty( cell );" />
+		<element id="6" value=" 7      } ELSE {" />
+		<element id="7" value=" 8        RETURN TRUE;" />
+		<element id="8" value=" 9      }" />
+		<element id="9" value="10    }" />
+		<element id="10" value="11    RETURN FALSE;" />
+	</pseudocode>
+</structure>

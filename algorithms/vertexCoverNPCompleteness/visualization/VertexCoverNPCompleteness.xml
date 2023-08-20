@@ -1,0 +1,1906 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm name="Vertex Cover">
+<step number="0">
+<structure name="Boolean formula" type="GeometricFigure">
+<geometricFigure size="1">
+<element id="0" value="Text[(x1 OR x2 OR x3) AND ((NOT x1) OR (NOT x2) OR x3) AND ((NOT x1) OR x2 OR (NOT x3));0.0;0.0]"/>
+</geometricFigure>
+<visualGeometricFigure defaultColor="000000" defaultFont="Monospaced-PLAIN-16" defaultLineThickness="0.5" originX="20" originY="20">
+</visualGeometricFigure>
+<message content="Boolean formula in CNF that has to be reduced to a Vertex Cover instance graph.">
+</message>
+</structure>
+</step>
+<step number="1">
+<structure name="Graph" type="Graph">
+<graph isOriented="false" type="StringInformation" arcLabelType="IntInformation">
+<node id="0" value="p[1]" x="0" y="0"/>
+<node id="1" value="n[1]" x="100" y="0"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="0" idFirstNode="1" idSecondNode="0"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="35.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="80">
+<visualNode id="0" color="00FF00" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="1" color="00FF00" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualArc id="0" labelFont="Monospaced-PLAIN-14" lineColor="FF0000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="1" labelFont="Monospaced-PLAIN-14" lineColor="FF0000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="2" labelFont="Monospaced-PLAIN-14" lineColor="FF0000" lineType="CONTINUE" lineThickness="0.5"/>
+</visualGraph>
+<message content="The nodes and edges corresponding to the next variable have been created.">
+</message>
+</structure>
+<structure name="Boolean formula" type="GeometricFigure">
+<geometricFigure size="1">
+<element id="0" value="Text[(x1 OR x2 OR x3) AND ((NOT x1) OR (NOT x2) OR x3) AND ((NOT x1) OR x2 OR (NOT x3));0.0;0.0]"/>
+</geometricFigure>
+<visualGeometricFigure defaultColor="000000" defaultFont="Monospaced-PLAIN-16" defaultLineThickness="0.5" originX="20" originY="20">
+</visualGeometricFigure>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="2">
+<structure name="Graph" type="Graph">
+<graph isOriented="false" type="StringInformation" arcLabelType="IntInformation">
+<node id="0" value="p[1]" x="0" y="0"/>
+<node id="1" value="n[1]" x="100" y="0"/>
+<node id="2" value="p[2]" x="200" y="0"/>
+<node id="3" value="n[2]" x="300" y="0"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="0" idFirstNode="1" idSecondNode="0"/>
+<arc id="1" idFirstNode="2" idSecondNode="3"/>
+<arc id="1" idFirstNode="3" idSecondNode="2"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="35.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="80">
+<visualNode id="2" color="00FF00" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="3" color="00FF00" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualArc id="1" labelFont="Monospaced-PLAIN-14" lineColor="FF0000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="2" labelFont="Monospaced-PLAIN-14" lineColor="FF0000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="3" labelFont="Monospaced-PLAIN-14" lineColor="FF0000" lineType="CONTINUE" lineThickness="0.5"/>
+</visualGraph>
+<message content="The nodes and edges corresponding to the next variable have been created.">
+</message>
+</structure>
+<structure name="Boolean formula" type="GeometricFigure">
+<geometricFigure size="1">
+<element id="0" value="Text[(x1 OR x2 OR x3) AND ((NOT x1) OR (NOT x2) OR x3) AND ((NOT x1) OR x2 OR (NOT x3));0.0;0.0]"/>
+</geometricFigure>
+<visualGeometricFigure defaultColor="000000" defaultFont="Monospaced-PLAIN-16" defaultLineThickness="0.5" originX="20" originY="20">
+</visualGeometricFigure>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="3">
+<structure name="Graph" type="Graph">
+<graph isOriented="false" type="StringInformation" arcLabelType="IntInformation">
+<node id="0" value="p[1]" x="0" y="0"/>
+<node id="1" value="n[1]" x="100" y="0"/>
+<node id="2" value="p[2]" x="200" y="0"/>
+<node id="3" value="n[2]" x="300" y="0"/>
+<node id="4" value="p[3]" x="400" y="0"/>
+<node id="5" value="n[3]" x="500" y="0"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="0" idFirstNode="1" idSecondNode="0"/>
+<arc id="1" idFirstNode="2" idSecondNode="3"/>
+<arc id="1" idFirstNode="3" idSecondNode="2"/>
+<arc id="2" idFirstNode="4" idSecondNode="5"/>
+<arc id="2" idFirstNode="5" idSecondNode="4"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="35.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="80">
+<visualNode id="4" color="00FF00" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="5" color="00FF00" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualArc id="2" labelFont="Monospaced-PLAIN-14" lineColor="FF0000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="3" labelFont="Monospaced-PLAIN-14" lineColor="FF0000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="4" labelFont="Monospaced-PLAIN-14" lineColor="FF0000" lineType="CONTINUE" lineThickness="0.5"/>
+</visualGraph>
+<message content="The nodes and edges corresponding to the next variable have been created.">
+</message>
+</structure>
+<structure name="Boolean formula" type="GeometricFigure">
+<geometricFigure size="1">
+<element id="0" value="Text[(x1 OR x2 OR x3) AND ((NOT x1) OR (NOT x2) OR x3) AND ((NOT x1) OR x2 OR (NOT x3));0.0;0.0]"/>
+</geometricFigure>
+<visualGeometricFigure defaultColor="000000" defaultFont="Monospaced-PLAIN-16" defaultLineThickness="0.5" originX="20" originY="20">
+</visualGeometricFigure>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="4">
+<structure name="Graph" type="Graph">
+<graph isOriented="false" type="StringInformation" arcLabelType="IntInformation">
+<node id="0" value="p[1]" x="0" y="0"/>
+<node id="1" value="n[1]" x="100" y="0"/>
+<node id="2" value="p[2]" x="200" y="0"/>
+<node id="3" value="n[2]" x="300" y="0"/>
+<node id="4" value="p[3]" x="400" y="0"/>
+<node id="5" value="n[3]" x="500" y="0"/>
+<node id="6" value="f[1]" x="50" y="200"/>
+<node id="7" value="s[1]" x="0" y="300"/>
+<node id="8" value="t[1]" x="100" y="300"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="6" idFirstNode="0" idSecondNode="6"/>
+<arc id="0" idFirstNode="1" idSecondNode="0"/>
+<arc id="1" idFirstNode="2" idSecondNode="3"/>
+<arc id="7" idFirstNode="2" idSecondNode="7"/>
+<arc id="1" idFirstNode="3" idSecondNode="2"/>
+<arc id="2" idFirstNode="4" idSecondNode="5"/>
+<arc id="8" idFirstNode="4" idSecondNode="8"/>
+<arc id="2" idFirstNode="5" idSecondNode="4"/>
+<arc id="6" idFirstNode="6" idSecondNode="0"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="4" idFirstNode="6" idSecondNode="8"/>
+<arc id="7" idFirstNode="7" idSecondNode="2"/>
+<arc id="3" idFirstNode="7" idSecondNode="6"/>
+<arc id="5" idFirstNode="7" idSecondNode="8"/>
+<arc id="8" idFirstNode="8" idSecondNode="4"/>
+<arc id="4" idFirstNode="8" idSecondNode="6"/>
+<arc id="5" idFirstNode="8" idSecondNode="7"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="35.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="80">
+<visualNode id="6" color="00FF00" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="7" color="00FF00" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="8" color="00FF00" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualArc id="3" labelFont="Monospaced-PLAIN-14" lineColor="FF0000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="4" labelFont="Monospaced-PLAIN-14" lineColor="FF0000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="5" labelFont="Monospaced-PLAIN-14" lineColor="FF0000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="6" labelFont="Monospaced-PLAIN-14" lineColor="FF0000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="7" labelFont="Monospaced-PLAIN-14" lineColor="FF0000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="8" labelFont="Monospaced-PLAIN-14" lineColor="FF0000" lineType="CONTINUE" lineThickness="0.5"/>
+</visualGraph>
+<message content="The nodes and edges corresponding to the current clause have been added.">
+</message>
+</structure>
+<structure name="Boolean formula" type="GeometricFigure">
+<geometricFigure size="1">
+<element id="0" value="Text[(x1 OR x2 OR x3) AND ((NOT x1) OR (NOT x2) OR x3) AND ((NOT x1) OR x2 OR (NOT x3));0.0;0.0]"/>
+</geometricFigure>
+<visualGeometricFigure defaultColor="000000" defaultFont="Monospaced-PLAIN-16" defaultLineThickness="0.5" originX="20" originY="20">
+</visualGeometricFigure>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="5">
+<structure name="Graph" type="Graph">
+<graph isOriented="false" type="StringInformation" arcLabelType="IntInformation">
+<node id="0" value="p[1]" x="0" y="0"/>
+<node id="1" value="n[1]" x="100" y="0"/>
+<node id="2" value="p[2]" x="200" y="0"/>
+<node id="3" value="n[2]" x="300" y="0"/>
+<node id="4" value="p[3]" x="400" y="0"/>
+<node id="5" value="n[3]" x="500" y="0"/>
+<node id="6" value="f[1]" x="50" y="200"/>
+<node id="7" value="s[1]" x="0" y="300"/>
+<node id="8" value="t[1]" x="100" y="300"/>
+<node id="9" value="f[2]" x="250" y="200"/>
+<node id="10" value="s[2]" x="200" y="300"/>
+<node id="11" value="t[2]" x="300" y="300"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="6" idFirstNode="0" idSecondNode="6"/>
+<arc id="0" idFirstNode="1" idSecondNode="0"/>
+<arc id="12" idFirstNode="1" idSecondNode="9"/>
+<arc id="1" idFirstNode="2" idSecondNode="3"/>
+<arc id="7" idFirstNode="2" idSecondNode="7"/>
+<arc id="1" idFirstNode="3" idSecondNode="2"/>
+<arc id="13" idFirstNode="3" idSecondNode="10"/>
+<arc id="2" idFirstNode="4" idSecondNode="5"/>
+<arc id="8" idFirstNode="4" idSecondNode="8"/>
+<arc id="14" idFirstNode="4" idSecondNode="11"/>
+<arc id="2" idFirstNode="5" idSecondNode="4"/>
+<arc id="6" idFirstNode="6" idSecondNode="0"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="4" idFirstNode="6" idSecondNode="8"/>
+<arc id="7" idFirstNode="7" idSecondNode="2"/>
+<arc id="3" idFirstNode="7" idSecondNode="6"/>
+<arc id="5" idFirstNode="7" idSecondNode="8"/>
+<arc id="8" idFirstNode="8" idSecondNode="4"/>
+<arc id="4" idFirstNode="8" idSecondNode="6"/>
+<arc id="5" idFirstNode="8" idSecondNode="7"/>
+<arc id="12" idFirstNode="9" idSecondNode="1"/>
+<arc id="9" idFirstNode="9" idSecondNode="10"/>
+<arc id="10" idFirstNode="9" idSecondNode="11"/>
+<arc id="13" idFirstNode="10" idSecondNode="3"/>
+<arc id="9" idFirstNode="10" idSecondNode="9"/>
+<arc id="11" idFirstNode="10" idSecondNode="11"/>
+<arc id="14" idFirstNode="11" idSecondNode="4"/>
+<arc id="10" idFirstNode="11" idSecondNode="9"/>
+<arc id="11" idFirstNode="11" idSecondNode="10"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="35.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="80">
+<visualNode id="9" color="00FF00" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="10" color="00FF00" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="11" color="00FF00" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualArc id="9" labelFont="Monospaced-PLAIN-14" lineColor="FF0000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="10" labelFont="Monospaced-PLAIN-14" lineColor="FF0000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="11" labelFont="Monospaced-PLAIN-14" lineColor="FF0000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="12" labelFont="Monospaced-PLAIN-14" lineColor="FF0000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="13" labelFont="Monospaced-PLAIN-14" lineColor="FF0000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="14" labelFont="Monospaced-PLAIN-14" lineColor="FF0000" lineType="CONTINUE" lineThickness="0.5"/>
+</visualGraph>
+<message content="The nodes and edges corresponding to the current clause have been added.">
+</message>
+</structure>
+<structure name="Boolean formula" type="GeometricFigure">
+<geometricFigure size="1">
+<element id="0" value="Text[(x1 OR x2 OR x3) AND ((NOT x1) OR (NOT x2) OR x3) AND ((NOT x1) OR x2 OR (NOT x3));0.0;0.0]"/>
+</geometricFigure>
+<visualGeometricFigure defaultColor="000000" defaultFont="Monospaced-PLAIN-16" defaultLineThickness="0.5" originX="20" originY="20">
+</visualGeometricFigure>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="6">
+<structure name="Graph" type="Graph">
+<graph isOriented="false" type="StringInformation" arcLabelType="IntInformation">
+<node id="0" value="p[1]" x="0" y="0"/>
+<node id="1" value="n[1]" x="100" y="0"/>
+<node id="2" value="p[2]" x="200" y="0"/>
+<node id="3" value="n[2]" x="300" y="0"/>
+<node id="4" value="p[3]" x="400" y="0"/>
+<node id="5" value="n[3]" x="500" y="0"/>
+<node id="6" value="f[1]" x="50" y="200"/>
+<node id="7" value="s[1]" x="0" y="300"/>
+<node id="8" value="t[1]" x="100" y="300"/>
+<node id="9" value="f[2]" x="250" y="200"/>
+<node id="10" value="s[2]" x="200" y="300"/>
+<node id="11" value="t[2]" x="300" y="300"/>
+<node id="12" value="f[3]" x="450" y="200"/>
+<node id="13" value="s[3]" x="400" y="300"/>
+<node id="14" value="t[3]" x="500" y="300"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="6" idFirstNode="0" idSecondNode="6"/>
+<arc id="0" idFirstNode="1" idSecondNode="0"/>
+<arc id="12" idFirstNode="1" idSecondNode="9"/>
+<arc id="18" idFirstNode="1" idSecondNode="12"/>
+<arc id="1" idFirstNode="2" idSecondNode="3"/>
+<arc id="7" idFirstNode="2" idSecondNode="7"/>
+<arc id="19" idFirstNode="2" idSecondNode="13"/>
+<arc id="1" idFirstNode="3" idSecondNode="2"/>
+<arc id="13" idFirstNode="3" idSecondNode="10"/>
+<arc id="2" idFirstNode="4" idSecondNode="5"/>
+<arc id="8" idFirstNode="4" idSecondNode="8"/>
+<arc id="14" idFirstNode="4" idSecondNode="11"/>
+<arc id="2" idFirstNode="5" idSecondNode="4"/>
+<arc id="20" idFirstNode="5" idSecondNode="14"/>
+<arc id="6" idFirstNode="6" idSecondNode="0"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="4" idFirstNode="6" idSecondNode="8"/>
+<arc id="7" idFirstNode="7" idSecondNode="2"/>
+<arc id="3" idFirstNode="7" idSecondNode="6"/>
+<arc id="5" idFirstNode="7" idSecondNode="8"/>
+<arc id="8" idFirstNode="8" idSecondNode="4"/>
+<arc id="4" idFirstNode="8" idSecondNode="6"/>
+<arc id="5" idFirstNode="8" idSecondNode="7"/>
+<arc id="12" idFirstNode="9" idSecondNode="1"/>
+<arc id="9" idFirstNode="9" idSecondNode="10"/>
+<arc id="10" idFirstNode="9" idSecondNode="11"/>
+<arc id="13" idFirstNode="10" idSecondNode="3"/>
+<arc id="9" idFirstNode="10" idSecondNode="9"/>
+<arc id="11" idFirstNode="10" idSecondNode="11"/>
+<arc id="14" idFirstNode="11" idSecondNode="4"/>
+<arc id="10" idFirstNode="11" idSecondNode="9"/>
+<arc id="11" idFirstNode="11" idSecondNode="10"/>
+<arc id="18" idFirstNode="12" idSecondNode="1"/>
+<arc id="15" idFirstNode="12" idSecondNode="13"/>
+<arc id="16" idFirstNode="12" idSecondNode="14"/>
+<arc id="19" idFirstNode="13" idSecondNode="2"/>
+<arc id="15" idFirstNode="13" idSecondNode="12"/>
+<arc id="17" idFirstNode="13" idSecondNode="14"/>
+<arc id="20" idFirstNode="14" idSecondNode="5"/>
+<arc id="16" idFirstNode="14" idSecondNode="12"/>
+<arc id="17" idFirstNode="14" idSecondNode="13"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="35.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="80">
+<visualNode id="12" color="00FF00" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="13" color="00FF00" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="14" color="00FF00" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualArc id="15" labelFont="Monospaced-PLAIN-14" lineColor="FF0000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="16" labelFont="Monospaced-PLAIN-14" lineColor="FF0000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="17" labelFont="Monospaced-PLAIN-14" lineColor="FF0000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="18" labelFont="Monospaced-PLAIN-14" lineColor="FF0000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="19" labelFont="Monospaced-PLAIN-14" lineColor="FF0000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="20" labelFont="Monospaced-PLAIN-14" lineColor="FF0000" lineType="CONTINUE" lineThickness="0.5"/>
+</visualGraph>
+<message content="The nodes and edges corresponding to the current clause have been added.">
+</message>
+</structure>
+<structure name="Boolean formula" type="GeometricFigure">
+<geometricFigure size="1">
+<element id="0" value="Text[(x1 OR x2 OR x3) AND ((NOT x1) OR (NOT x2) OR x3) AND ((NOT x1) OR x2 OR (NOT x3));0.0;0.0]"/>
+</geometricFigure>
+<visualGeometricFigure defaultColor="000000" defaultFont="Monospaced-PLAIN-16" defaultLineThickness="0.5" originX="20" originY="20">
+</visualGeometricFigure>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="7">
+<structure name="Graph" type="Graph">
+<graph isOriented="false" type="StringInformation" arcLabelType="IntInformation">
+<node id="0" value="p[1]" x="0" y="0"/>
+<node id="1" value="n[1]" x="100" y="0"/>
+<node id="2" value="p[2]" x="200" y="0"/>
+<node id="3" value="n[2]" x="300" y="0"/>
+<node id="4" value="p[3]" x="400" y="0"/>
+<node id="5" value="n[3]" x="500" y="0"/>
+<node id="6" value="f[1]" x="50" y="200"/>
+<node id="7" value="s[1]" x="0" y="300"/>
+<node id="8" value="t[1]" x="100" y="300"/>
+<node id="9" value="f[2]" x="250" y="200"/>
+<node id="10" value="s[2]" x="200" y="300"/>
+<node id="11" value="t[2]" x="300" y="300"/>
+<node id="12" value="f[3]" x="450" y="200"/>
+<node id="13" value="s[3]" x="400" y="300"/>
+<node id="14" value="t[3]" x="500" y="300"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="6" idFirstNode="0" idSecondNode="6"/>
+<arc id="0" idFirstNode="1" idSecondNode="0"/>
+<arc id="12" idFirstNode="1" idSecondNode="9"/>
+<arc id="18" idFirstNode="1" idSecondNode="12"/>
+<arc id="1" idFirstNode="2" idSecondNode="3"/>
+<arc id="7" idFirstNode="2" idSecondNode="7"/>
+<arc id="19" idFirstNode="2" idSecondNode="13"/>
+<arc id="1" idFirstNode="3" idSecondNode="2"/>
+<arc id="13" idFirstNode="3" idSecondNode="10"/>
+<arc id="2" idFirstNode="4" idSecondNode="5"/>
+<arc id="8" idFirstNode="4" idSecondNode="8"/>
+<arc id="14" idFirstNode="4" idSecondNode="11"/>
+<arc id="2" idFirstNode="5" idSecondNode="4"/>
+<arc id="20" idFirstNode="5" idSecondNode="14"/>
+<arc id="6" idFirstNode="6" idSecondNode="0"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="4" idFirstNode="6" idSecondNode="8"/>
+<arc id="7" idFirstNode="7" idSecondNode="2"/>
+<arc id="3" idFirstNode="7" idSecondNode="6"/>
+<arc id="5" idFirstNode="7" idSecondNode="8"/>
+<arc id="8" idFirstNode="8" idSecondNode="4"/>
+<arc id="4" idFirstNode="8" idSecondNode="6"/>
+<arc id="5" idFirstNode="8" idSecondNode="7"/>
+<arc id="12" idFirstNode="9" idSecondNode="1"/>
+<arc id="9" idFirstNode="9" idSecondNode="10"/>
+<arc id="10" idFirstNode="9" idSecondNode="11"/>
+<arc id="13" idFirstNode="10" idSecondNode="3"/>
+<arc id="9" idFirstNode="10" idSecondNode="9"/>
+<arc id="11" idFirstNode="10" idSecondNode="11"/>
+<arc id="14" idFirstNode="11" idSecondNode="4"/>
+<arc id="10" idFirstNode="11" idSecondNode="9"/>
+<arc id="11" idFirstNode="11" idSecondNode="10"/>
+<arc id="18" idFirstNode="12" idSecondNode="1"/>
+<arc id="15" idFirstNode="12" idSecondNode="13"/>
+<arc id="16" idFirstNode="12" idSecondNode="14"/>
+<arc id="19" idFirstNode="13" idSecondNode="2"/>
+<arc id="15" idFirstNode="13" idSecondNode="12"/>
+<arc id="17" idFirstNode="13" idSecondNode="14"/>
+<arc id="20" idFirstNode="14" idSecondNode="5"/>
+<arc id="16" idFirstNode="14" idSecondNode="12"/>
+<arc id="17" idFirstNode="14" idSecondNode="13"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="35.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="80">
+</visualGraph>
+<message content="The graph corresponding to the Boolean formula has been created.">
+</message>
+</structure>
+<structure name="Boolean formula" type="GeometricFigure">
+<geometricFigure size="1">
+<element id="0" value="Text[(x1 OR x2 OR x3) AND ((NOT x1) OR (NOT x2) OR x3) AND ((NOT x1) OR x2 OR (NOT x3));0.0;0.0]"/>
+</geometricFigure>
+<visualGeometricFigure defaultColor="000000" defaultFont="Monospaced-PLAIN-16" defaultLineThickness="0.5" originX="20" originY="20">
+</visualGeometricFigure>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="8">
+<structure name="Graph" type="Graph">
+<graph isOriented="false" type="StringInformation" arcLabelType="IntInformation">
+<node id="0" value="p[1]" x="0" y="0"/>
+<node id="1" value="n[1]" x="100" y="0"/>
+<node id="2" value="p[2]" x="200" y="0"/>
+<node id="3" value="n[2]" x="300" y="0"/>
+<node id="4" value="p[3]" x="400" y="0"/>
+<node id="5" value="n[3]" x="500" y="0"/>
+<node id="6" value="f[1]" x="50" y="200"/>
+<node id="7" value="s[1]" x="0" y="300"/>
+<node id="8" value="t[1]" x="100" y="300"/>
+<node id="9" value="f[2]" x="250" y="200"/>
+<node id="10" value="s[2]" x="200" y="300"/>
+<node id="11" value="t[2]" x="300" y="300"/>
+<node id="12" value="f[3]" x="450" y="200"/>
+<node id="13" value="s[3]" x="400" y="300"/>
+<node id="14" value="t[3]" x="500" y="300"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="6" idFirstNode="0" idSecondNode="6"/>
+<arc id="0" idFirstNode="1" idSecondNode="0"/>
+<arc id="12" idFirstNode="1" idSecondNode="9"/>
+<arc id="18" idFirstNode="1" idSecondNode="12"/>
+<arc id="1" idFirstNode="2" idSecondNode="3"/>
+<arc id="7" idFirstNode="2" idSecondNode="7"/>
+<arc id="19" idFirstNode="2" idSecondNode="13"/>
+<arc id="1" idFirstNode="3" idSecondNode="2"/>
+<arc id="13" idFirstNode="3" idSecondNode="10"/>
+<arc id="2" idFirstNode="4" idSecondNode="5"/>
+<arc id="8" idFirstNode="4" idSecondNode="8"/>
+<arc id="14" idFirstNode="4" idSecondNode="11"/>
+<arc id="2" idFirstNode="5" idSecondNode="4"/>
+<arc id="20" idFirstNode="5" idSecondNode="14"/>
+<arc id="6" idFirstNode="6" idSecondNode="0"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="4" idFirstNode="6" idSecondNode="8"/>
+<arc id="7" idFirstNode="7" idSecondNode="2"/>
+<arc id="3" idFirstNode="7" idSecondNode="6"/>
+<arc id="5" idFirstNode="7" idSecondNode="8"/>
+<arc id="8" idFirstNode="8" idSecondNode="4"/>
+<arc id="4" idFirstNode="8" idSecondNode="6"/>
+<arc id="5" idFirstNode="8" idSecondNode="7"/>
+<arc id="12" idFirstNode="9" idSecondNode="1"/>
+<arc id="9" idFirstNode="9" idSecondNode="10"/>
+<arc id="10" idFirstNode="9" idSecondNode="11"/>
+<arc id="13" idFirstNode="10" idSecondNode="3"/>
+<arc id="9" idFirstNode="10" idSecondNode="9"/>
+<arc id="11" idFirstNode="10" idSecondNode="11"/>
+<arc id="14" idFirstNode="11" idSecondNode="4"/>
+<arc id="10" idFirstNode="11" idSecondNode="9"/>
+<arc id="11" idFirstNode="11" idSecondNode="10"/>
+<arc id="18" idFirstNode="12" idSecondNode="1"/>
+<arc id="15" idFirstNode="12" idSecondNode="13"/>
+<arc id="16" idFirstNode="12" idSecondNode="14"/>
+<arc id="19" idFirstNode="13" idSecondNode="2"/>
+<arc id="15" idFirstNode="13" idSecondNode="12"/>
+<arc id="17" idFirstNode="13" idSecondNode="14"/>
+<arc id="20" idFirstNode="14" idSecondNode="5"/>
+<arc id="16" idFirstNode="14" idSecondNode="12"/>
+<arc id="17" idFirstNode="14" idSecondNode="13"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="35.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="80">
+</visualGraph>
+<message content="A satisfying assignment to the variables will now be used to derive a vertex cover of the graph.">
+</message>
+</structure>
+<structure name="Boolean formula" type="GeometricFigure">
+<geometricFigure size="2">
+<element id="0" value="Text[(x1 OR x2 OR x3) AND ((NOT x1) OR (NOT x2) OR x3) AND ((NOT x1) OR x2 OR (NOT x3));0.0;0.0]"/>
+<element id="1" value="Text[x1=true, x2=false, x3=false;0.0;20.0]"/>
+</geometricFigure>
+<visualGeometricFigure defaultColor="000000" defaultFont="Monospaced-PLAIN-16" defaultLineThickness="0.5" originX="20" originY="20">
+</visualGeometricFigure>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="9">
+<structure name="Graph" type="Graph">
+<graph isOriented="false" type="StringInformation" arcLabelType="IntInformation">
+<node id="0" value="p[1]" x="0" y="0"/>
+<node id="1" value="n[1]" x="100" y="0"/>
+<node id="2" value="p[2]" x="200" y="0"/>
+<node id="3" value="n[2]" x="300" y="0"/>
+<node id="4" value="p[3]" x="400" y="0"/>
+<node id="5" value="n[3]" x="500" y="0"/>
+<node id="6" value="f[1]" x="50" y="200"/>
+<node id="7" value="s[1]" x="0" y="300"/>
+<node id="8" value="t[1]" x="100" y="300"/>
+<node id="9" value="f[2]" x="250" y="200"/>
+<node id="10" value="s[2]" x="200" y="300"/>
+<node id="11" value="t[2]" x="300" y="300"/>
+<node id="12" value="f[3]" x="450" y="200"/>
+<node id="13" value="s[3]" x="400" y="300"/>
+<node id="14" value="t[3]" x="500" y="300"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="6" idFirstNode="0" idSecondNode="6"/>
+<arc id="0" idFirstNode="1" idSecondNode="0"/>
+<arc id="12" idFirstNode="1" idSecondNode="9"/>
+<arc id="18" idFirstNode="1" idSecondNode="12"/>
+<arc id="1" idFirstNode="2" idSecondNode="3"/>
+<arc id="7" idFirstNode="2" idSecondNode="7"/>
+<arc id="19" idFirstNode="2" idSecondNode="13"/>
+<arc id="1" idFirstNode="3" idSecondNode="2"/>
+<arc id="13" idFirstNode="3" idSecondNode="10"/>
+<arc id="2" idFirstNode="4" idSecondNode="5"/>
+<arc id="8" idFirstNode="4" idSecondNode="8"/>
+<arc id="14" idFirstNode="4" idSecondNode="11"/>
+<arc id="2" idFirstNode="5" idSecondNode="4"/>
+<arc id="20" idFirstNode="5" idSecondNode="14"/>
+<arc id="6" idFirstNode="6" idSecondNode="0"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="4" idFirstNode="6" idSecondNode="8"/>
+<arc id="7" idFirstNode="7" idSecondNode="2"/>
+<arc id="3" idFirstNode="7" idSecondNode="6"/>
+<arc id="5" idFirstNode="7" idSecondNode="8"/>
+<arc id="8" idFirstNode="8" idSecondNode="4"/>
+<arc id="4" idFirstNode="8" idSecondNode="6"/>
+<arc id="5" idFirstNode="8" idSecondNode="7"/>
+<arc id="12" idFirstNode="9" idSecondNode="1"/>
+<arc id="9" idFirstNode="9" idSecondNode="10"/>
+<arc id="10" idFirstNode="9" idSecondNode="11"/>
+<arc id="13" idFirstNode="10" idSecondNode="3"/>
+<arc id="9" idFirstNode="10" idSecondNode="9"/>
+<arc id="11" idFirstNode="10" idSecondNode="11"/>
+<arc id="14" idFirstNode="11" idSecondNode="4"/>
+<arc id="10" idFirstNode="11" idSecondNode="9"/>
+<arc id="11" idFirstNode="11" idSecondNode="10"/>
+<arc id="18" idFirstNode="12" idSecondNode="1"/>
+<arc id="15" idFirstNode="12" idSecondNode="13"/>
+<arc id="16" idFirstNode="12" idSecondNode="14"/>
+<arc id="19" idFirstNode="13" idSecondNode="2"/>
+<arc id="15" idFirstNode="13" idSecondNode="12"/>
+<arc id="17" idFirstNode="13" idSecondNode="14"/>
+<arc id="20" idFirstNode="14" idSecondNode="5"/>
+<arc id="16" idFirstNode="14" idSecondNode="12"/>
+<arc id="17" idFirstNode="14" idSecondNode="13"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="35.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="80">
+<visualNode id="0" color="00FFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="1" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="2" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="3" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="5" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="6" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="7" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="8" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="9" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="10" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="11" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="12" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="13" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="14" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualArc id="0" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="1" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="2" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="3" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="4" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="5" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="6" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="7" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="8" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="9" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="10" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="11" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="12" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="13" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="14" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="15" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="16" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="17" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="18" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="19" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="20" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+</visualGraph>
+<message content="Since the current variable is true, its node p is included in the vertex cover.">
+</message>
+</structure>
+<structure name="Boolean formula" type="GeometricFigure">
+<geometricFigure size="2">
+<element id="0" value="Text[(x1 OR x2 OR x3) AND ((NOT x1) OR (NOT x2) OR x3) AND ((NOT x1) OR x2 OR (NOT x3));0.0;0.0]"/>
+<element id="1" value="Text[x1=true, x2=false, x3=false;0.0;20.0]"/>
+</geometricFigure>
+<visualGeometricFigure defaultColor="000000" defaultFont="Monospaced-PLAIN-16" defaultLineThickness="0.5" originX="20" originY="20">
+</visualGeometricFigure>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="10">
+<structure name="Graph" type="Graph">
+<graph isOriented="false" type="StringInformation" arcLabelType="IntInformation">
+<node id="0" value="p[1]" x="0" y="0"/>
+<node id="1" value="n[1]" x="100" y="0"/>
+<node id="2" value="p[2]" x="200" y="0"/>
+<node id="3" value="n[2]" x="300" y="0"/>
+<node id="4" value="p[3]" x="400" y="0"/>
+<node id="5" value="n[3]" x="500" y="0"/>
+<node id="6" value="f[1]" x="50" y="200"/>
+<node id="7" value="s[1]" x="0" y="300"/>
+<node id="8" value="t[1]" x="100" y="300"/>
+<node id="9" value="f[2]" x="250" y="200"/>
+<node id="10" value="s[2]" x="200" y="300"/>
+<node id="11" value="t[2]" x="300" y="300"/>
+<node id="12" value="f[3]" x="450" y="200"/>
+<node id="13" value="s[3]" x="400" y="300"/>
+<node id="14" value="t[3]" x="500" y="300"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="6" idFirstNode="0" idSecondNode="6"/>
+<arc id="0" idFirstNode="1" idSecondNode="0"/>
+<arc id="12" idFirstNode="1" idSecondNode="9"/>
+<arc id="18" idFirstNode="1" idSecondNode="12"/>
+<arc id="1" idFirstNode="2" idSecondNode="3"/>
+<arc id="7" idFirstNode="2" idSecondNode="7"/>
+<arc id="19" idFirstNode="2" idSecondNode="13"/>
+<arc id="1" idFirstNode="3" idSecondNode="2"/>
+<arc id="13" idFirstNode="3" idSecondNode="10"/>
+<arc id="2" idFirstNode="4" idSecondNode="5"/>
+<arc id="8" idFirstNode="4" idSecondNode="8"/>
+<arc id="14" idFirstNode="4" idSecondNode="11"/>
+<arc id="2" idFirstNode="5" idSecondNode="4"/>
+<arc id="20" idFirstNode="5" idSecondNode="14"/>
+<arc id="6" idFirstNode="6" idSecondNode="0"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="4" idFirstNode="6" idSecondNode="8"/>
+<arc id="7" idFirstNode="7" idSecondNode="2"/>
+<arc id="3" idFirstNode="7" idSecondNode="6"/>
+<arc id="5" idFirstNode="7" idSecondNode="8"/>
+<arc id="8" idFirstNode="8" idSecondNode="4"/>
+<arc id="4" idFirstNode="8" idSecondNode="6"/>
+<arc id="5" idFirstNode="8" idSecondNode="7"/>
+<arc id="12" idFirstNode="9" idSecondNode="1"/>
+<arc id="9" idFirstNode="9" idSecondNode="10"/>
+<arc id="10" idFirstNode="9" idSecondNode="11"/>
+<arc id="13" idFirstNode="10" idSecondNode="3"/>
+<arc id="9" idFirstNode="10" idSecondNode="9"/>
+<arc id="11" idFirstNode="10" idSecondNode="11"/>
+<arc id="14" idFirstNode="11" idSecondNode="4"/>
+<arc id="10" idFirstNode="11" idSecondNode="9"/>
+<arc id="11" idFirstNode="11" idSecondNode="10"/>
+<arc id="18" idFirstNode="12" idSecondNode="1"/>
+<arc id="15" idFirstNode="12" idSecondNode="13"/>
+<arc id="16" idFirstNode="12" idSecondNode="14"/>
+<arc id="19" idFirstNode="13" idSecondNode="2"/>
+<arc id="15" idFirstNode="13" idSecondNode="12"/>
+<arc id="17" idFirstNode="13" idSecondNode="14"/>
+<arc id="20" idFirstNode="14" idSecondNode="5"/>
+<arc id="16" idFirstNode="14" idSecondNode="12"/>
+<arc id="17" idFirstNode="14" idSecondNode="13"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="35.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="80">
+<visualNode id="0" color="BBBBBB" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="1" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="2" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="3" color="00FFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="5" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="6" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="7" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="8" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="9" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="10" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="11" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="12" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="13" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="14" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualArc id="0" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="1" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="2" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="3" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="4" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="5" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="6" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="7" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="8" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="9" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="10" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="11" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="12" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="13" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="14" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="15" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="16" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="17" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="18" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="19" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="20" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+</visualGraph>
+<message content="Since the current variable is false, its node n is included in the vertex cover.">
+</message>
+</structure>
+<structure name="Boolean formula" type="GeometricFigure">
+<geometricFigure size="2">
+<element id="0" value="Text[(x1 OR x2 OR x3) AND ((NOT x1) OR (NOT x2) OR x3) AND ((NOT x1) OR x2 OR (NOT x3));0.0;0.0]"/>
+<element id="1" value="Text[x1=true, x2=false, x3=false;0.0;20.0]"/>
+</geometricFigure>
+<visualGeometricFigure defaultColor="000000" defaultFont="Monospaced-PLAIN-16" defaultLineThickness="0.5" originX="20" originY="20">
+</visualGeometricFigure>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="11">
+<structure name="Graph" type="Graph">
+<graph isOriented="false" type="StringInformation" arcLabelType="IntInformation">
+<node id="0" value="p[1]" x="0" y="0"/>
+<node id="1" value="n[1]" x="100" y="0"/>
+<node id="2" value="p[2]" x="200" y="0"/>
+<node id="3" value="n[2]" x="300" y="0"/>
+<node id="4" value="p[3]" x="400" y="0"/>
+<node id="5" value="n[3]" x="500" y="0"/>
+<node id="6" value="f[1]" x="50" y="200"/>
+<node id="7" value="s[1]" x="0" y="300"/>
+<node id="8" value="t[1]" x="100" y="300"/>
+<node id="9" value="f[2]" x="250" y="200"/>
+<node id="10" value="s[2]" x="200" y="300"/>
+<node id="11" value="t[2]" x="300" y="300"/>
+<node id="12" value="f[3]" x="450" y="200"/>
+<node id="13" value="s[3]" x="400" y="300"/>
+<node id="14" value="t[3]" x="500" y="300"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="6" idFirstNode="0" idSecondNode="6"/>
+<arc id="0" idFirstNode="1" idSecondNode="0"/>
+<arc id="12" idFirstNode="1" idSecondNode="9"/>
+<arc id="18" idFirstNode="1" idSecondNode="12"/>
+<arc id="1" idFirstNode="2" idSecondNode="3"/>
+<arc id="7" idFirstNode="2" idSecondNode="7"/>
+<arc id="19" idFirstNode="2" idSecondNode="13"/>
+<arc id="1" idFirstNode="3" idSecondNode="2"/>
+<arc id="13" idFirstNode="3" idSecondNode="10"/>
+<arc id="2" idFirstNode="4" idSecondNode="5"/>
+<arc id="8" idFirstNode="4" idSecondNode="8"/>
+<arc id="14" idFirstNode="4" idSecondNode="11"/>
+<arc id="2" idFirstNode="5" idSecondNode="4"/>
+<arc id="20" idFirstNode="5" idSecondNode="14"/>
+<arc id="6" idFirstNode="6" idSecondNode="0"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="4" idFirstNode="6" idSecondNode="8"/>
+<arc id="7" idFirstNode="7" idSecondNode="2"/>
+<arc id="3" idFirstNode="7" idSecondNode="6"/>
+<arc id="5" idFirstNode="7" idSecondNode="8"/>
+<arc id="8" idFirstNode="8" idSecondNode="4"/>
+<arc id="4" idFirstNode="8" idSecondNode="6"/>
+<arc id="5" idFirstNode="8" idSecondNode="7"/>
+<arc id="12" idFirstNode="9" idSecondNode="1"/>
+<arc id="9" idFirstNode="9" idSecondNode="10"/>
+<arc id="10" idFirstNode="9" idSecondNode="11"/>
+<arc id="13" idFirstNode="10" idSecondNode="3"/>
+<arc id="9" idFirstNode="10" idSecondNode="9"/>
+<arc id="11" idFirstNode="10" idSecondNode="11"/>
+<arc id="14" idFirstNode="11" idSecondNode="4"/>
+<arc id="10" idFirstNode="11" idSecondNode="9"/>
+<arc id="11" idFirstNode="11" idSecondNode="10"/>
+<arc id="18" idFirstNode="12" idSecondNode="1"/>
+<arc id="15" idFirstNode="12" idSecondNode="13"/>
+<arc id="16" idFirstNode="12" idSecondNode="14"/>
+<arc id="19" idFirstNode="13" idSecondNode="2"/>
+<arc id="15" idFirstNode="13" idSecondNode="12"/>
+<arc id="17" idFirstNode="13" idSecondNode="14"/>
+<arc id="20" idFirstNode="14" idSecondNode="5"/>
+<arc id="16" idFirstNode="14" idSecondNode="12"/>
+<arc id="17" idFirstNode="14" idSecondNode="13"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="35.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="80">
+<visualNode id="0" color="BBBBBB" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="1" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="2" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="3" color="BBBBBB" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="5" color="00FFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="6" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="7" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="8" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="9" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="10" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="11" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="12" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="13" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="14" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualArc id="0" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="1" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="2" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="3" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="4" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="5" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="6" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="7" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="8" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="9" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="10" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="11" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="12" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="13" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="14" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="15" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="16" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="17" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="18" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="19" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="20" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+</visualGraph>
+<message content="Since the current variable is false, its node n is included in the vertex cover.">
+</message>
+</structure>
+<structure name="Boolean formula" type="GeometricFigure">
+<geometricFigure size="2">
+<element id="0" value="Text[(x1 OR x2 OR x3) AND ((NOT x1) OR (NOT x2) OR x3) AND ((NOT x1) OR x2 OR (NOT x3));0.0;0.0]"/>
+<element id="1" value="Text[x1=true, x2=false, x3=false;0.0;20.0]"/>
+</geometricFigure>
+<visualGeometricFigure defaultColor="000000" defaultFont="Monospaced-PLAIN-16" defaultLineThickness="0.5" originX="20" originY="20">
+</visualGeometricFigure>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="12">
+<structure name="Graph" type="Graph">
+<graph isOriented="false" type="StringInformation" arcLabelType="IntInformation">
+<node id="0" value="p[1]" x="0" y="0"/>
+<node id="1" value="n[1]" x="100" y="0"/>
+<node id="2" value="p[2]" x="200" y="0"/>
+<node id="3" value="n[2]" x="300" y="0"/>
+<node id="4" value="p[3]" x="400" y="0"/>
+<node id="5" value="n[3]" x="500" y="0"/>
+<node id="6" value="f[1]" x="50" y="200"/>
+<node id="7" value="s[1]" x="0" y="300"/>
+<node id="8" value="t[1]" x="100" y="300"/>
+<node id="9" value="f[2]" x="250" y="200"/>
+<node id="10" value="s[2]" x="200" y="300"/>
+<node id="11" value="t[2]" x="300" y="300"/>
+<node id="12" value="f[3]" x="450" y="200"/>
+<node id="13" value="s[3]" x="400" y="300"/>
+<node id="14" value="t[3]" x="500" y="300"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="6" idFirstNode="0" idSecondNode="6"/>
+<arc id="0" idFirstNode="1" idSecondNode="0"/>
+<arc id="12" idFirstNode="1" idSecondNode="9"/>
+<arc id="18" idFirstNode="1" idSecondNode="12"/>
+<arc id="1" idFirstNode="2" idSecondNode="3"/>
+<arc id="7" idFirstNode="2" idSecondNode="7"/>
+<arc id="19" idFirstNode="2" idSecondNode="13"/>
+<arc id="1" idFirstNode="3" idSecondNode="2"/>
+<arc id="13" idFirstNode="3" idSecondNode="10"/>
+<arc id="2" idFirstNode="4" idSecondNode="5"/>
+<arc id="8" idFirstNode="4" idSecondNode="8"/>
+<arc id="14" idFirstNode="4" idSecondNode="11"/>
+<arc id="2" idFirstNode="5" idSecondNode="4"/>
+<arc id="20" idFirstNode="5" idSecondNode="14"/>
+<arc id="6" idFirstNode="6" idSecondNode="0"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="4" idFirstNode="6" idSecondNode="8"/>
+<arc id="7" idFirstNode="7" idSecondNode="2"/>
+<arc id="3" idFirstNode="7" idSecondNode="6"/>
+<arc id="5" idFirstNode="7" idSecondNode="8"/>
+<arc id="8" idFirstNode="8" idSecondNode="4"/>
+<arc id="4" idFirstNode="8" idSecondNode="6"/>
+<arc id="5" idFirstNode="8" idSecondNode="7"/>
+<arc id="12" idFirstNode="9" idSecondNode="1"/>
+<arc id="9" idFirstNode="9" idSecondNode="10"/>
+<arc id="10" idFirstNode="9" idSecondNode="11"/>
+<arc id="13" idFirstNode="10" idSecondNode="3"/>
+<arc id="9" idFirstNode="10" idSecondNode="9"/>
+<arc id="11" idFirstNode="10" idSecondNode="11"/>
+<arc id="14" idFirstNode="11" idSecondNode="4"/>
+<arc id="10" idFirstNode="11" idSecondNode="9"/>
+<arc id="11" idFirstNode="11" idSecondNode="10"/>
+<arc id="18" idFirstNode="12" idSecondNode="1"/>
+<arc id="15" idFirstNode="12" idSecondNode="13"/>
+<arc id="16" idFirstNode="12" idSecondNode="14"/>
+<arc id="19" idFirstNode="13" idSecondNode="2"/>
+<arc id="15" idFirstNode="13" idSecondNode="12"/>
+<arc id="17" idFirstNode="13" idSecondNode="14"/>
+<arc id="20" idFirstNode="14" idSecondNode="5"/>
+<arc id="16" idFirstNode="14" idSecondNode="12"/>
+<arc id="17" idFirstNode="14" idSecondNode="13"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="35.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="80">
+<visualNode id="0" color="BBBBBB" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="1" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="2" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="3" color="BBBBBB" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="5" color="BBBBBB" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="6" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="7" color="00FFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="8" color="00FFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="9" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="10" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="11" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="12" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="13" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="14" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualArc id="0" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="1" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="2" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="3" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="4" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="5" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="6" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="7" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="8" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="9" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="10" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="11" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="12" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="13" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="14" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="15" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="16" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="17" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="18" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="19" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="20" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+</visualGraph>
+<message content="Two nodes of the triangle corresponding to the current clause have been included in the cover: in this way all edges adjacent to the triangle are now covered.">
+</message>
+</structure>
+<structure name="Boolean formula" type="GeometricFigure">
+<geometricFigure size="2">
+<element id="0" value="Text[(x1 OR x2 OR x3) AND ((NOT x1) OR (NOT x2) OR x3) AND ((NOT x1) OR x2 OR (NOT x3));0.0;0.0]"/>
+<element id="1" value="Text[x1=true, x2=false, x3=false;0.0;20.0]"/>
+</geometricFigure>
+<visualGeometricFigure defaultColor="000000" defaultFont="Monospaced-PLAIN-16" defaultLineThickness="0.5" originX="20" originY="20">
+</visualGeometricFigure>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="13">
+<structure name="Graph" type="Graph">
+<graph isOriented="false" type="StringInformation" arcLabelType="IntInformation">
+<node id="0" value="p[1]" x="0" y="0"/>
+<node id="1" value="n[1]" x="100" y="0"/>
+<node id="2" value="p[2]" x="200" y="0"/>
+<node id="3" value="n[2]" x="300" y="0"/>
+<node id="4" value="p[3]" x="400" y="0"/>
+<node id="5" value="n[3]" x="500" y="0"/>
+<node id="6" value="f[1]" x="50" y="200"/>
+<node id="7" value="s[1]" x="0" y="300"/>
+<node id="8" value="t[1]" x="100" y="300"/>
+<node id="9" value="f[2]" x="250" y="200"/>
+<node id="10" value="s[2]" x="200" y="300"/>
+<node id="11" value="t[2]" x="300" y="300"/>
+<node id="12" value="f[3]" x="450" y="200"/>
+<node id="13" value="s[3]" x="400" y="300"/>
+<node id="14" value="t[3]" x="500" y="300"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="6" idFirstNode="0" idSecondNode="6"/>
+<arc id="0" idFirstNode="1" idSecondNode="0"/>
+<arc id="12" idFirstNode="1" idSecondNode="9"/>
+<arc id="18" idFirstNode="1" idSecondNode="12"/>
+<arc id="1" idFirstNode="2" idSecondNode="3"/>
+<arc id="7" idFirstNode="2" idSecondNode="7"/>
+<arc id="19" idFirstNode="2" idSecondNode="13"/>
+<arc id="1" idFirstNode="3" idSecondNode="2"/>
+<arc id="13" idFirstNode="3" idSecondNode="10"/>
+<arc id="2" idFirstNode="4" idSecondNode="5"/>
+<arc id="8" idFirstNode="4" idSecondNode="8"/>
+<arc id="14" idFirstNode="4" idSecondNode="11"/>
+<arc id="2" idFirstNode="5" idSecondNode="4"/>
+<arc id="20" idFirstNode="5" idSecondNode="14"/>
+<arc id="6" idFirstNode="6" idSecondNode="0"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="4" idFirstNode="6" idSecondNode="8"/>
+<arc id="7" idFirstNode="7" idSecondNode="2"/>
+<arc id="3" idFirstNode="7" idSecondNode="6"/>
+<arc id="5" idFirstNode="7" idSecondNode="8"/>
+<arc id="8" idFirstNode="8" idSecondNode="4"/>
+<arc id="4" idFirstNode="8" idSecondNode="6"/>
+<arc id="5" idFirstNode="8" idSecondNode="7"/>
+<arc id="12" idFirstNode="9" idSecondNode="1"/>
+<arc id="9" idFirstNode="9" idSecondNode="10"/>
+<arc id="10" idFirstNode="9" idSecondNode="11"/>
+<arc id="13" idFirstNode="10" idSecondNode="3"/>
+<arc id="9" idFirstNode="10" idSecondNode="9"/>
+<arc id="11" idFirstNode="10" idSecondNode="11"/>
+<arc id="14" idFirstNode="11" idSecondNode="4"/>
+<arc id="10" idFirstNode="11" idSecondNode="9"/>
+<arc id="11" idFirstNode="11" idSecondNode="10"/>
+<arc id="18" idFirstNode="12" idSecondNode="1"/>
+<arc id="15" idFirstNode="12" idSecondNode="13"/>
+<arc id="16" idFirstNode="12" idSecondNode="14"/>
+<arc id="19" idFirstNode="13" idSecondNode="2"/>
+<arc id="15" idFirstNode="13" idSecondNode="12"/>
+<arc id="17" idFirstNode="13" idSecondNode="14"/>
+<arc id="20" idFirstNode="14" idSecondNode="5"/>
+<arc id="16" idFirstNode="14" idSecondNode="12"/>
+<arc id="17" idFirstNode="14" idSecondNode="13"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="35.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="80">
+<visualNode id="0" color="BBBBBB" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="1" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="2" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="3" color="BBBBBB" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="5" color="BBBBBB" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="6" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="7" color="BBBBBB" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="8" color="BBBBBB" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="9" color="00FFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="10" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="11" color="00FFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="12" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="13" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="14" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualArc id="0" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="1" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="2" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="3" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="4" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="5" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="6" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="7" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="8" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="9" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="10" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="11" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="12" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="13" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="14" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="15" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="16" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="17" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="18" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="19" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="20" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+</visualGraph>
+<message content="Two nodes of the triangle corresponding to the current clause have been included in the cover: in this way all edges adjacent to the triangle are now covered.">
+</message>
+</structure>
+<structure name="Boolean formula" type="GeometricFigure">
+<geometricFigure size="2">
+<element id="0" value="Text[(x1 OR x2 OR x3) AND ((NOT x1) OR (NOT x2) OR x3) AND ((NOT x1) OR x2 OR (NOT x3));0.0;0.0]"/>
+<element id="1" value="Text[x1=true, x2=false, x3=false;0.0;20.0]"/>
+</geometricFigure>
+<visualGeometricFigure defaultColor="000000" defaultFont="Monospaced-PLAIN-16" defaultLineThickness="0.5" originX="20" originY="20">
+</visualGeometricFigure>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="14">
+<structure name="Graph" type="Graph">
+<graph isOriented="false" type="StringInformation" arcLabelType="IntInformation">
+<node id="0" value="p[1]" x="0" y="0"/>
+<node id="1" value="n[1]" x="100" y="0"/>
+<node id="2" value="p[2]" x="200" y="0"/>
+<node id="3" value="n[2]" x="300" y="0"/>
+<node id="4" value="p[3]" x="400" y="0"/>
+<node id="5" value="n[3]" x="500" y="0"/>
+<node id="6" value="f[1]" x="50" y="200"/>
+<node id="7" value="s[1]" x="0" y="300"/>
+<node id="8" value="t[1]" x="100" y="300"/>
+<node id="9" value="f[2]" x="250" y="200"/>
+<node id="10" value="s[2]" x="200" y="300"/>
+<node id="11" value="t[2]" x="300" y="300"/>
+<node id="12" value="f[3]" x="450" y="200"/>
+<node id="13" value="s[3]" x="400" y="300"/>
+<node id="14" value="t[3]" x="500" y="300"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="6" idFirstNode="0" idSecondNode="6"/>
+<arc id="0" idFirstNode="1" idSecondNode="0"/>
+<arc id="12" idFirstNode="1" idSecondNode="9"/>
+<arc id="18" idFirstNode="1" idSecondNode="12"/>
+<arc id="1" idFirstNode="2" idSecondNode="3"/>
+<arc id="7" idFirstNode="2" idSecondNode="7"/>
+<arc id="19" idFirstNode="2" idSecondNode="13"/>
+<arc id="1" idFirstNode="3" idSecondNode="2"/>
+<arc id="13" idFirstNode="3" idSecondNode="10"/>
+<arc id="2" idFirstNode="4" idSecondNode="5"/>
+<arc id="8" idFirstNode="4" idSecondNode="8"/>
+<arc id="14" idFirstNode="4" idSecondNode="11"/>
+<arc id="2" idFirstNode="5" idSecondNode="4"/>
+<arc id="20" idFirstNode="5" idSecondNode="14"/>
+<arc id="6" idFirstNode="6" idSecondNode="0"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="4" idFirstNode="6" idSecondNode="8"/>
+<arc id="7" idFirstNode="7" idSecondNode="2"/>
+<arc id="3" idFirstNode="7" idSecondNode="6"/>
+<arc id="5" idFirstNode="7" idSecondNode="8"/>
+<arc id="8" idFirstNode="8" idSecondNode="4"/>
+<arc id="4" idFirstNode="8" idSecondNode="6"/>
+<arc id="5" idFirstNode="8" idSecondNode="7"/>
+<arc id="12" idFirstNode="9" idSecondNode="1"/>
+<arc id="9" idFirstNode="9" idSecondNode="10"/>
+<arc id="10" idFirstNode="9" idSecondNode="11"/>
+<arc id="13" idFirstNode="10" idSecondNode="3"/>
+<arc id="9" idFirstNode="10" idSecondNode="9"/>
+<arc id="11" idFirstNode="10" idSecondNode="11"/>
+<arc id="14" idFirstNode="11" idSecondNode="4"/>
+<arc id="10" idFirstNode="11" idSecondNode="9"/>
+<arc id="11" idFirstNode="11" idSecondNode="10"/>
+<arc id="18" idFirstNode="12" idSecondNode="1"/>
+<arc id="15" idFirstNode="12" idSecondNode="13"/>
+<arc id="16" idFirstNode="12" idSecondNode="14"/>
+<arc id="19" idFirstNode="13" idSecondNode="2"/>
+<arc id="15" idFirstNode="13" idSecondNode="12"/>
+<arc id="17" idFirstNode="13" idSecondNode="14"/>
+<arc id="20" idFirstNode="14" idSecondNode="5"/>
+<arc id="16" idFirstNode="14" idSecondNode="12"/>
+<arc id="17" idFirstNode="14" idSecondNode="13"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="35.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="80">
+<visualNode id="0" color="BBBBBB" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="1" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="2" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="3" color="BBBBBB" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="5" color="BBBBBB" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="6" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="7" color="BBBBBB" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="8" color="BBBBBB" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="9" color="BBBBBB" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="10" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="11" color="BBBBBB" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="12" color="00FFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="13" color="00FFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="14" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualArc id="0" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="1" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="2" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="3" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="4" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="5" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="6" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="7" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="8" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="9" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="10" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="11" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="12" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="13" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="14" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="15" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="16" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="17" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="18" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="19" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="20" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+</visualGraph>
+<message content="Two nodes of the triangle corresponding to the current clause have been included in the cover: in this way all edges adjacent to the triangle are now covered.">
+</message>
+</structure>
+<structure name="Boolean formula" type="GeometricFigure">
+<geometricFigure size="2">
+<element id="0" value="Text[(x1 OR x2 OR x3) AND ((NOT x1) OR (NOT x2) OR x3) AND ((NOT x1) OR x2 OR (NOT x3));0.0;0.0]"/>
+<element id="1" value="Text[x1=true, x2=false, x3=false;0.0;20.0]"/>
+</geometricFigure>
+<visualGeometricFigure defaultColor="000000" defaultFont="Monospaced-PLAIN-16" defaultLineThickness="0.5" originX="20" originY="20">
+</visualGeometricFigure>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="15">
+<structure name="Graph" type="Graph">
+<graph isOriented="false" type="StringInformation" arcLabelType="IntInformation">
+<node id="0" value="p[1]" x="0" y="0"/>
+<node id="1" value="n[1]" x="100" y="0"/>
+<node id="2" value="p[2]" x="200" y="0"/>
+<node id="3" value="n[2]" x="300" y="0"/>
+<node id="4" value="p[3]" x="400" y="0"/>
+<node id="5" value="n[3]" x="500" y="0"/>
+<node id="6" value="f[1]" x="50" y="200"/>
+<node id="7" value="s[1]" x="0" y="300"/>
+<node id="8" value="t[1]" x="100" y="300"/>
+<node id="9" value="f[2]" x="250" y="200"/>
+<node id="10" value="s[2]" x="200" y="300"/>
+<node id="11" value="t[2]" x="300" y="300"/>
+<node id="12" value="f[3]" x="450" y="200"/>
+<node id="13" value="s[3]" x="400" y="300"/>
+<node id="14" value="t[3]" x="500" y="300"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="6" idFirstNode="0" idSecondNode="6"/>
+<arc id="0" idFirstNode="1" idSecondNode="0"/>
+<arc id="12" idFirstNode="1" idSecondNode="9"/>
+<arc id="18" idFirstNode="1" idSecondNode="12"/>
+<arc id="1" idFirstNode="2" idSecondNode="3"/>
+<arc id="7" idFirstNode="2" idSecondNode="7"/>
+<arc id="19" idFirstNode="2" idSecondNode="13"/>
+<arc id="1" idFirstNode="3" idSecondNode="2"/>
+<arc id="13" idFirstNode="3" idSecondNode="10"/>
+<arc id="2" idFirstNode="4" idSecondNode="5"/>
+<arc id="8" idFirstNode="4" idSecondNode="8"/>
+<arc id="14" idFirstNode="4" idSecondNode="11"/>
+<arc id="2" idFirstNode="5" idSecondNode="4"/>
+<arc id="20" idFirstNode="5" idSecondNode="14"/>
+<arc id="6" idFirstNode="6" idSecondNode="0"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="4" idFirstNode="6" idSecondNode="8"/>
+<arc id="7" idFirstNode="7" idSecondNode="2"/>
+<arc id="3" idFirstNode="7" idSecondNode="6"/>
+<arc id="5" idFirstNode="7" idSecondNode="8"/>
+<arc id="8" idFirstNode="8" idSecondNode="4"/>
+<arc id="4" idFirstNode="8" idSecondNode="6"/>
+<arc id="5" idFirstNode="8" idSecondNode="7"/>
+<arc id="12" idFirstNode="9" idSecondNode="1"/>
+<arc id="9" idFirstNode="9" idSecondNode="10"/>
+<arc id="10" idFirstNode="9" idSecondNode="11"/>
+<arc id="13" idFirstNode="10" idSecondNode="3"/>
+<arc id="9" idFirstNode="10" idSecondNode="9"/>
+<arc id="11" idFirstNode="10" idSecondNode="11"/>
+<arc id="14" idFirstNode="11" idSecondNode="4"/>
+<arc id="10" idFirstNode="11" idSecondNode="9"/>
+<arc id="11" idFirstNode="11" idSecondNode="10"/>
+<arc id="18" idFirstNode="12" idSecondNode="1"/>
+<arc id="15" idFirstNode="12" idSecondNode="13"/>
+<arc id="16" idFirstNode="12" idSecondNode="14"/>
+<arc id="19" idFirstNode="13" idSecondNode="2"/>
+<arc id="15" idFirstNode="13" idSecondNode="12"/>
+<arc id="17" idFirstNode="13" idSecondNode="14"/>
+<arc id="20" idFirstNode="14" idSecondNode="5"/>
+<arc id="16" idFirstNode="14" idSecondNode="12"/>
+<arc id="17" idFirstNode="14" idSecondNode="13"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="35.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="80">
+<visualNode id="0" color="BBBBBB" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="1" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="2" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="3" color="BBBBBB" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="5" color="BBBBBB" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="6" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="7" color="BBBBBB" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="8" color="BBBBBB" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="9" color="BBBBBB" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="10" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="11" color="BBBBBB" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="12" color="BBBBBB" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="13" color="BBBBBB" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="14" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualArc id="0" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="1" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="2" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="3" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="4" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="5" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="6" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="7" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="8" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="9" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="10" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="11" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="12" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="13" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="14" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="15" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="16" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="17" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="18" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="19" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="20" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+</visualGraph>
+<message content="All edges have been covered with one node per variable and two nodes per clause: this is due to the fact that the assignment satisfies the formula.">
+</message>
+</structure>
+<structure name="Boolean formula" type="GeometricFigure">
+<geometricFigure size="2">
+<element id="0" value="Text[(x1 OR x2 OR x3) AND ((NOT x1) OR (NOT x2) OR x3) AND ((NOT x1) OR x2 OR (NOT x3));0.0;0.0]"/>
+<element id="1" value="Text[x1=true, x2=false, x3=false;0.0;20.0]"/>
+</geometricFigure>
+<visualGeometricFigure defaultColor="000000" defaultFont="Monospaced-PLAIN-16" defaultLineThickness="0.5" originX="20" originY="20">
+</visualGeometricFigure>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="16">
+<structure name="Graph" type="Graph">
+<graph isOriented="false" type="StringInformation" arcLabelType="IntInformation">
+<node id="0" value="p[1]" x="0" y="0"/>
+<node id="1" value="n[1]" x="100" y="0"/>
+<node id="2" value="p[2]" x="200" y="0"/>
+<node id="3" value="n[2]" x="300" y="0"/>
+<node id="4" value="p[3]" x="400" y="0"/>
+<node id="5" value="n[3]" x="500" y="0"/>
+<node id="6" value="f[1]" x="50" y="200"/>
+<node id="7" value="s[1]" x="0" y="300"/>
+<node id="8" value="t[1]" x="100" y="300"/>
+<node id="9" value="f[2]" x="250" y="200"/>
+<node id="10" value="s[2]" x="200" y="300"/>
+<node id="11" value="t[2]" x="300" y="300"/>
+<node id="12" value="f[3]" x="450" y="200"/>
+<node id="13" value="s[3]" x="400" y="300"/>
+<node id="14" value="t[3]" x="500" y="300"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="6" idFirstNode="0" idSecondNode="6"/>
+<arc id="0" idFirstNode="1" idSecondNode="0"/>
+<arc id="12" idFirstNode="1" idSecondNode="9"/>
+<arc id="18" idFirstNode="1" idSecondNode="12"/>
+<arc id="1" idFirstNode="2" idSecondNode="3"/>
+<arc id="7" idFirstNode="2" idSecondNode="7"/>
+<arc id="19" idFirstNode="2" idSecondNode="13"/>
+<arc id="1" idFirstNode="3" idSecondNode="2"/>
+<arc id="13" idFirstNode="3" idSecondNode="10"/>
+<arc id="2" idFirstNode="4" idSecondNode="5"/>
+<arc id="8" idFirstNode="4" idSecondNode="8"/>
+<arc id="14" idFirstNode="4" idSecondNode="11"/>
+<arc id="2" idFirstNode="5" idSecondNode="4"/>
+<arc id="20" idFirstNode="5" idSecondNode="14"/>
+<arc id="6" idFirstNode="6" idSecondNode="0"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="4" idFirstNode="6" idSecondNode="8"/>
+<arc id="7" idFirstNode="7" idSecondNode="2"/>
+<arc id="3" idFirstNode="7" idSecondNode="6"/>
+<arc id="5" idFirstNode="7" idSecondNode="8"/>
+<arc id="8" idFirstNode="8" idSecondNode="4"/>
+<arc id="4" idFirstNode="8" idSecondNode="6"/>
+<arc id="5" idFirstNode="8" idSecondNode="7"/>
+<arc id="12" idFirstNode="9" idSecondNode="1"/>
+<arc id="9" idFirstNode="9" idSecondNode="10"/>
+<arc id="10" idFirstNode="9" idSecondNode="11"/>
+<arc id="13" idFirstNode="10" idSecondNode="3"/>
+<arc id="9" idFirstNode="10" idSecondNode="9"/>
+<arc id="11" idFirstNode="10" idSecondNode="11"/>
+<arc id="14" idFirstNode="11" idSecondNode="4"/>
+<arc id="10" idFirstNode="11" idSecondNode="9"/>
+<arc id="11" idFirstNode="11" idSecondNode="10"/>
+<arc id="18" idFirstNode="12" idSecondNode="1"/>
+<arc id="15" idFirstNode="12" idSecondNode="13"/>
+<arc id="16" idFirstNode="12" idSecondNode="14"/>
+<arc id="19" idFirstNode="13" idSecondNode="2"/>
+<arc id="15" idFirstNode="13" idSecondNode="12"/>
+<arc id="17" idFirstNode="13" idSecondNode="14"/>
+<arc id="20" idFirstNode="14" idSecondNode="5"/>
+<arc id="16" idFirstNode="14" idSecondNode="12"/>
+<arc id="17" idFirstNode="14" idSecondNode="13"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="35.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="80">
+</visualGraph>
+<message content="An unsatisfying assignment to the variables will now be used to try to derive a vertex cover of the graph.">
+</message>
+</structure>
+<structure name="Boolean formula" type="GeometricFigure">
+<geometricFigure size="2">
+<element id="0" value="Text[(x1 OR x2 OR x3) AND ((NOT x1) OR (NOT x2) OR x3) AND ((NOT x1) OR x2 OR (NOT x3));0.0;0.0]"/>
+<element id="1" value="Text[x1=true, x2=true, x3=false;0.0;20.0]"/>
+</geometricFigure>
+<visualGeometricFigure defaultColor="000000" defaultFont="Monospaced-PLAIN-16" defaultLineThickness="0.5" originX="20" originY="20">
+</visualGeometricFigure>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="17">
+<structure name="Graph" type="Graph">
+<graph isOriented="false" type="StringInformation" arcLabelType="IntInformation">
+<node id="0" value="p[1]" x="0" y="0"/>
+<node id="1" value="n[1]" x="100" y="0"/>
+<node id="2" value="p[2]" x="200" y="0"/>
+<node id="3" value="n[2]" x="300" y="0"/>
+<node id="4" value="p[3]" x="400" y="0"/>
+<node id="5" value="n[3]" x="500" y="0"/>
+<node id="6" value="f[1]" x="50" y="200"/>
+<node id="7" value="s[1]" x="0" y="300"/>
+<node id="8" value="t[1]" x="100" y="300"/>
+<node id="9" value="f[2]" x="250" y="200"/>
+<node id="10" value="s[2]" x="200" y="300"/>
+<node id="11" value="t[2]" x="300" y="300"/>
+<node id="12" value="f[3]" x="450" y="200"/>
+<node id="13" value="s[3]" x="400" y="300"/>
+<node id="14" value="t[3]" x="500" y="300"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="6" idFirstNode="0" idSecondNode="6"/>
+<arc id="0" idFirstNode="1" idSecondNode="0"/>
+<arc id="12" idFirstNode="1" idSecondNode="9"/>
+<arc id="18" idFirstNode="1" idSecondNode="12"/>
+<arc id="1" idFirstNode="2" idSecondNode="3"/>
+<arc id="7" idFirstNode="2" idSecondNode="7"/>
+<arc id="19" idFirstNode="2" idSecondNode="13"/>
+<arc id="1" idFirstNode="3" idSecondNode="2"/>
+<arc id="13" idFirstNode="3" idSecondNode="10"/>
+<arc id="2" idFirstNode="4" idSecondNode="5"/>
+<arc id="8" idFirstNode="4" idSecondNode="8"/>
+<arc id="14" idFirstNode="4" idSecondNode="11"/>
+<arc id="2" idFirstNode="5" idSecondNode="4"/>
+<arc id="20" idFirstNode="5" idSecondNode="14"/>
+<arc id="6" idFirstNode="6" idSecondNode="0"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="4" idFirstNode="6" idSecondNode="8"/>
+<arc id="7" idFirstNode="7" idSecondNode="2"/>
+<arc id="3" idFirstNode="7" idSecondNode="6"/>
+<arc id="5" idFirstNode="7" idSecondNode="8"/>
+<arc id="8" idFirstNode="8" idSecondNode="4"/>
+<arc id="4" idFirstNode="8" idSecondNode="6"/>
+<arc id="5" idFirstNode="8" idSecondNode="7"/>
+<arc id="12" idFirstNode="9" idSecondNode="1"/>
+<arc id="9" idFirstNode="9" idSecondNode="10"/>
+<arc id="10" idFirstNode="9" idSecondNode="11"/>
+<arc id="13" idFirstNode="10" idSecondNode="3"/>
+<arc id="9" idFirstNode="10" idSecondNode="9"/>
+<arc id="11" idFirstNode="10" idSecondNode="11"/>
+<arc id="14" idFirstNode="11" idSecondNode="4"/>
+<arc id="10" idFirstNode="11" idSecondNode="9"/>
+<arc id="11" idFirstNode="11" idSecondNode="10"/>
+<arc id="18" idFirstNode="12" idSecondNode="1"/>
+<arc id="15" idFirstNode="12" idSecondNode="13"/>
+<arc id="16" idFirstNode="12" idSecondNode="14"/>
+<arc id="19" idFirstNode="13" idSecondNode="2"/>
+<arc id="15" idFirstNode="13" idSecondNode="12"/>
+<arc id="17" idFirstNode="13" idSecondNode="14"/>
+<arc id="20" idFirstNode="14" idSecondNode="5"/>
+<arc id="16" idFirstNode="14" idSecondNode="12"/>
+<arc id="17" idFirstNode="14" idSecondNode="13"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="35.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="80">
+<visualNode id="0" color="00FFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="1" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="2" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="3" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="5" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="6" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="7" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="8" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="9" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="10" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="11" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="12" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="13" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="14" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualArc id="0" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="1" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="2" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="3" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="4" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="5" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="6" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="7" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="8" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="9" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="10" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="11" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="12" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="13" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="14" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="15" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="16" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="17" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="18" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="19" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="20" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+</visualGraph>
+<message content="Since the current variable is true, its node p is included in the vertex cover.">
+</message>
+</structure>
+<structure name="Boolean formula" type="GeometricFigure">
+<geometricFigure size="2">
+<element id="0" value="Text[(x1 OR x2 OR x3) AND ((NOT x1) OR (NOT x2) OR x3) AND ((NOT x1) OR x2 OR (NOT x3));0.0;0.0]"/>
+<element id="1" value="Text[x1=true, x2=true, x3=false;0.0;20.0]"/>
+</geometricFigure>
+<visualGeometricFigure defaultColor="000000" defaultFont="Monospaced-PLAIN-16" defaultLineThickness="0.5" originX="20" originY="20">
+</visualGeometricFigure>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="18">
+<structure name="Graph" type="Graph">
+<graph isOriented="false" type="StringInformation" arcLabelType="IntInformation">
+<node id="0" value="p[1]" x="0" y="0"/>
+<node id="1" value="n[1]" x="100" y="0"/>
+<node id="2" value="p[2]" x="200" y="0"/>
+<node id="3" value="n[2]" x="300" y="0"/>
+<node id="4" value="p[3]" x="400" y="0"/>
+<node id="5" value="n[3]" x="500" y="0"/>
+<node id="6" value="f[1]" x="50" y="200"/>
+<node id="7" value="s[1]" x="0" y="300"/>
+<node id="8" value="t[1]" x="100" y="300"/>
+<node id="9" value="f[2]" x="250" y="200"/>
+<node id="10" value="s[2]" x="200" y="300"/>
+<node id="11" value="t[2]" x="300" y="300"/>
+<node id="12" value="f[3]" x="450" y="200"/>
+<node id="13" value="s[3]" x="400" y="300"/>
+<node id="14" value="t[3]" x="500" y="300"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="6" idFirstNode="0" idSecondNode="6"/>
+<arc id="0" idFirstNode="1" idSecondNode="0"/>
+<arc id="12" idFirstNode="1" idSecondNode="9"/>
+<arc id="18" idFirstNode="1" idSecondNode="12"/>
+<arc id="1" idFirstNode="2" idSecondNode="3"/>
+<arc id="7" idFirstNode="2" idSecondNode="7"/>
+<arc id="19" idFirstNode="2" idSecondNode="13"/>
+<arc id="1" idFirstNode="3" idSecondNode="2"/>
+<arc id="13" idFirstNode="3" idSecondNode="10"/>
+<arc id="2" idFirstNode="4" idSecondNode="5"/>
+<arc id="8" idFirstNode="4" idSecondNode="8"/>
+<arc id="14" idFirstNode="4" idSecondNode="11"/>
+<arc id="2" idFirstNode="5" idSecondNode="4"/>
+<arc id="20" idFirstNode="5" idSecondNode="14"/>
+<arc id="6" idFirstNode="6" idSecondNode="0"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="4" idFirstNode="6" idSecondNode="8"/>
+<arc id="7" idFirstNode="7" idSecondNode="2"/>
+<arc id="3" idFirstNode="7" idSecondNode="6"/>
+<arc id="5" idFirstNode="7" idSecondNode="8"/>
+<arc id="8" idFirstNode="8" idSecondNode="4"/>
+<arc id="4" idFirstNode="8" idSecondNode="6"/>
+<arc id="5" idFirstNode="8" idSecondNode="7"/>
+<arc id="12" idFirstNode="9" idSecondNode="1"/>
+<arc id="9" idFirstNode="9" idSecondNode="10"/>
+<arc id="10" idFirstNode="9" idSecondNode="11"/>
+<arc id="13" idFirstNode="10" idSecondNode="3"/>
+<arc id="9" idFirstNode="10" idSecondNode="9"/>
+<arc id="11" idFirstNode="10" idSecondNode="11"/>
+<arc id="14" idFirstNode="11" idSecondNode="4"/>
+<arc id="10" idFirstNode="11" idSecondNode="9"/>
+<arc id="11" idFirstNode="11" idSecondNode="10"/>
+<arc id="18" idFirstNode="12" idSecondNode="1"/>
+<arc id="15" idFirstNode="12" idSecondNode="13"/>
+<arc id="16" idFirstNode="12" idSecondNode="14"/>
+<arc id="19" idFirstNode="13" idSecondNode="2"/>
+<arc id="15" idFirstNode="13" idSecondNode="12"/>
+<arc id="17" idFirstNode="13" idSecondNode="14"/>
+<arc id="20" idFirstNode="14" idSecondNode="5"/>
+<arc id="16" idFirstNode="14" idSecondNode="12"/>
+<arc id="17" idFirstNode="14" idSecondNode="13"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="35.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="80">
+<visualNode id="0" color="BBBBBB" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="1" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="2" color="00FFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="3" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="5" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="6" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="7" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="8" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="9" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="10" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="11" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="12" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="13" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="14" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualArc id="0" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="1" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="2" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="3" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="4" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="5" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="6" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="7" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="8" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="9" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="10" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="11" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="12" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="13" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="14" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="15" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="16" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="17" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="18" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="19" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="20" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+</visualGraph>
+<message content="Since the current variable is true, its node p is included in the vertex cover.">
+</message>
+</structure>
+<structure name="Boolean formula" type="GeometricFigure">
+<geometricFigure size="2">
+<element id="0" value="Text[(x1 OR x2 OR x3) AND ((NOT x1) OR (NOT x2) OR x3) AND ((NOT x1) OR x2 OR (NOT x3));0.0;0.0]"/>
+<element id="1" value="Text[x1=true, x2=true, x3=false;0.0;20.0]"/>
+</geometricFigure>
+<visualGeometricFigure defaultColor="000000" defaultFont="Monospaced-PLAIN-16" defaultLineThickness="0.5" originX="20" originY="20">
+</visualGeometricFigure>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="19">
+<structure name="Graph" type="Graph">
+<graph isOriented="false" type="StringInformation" arcLabelType="IntInformation">
+<node id="0" value="p[1]" x="0" y="0"/>
+<node id="1" value="n[1]" x="100" y="0"/>
+<node id="2" value="p[2]" x="200" y="0"/>
+<node id="3" value="n[2]" x="300" y="0"/>
+<node id="4" value="p[3]" x="400" y="0"/>
+<node id="5" value="n[3]" x="500" y="0"/>
+<node id="6" value="f[1]" x="50" y="200"/>
+<node id="7" value="s[1]" x="0" y="300"/>
+<node id="8" value="t[1]" x="100" y="300"/>
+<node id="9" value="f[2]" x="250" y="200"/>
+<node id="10" value="s[2]" x="200" y="300"/>
+<node id="11" value="t[2]" x="300" y="300"/>
+<node id="12" value="f[3]" x="450" y="200"/>
+<node id="13" value="s[3]" x="400" y="300"/>
+<node id="14" value="t[3]" x="500" y="300"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="6" idFirstNode="0" idSecondNode="6"/>
+<arc id="0" idFirstNode="1" idSecondNode="0"/>
+<arc id="12" idFirstNode="1" idSecondNode="9"/>
+<arc id="18" idFirstNode="1" idSecondNode="12"/>
+<arc id="1" idFirstNode="2" idSecondNode="3"/>
+<arc id="7" idFirstNode="2" idSecondNode="7"/>
+<arc id="19" idFirstNode="2" idSecondNode="13"/>
+<arc id="1" idFirstNode="3" idSecondNode="2"/>
+<arc id="13" idFirstNode="3" idSecondNode="10"/>
+<arc id="2" idFirstNode="4" idSecondNode="5"/>
+<arc id="8" idFirstNode="4" idSecondNode="8"/>
+<arc id="14" idFirstNode="4" idSecondNode="11"/>
+<arc id="2" idFirstNode="5" idSecondNode="4"/>
+<arc id="20" idFirstNode="5" idSecondNode="14"/>
+<arc id="6" idFirstNode="6" idSecondNode="0"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="4" idFirstNode="6" idSecondNode="8"/>
+<arc id="7" idFirstNode="7" idSecondNode="2"/>
+<arc id="3" idFirstNode="7" idSecondNode="6"/>
+<arc id="5" idFirstNode="7" idSecondNode="8"/>
+<arc id="8" idFirstNode="8" idSecondNode="4"/>
+<arc id="4" idFirstNode="8" idSecondNode="6"/>
+<arc id="5" idFirstNode="8" idSecondNode="7"/>
+<arc id="12" idFirstNode="9" idSecondNode="1"/>
+<arc id="9" idFirstNode="9" idSecondNode="10"/>
+<arc id="10" idFirstNode="9" idSecondNode="11"/>
+<arc id="13" idFirstNode="10" idSecondNode="3"/>
+<arc id="9" idFirstNode="10" idSecondNode="9"/>
+<arc id="11" idFirstNode="10" idSecondNode="11"/>
+<arc id="14" idFirstNode="11" idSecondNode="4"/>
+<arc id="10" idFirstNode="11" idSecondNode="9"/>
+<arc id="11" idFirstNode="11" idSecondNode="10"/>
+<arc id="18" idFirstNode="12" idSecondNode="1"/>
+<arc id="15" idFirstNode="12" idSecondNode="13"/>
+<arc id="16" idFirstNode="12" idSecondNode="14"/>
+<arc id="19" idFirstNode="13" idSecondNode="2"/>
+<arc id="15" idFirstNode="13" idSecondNode="12"/>
+<arc id="17" idFirstNode="13" idSecondNode="14"/>
+<arc id="20" idFirstNode="14" idSecondNode="5"/>
+<arc id="16" idFirstNode="14" idSecondNode="12"/>
+<arc id="17" idFirstNode="14" idSecondNode="13"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="35.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="80">
+<visualNode id="0" color="BBBBBB" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="1" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="2" color="BBBBBB" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="3" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="5" color="00FFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="6" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="7" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="8" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="9" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="10" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="11" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="12" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="13" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="14" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualArc id="0" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="1" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="2" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="3" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="4" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="5" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="6" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="7" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="8" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="9" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="10" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="11" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="12" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="13" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="14" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="15" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="16" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="17" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="18" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="19" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="20" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+</visualGraph>
+<message content="Since the current variable is false, its node n is included in the vertex cover.">
+</message>
+</structure>
+<structure name="Boolean formula" type="GeometricFigure">
+<geometricFigure size="2">
+<element id="0" value="Text[(x1 OR x2 OR x3) AND ((NOT x1) OR (NOT x2) OR x3) AND ((NOT x1) OR x2 OR (NOT x3));0.0;0.0]"/>
+<element id="1" value="Text[x1=true, x2=true, x3=false;0.0;20.0]"/>
+</geometricFigure>
+<visualGeometricFigure defaultColor="000000" defaultFont="Monospaced-PLAIN-16" defaultLineThickness="0.5" originX="20" originY="20">
+</visualGeometricFigure>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="20">
+<structure name="Graph" type="Graph">
+<graph isOriented="false" type="StringInformation" arcLabelType="IntInformation">
+<node id="0" value="p[1]" x="0" y="0"/>
+<node id="1" value="n[1]" x="100" y="0"/>
+<node id="2" value="p[2]" x="200" y="0"/>
+<node id="3" value="n[2]" x="300" y="0"/>
+<node id="4" value="p[3]" x="400" y="0"/>
+<node id="5" value="n[3]" x="500" y="0"/>
+<node id="6" value="f[1]" x="50" y="200"/>
+<node id="7" value="s[1]" x="0" y="300"/>
+<node id="8" value="t[1]" x="100" y="300"/>
+<node id="9" value="f[2]" x="250" y="200"/>
+<node id="10" value="s[2]" x="200" y="300"/>
+<node id="11" value="t[2]" x="300" y="300"/>
+<node id="12" value="f[3]" x="450" y="200"/>
+<node id="13" value="s[3]" x="400" y="300"/>
+<node id="14" value="t[3]" x="500" y="300"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="6" idFirstNode="0" idSecondNode="6"/>
+<arc id="0" idFirstNode="1" idSecondNode="0"/>
+<arc id="12" idFirstNode="1" idSecondNode="9"/>
+<arc id="18" idFirstNode="1" idSecondNode="12"/>
+<arc id="1" idFirstNode="2" idSecondNode="3"/>
+<arc id="7" idFirstNode="2" idSecondNode="7"/>
+<arc id="19" idFirstNode="2" idSecondNode="13"/>
+<arc id="1" idFirstNode="3" idSecondNode="2"/>
+<arc id="13" idFirstNode="3" idSecondNode="10"/>
+<arc id="2" idFirstNode="4" idSecondNode="5"/>
+<arc id="8" idFirstNode="4" idSecondNode="8"/>
+<arc id="14" idFirstNode="4" idSecondNode="11"/>
+<arc id="2" idFirstNode="5" idSecondNode="4"/>
+<arc id="20" idFirstNode="5" idSecondNode="14"/>
+<arc id="6" idFirstNode="6" idSecondNode="0"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="4" idFirstNode="6" idSecondNode="8"/>
+<arc id="7" idFirstNode="7" idSecondNode="2"/>
+<arc id="3" idFirstNode="7" idSecondNode="6"/>
+<arc id="5" idFirstNode="7" idSecondNode="8"/>
+<arc id="8" idFirstNode="8" idSecondNode="4"/>
+<arc id="4" idFirstNode="8" idSecondNode="6"/>
+<arc id="5" idFirstNode="8" idSecondNode="7"/>
+<arc id="12" idFirstNode="9" idSecondNode="1"/>
+<arc id="9" idFirstNode="9" idSecondNode="10"/>
+<arc id="10" idFirstNode="9" idSecondNode="11"/>
+<arc id="13" idFirstNode="10" idSecondNode="3"/>
+<arc id="9" idFirstNode="10" idSecondNode="9"/>
+<arc id="11" idFirstNode="10" idSecondNode="11"/>
+<arc id="14" idFirstNode="11" idSecondNode="4"/>
+<arc id="10" idFirstNode="11" idSecondNode="9"/>
+<arc id="11" idFirstNode="11" idSecondNode="10"/>
+<arc id="18" idFirstNode="12" idSecondNode="1"/>
+<arc id="15" idFirstNode="12" idSecondNode="13"/>
+<arc id="16" idFirstNode="12" idSecondNode="14"/>
+<arc id="19" idFirstNode="13" idSecondNode="2"/>
+<arc id="15" idFirstNode="13" idSecondNode="12"/>
+<arc id="17" idFirstNode="13" idSecondNode="14"/>
+<arc id="20" idFirstNode="14" idSecondNode="5"/>
+<arc id="16" idFirstNode="14" idSecondNode="12"/>
+<arc id="17" idFirstNode="14" idSecondNode="13"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="35.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="80">
+<visualNode id="0" color="BBBBBB" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="1" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="2" color="BBBBBB" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="3" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="5" color="BBBBBB" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="6" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="7" color="00FFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="8" color="00FFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="9" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="10" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="11" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="12" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="13" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="14" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualArc id="0" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="1" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="2" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="3" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="4" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="5" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="6" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="7" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="8" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="9" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="10" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="11" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="12" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="13" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="14" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="15" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="16" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="17" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="18" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="19" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="20" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+</visualGraph>
+<message content="Two nodes of the triangle corresponding to the current clause have been included in the cover: in this way all edges adjacent to the triangle are now covered.">
+</message>
+</structure>
+<structure name="Boolean formula" type="GeometricFigure">
+<geometricFigure size="2">
+<element id="0" value="Text[(x1 OR x2 OR x3) AND ((NOT x1) OR (NOT x2) OR x3) AND ((NOT x1) OR x2 OR (NOT x3));0.0;0.0]"/>
+<element id="1" value="Text[x1=true, x2=true, x3=false;0.0;20.0]"/>
+</geometricFigure>
+<visualGeometricFigure defaultColor="000000" defaultFont="Monospaced-PLAIN-16" defaultLineThickness="0.5" originX="20" originY="20">
+</visualGeometricFigure>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="21">
+<structure name="Graph" type="Graph">
+<graph isOriented="false" type="StringInformation" arcLabelType="IntInformation">
+<node id="0" value="p[1]" x="0" y="0"/>
+<node id="1" value="n[1]" x="100" y="0"/>
+<node id="2" value="p[2]" x="200" y="0"/>
+<node id="3" value="n[2]" x="300" y="0"/>
+<node id="4" value="p[3]" x="400" y="0"/>
+<node id="5" value="n[3]" x="500" y="0"/>
+<node id="6" value="f[1]" x="50" y="200"/>
+<node id="7" value="s[1]" x="0" y="300"/>
+<node id="8" value="t[1]" x="100" y="300"/>
+<node id="9" value="f[2]" x="250" y="200"/>
+<node id="10" value="s[2]" x="200" y="300"/>
+<node id="11" value="t[2]" x="300" y="300"/>
+<node id="12" value="f[3]" x="450" y="200"/>
+<node id="13" value="s[3]" x="400" y="300"/>
+<node id="14" value="t[3]" x="500" y="300"/>
+<arc id="0" idFirstNode="0" idSecondNode="1"/>
+<arc id="6" idFirstNode="0" idSecondNode="6"/>
+<arc id="0" idFirstNode="1" idSecondNode="0"/>
+<arc id="12" idFirstNode="1" idSecondNode="9"/>
+<arc id="18" idFirstNode="1" idSecondNode="12"/>
+<arc id="1" idFirstNode="2" idSecondNode="3"/>
+<arc id="7" idFirstNode="2" idSecondNode="7"/>
+<arc id="19" idFirstNode="2" idSecondNode="13"/>
+<arc id="1" idFirstNode="3" idSecondNode="2"/>
+<arc id="13" idFirstNode="3" idSecondNode="10"/>
+<arc id="2" idFirstNode="4" idSecondNode="5"/>
+<arc id="8" idFirstNode="4" idSecondNode="8"/>
+<arc id="14" idFirstNode="4" idSecondNode="11"/>
+<arc id="2" idFirstNode="5" idSecondNode="4"/>
+<arc id="20" idFirstNode="5" idSecondNode="14"/>
+<arc id="6" idFirstNode="6" idSecondNode="0"/>
+<arc id="3" idFirstNode="6" idSecondNode="7"/>
+<arc id="4" idFirstNode="6" idSecondNode="8"/>
+<arc id="7" idFirstNode="7" idSecondNode="2"/>
+<arc id="3" idFirstNode="7" idSecondNode="6"/>
+<arc id="5" idFirstNode="7" idSecondNode="8"/>
+<arc id="8" idFirstNode="8" idSecondNode="4"/>
+<arc id="4" idFirstNode="8" idSecondNode="6"/>
+<arc id="5" idFirstNode="8" idSecondNode="7"/>
+<arc id="12" idFirstNode="9" idSecondNode="1"/>
+<arc id="9" idFirstNode="9" idSecondNode="10"/>
+<arc id="10" idFirstNode="9" idSecondNode="11"/>
+<arc id="13" idFirstNode="10" idSecondNode="3"/>
+<arc id="9" idFirstNode="10" idSecondNode="9"/>
+<arc id="11" idFirstNode="10" idSecondNode="11"/>
+<arc id="14" idFirstNode="11" idSecondNode="4"/>
+<arc id="10" idFirstNode="11" idSecondNode="9"/>
+<arc id="11" idFirstNode="11" idSecondNode="10"/>
+<arc id="18" idFirstNode="12" idSecondNode="1"/>
+<arc id="15" idFirstNode="12" idSecondNode="13"/>
+<arc id="16" idFirstNode="12" idSecondNode="14"/>
+<arc id="19" idFirstNode="13" idSecondNode="2"/>
+<arc id="15" idFirstNode="13" idSecondNode="12"/>
+<arc id="17" idFirstNode="13" idSecondNode="14"/>
+<arc id="20" idFirstNode="14" idSecondNode="5"/>
+<arc id="16" idFirstNode="14" idSecondNode="12"/>
+<arc id="17" idFirstNode="14" idSecondNode="13"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Rectangular" defaultShapeHeight="30.0" defaultShapeWidth="35.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="20" originY="80">
+<visualNode id="0" color="BBBBBB" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="1" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="2" color="BBBBBB" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="3" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="5" color="BBBBBB" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="6" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="7" color="BBBBBB" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="8" color="BBBBBB" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="9" color="00FFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="10" color="00FFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="11" color="00FFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="12" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="13" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualNode id="14" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="30.0" shapeWidth="35.0"/>
+<visualArc id="0" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="1" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="2" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="3" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="4" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="5" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="6" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="7" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="8" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="9" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="10" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="11" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="12" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="13" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="14" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="15" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="16" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="17" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="18" labelFont="Monospaced-PLAIN-14" lineColor="000000" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="19" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+<visualArc id="20" labelFont="Monospaced-PLAIN-14" lineColor="00FF00" lineType="CONTINUE" lineThickness="0.5"/>
+</visualGraph>
+<message content="All the nodes of the triangle of the current clause have to be included in the cover: this is due to the fact that the assignment does not satisfy this clause.">
+</message>
+</structure>
+<structure name="Boolean formula" type="GeometricFigure">
+<geometricFigure size="2">
+<element id="0" value="Text[(x1 OR x2 OR x3) AND ((NOT x1) OR (NOT x2) OR x3) AND ((NOT x1) OR x2 OR (NOT x3));0.0;0.0]"/>
+<element id="1" value="Text[x1=true, x2=true, x3=false;0.0;20.0]"/>
+</geometricFigure>
+<visualGeometricFigure defaultColor="000000" defaultFont="Monospaced-PLAIN-16" defaultLineThickness="0.5" originX="20" originY="20">
+</visualGeometricFigure>
+<message content="">
+</message>
+</structure>
+</step>
+</algorithm>

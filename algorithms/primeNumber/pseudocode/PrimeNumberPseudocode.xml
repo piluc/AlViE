@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure name="Prime number" type = "Pseudocode">
+<pseudocode size="5">
+	<element id="0"  value=" 1  First( number )"/>
+	<element id="1"  value=" 2    factor = 2;"/>
+	<element id="2"  value=" 3    WHILE (number % factor != 0)"/>
+	<element id="3"  value=" 4      factor = factor + 1;"/>
+	<element id="4"  value=" 5    RETURN (factor == number);"/>
+</pseudocode>
+</structure>

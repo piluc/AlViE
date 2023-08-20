@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure name="Skip List" type="Pseudocode">
+	<pseudocode size="9">
+		<element id="0" value=" 1  SkipListScan( k ):" />
+		<element id="1" value=" 2    p = L[h];" />
+		<element id="2" value=" 3    WHILE (p != null) {" />
+		<element id="3" value=" 4      WHILE (p.succ.key &#60;= k)" />
+		<element id="4" value=" 5        p = p.succ;" />
+		<element id="5" value=" 6      predecessor = p;" />
+		<element id="6" value=" 7      p = p.inf;" />
+		<element id="7" value=" 8    }" />
+		<element id="8" value=" 9    RETURN predecessor;" />
+	</pseudocode>
+</structure>
