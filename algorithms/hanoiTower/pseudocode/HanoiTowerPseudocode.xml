@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure name="Hanoi Towers" type="Pseudocode">
+	<pseudocode size="8">
+		<element id="0" value=" 1  HanoiTowers( n, s, d )" />
+		<element id="1" value=" 2    IF (n == 1) {" />
+		<element id="2" value=" 3      PRINT s |-> d;" />
+		<element id="3" value=" 4    } ELSE {" />
+		<element id="4" value=" 5      HanoiTowers( n-1, s, 3-s-d );" />
+		<element id="5" value=" 6      PRINT first |-> third;" />
+		<element id="6" value=" 7      HanoiTowers( n-1, 3-s-d, s );" />
+		<element id="7" value=" 8    }" />
+	</pseudocode>
+</structure>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure name="Formula" type="Matrix">
+	<matrix width="3" height="3" type="IntInformation">
+		<element id="0" value="1" />
+		<element id="1" value="3" />
+		<element id="2" value="5" />
+		<element id="3" value="2" />
+		<element id="4" value="4" />
+		<element id="5" value="5" />
+		<element id="6" value="2" />
+		<element id="7" value="3" />
+		<element id="8" value="6" />
+	</matrix>
+</structure>

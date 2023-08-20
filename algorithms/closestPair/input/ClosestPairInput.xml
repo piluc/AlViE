@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure name="Closest pair inpu problem" type="Matrix">
+	<matrix type="DoubleInformation" height="9" width="2">
+		<element id="0" value="280" />
+		<element id="1" value="350" />
+		<element id="2" value="380" />
+		<element id="3" value="100" />
+		<element id="4" value="120" />
+		<element id="5" value="150" />
+		<element id="6" value="420" />
+		<element id="7" value="200" />
+		<element id="8" value="80" />
+		<element id="9" value="250" />
+		<element id="10" value="0" />
+		<element id="11" value="300" />
+		<element id="12" value="340" />
+		<element id="13" value="275" />
+		<element id="14" value="220" />
+		<element id="15" value="400" />
+		<element id="16" value="140" />
+		<element id="17" value="450" />
+	</matrix>
+</structure>

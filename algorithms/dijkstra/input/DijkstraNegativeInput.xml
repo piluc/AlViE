@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure name="Graph" type="Graph">
+<graph isOriented="true" type="StringInformation" arcLabelType="IntInformation">
+<node id="2" value=" " x="71" y="117"/>
+<node id="1" value=" " x="266" y="-6"/>
+<node id="3" value=" " x="266" y="122"/>
+<node id="0" value=" " x="71" y="-6"/>
+<arc id="2" idFirstNode="2" idSecondNode="1" label="-3"/>
+<arc id="3" idFirstNode="1" idSecondNode="3" label="1"/>
+<arc id="1" idFirstNode="0" idSecondNode="2" label="4"/>
+<arc id="0" idFirstNode="0" idSecondNode="1" label="2"/>
+</graph>
+</structure>

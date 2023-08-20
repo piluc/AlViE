@@ -1,0 +1,1673 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm name="Huffman code">
+<step number="0">
+<structure name="Frequency table" type="Matrix">
+<matrix height="2" width="5" type="StringInformation">
+	<element id="0" value="S0"/>
+	<element id="1" value="S1"/>
+	<element id="2" value="S2"/>
+	<element id="3" value="S3"/>
+	<element id="4" value="S4"/>
+	<element id="5" value="8"/>
+	<element id="6" value="8"/>
+	<element id="7" value="10"/>
+	<element id="8" value="12"/>
+	<element id="9" value="24"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="30" originY="35">
+</visualMatrix>
+<message content="Frequency table (sorted in increasing order) from which the Huffman coding tree has to be constructed.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="8">
+<element id="0" value="1. Start with as many leaves as there are symbols"/>
+<element id="1" value="2. Enqueue all leaf nodes into the first queue (by probability in increasing order)"/>
+<element id="2" value="3. While there is more than one node in the two queues:"/>
+<element id="3" value="     1. Dequeue the two nodes with the lowest weight by examining the front of both queues"/>
+<element id="4" value="     2. Create a new internal node, with the two just-removed nodes as children (either node can be"/>
+<element id="5" value="        either child) and the sum of their weights as the new weight"/>
+<element id="6" value="     3. Enqueue the new node into the rear of the second queue"/>
+<element id="7" value="4. The remaining node is the root node; the tree has now been generated"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="700.0" originX="30" originY="80">
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="1">
+<structure name="Frequency table" type="Matrix">
+<matrix height="2" width="5" type="StringInformation">
+	<element id="0" value="S0"/>
+	<element id="1" value="S1"/>
+	<element id="2" value="S2"/>
+	<element id="3" value="S3"/>
+	<element id="4" value="S4"/>
+	<element id="5" value="8"/>
+	<element id="6" value="8"/>
+	<element id="7" value="10"/>
+	<element id="8" value="12"/>
+	<element id="9" value="24"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="30" originY="35">
+</visualMatrix>
+<message content="The algorithm has created as many leaves as there are symbols: the weight of each leave is the frequency of the corresponding symbol.">
+</message>
+</structure>
+<structure name="Tree 0" type="BinaryTree">
+<binaryTree size="1" type="IntInformation">
+<element id="0" value="8"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="60" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 1" type="BinaryTree">
+<binaryTree size="1" type="IntInformation">
+<element id="0" value="8"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="160" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 2" type="BinaryTree">
+<binaryTree size="1" type="IntInformation">
+<element id="0" value="10"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="260" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 3" type="BinaryTree">
+<binaryTree size="1" type="IntInformation">
+<element id="0" value="12"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="360" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 4" type="BinaryTree">
+<binaryTree size="1" type="IntInformation">
+<element id="0" value="24"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="460" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="8">
+<element id="0" value="1. Start with as many leaves as there are symbols"/>
+<element id="1" value="2. Enqueue all leaf nodes into the first queue (by probability in increasing order)"/>
+<element id="2" value="3. While there is more than one node in the two queues:"/>
+<element id="3" value="     1. Dequeue the two nodes with the lowest weight by examining the front of both queues"/>
+<element id="4" value="     2. Create a new internal node, with the two just-removed nodes as children (either node can be"/>
+<element id="5" value="        either child) and the sum of their weights as the new weight"/>
+<element id="6" value="     3. Enqueue the new node into the rear of the second queue"/>
+<element id="7" value="4. The remaining node is the root node; the tree has now been generated"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="700.0" originX="30" originY="80">
+<visualMalleableElement id="0" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="700"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="2">
+<structure name="Frequency table" type="Matrix">
+<matrix height="2" width="5" type="StringInformation">
+	<element id="0" value="S0"/>
+	<element id="1" value="S1"/>
+	<element id="2" value="S2"/>
+	<element id="3" value="S3"/>
+	<element id="4" value="S4"/>
+	<element id="5" value="8"/>
+	<element id="6" value="8"/>
+	<element id="7" value="10"/>
+	<element id="8" value="12"/>
+	<element id="9" value="24"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="30" originY="35">
+</visualMatrix>
+<message content="All the leaf nodes have beee enqueued into the first queue (by freqeuncy in increasing order)">
+</message>
+</structure>
+<structure name="First queue" type="Array">
+<array size="5" type="IntInformation">
+<element id="0" value="8"/>
+<element id="1" value="8"/>
+<element id="2" value="10"/>
+<element id="3" value="12"/>
+<element id="4" value="24"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="30" originY="220">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 0" type="BinaryTree">
+<binaryTree size="1" type="IntInformation">
+<element id="0" value="8"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="60" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 1" type="BinaryTree">
+<binaryTree size="1" type="IntInformation">
+<element id="0" value="8"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="160" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 2" type="BinaryTree">
+<binaryTree size="1" type="IntInformation">
+<element id="0" value="10"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="260" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 3" type="BinaryTree">
+<binaryTree size="1" type="IntInformation">
+<element id="0" value="12"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="360" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 4" type="BinaryTree">
+<binaryTree size="1" type="IntInformation">
+<element id="0" value="24"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="460" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="8">
+<element id="0" value="1. Start with as many leaves as there are symbols"/>
+<element id="1" value="2. Enqueue all leaf nodes into the first queue (by probability in increasing order)"/>
+<element id="2" value="3. While there is more than one node in the two queues:"/>
+<element id="3" value="     1. Dequeue the two nodes with the lowest weight by examining the front of both queues"/>
+<element id="4" value="     2. Create a new internal node, with the two just-removed nodes as children (either node can be"/>
+<element id="5" value="        either child) and the sum of their weights as the new weight"/>
+<element id="6" value="     3. Enqueue the new node into the rear of the second queue"/>
+<element id="7" value="4. The remaining node is the root node; the tree has now been generated"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="700.0" originX="30" originY="80">
+<visualMalleableElement id="1" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="700"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="3">
+<structure name="Frequency table" type="Matrix">
+<matrix height="2" width="5" type="StringInformation">
+	<element id="0" value="S0"/>
+	<element id="1" value="S1"/>
+	<element id="2" value="S2"/>
+	<element id="3" value="S3"/>
+	<element id="4" value="S4"/>
+	<element id="5" value="8"/>
+	<element id="6" value="8"/>
+	<element id="7" value="10"/>
+	<element id="8" value="12"/>
+	<element id="9" value="24"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="30" originY="35">
+</visualMatrix>
+<message content="The two queues contain more than one node: hence, another iteration of the while loop must be executed.">
+</message>
+</structure>
+<structure name="First queue" type="Array">
+<array size="5" type="IntInformation">
+<element id="0" value="8"/>
+<element id="1" value="8"/>
+<element id="2" value="10"/>
+<element id="3" value="12"/>
+<element id="4" value="24"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="30" originY="220">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 0" type="BinaryTree">
+<binaryTree size="1" type="IntInformation">
+<element id="0" value="8"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="60" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 1" type="BinaryTree">
+<binaryTree size="1" type="IntInformation">
+<element id="0" value="8"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="160" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 2" type="BinaryTree">
+<binaryTree size="1" type="IntInformation">
+<element id="0" value="10"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="260" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 3" type="BinaryTree">
+<binaryTree size="1" type="IntInformation">
+<element id="0" value="12"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="360" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 4" type="BinaryTree">
+<binaryTree size="1" type="IntInformation">
+<element id="0" value="24"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="460" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="8">
+<element id="0" value="1. Start with as many leaves as there are symbols"/>
+<element id="1" value="2. Enqueue all leaf nodes into the first queue (by probability in increasing order)"/>
+<element id="2" value="3. While there is more than one node in the two queues:"/>
+<element id="3" value="     1. Dequeue the two nodes with the lowest weight by examining the front of both queues"/>
+<element id="4" value="     2. Create a new internal node, with the two just-removed nodes as children (either node can be"/>
+<element id="5" value="        either child) and the sum of their weights as the new weight"/>
+<element id="6" value="     3. Enqueue the new node into the rear of the second queue"/>
+<element id="7" value="4. The remaining node is the root node; the tree has now been generated"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="700.0" originX="30" originY="80">
+<visualMalleableElement id="2" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="700"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="4">
+<structure name="Frequency table" type="Matrix">
+<matrix height="2" width="5" type="StringInformation">
+	<element id="0" value="S0"/>
+	<element id="1" value="S1"/>
+	<element id="2" value="S2"/>
+	<element id="3" value="S3"/>
+	<element id="4" value="S4"/>
+	<element id="5" value="8"/>
+	<element id="6" value="8"/>
+	<element id="7" value="10"/>
+	<element id="8" value="12"/>
+	<element id="9" value="24"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="30" originY="35">
+</visualMatrix>
+<message content="The two nodes in yellow must be dequeued and their corresponding trees must be merged.">
+</message>
+</structure>
+<structure name="First queue" type="Array">
+<array size="5" type="IntInformation">
+<element id="0" value="8"/>
+<element id="1" value="8"/>
+<element id="2" value="10"/>
+<element id="3" value="12"/>
+<element id="4" value="24"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="30" originY="220">
+<visualMalleableElement id="0" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 0" type="BinaryTree">
+<binaryTree size="1" type="IntInformation">
+<element id="0" value="8"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="60" originY="300">
+<visualLinkedElement id="0" color="FFFF00" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 1" type="BinaryTree">
+<binaryTree size="1" type="IntInformation">
+<element id="0" value="8"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="160" originY="300">
+<visualLinkedElement id="0" color="FFFF00" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 2" type="BinaryTree">
+<binaryTree size="1" type="IntInformation">
+<element id="0" value="10"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="260" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 3" type="BinaryTree">
+<binaryTree size="1" type="IntInformation">
+<element id="0" value="12"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="360" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 4" type="BinaryTree">
+<binaryTree size="1" type="IntInformation">
+<element id="0" value="24"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="460" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="8">
+<element id="0" value="1. Start with as many leaves as there are symbols"/>
+<element id="1" value="2. Enqueue all leaf nodes into the first queue (by probability in increasing order)"/>
+<element id="2" value="3. While there is more than one node in the two queues:"/>
+<element id="3" value="     1. Dequeue the two nodes with the lowest weight by examining the front of both queues"/>
+<element id="4" value="     2. Create a new internal node, with the two just-removed nodes as children (either node can be"/>
+<element id="5" value="        either child) and the sum of their weights as the new weight"/>
+<element id="6" value="     3. Enqueue the new node into the rear of the second queue"/>
+<element id="7" value="4. The remaining node is the root node; the tree has now been generated"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="700.0" originX="30" originY="80">
+<visualMalleableElement id="3" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="700"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="5">
+<structure name="Frequency table" type="Matrix">
+<matrix height="2" width="5" type="StringInformation">
+	<element id="0" value="S0"/>
+	<element id="1" value="S1"/>
+	<element id="2" value="S2"/>
+	<element id="3" value="S3"/>
+	<element id="4" value="S4"/>
+	<element id="5" value="8"/>
+	<element id="6" value="8"/>
+	<element id="7" value="10"/>
+	<element id="8" value="12"/>
+	<element id="9" value="24"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="30" originY="35">
+</visualMatrix>
+<message content="A new node has been created, with the two just-removed nodes as children and the sum of their weights as the new weight.">
+</message>
+</structure>
+<structure name="First queue" type="Array">
+<array size="3" type="IntInformation">
+<element id="0" value="10"/>
+<element id="1" value="12"/>
+<element id="2" value="24"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="30" originY="220">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 0" type="BinaryTree">
+<binaryTree size="1" type="IntInformation">
+<element id="0" value="10"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="60" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 1" type="BinaryTree">
+<binaryTree size="1" type="IntInformation">
+<element id="0" value="12"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="160" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 2" type="BinaryTree">
+<binaryTree size="1" type="IntInformation">
+<element id="0" value="24"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="260" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 3" type="BinaryTree">
+<binaryTree size="3" type="IntInformation">
+<element id="0" value="16"/>
+<element id="1" value="8"/>
+<element id="2" value="8"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="360" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="8">
+<element id="0" value="1. Start with as many leaves as there are symbols"/>
+<element id="1" value="2. Enqueue all leaf nodes into the first queue (by probability in increasing order)"/>
+<element id="2" value="3. While there is more than one node in the two queues:"/>
+<element id="3" value="     1. Dequeue the two nodes with the lowest weight by examining the front of both queues"/>
+<element id="4" value="     2. Create a new internal node, with the two just-removed nodes as children (either node can be"/>
+<element id="5" value="        either child) and the sum of their weights as the new weight"/>
+<element id="6" value="     3. Enqueue the new node into the rear of the second queue"/>
+<element id="7" value="4. The remaining node is the root node; the tree has now been generated"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="700.0" originX="30" originY="80">
+<visualMalleableElement id="4" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="700"/>
+<visualMalleableElement id="5" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="700"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="6">
+<structure name="Frequency table" type="Matrix">
+<matrix height="2" width="5" type="StringInformation">
+	<element id="0" value="S0"/>
+	<element id="1" value="S1"/>
+	<element id="2" value="S2"/>
+	<element id="3" value="S3"/>
+	<element id="4" value="S4"/>
+	<element id="5" value="8"/>
+	<element id="6" value="8"/>
+	<element id="7" value="10"/>
+	<element id="8" value="12"/>
+	<element id="9" value="24"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="30" originY="35">
+</visualMatrix>
+<message content="The new node has been enqueued in the second queue.">
+</message>
+</structure>
+<structure name="First queue" type="Array">
+<array size="3" type="IntInformation">
+<element id="0" value="10"/>
+<element id="1" value="12"/>
+<element id="2" value="24"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="30" originY="220">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Second queue" type="Array">
+<array size="1" type="IntInformation">
+<element id="0" value="16"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="30" originY="260">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 0" type="BinaryTree">
+<binaryTree size="1" type="IntInformation">
+<element id="0" value="10"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="60" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 1" type="BinaryTree">
+<binaryTree size="1" type="IntInformation">
+<element id="0" value="12"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="160" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 2" type="BinaryTree">
+<binaryTree size="1" type="IntInformation">
+<element id="0" value="24"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="260" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 3" type="BinaryTree">
+<binaryTree size="3" type="IntInformation">
+<element id="0" value="16"/>
+<element id="1" value="8"/>
+<element id="2" value="8"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="360" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="8">
+<element id="0" value="1. Start with as many leaves as there are symbols"/>
+<element id="1" value="2. Enqueue all leaf nodes into the first queue (by probability in increasing order)"/>
+<element id="2" value="3. While there is more than one node in the two queues:"/>
+<element id="3" value="     1. Dequeue the two nodes with the lowest weight by examining the front of both queues"/>
+<element id="4" value="     2. Create a new internal node, with the two just-removed nodes as children (either node can be"/>
+<element id="5" value="        either child) and the sum of their weights as the new weight"/>
+<element id="6" value="     3. Enqueue the new node into the rear of the second queue"/>
+<element id="7" value="4. The remaining node is the root node; the tree has now been generated"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="700.0" originX="30" originY="80">
+<visualMalleableElement id="6" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="700"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="7">
+<structure name="Frequency table" type="Matrix">
+<matrix height="2" width="5" type="StringInformation">
+	<element id="0" value="S0"/>
+	<element id="1" value="S1"/>
+	<element id="2" value="S2"/>
+	<element id="3" value="S3"/>
+	<element id="4" value="S4"/>
+	<element id="5" value="8"/>
+	<element id="6" value="8"/>
+	<element id="7" value="10"/>
+	<element id="8" value="12"/>
+	<element id="9" value="24"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="30" originY="35">
+</visualMatrix>
+<message content="The two queues contain more than one node: hence, another iteration of the while loop must be executed.">
+</message>
+</structure>
+<structure name="First queue" type="Array">
+<array size="3" type="IntInformation">
+<element id="0" value="10"/>
+<element id="1" value="12"/>
+<element id="2" value="24"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="30" originY="220">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Second queue" type="Array">
+<array size="1" type="IntInformation">
+<element id="0" value="16"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="30" originY="260">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 0" type="BinaryTree">
+<binaryTree size="1" type="IntInformation">
+<element id="0" value="10"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="60" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 1" type="BinaryTree">
+<binaryTree size="1" type="IntInformation">
+<element id="0" value="12"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="160" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 2" type="BinaryTree">
+<binaryTree size="1" type="IntInformation">
+<element id="0" value="24"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="260" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 3" type="BinaryTree">
+<binaryTree size="3" type="IntInformation">
+<element id="0" value="16"/>
+<element id="1" value="8"/>
+<element id="2" value="8"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="360" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="8">
+<element id="0" value="1. Start with as many leaves as there are symbols"/>
+<element id="1" value="2. Enqueue all leaf nodes into the first queue (by probability in increasing order)"/>
+<element id="2" value="3. While there is more than one node in the two queues:"/>
+<element id="3" value="     1. Dequeue the two nodes with the lowest weight by examining the front of both queues"/>
+<element id="4" value="     2. Create a new internal node, with the two just-removed nodes as children (either node can be"/>
+<element id="5" value="        either child) and the sum of their weights as the new weight"/>
+<element id="6" value="     3. Enqueue the new node into the rear of the second queue"/>
+<element id="7" value="4. The remaining node is the root node; the tree has now been generated"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="700.0" originX="30" originY="80">
+<visualMalleableElement id="2" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="700"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="8">
+<structure name="Frequency table" type="Matrix">
+<matrix height="2" width="5" type="StringInformation">
+	<element id="0" value="S0"/>
+	<element id="1" value="S1"/>
+	<element id="2" value="S2"/>
+	<element id="3" value="S3"/>
+	<element id="4" value="S4"/>
+	<element id="5" value="8"/>
+	<element id="6" value="8"/>
+	<element id="7" value="10"/>
+	<element id="8" value="12"/>
+	<element id="9" value="24"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="30" originY="35">
+</visualMatrix>
+<message content="The two nodes in yellow must be dequeued and their corresponding trees must be merged.">
+</message>
+</structure>
+<structure name="First queue" type="Array">
+<array size="3" type="IntInformation">
+<element id="0" value="10"/>
+<element id="1" value="12"/>
+<element id="2" value="24"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="30" originY="220">
+<visualMalleableElement id="0" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Second queue" type="Array">
+<array size="1" type="IntInformation">
+<element id="0" value="16"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="30" originY="260">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 0" type="BinaryTree">
+<binaryTree size="1" type="IntInformation">
+<element id="0" value="10"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="60" originY="300">
+<visualLinkedElement id="0" color="FFFF00" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 1" type="BinaryTree">
+<binaryTree size="1" type="IntInformation">
+<element id="0" value="12"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="160" originY="300">
+<visualLinkedElement id="0" color="FFFF00" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 2" type="BinaryTree">
+<binaryTree size="1" type="IntInformation">
+<element id="0" value="24"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="260" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 3" type="BinaryTree">
+<binaryTree size="3" type="IntInformation">
+<element id="0" value="16"/>
+<element id="1" value="8"/>
+<element id="2" value="8"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="360" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="8">
+<element id="0" value="1. Start with as many leaves as there are symbols"/>
+<element id="1" value="2. Enqueue all leaf nodes into the first queue (by probability in increasing order)"/>
+<element id="2" value="3. While there is more than one node in the two queues:"/>
+<element id="3" value="     1. Dequeue the two nodes with the lowest weight by examining the front of both queues"/>
+<element id="4" value="     2. Create a new internal node, with the two just-removed nodes as children (either node can be"/>
+<element id="5" value="        either child) and the sum of their weights as the new weight"/>
+<element id="6" value="     3. Enqueue the new node into the rear of the second queue"/>
+<element id="7" value="4. The remaining node is the root node; the tree has now been generated"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="700.0" originX="30" originY="80">
+<visualMalleableElement id="3" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="700"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="9">
+<structure name="Frequency table" type="Matrix">
+<matrix height="2" width="5" type="StringInformation">
+	<element id="0" value="S0"/>
+	<element id="1" value="S1"/>
+	<element id="2" value="S2"/>
+	<element id="3" value="S3"/>
+	<element id="4" value="S4"/>
+	<element id="5" value="8"/>
+	<element id="6" value="8"/>
+	<element id="7" value="10"/>
+	<element id="8" value="12"/>
+	<element id="9" value="24"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="30" originY="35">
+</visualMatrix>
+<message content="A new node has been created, with the two just-removed nodes as children and the sum of their weights as the new weight.">
+</message>
+</structure>
+<structure name="First queue" type="Array">
+<array size="1" type="IntInformation">
+<element id="0" value="24"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="30" originY="220">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Second queue" type="Array">
+<array size="1" type="IntInformation">
+<element id="0" value="16"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="30" originY="260">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 0" type="BinaryTree">
+<binaryTree size="1" type="IntInformation">
+<element id="0" value="24"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="60" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 1" type="BinaryTree">
+<binaryTree size="3" type="IntInformation">
+<element id="0" value="16"/>
+<element id="1" value="8"/>
+<element id="2" value="8"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="160" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 2" type="BinaryTree">
+<binaryTree size="3" type="IntInformation">
+<element id="0" value="22"/>
+<element id="1" value="10"/>
+<element id="2" value="12"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="460" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="8">
+<element id="0" value="1. Start with as many leaves as there are symbols"/>
+<element id="1" value="2. Enqueue all leaf nodes into the first queue (by probability in increasing order)"/>
+<element id="2" value="3. While there is more than one node in the two queues:"/>
+<element id="3" value="     1. Dequeue the two nodes with the lowest weight by examining the front of both queues"/>
+<element id="4" value="     2. Create a new internal node, with the two just-removed nodes as children (either node can be"/>
+<element id="5" value="        either child) and the sum of their weights as the new weight"/>
+<element id="6" value="     3. Enqueue the new node into the rear of the second queue"/>
+<element id="7" value="4. The remaining node is the root node; the tree has now been generated"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="700.0" originX="30" originY="80">
+<visualMalleableElement id="4" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="700"/>
+<visualMalleableElement id="5" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="700"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="10">
+<structure name="Frequency table" type="Matrix">
+<matrix height="2" width="5" type="StringInformation">
+	<element id="0" value="S0"/>
+	<element id="1" value="S1"/>
+	<element id="2" value="S2"/>
+	<element id="3" value="S3"/>
+	<element id="4" value="S4"/>
+	<element id="5" value="8"/>
+	<element id="6" value="8"/>
+	<element id="7" value="10"/>
+	<element id="8" value="12"/>
+	<element id="9" value="24"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="30" originY="35">
+</visualMatrix>
+<message content="The new node has been enqueued in the second queue.">
+</message>
+</structure>
+<structure name="First queue" type="Array">
+<array size="1" type="IntInformation">
+<element id="0" value="24"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="30" originY="220">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Second queue" type="Array">
+<array size="2" type="IntInformation">
+<element id="0" value="16"/>
+<element id="1" value="22"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="30" originY="260">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 0" type="BinaryTree">
+<binaryTree size="1" type="IntInformation">
+<element id="0" value="24"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="60" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 1" type="BinaryTree">
+<binaryTree size="3" type="IntInformation">
+<element id="0" value="16"/>
+<element id="1" value="8"/>
+<element id="2" value="8"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="160" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 2" type="BinaryTree">
+<binaryTree size="3" type="IntInformation">
+<element id="0" value="22"/>
+<element id="1" value="10"/>
+<element id="2" value="12"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="460" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="8">
+<element id="0" value="1. Start with as many leaves as there are symbols"/>
+<element id="1" value="2. Enqueue all leaf nodes into the first queue (by probability in increasing order)"/>
+<element id="2" value="3. While there is more than one node in the two queues:"/>
+<element id="3" value="     1. Dequeue the two nodes with the lowest weight by examining the front of both queues"/>
+<element id="4" value="     2. Create a new internal node, with the two just-removed nodes as children (either node can be"/>
+<element id="5" value="        either child) and the sum of their weights as the new weight"/>
+<element id="6" value="     3. Enqueue the new node into the rear of the second queue"/>
+<element id="7" value="4. The remaining node is the root node; the tree has now been generated"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="700.0" originX="30" originY="80">
+<visualMalleableElement id="6" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="700"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="11">
+<structure name="Frequency table" type="Matrix">
+<matrix height="2" width="5" type="StringInformation">
+	<element id="0" value="S0"/>
+	<element id="1" value="S1"/>
+	<element id="2" value="S2"/>
+	<element id="3" value="S3"/>
+	<element id="4" value="S4"/>
+	<element id="5" value="8"/>
+	<element id="6" value="8"/>
+	<element id="7" value="10"/>
+	<element id="8" value="12"/>
+	<element id="9" value="24"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="30" originY="35">
+</visualMatrix>
+<message content="The two queues contain more than one node: hence, another iteration of the while loop must be executed.">
+</message>
+</structure>
+<structure name="First queue" type="Array">
+<array size="1" type="IntInformation">
+<element id="0" value="24"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="30" originY="220">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Second queue" type="Array">
+<array size="2" type="IntInformation">
+<element id="0" value="16"/>
+<element id="1" value="22"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="30" originY="260">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 0" type="BinaryTree">
+<binaryTree size="1" type="IntInformation">
+<element id="0" value="24"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="60" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 1" type="BinaryTree">
+<binaryTree size="3" type="IntInformation">
+<element id="0" value="16"/>
+<element id="1" value="8"/>
+<element id="2" value="8"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="160" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 2" type="BinaryTree">
+<binaryTree size="3" type="IntInformation">
+<element id="0" value="22"/>
+<element id="1" value="10"/>
+<element id="2" value="12"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="460" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="8">
+<element id="0" value="1. Start with as many leaves as there are symbols"/>
+<element id="1" value="2. Enqueue all leaf nodes into the first queue (by probability in increasing order)"/>
+<element id="2" value="3. While there is more than one node in the two queues:"/>
+<element id="3" value="     1. Dequeue the two nodes with the lowest weight by examining the front of both queues"/>
+<element id="4" value="     2. Create a new internal node, with the two just-removed nodes as children (either node can be"/>
+<element id="5" value="        either child) and the sum of their weights as the new weight"/>
+<element id="6" value="     3. Enqueue the new node into the rear of the second queue"/>
+<element id="7" value="4. The remaining node is the root node; the tree has now been generated"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="700.0" originX="30" originY="80">
+<visualMalleableElement id="2" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="700"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="12">
+<structure name="Frequency table" type="Matrix">
+<matrix height="2" width="5" type="StringInformation">
+	<element id="0" value="S0"/>
+	<element id="1" value="S1"/>
+	<element id="2" value="S2"/>
+	<element id="3" value="S3"/>
+	<element id="4" value="S4"/>
+	<element id="5" value="8"/>
+	<element id="6" value="8"/>
+	<element id="7" value="10"/>
+	<element id="8" value="12"/>
+	<element id="9" value="24"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="30" originY="35">
+</visualMatrix>
+<message content="The two nodes in yellow must be dequeued and their corresponding trees must be merged.">
+</message>
+</structure>
+<structure name="First queue" type="Array">
+<array size="1" type="IntInformation">
+<element id="0" value="24"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="30" originY="220">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Second queue" type="Array">
+<array size="2" type="IntInformation">
+<element id="0" value="16"/>
+<element id="1" value="22"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="30" originY="260">
+<visualMalleableElement id="0" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 0" type="BinaryTree">
+<binaryTree size="1" type="IntInformation">
+<element id="0" value="24"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="60" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 1" type="BinaryTree">
+<binaryTree size="3" type="IntInformation">
+<element id="0" value="16"/>
+<element id="1" value="8"/>
+<element id="2" value="8"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="160" originY="300">
+<visualLinkedElement id="0" color="FFFF00" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 2" type="BinaryTree">
+<binaryTree size="3" type="IntInformation">
+<element id="0" value="22"/>
+<element id="1" value="10"/>
+<element id="2" value="12"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="460" originY="300">
+<visualLinkedElement id="0" color="FFFF00" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="8">
+<element id="0" value="1. Start with as many leaves as there are symbols"/>
+<element id="1" value="2. Enqueue all leaf nodes into the first queue (by probability in increasing order)"/>
+<element id="2" value="3. While there is more than one node in the two queues:"/>
+<element id="3" value="     1. Dequeue the two nodes with the lowest weight by examining the front of both queues"/>
+<element id="4" value="     2. Create a new internal node, with the two just-removed nodes as children (either node can be"/>
+<element id="5" value="        either child) and the sum of their weights as the new weight"/>
+<element id="6" value="     3. Enqueue the new node into the rear of the second queue"/>
+<element id="7" value="4. The remaining node is the root node; the tree has now been generated"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="700.0" originX="30" originY="80">
+<visualMalleableElement id="3" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="700"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="13">
+<structure name="Frequency table" type="Matrix">
+<matrix height="2" width="5" type="StringInformation">
+	<element id="0" value="S0"/>
+	<element id="1" value="S1"/>
+	<element id="2" value="S2"/>
+	<element id="3" value="S3"/>
+	<element id="4" value="S4"/>
+	<element id="5" value="8"/>
+	<element id="6" value="8"/>
+	<element id="7" value="10"/>
+	<element id="8" value="12"/>
+	<element id="9" value="24"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="30" originY="35">
+</visualMatrix>
+<message content="A new node has been created, with the two just-removed nodes as children and the sum of their weights as the new weight.">
+</message>
+</structure>
+<structure name="First queue" type="Array">
+<array size="1" type="IntInformation">
+<element id="0" value="24"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="30" originY="220">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 0" type="BinaryTree">
+<binaryTree size="1" type="IntInformation">
+<element id="0" value="24"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="60" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 1" type="BinaryTree">
+<binaryTree size="7" type="IntInformation">
+<element id="0" value="38"/>
+<element id="1" value="16"/>
+<element id="3" value="8"/>
+<element id="4" value="8"/>
+<element id="2" value="22"/>
+<element id="5" value="10"/>
+<element id="6" value="12"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="160" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="8">
+<element id="0" value="1. Start with as many leaves as there are symbols"/>
+<element id="1" value="2. Enqueue all leaf nodes into the first queue (by probability in increasing order)"/>
+<element id="2" value="3. While there is more than one node in the two queues:"/>
+<element id="3" value="     1. Dequeue the two nodes with the lowest weight by examining the front of both queues"/>
+<element id="4" value="     2. Create a new internal node, with the two just-removed nodes as children (either node can be"/>
+<element id="5" value="        either child) and the sum of their weights as the new weight"/>
+<element id="6" value="     3. Enqueue the new node into the rear of the second queue"/>
+<element id="7" value="4. The remaining node is the root node; the tree has now been generated"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="700.0" originX="30" originY="80">
+<visualMalleableElement id="4" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="700"/>
+<visualMalleableElement id="5" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="700"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="14">
+<structure name="Frequency table" type="Matrix">
+<matrix height="2" width="5" type="StringInformation">
+	<element id="0" value="S0"/>
+	<element id="1" value="S1"/>
+	<element id="2" value="S2"/>
+	<element id="3" value="S3"/>
+	<element id="4" value="S4"/>
+	<element id="5" value="8"/>
+	<element id="6" value="8"/>
+	<element id="7" value="10"/>
+	<element id="8" value="12"/>
+	<element id="9" value="24"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="30" originY="35">
+</visualMatrix>
+<message content="The new node has been enqueued in the second queue.">
+</message>
+</structure>
+<structure name="First queue" type="Array">
+<array size="1" type="IntInformation">
+<element id="0" value="24"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="30" originY="220">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Second queue" type="Array">
+<array size="1" type="IntInformation">
+<element id="0" value="38"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="30" originY="260">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 0" type="BinaryTree">
+<binaryTree size="1" type="IntInformation">
+<element id="0" value="24"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="60" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 1" type="BinaryTree">
+<binaryTree size="7" type="IntInformation">
+<element id="0" value="38"/>
+<element id="1" value="16"/>
+<element id="3" value="8"/>
+<element id="4" value="8"/>
+<element id="2" value="22"/>
+<element id="5" value="10"/>
+<element id="6" value="12"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="160" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="8">
+<element id="0" value="1. Start with as many leaves as there are symbols"/>
+<element id="1" value="2. Enqueue all leaf nodes into the first queue (by probability in increasing order)"/>
+<element id="2" value="3. While there is more than one node in the two queues:"/>
+<element id="3" value="     1. Dequeue the two nodes with the lowest weight by examining the front of both queues"/>
+<element id="4" value="     2. Create a new internal node, with the two just-removed nodes as children (either node can be"/>
+<element id="5" value="        either child) and the sum of their weights as the new weight"/>
+<element id="6" value="     3. Enqueue the new node into the rear of the second queue"/>
+<element id="7" value="4. The remaining node is the root node; the tree has now been generated"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="700.0" originX="30" originY="80">
+<visualMalleableElement id="6" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="700"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="15">
+<structure name="Frequency table" type="Matrix">
+<matrix height="2" width="5" type="StringInformation">
+	<element id="0" value="S0"/>
+	<element id="1" value="S1"/>
+	<element id="2" value="S2"/>
+	<element id="3" value="S3"/>
+	<element id="4" value="S4"/>
+	<element id="5" value="8"/>
+	<element id="6" value="8"/>
+	<element id="7" value="10"/>
+	<element id="8" value="12"/>
+	<element id="9" value="24"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="30" originY="35">
+</visualMatrix>
+<message content="The two queues contain more than one node: hence, another iteration of the while loop must be executed.">
+</message>
+</structure>
+<structure name="First queue" type="Array">
+<array size="1" type="IntInformation">
+<element id="0" value="24"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="30" originY="220">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Second queue" type="Array">
+<array size="1" type="IntInformation">
+<element id="0" value="38"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="30" originY="260">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 0" type="BinaryTree">
+<binaryTree size="1" type="IntInformation">
+<element id="0" value="24"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="60" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 1" type="BinaryTree">
+<binaryTree size="7" type="IntInformation">
+<element id="0" value="38"/>
+<element id="1" value="16"/>
+<element id="3" value="8"/>
+<element id="4" value="8"/>
+<element id="2" value="22"/>
+<element id="5" value="10"/>
+<element id="6" value="12"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="160" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="8">
+<element id="0" value="1. Start with as many leaves as there are symbols"/>
+<element id="1" value="2. Enqueue all leaf nodes into the first queue (by probability in increasing order)"/>
+<element id="2" value="3. While there is more than one node in the two queues:"/>
+<element id="3" value="     1. Dequeue the two nodes with the lowest weight by examining the front of both queues"/>
+<element id="4" value="     2. Create a new internal node, with the two just-removed nodes as children (either node can be"/>
+<element id="5" value="        either child) and the sum of their weights as the new weight"/>
+<element id="6" value="     3. Enqueue the new node into the rear of the second queue"/>
+<element id="7" value="4. The remaining node is the root node; the tree has now been generated"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="700.0" originX="30" originY="80">
+<visualMalleableElement id="2" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="700"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="16">
+<structure name="Frequency table" type="Matrix">
+<matrix height="2" width="5" type="StringInformation">
+	<element id="0" value="S0"/>
+	<element id="1" value="S1"/>
+	<element id="2" value="S2"/>
+	<element id="3" value="S3"/>
+	<element id="4" value="S4"/>
+	<element id="5" value="8"/>
+	<element id="6" value="8"/>
+	<element id="7" value="10"/>
+	<element id="8" value="12"/>
+	<element id="9" value="24"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="30" originY="35">
+</visualMatrix>
+<message content="The two nodes in yellow must be dequeued and their corresponding trees must be merged.">
+</message>
+</structure>
+<structure name="First queue" type="Array">
+<array size="1" type="IntInformation">
+<element id="0" value="24"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="30" originY="220">
+<visualMalleableElement id="0" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Second queue" type="Array">
+<array size="1" type="IntInformation">
+<element id="0" value="38"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="30" originY="260">
+<visualMalleableElement id="0" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 0" type="BinaryTree">
+<binaryTree size="1" type="IntInformation">
+<element id="0" value="24"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="60" originY="300">
+<visualLinkedElement id="0" color="FFFF00" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 1" type="BinaryTree">
+<binaryTree size="7" type="IntInformation">
+<element id="0" value="38"/>
+<element id="1" value="16"/>
+<element id="3" value="8"/>
+<element id="4" value="8"/>
+<element id="2" value="22"/>
+<element id="5" value="10"/>
+<element id="6" value="12"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="160" originY="300">
+<visualLinkedElement id="0" color="FFFF00" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="8">
+<element id="0" value="1. Start with as many leaves as there are symbols"/>
+<element id="1" value="2. Enqueue all leaf nodes into the first queue (by probability in increasing order)"/>
+<element id="2" value="3. While there is more than one node in the two queues:"/>
+<element id="3" value="     1. Dequeue the two nodes with the lowest weight by examining the front of both queues"/>
+<element id="4" value="     2. Create a new internal node, with the two just-removed nodes as children (either node can be"/>
+<element id="5" value="        either child) and the sum of their weights as the new weight"/>
+<element id="6" value="     3. Enqueue the new node into the rear of the second queue"/>
+<element id="7" value="4. The remaining node is the root node; the tree has now been generated"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="700.0" originX="30" originY="80">
+<visualMalleableElement id="3" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="700"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="17">
+<structure name="Frequency table" type="Matrix">
+<matrix height="2" width="5" type="StringInformation">
+	<element id="0" value="S0"/>
+	<element id="1" value="S1"/>
+	<element id="2" value="S2"/>
+	<element id="3" value="S3"/>
+	<element id="4" value="S4"/>
+	<element id="5" value="8"/>
+	<element id="6" value="8"/>
+	<element id="7" value="10"/>
+	<element id="8" value="12"/>
+	<element id="9" value="24"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="30" originY="35">
+</visualMatrix>
+<message content="A new node has been created, with the two just-removed nodes as children and the sum of their weights as the new weight.">
+</message>
+</structure>
+<structure name="Tree 0" type="BinaryTree">
+<binaryTree size="9" type="IntInformation">
+<element id="0" value="62"/>
+<element id="1" value="24"/>
+<element id="2" value="38"/>
+<element id="5" value="16"/>
+<element id="11" value="8"/>
+<element id="12" value="8"/>
+<element id="6" value="22"/>
+<element id="13" value="10"/>
+<element id="14" value="12"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="60" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="8">
+<element id="0" value="1. Start with as many leaves as there are symbols"/>
+<element id="1" value="2. Enqueue all leaf nodes into the first queue (by probability in increasing order)"/>
+<element id="2" value="3. While there is more than one node in the two queues:"/>
+<element id="3" value="     1. Dequeue the two nodes with the lowest weight by examining the front of both queues"/>
+<element id="4" value="     2. Create a new internal node, with the two just-removed nodes as children (either node can be"/>
+<element id="5" value="        either child) and the sum of their weights as the new weight"/>
+<element id="6" value="     3. Enqueue the new node into the rear of the second queue"/>
+<element id="7" value="4. The remaining node is the root node; the tree has now been generated"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="700.0" originX="30" originY="80">
+<visualMalleableElement id="4" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="700"/>
+<visualMalleableElement id="5" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="700"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="18">
+<structure name="Frequency table" type="Matrix">
+<matrix height="2" width="5" type="StringInformation">
+	<element id="0" value="S0"/>
+	<element id="1" value="S1"/>
+	<element id="2" value="S2"/>
+	<element id="3" value="S3"/>
+	<element id="4" value="S4"/>
+	<element id="5" value="8"/>
+	<element id="6" value="8"/>
+	<element id="7" value="10"/>
+	<element id="8" value="12"/>
+	<element id="9" value="24"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="30" originY="35">
+</visualMatrix>
+<message content="The new node has been enqueued in the second queue.">
+</message>
+</structure>
+<structure name="Second queue" type="Array">
+<array size="1" type="IntInformation">
+<element id="0" value="62"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="30" originY="260">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 0" type="BinaryTree">
+<binaryTree size="9" type="IntInformation">
+<element id="0" value="62"/>
+<element id="1" value="24"/>
+<element id="2" value="38"/>
+<element id="5" value="16"/>
+<element id="11" value="8"/>
+<element id="12" value="8"/>
+<element id="6" value="22"/>
+<element id="13" value="10"/>
+<element id="14" value="12"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="60" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="8">
+<element id="0" value="1. Start with as many leaves as there are symbols"/>
+<element id="1" value="2. Enqueue all leaf nodes into the first queue (by probability in increasing order)"/>
+<element id="2" value="3. While there is more than one node in the two queues:"/>
+<element id="3" value="     1. Dequeue the two nodes with the lowest weight by examining the front of both queues"/>
+<element id="4" value="     2. Create a new internal node, with the two just-removed nodes as children (either node can be"/>
+<element id="5" value="        either child) and the sum of their weights as the new weight"/>
+<element id="6" value="     3. Enqueue the new node into the rear of the second queue"/>
+<element id="7" value="4. The remaining node is the root node; the tree has now been generated"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="700.0" originX="30" originY="80">
+<visualMalleableElement id="6" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="700"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="19">
+<structure name="Frequency table" type="Matrix">
+<matrix height="2" width="5" type="StringInformation">
+	<element id="0" value="S0"/>
+	<element id="1" value="S1"/>
+	<element id="2" value="S2"/>
+	<element id="3" value="S3"/>
+	<element id="4" value="S4"/>
+	<element id="5" value="8"/>
+	<element id="6" value="8"/>
+	<element id="7" value="10"/>
+	<element id="8" value="12"/>
+	<element id="9" value="24"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="30" originY="35">
+</visualMatrix>
+<message content="The remaining node is the root node and the Huffman coding tree has now been generated.">
+</message>
+</structure>
+<structure name="Second queue" type="Array">
+<array size="1" type="IntInformation">
+<element id="0" value="62"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="30" originY="260">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Tree 0" type="BinaryTree">
+<binaryTree size="9" type="IntInformation">
+<element id="0" value="62"/>
+<element id="1" value="24"/>
+<element id="2" value="38"/>
+<element id="5" value="16"/>
+<element id="11" value="8"/>
+<element id="12" value="8"/>
+<element id="6" value="22"/>
+<element id="13" value="10"/>
+<element id="14" value="12"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="60" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="8">
+<element id="0" value="1. Start with as many leaves as there are symbols"/>
+<element id="1" value="2. Enqueue all leaf nodes into the first queue (by probability in increasing order)"/>
+<element id="2" value="3. While there is more than one node in the two queues:"/>
+<element id="3" value="     1. Dequeue the two nodes with the lowest weight by examining the front of both queues"/>
+<element id="4" value="     2. Create a new internal node, with the two just-removed nodes as children (either node can be"/>
+<element id="5" value="        either child) and the sum of their weights as the new weight"/>
+<element id="6" value="     3. Enqueue the new node into the rear of the second queue"/>
+<element id="7" value="4. The remaining node is the root node; the tree has now been generated"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="700.0" originX="30" originY="80">
+<visualMalleableElement id="7" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="700"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="20">
+<structure name="Frequency table" type="Matrix">
+<matrix height="3" width="5" type="StringInformation">
+	<element id="0" value="S0"/>
+	<element id="1" value="S1"/>
+	<element id="2" value="S2"/>
+	<element id="3" value="S3"/>
+	<element id="4" value="S4"/>
+	<element id="5" value="8"/>
+	<element id="6" value="8"/>
+	<element id="7" value="10"/>
+	<element id="8" value="12"/>
+	<element id="9" value="24"/>
+	<element id="10" value="100"/>
+	<element id="11" value="101"/>
+	<element id="12" value="110"/>
+	<element id="13" value="111"/>
+	<element id="14" value="0"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="30" originY="35">
+</visualMatrix>
+<message content="The Huffman coding has been computed.">
+</message>
+</structure>
+<structure name="Tree 0" type="BinaryTree">
+<binaryTree size="9" type="IntInformation">
+<element id="0" value="62"/>
+<element id="1" value="24"/>
+<element id="2" value="38"/>
+<element id="5" value="16"/>
+<element id="11" value="8"/>
+<element id="12" value="8"/>
+<element id="6" value="22"/>
+<element id="13" value="10"/>
+<element id="14" value="12"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="60" originY="300">
+</visualBinaryTree>
+<message content="">
+</message>
+</structure>
+</step>
+</algorithm>

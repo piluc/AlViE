@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure name="Euclid's extended algorithm" type="Pseudocode">
+	<pseudocode size="7">
+		<element id="0"  value=" 1  Euclid( a, b ):" />
+		<element id="1"  value=" 2    IF (b == 0)" />
+		<element id="2"  value=" 3      RETURN (a,1,0);" />
+		<element id="3"  value=" 4    q = a / b;" />
+		<element id="4"  value=" 5    r = a % b;" />
+		<element id="5"  value=" 6    (d, x, y) = Euclid( b, r);" />
+		<element id="6"  value=" 7    RETURN (d, y, x - q * y);" />
+	</pseudocode>
+</structure>

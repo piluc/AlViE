@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure name="Dynamic Array" type="Pseudocode">
+	<pseudocode size="14">
+		<element id="0" value=" 1  VerifyDoubling( ):" />
+		<element id="1" value=" 2    IF (m == s) {" />
+		<element id="2" value=" 3      b = NewArray( 2 x s );" />
+		<element id="3" value=" 4      FOR (i = 0; i &#60; m; i = i +1)" />
+		<element id="4" value=" 5        b[i] = a[i];" />
+		<element id="5" value=" 6      a = b;" />
+		<element id="6" value=" 7    }" />
+		<element id="7" value=" 1  VerifyHalving( ):" />
+		<element id="8" value=" 2    IF ((s > 1) &#38;&#38; (m == s/4)) {" />
+		<element id="9" value=" 3      b = NewArray( s/2 );" />
+		<element id="10" value=" 4      FOR (i = 0; i &#60; m; i = i +1)" />
+		<element id="11" value=" 5        b[i] = a[i];" />
+		<element id="12" value=" 6      a = b;" />
+		<element id="13" value=" 7    }" />
+	</pseudocode>
+</structure>

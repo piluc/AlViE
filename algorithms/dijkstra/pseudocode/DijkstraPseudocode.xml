@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure name="Dijkstra" type="Pseudocode">
+	<pseudocode size="24">
+		<element id="0" value=" 1  Dijkstra( s )" />
+		<element id="1" value=" 2    FOR (u = 0; u &#60; n; u = u + 1) {" />
+		<element id="2" value=" 3      pred[u] = -1;" />
+		<element id="3" value=" 4      dist[u] = +oo;" />
+		<element id="4" value=" 5    }" />
+		<element id="5" value=" 6    pred[s] = s;" />
+		<element id="6" value=" 7    dist[s] = 0;" />
+		<element id="7" value=" 8    FOR (u = 0; u &#60; n; u = u + 1) {" />
+		<element id="8" value=" 9      element.weight = dist[u];" />
+		<element id="9" value="10      element.data = u;" />
+		<element id="10" value="11      PQ.Enqueue( element );" />
+		<element id="11" value="12    }" />
+		<element id="12" value="13    WHILE (!PQ.Empty( )) {" />
+		<element id="13" value="14      e = PQ.Dequeue( );" />
+		<element id="14" value="15      v = e.data;" />
+		<element id="15" value="16      FOR (x = adiacencyList[v].begin; x != null; x = x.succ) {" />
+		<element id="16" value="17        u = x.data;" />
+		<element id="17" value="18        IF (dist[u] > dist[v] + x.weight) {" />
+		<element id="18" value="19          dist[u] = dist[v] + x.weight;" />
+		<element id="19" value="20          pred[u] = v;" />
+		<element id="20" value="21          PQ.DecreaseKey( u, dist[u] );" />
+		<element id="21" value="22        }" />
+		<element id="22" value="23      }" />
+		<element id="23" value="24    }" />
+	</pseudocode>
+</structure>

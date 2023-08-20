@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure name="Operations" type="Array">
+	<array size="15" type="IntInformation">
+		<element id="0" value="5" />
+		<element id="1" value="10" />
+		<element id="2" value="6" />
+		<element id="3" value="14" />
+		<element id="4" value="11" />
+		<element id="5" value="9" />
+		<element id="6" value="2" />
+		<element id="7" value="-1" />
+		<element id="8" value="-1" />
+		<element id="9" value="-1" />
+		<element id="10" value="-1" />
+		<element id="11" value="-1" />
+		<element id="12" value="-1" />
+		<element id="13" value="-1" />
+		<element id="14" value="3" />
+	</array>
+</structure>

@@ -1,0 +1,1084 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm name="First-fit decreasing">
+<step number="0">
+<structure name="Items" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="100"/>
+<element id="1" value="50"/>
+<element id="2" value="40"/>
+<element id="3" value="70"/>
+<element id="4" value="10"/>
+<element id="5" value="30"/>
+<element id="6" value="80"/>
+<element id="7" value="20"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="18.0" originX="20" originY="35">
+<visualMalleableElement id="0" color="FFFF00" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+</visualArray>
+<message content="Set of items that have to be packed into bins of equal size: the first element (in yellow) denotes the size of the bins.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="6">
+<element id="0" value=" 1  FirstFitDecreasing( A ):"/>
+<element id="1" value=" 2    Sort A in non-increasing order;"/>
+<element id="2" value=" 3    For any a in A {"/>
+<element id="3" value=" 4      If there exists bin which can contain a, insert a in this bin;"/>
+<element id="4" value=" 5      Else insert a in new bin;"/>
+<element id="5" value=" 6    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="500.0" originX="20" originY="60">
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+<structure name="Bins" type="GeometricFigure">
+<geometricFigure size="0">
+</geometricFigure>
+<visualGeometricFigure defaultColor="DDDDDD" defaultFont="Monospaced-PLAIN-16" defaultLineThickness="1.0" originX="0" originY="145">
+</visualGeometricFigure>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="1">
+<structure name="Items" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="100"/>
+<element id="1" value="80"/>
+<element id="2" value="70"/>
+<element id="3" value="50"/>
+<element id="4" value="40"/>
+<element id="5" value="30"/>
+<element id="6" value="20"/>
+<element id="7" value="10"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="18.0" originX="20" originY="35">
+<visualMalleableElement id="0" color="FFFF00" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+</visualArray>
+<message content="The items have been sorted in non-increasing order (the first element (in yellow) denotes the size of the bins).">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="6">
+<element id="0" value=" 1  FirstFitDecreasing( A ):"/>
+<element id="1" value=" 2    Sort A in non-increasing order;"/>
+<element id="2" value=" 3    For any a in A {"/>
+<element id="3" value=" 4      If there exists bin which can contain a, insert a in this bin;"/>
+<element id="4" value=" 5      Else insert a in new bin;"/>
+<element id="5" value=" 6    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="500.0" originX="20" originY="60">
+<visualMalleableElement id="1" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+<structure name="Bins" type="GeometricFigure">
+<geometricFigure size="0">
+</geometricFigure>
+<visualGeometricFigure defaultColor="DDDDDD" defaultFont="Monospaced-PLAIN-16" defaultLineThickness="1.0" originX="0" originY="145">
+</visualGeometricFigure>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="2">
+<structure name="Items" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="100"/>
+<element id="1" value="80"/>
+<element id="2" value="70"/>
+<element id="3" value="50"/>
+<element id="4" value="40"/>
+<element id="5" value="30"/>
+<element id="6" value="20"/>
+<element id="7" value="10"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="18.0" originX="20" originY="35">
+<visualMalleableElement id="0" color="FFFF00" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="1" color="00FFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+</visualArray>
+<message content="A new item (in azure) has to be analyzed in order to decide in which bin it will be packed.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="6">
+<element id="0" value=" 1  FirstFitDecreasing( A ):"/>
+<element id="1" value=" 2    Sort A in non-increasing order;"/>
+<element id="2" value=" 3    For any a in A {"/>
+<element id="3" value=" 4      If there exists bin which can contain a, insert a in this bin;"/>
+<element id="4" value=" 5      Else insert a in new bin;"/>
+<element id="5" value=" 6    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="500.0" originX="20" originY="60">
+<visualMalleableElement id="2" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="3">
+<structure name="Items" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="100"/>
+<element id="1" value="80"/>
+<element id="2" value="70"/>
+<element id="3" value="50"/>
+<element id="4" value="40"/>
+<element id="5" value="30"/>
+<element id="6" value="20"/>
+<element id="7" value="10"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="18.0" originX="20" originY="35">
+<visualMalleableElement id="0" color="FFFF00" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="1" color="00FFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+</visualArray>
+<message content="A new bin has been created and the item has been added to this new bin.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="6">
+<element id="0" value=" 1  FirstFitDecreasing( A ):"/>
+<element id="1" value=" 2    Sort A in non-increasing order;"/>
+<element id="2" value=" 3    For any a in A {"/>
+<element id="3" value=" 4      If there exists bin which can contain a, insert a in this bin;"/>
+<element id="4" value=" 5      Else insert a in new bin;"/>
+<element id="5" value=" 6    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="500.0" originX="20" originY="60">
+<visualMalleableElement id="4" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+<structure name="Bins" type="GeometricFigure">
+<geometricFigure size="3">
+<element id="0" value="Rectangle[20.0;0.0;40.0;300.0]"/>
+<element id="1" value="Rectangle[20.0;0.0;40.0;240.0]"/>
+<element id="2" value="Text[80;30.0;120.0]"/>
+</geometricFigure>
+<visualGeometricFigure defaultColor="DDDDDD" defaultFont="Monospaced-PLAIN-16" defaultLineThickness="1.0" originX="0" originY="145">
+<visualGeometricObject id="0" color="DDDDDD" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="1" color="00FF00" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="2" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+</visualGeometricFigure>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="4">
+<structure name="Items" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="100"/>
+<element id="1" value="80"/>
+<element id="2" value="70"/>
+<element id="3" value="50"/>
+<element id="4" value="40"/>
+<element id="5" value="30"/>
+<element id="6" value="20"/>
+<element id="7" value="10"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="18.0" originX="20" originY="35">
+<visualMalleableElement id="0" color="FFFF00" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="1" color="999999" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="2" color="00FFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+</visualArray>
+<message content="A new item (in azure) has to be analyzed in order to decide in which bin it will be packed.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="6">
+<element id="0" value=" 1  FirstFitDecreasing( A ):"/>
+<element id="1" value=" 2    Sort A in non-increasing order;"/>
+<element id="2" value=" 3    For any a in A {"/>
+<element id="3" value=" 4      If there exists bin which can contain a, insert a in this bin;"/>
+<element id="4" value=" 5      Else insert a in new bin;"/>
+<element id="5" value=" 6    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="500.0" originX="20" originY="60">
+<visualMalleableElement id="2" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+<structure name="Bins" type="GeometricFigure">
+<geometricFigure size="3">
+<element id="0" value="Rectangle[20.0;0.0;40.0;300.0]"/>
+<element id="1" value="Rectangle[20.0;0.0;40.0;240.0]"/>
+<element id="2" value="Text[80;30.0;120.0]"/>
+</geometricFigure>
+<visualGeometricFigure defaultColor="DDDDDD" defaultFont="Monospaced-PLAIN-16" defaultLineThickness="1.0" originX="0" originY="145">
+<visualGeometricObject id="0" color="DDDDDD" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="1" color="00FF00" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="2" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+</visualGeometricFigure>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="5">
+<structure name="Items" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="100"/>
+<element id="1" value="80"/>
+<element id="2" value="70"/>
+<element id="3" value="50"/>
+<element id="4" value="40"/>
+<element id="5" value="30"/>
+<element id="6" value="20"/>
+<element id="7" value="10"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="18.0" originX="20" originY="35">
+<visualMalleableElement id="0" color="FFFF00" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="1" color="999999" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="2" color="00FFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+</visualArray>
+<message content="A new bin has been created and the item has been added to this new bin.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="6">
+<element id="0" value=" 1  FirstFitDecreasing( A ):"/>
+<element id="1" value=" 2    Sort A in non-increasing order;"/>
+<element id="2" value=" 3    For any a in A {"/>
+<element id="3" value=" 4      If there exists bin which can contain a, insert a in this bin;"/>
+<element id="4" value=" 5      Else insert a in new bin;"/>
+<element id="5" value=" 6    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="500.0" originX="20" originY="60">
+<visualMalleableElement id="4" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+<structure name="Bins" type="GeometricFigure">
+<geometricFigure size="6">
+<element id="0" value="Rectangle[20.0;0.0;40.0;300.0]"/>
+<element id="1" value="Rectangle[65.0;0.0;40.0;300.0]"/>
+<element id="2" value="Rectangle[20.0;0.0;40.0;240.0]"/>
+<element id="3" value="Rectangle[65.0;0.0;40.0;210.0]"/>
+<element id="4" value="Text[80;30.0;120.0]"/>
+<element id="5" value="Text[70;75.0;105.0]"/>
+</geometricFigure>
+<visualGeometricFigure defaultColor="DDDDDD" defaultFont="Monospaced-PLAIN-16" defaultLineThickness="1.0" originX="0" originY="145">
+<visualGeometricObject id="0" color="DDDDDD" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="1" color="DDDDDD" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="2" color="00FF00" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="3" color="00FF00" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="4" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="5" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+</visualGeometricFigure>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="6">
+<structure name="Items" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="100"/>
+<element id="1" value="80"/>
+<element id="2" value="70"/>
+<element id="3" value="50"/>
+<element id="4" value="40"/>
+<element id="5" value="30"/>
+<element id="6" value="20"/>
+<element id="7" value="10"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="18.0" originX="20" originY="35">
+<visualMalleableElement id="0" color="FFFF00" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="1" color="999999" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="2" color="999999" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="3" color="00FFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+</visualArray>
+<message content="A new item (in azure) has to be analyzed in order to decide in which bin it will be packed.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="6">
+<element id="0" value=" 1  FirstFitDecreasing( A ):"/>
+<element id="1" value=" 2    Sort A in non-increasing order;"/>
+<element id="2" value=" 3    For any a in A {"/>
+<element id="3" value=" 4      If there exists bin which can contain a, insert a in this bin;"/>
+<element id="4" value=" 5      Else insert a in new bin;"/>
+<element id="5" value=" 6    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="500.0" originX="20" originY="60">
+<visualMalleableElement id="2" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+<structure name="Bins" type="GeometricFigure">
+<geometricFigure size="6">
+<element id="0" value="Rectangle[20.0;0.0;40.0;300.0]"/>
+<element id="1" value="Rectangle[65.0;0.0;40.0;300.0]"/>
+<element id="2" value="Rectangle[20.0;0.0;40.0;240.0]"/>
+<element id="3" value="Rectangle[65.0;0.0;40.0;210.0]"/>
+<element id="4" value="Text[80;30.0;120.0]"/>
+<element id="5" value="Text[70;75.0;105.0]"/>
+</geometricFigure>
+<visualGeometricFigure defaultColor="DDDDDD" defaultFont="Monospaced-PLAIN-16" defaultLineThickness="1.0" originX="0" originY="145">
+<visualGeometricObject id="0" color="DDDDDD" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="1" color="DDDDDD" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="2" color="00FF00" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="3" color="00FF00" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="4" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="5" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+</visualGeometricFigure>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="7">
+<structure name="Items" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="100"/>
+<element id="1" value="80"/>
+<element id="2" value="70"/>
+<element id="3" value="50"/>
+<element id="4" value="40"/>
+<element id="5" value="30"/>
+<element id="6" value="20"/>
+<element id="7" value="10"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="18.0" originX="20" originY="35">
+<visualMalleableElement id="0" color="FFFF00" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="1" color="999999" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="2" color="999999" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="3" color="00FFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+</visualArray>
+<message content="A new bin has been created and the item has been added to this new bin.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="6">
+<element id="0" value=" 1  FirstFitDecreasing( A ):"/>
+<element id="1" value=" 2    Sort A in non-increasing order;"/>
+<element id="2" value=" 3    For any a in A {"/>
+<element id="3" value=" 4      If there exists bin which can contain a, insert a in this bin;"/>
+<element id="4" value=" 5      Else insert a in new bin;"/>
+<element id="5" value=" 6    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="500.0" originX="20" originY="60">
+<visualMalleableElement id="4" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+<structure name="Bins" type="GeometricFigure">
+<geometricFigure size="9">
+<element id="0" value="Rectangle[20.0;0.0;40.0;300.0]"/>
+<element id="1" value="Rectangle[65.0;0.0;40.0;300.0]"/>
+<element id="2" value="Rectangle[110.0;0.0;40.0;300.0]"/>
+<element id="3" value="Rectangle[20.0;0.0;40.0;240.0]"/>
+<element id="4" value="Rectangle[65.0;0.0;40.0;210.0]"/>
+<element id="5" value="Rectangle[110.0;0.0;40.0;150.0]"/>
+<element id="6" value="Text[80;30.0;120.0]"/>
+<element id="7" value="Text[70;75.0;105.0]"/>
+<element id="8" value="Text[50;120.0;75.0]"/>
+</geometricFigure>
+<visualGeometricFigure defaultColor="DDDDDD" defaultFont="Monospaced-PLAIN-16" defaultLineThickness="1.0" originX="0" originY="145">
+<visualGeometricObject id="0" color="DDDDDD" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="1" color="DDDDDD" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="2" color="DDDDDD" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="3" color="00FF00" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="4" color="00FF00" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="5" color="00FF00" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="6" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="7" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="8" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+</visualGeometricFigure>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="8">
+<structure name="Items" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="100"/>
+<element id="1" value="80"/>
+<element id="2" value="70"/>
+<element id="3" value="50"/>
+<element id="4" value="40"/>
+<element id="5" value="30"/>
+<element id="6" value="20"/>
+<element id="7" value="10"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="18.0" originX="20" originY="35">
+<visualMalleableElement id="0" color="FFFF00" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="1" color="999999" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="2" color="999999" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="3" color="999999" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="4" color="00FFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+</visualArray>
+<message content="A new item (in azure) has to be analyzed in order to decide in which bin it will be packed.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="6">
+<element id="0" value=" 1  FirstFitDecreasing( A ):"/>
+<element id="1" value=" 2    Sort A in non-increasing order;"/>
+<element id="2" value=" 3    For any a in A {"/>
+<element id="3" value=" 4      If there exists bin which can contain a, insert a in this bin;"/>
+<element id="4" value=" 5      Else insert a in new bin;"/>
+<element id="5" value=" 6    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="500.0" originX="20" originY="60">
+<visualMalleableElement id="2" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+<structure name="Bins" type="GeometricFigure">
+<geometricFigure size="9">
+<element id="0" value="Rectangle[20.0;0.0;40.0;300.0]"/>
+<element id="1" value="Rectangle[65.0;0.0;40.0;300.0]"/>
+<element id="2" value="Rectangle[110.0;0.0;40.0;300.0]"/>
+<element id="3" value="Rectangle[20.0;0.0;40.0;240.0]"/>
+<element id="4" value="Rectangle[65.0;0.0;40.0;210.0]"/>
+<element id="5" value="Rectangle[110.0;0.0;40.0;150.0]"/>
+<element id="6" value="Text[80;30.0;120.0]"/>
+<element id="7" value="Text[70;75.0;105.0]"/>
+<element id="8" value="Text[50;120.0;75.0]"/>
+</geometricFigure>
+<visualGeometricFigure defaultColor="DDDDDD" defaultFont="Monospaced-PLAIN-16" defaultLineThickness="1.0" originX="0" originY="145">
+<visualGeometricObject id="0" color="DDDDDD" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="1" color="DDDDDD" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="2" color="DDDDDD" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="3" color="00FF00" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="4" color="00FF00" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="5" color="00FF00" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="6" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="7" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="8" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+</visualGeometricFigure>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="9">
+<structure name="Items" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="100"/>
+<element id="1" value="80"/>
+<element id="2" value="70"/>
+<element id="3" value="50"/>
+<element id="4" value="40"/>
+<element id="5" value="30"/>
+<element id="6" value="20"/>
+<element id="7" value="10"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="18.0" originX="20" originY="35">
+<visualMalleableElement id="0" color="FFFF00" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="1" color="999999" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="2" color="999999" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="3" color="999999" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="4" color="00FFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+</visualArray>
+<message content="The item has been added to the first bin which could contain it.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="6">
+<element id="0" value=" 1  FirstFitDecreasing( A ):"/>
+<element id="1" value=" 2    Sort A in non-increasing order;"/>
+<element id="2" value=" 3    For any a in A {"/>
+<element id="3" value=" 4      If there exists bin which can contain a, insert a in this bin;"/>
+<element id="4" value=" 5      Else insert a in new bin;"/>
+<element id="5" value=" 6    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="500.0" originX="20" originY="60">
+<visualMalleableElement id="3" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+<structure name="Bins" type="GeometricFigure">
+<geometricFigure size="11">
+<element id="0" value="Rectangle[20.0;0.0;40.0;300.0]"/>
+<element id="1" value="Rectangle[65.0;0.0;40.0;300.0]"/>
+<element id="2" value="Rectangle[110.0;0.0;40.0;300.0]"/>
+<element id="3" value="Rectangle[20.0;0.0;40.0;240.0]"/>
+<element id="4" value="Rectangle[65.0;0.0;40.0;210.0]"/>
+<element id="5" value="Rectangle[110.0;0.0;40.0;150.0]"/>
+<element id="6" value="Rectangle[110.0;150.0;40.0;120.0]"/>
+<element id="7" value="Text[80;30.0;120.0]"/>
+<element id="8" value="Text[70;75.0;105.0]"/>
+<element id="9" value="Text[50;120.0;75.0]"/>
+<element id="10" value="Text[40;120.0;210.0]"/>
+</geometricFigure>
+<visualGeometricFigure defaultColor="DDDDDD" defaultFont="Monospaced-PLAIN-16" defaultLineThickness="1.0" originX="0" originY="145">
+<visualGeometricObject id="0" color="DDDDDD" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="1" color="DDDDDD" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="2" color="DDDDDD" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="3" color="00FF00" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="4" color="00FF00" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="5" color="00FF00" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="6" color="FF00FF" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="7" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="8" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="9" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="10" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+</visualGeometricFigure>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="10">
+<structure name="Items" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="100"/>
+<element id="1" value="80"/>
+<element id="2" value="70"/>
+<element id="3" value="50"/>
+<element id="4" value="40"/>
+<element id="5" value="30"/>
+<element id="6" value="20"/>
+<element id="7" value="10"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="18.0" originX="20" originY="35">
+<visualMalleableElement id="0" color="FFFF00" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="1" color="999999" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="2" color="999999" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="3" color="999999" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="4" color="999999" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="5" color="00FFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+</visualArray>
+<message content="A new item (in azure) has to be analyzed in order to decide in which bin it will be packed.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="6">
+<element id="0" value=" 1  FirstFitDecreasing( A ):"/>
+<element id="1" value=" 2    Sort A in non-increasing order;"/>
+<element id="2" value=" 3    For any a in A {"/>
+<element id="3" value=" 4      If there exists bin which can contain a, insert a in this bin;"/>
+<element id="4" value=" 5      Else insert a in new bin;"/>
+<element id="5" value=" 6    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="500.0" originX="20" originY="60">
+<visualMalleableElement id="2" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+<structure name="Bins" type="GeometricFigure">
+<geometricFigure size="11">
+<element id="0" value="Rectangle[20.0;0.0;40.0;300.0]"/>
+<element id="1" value="Rectangle[65.0;0.0;40.0;300.0]"/>
+<element id="2" value="Rectangle[110.0;0.0;40.0;300.0]"/>
+<element id="3" value="Rectangle[20.0;0.0;40.0;240.0]"/>
+<element id="4" value="Rectangle[65.0;0.0;40.0;210.0]"/>
+<element id="5" value="Rectangle[110.0;0.0;40.0;150.0]"/>
+<element id="6" value="Rectangle[110.0;150.0;40.0;120.0]"/>
+<element id="7" value="Text[80;30.0;120.0]"/>
+<element id="8" value="Text[70;75.0;105.0]"/>
+<element id="9" value="Text[50;120.0;75.0]"/>
+<element id="10" value="Text[40;120.0;210.0]"/>
+</geometricFigure>
+<visualGeometricFigure defaultColor="DDDDDD" defaultFont="Monospaced-PLAIN-16" defaultLineThickness="1.0" originX="0" originY="145">
+<visualGeometricObject id="0" color="DDDDDD" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="1" color="DDDDDD" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="2" color="DDDDDD" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="3" color="00FF00" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="4" color="00FF00" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="5" color="00FF00" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="6" color="FF00FF" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="7" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="8" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="9" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="10" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+</visualGeometricFigure>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="11">
+<structure name="Items" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="100"/>
+<element id="1" value="80"/>
+<element id="2" value="70"/>
+<element id="3" value="50"/>
+<element id="4" value="40"/>
+<element id="5" value="30"/>
+<element id="6" value="20"/>
+<element id="7" value="10"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="18.0" originX="20" originY="35">
+<visualMalleableElement id="0" color="FFFF00" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="1" color="999999" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="2" color="999999" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="3" color="999999" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="4" color="999999" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="5" color="00FFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+</visualArray>
+<message content="The item has been added to the first bin which could contain it.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="6">
+<element id="0" value=" 1  FirstFitDecreasing( A ):"/>
+<element id="1" value=" 2    Sort A in non-increasing order;"/>
+<element id="2" value=" 3    For any a in A {"/>
+<element id="3" value=" 4      If there exists bin which can contain a, insert a in this bin;"/>
+<element id="4" value=" 5      Else insert a in new bin;"/>
+<element id="5" value=" 6    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="500.0" originX="20" originY="60">
+<visualMalleableElement id="3" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+<structure name="Bins" type="GeometricFigure">
+<geometricFigure size="13">
+<element id="0" value="Rectangle[20.0;0.0;40.0;300.0]"/>
+<element id="1" value="Rectangle[65.0;0.0;40.0;300.0]"/>
+<element id="2" value="Rectangle[110.0;0.0;40.0;300.0]"/>
+<element id="3" value="Rectangle[20.0;0.0;40.0;240.0]"/>
+<element id="4" value="Rectangle[65.0;0.0;40.0;210.0]"/>
+<element id="5" value="Rectangle[65.0;210.0;40.0;90.0]"/>
+<element id="6" value="Rectangle[110.0;0.0;40.0;150.0]"/>
+<element id="7" value="Rectangle[110.0;150.0;40.0;120.0]"/>
+<element id="8" value="Text[80;30.0;120.0]"/>
+<element id="9" value="Text[70;75.0;105.0]"/>
+<element id="10" value="Text[50;120.0;75.0]"/>
+<element id="11" value="Text[40;120.0;210.0]"/>
+<element id="12" value="Text[30;75.0;255.0]"/>
+</geometricFigure>
+<visualGeometricFigure defaultColor="DDDDDD" defaultFont="Monospaced-PLAIN-16" defaultLineThickness="1.0" originX="0" originY="145">
+<visualGeometricObject id="0" color="DDDDDD" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="1" color="DDDDDD" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="2" color="DDDDDD" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="3" color="00FF00" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="4" color="00FF00" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="5" color="FF00FF" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="6" color="00FF00" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="7" color="FF00FF" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="8" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="9" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="10" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="11" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="12" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+</visualGeometricFigure>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="12">
+<structure name="Items" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="100"/>
+<element id="1" value="80"/>
+<element id="2" value="70"/>
+<element id="3" value="50"/>
+<element id="4" value="40"/>
+<element id="5" value="30"/>
+<element id="6" value="20"/>
+<element id="7" value="10"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="18.0" originX="20" originY="35">
+<visualMalleableElement id="0" color="FFFF00" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="1" color="999999" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="2" color="999999" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="3" color="999999" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="4" color="999999" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="5" color="999999" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="6" color="00FFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+</visualArray>
+<message content="A new item (in azure) has to be analyzed in order to decide in which bin it will be packed.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="6">
+<element id="0" value=" 1  FirstFitDecreasing( A ):"/>
+<element id="1" value=" 2    Sort A in non-increasing order;"/>
+<element id="2" value=" 3    For any a in A {"/>
+<element id="3" value=" 4      If there exists bin which can contain a, insert a in this bin;"/>
+<element id="4" value=" 5      Else insert a in new bin;"/>
+<element id="5" value=" 6    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="500.0" originX="20" originY="60">
+<visualMalleableElement id="2" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+<structure name="Bins" type="GeometricFigure">
+<geometricFigure size="13">
+<element id="0" value="Rectangle[20.0;0.0;40.0;300.0]"/>
+<element id="1" value="Rectangle[65.0;0.0;40.0;300.0]"/>
+<element id="2" value="Rectangle[110.0;0.0;40.0;300.0]"/>
+<element id="3" value="Rectangle[20.0;0.0;40.0;240.0]"/>
+<element id="4" value="Rectangle[65.0;0.0;40.0;210.0]"/>
+<element id="5" value="Rectangle[65.0;210.0;40.0;90.0]"/>
+<element id="6" value="Rectangle[110.0;0.0;40.0;150.0]"/>
+<element id="7" value="Rectangle[110.0;150.0;40.0;120.0]"/>
+<element id="8" value="Text[80;30.0;120.0]"/>
+<element id="9" value="Text[70;75.0;105.0]"/>
+<element id="10" value="Text[50;120.0;75.0]"/>
+<element id="11" value="Text[40;120.0;210.0]"/>
+<element id="12" value="Text[30;75.0;255.0]"/>
+</geometricFigure>
+<visualGeometricFigure defaultColor="DDDDDD" defaultFont="Monospaced-PLAIN-16" defaultLineThickness="1.0" originX="0" originY="145">
+<visualGeometricObject id="0" color="DDDDDD" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="1" color="DDDDDD" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="2" color="DDDDDD" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="3" color="00FF00" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="4" color="00FF00" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="5" color="FF00FF" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="6" color="00FF00" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="7" color="FF00FF" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="8" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="9" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="10" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="11" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="12" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+</visualGeometricFigure>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="13">
+<structure name="Items" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="100"/>
+<element id="1" value="80"/>
+<element id="2" value="70"/>
+<element id="3" value="50"/>
+<element id="4" value="40"/>
+<element id="5" value="30"/>
+<element id="6" value="20"/>
+<element id="7" value="10"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="18.0" originX="20" originY="35">
+<visualMalleableElement id="0" color="FFFF00" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="1" color="999999" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="2" color="999999" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="3" color="999999" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="4" color="999999" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="5" color="999999" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="6" color="00FFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+</visualArray>
+<message content="The item has been added to the first bin which could contain it.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="6">
+<element id="0" value=" 1  FirstFitDecreasing( A ):"/>
+<element id="1" value=" 2    Sort A in non-increasing order;"/>
+<element id="2" value=" 3    For any a in A {"/>
+<element id="3" value=" 4      If there exists bin which can contain a, insert a in this bin;"/>
+<element id="4" value=" 5      Else insert a in new bin;"/>
+<element id="5" value=" 6    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="500.0" originX="20" originY="60">
+<visualMalleableElement id="3" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+<structure name="Bins" type="GeometricFigure">
+<geometricFigure size="15">
+<element id="0" value="Rectangle[20.0;0.0;40.0;300.0]"/>
+<element id="1" value="Rectangle[65.0;0.0;40.0;300.0]"/>
+<element id="2" value="Rectangle[110.0;0.0;40.0;300.0]"/>
+<element id="3" value="Rectangle[20.0;0.0;40.0;240.0]"/>
+<element id="4" value="Rectangle[20.0;240.0;40.0;60.0]"/>
+<element id="5" value="Rectangle[65.0;0.0;40.0;210.0]"/>
+<element id="6" value="Rectangle[65.0;210.0;40.0;90.0]"/>
+<element id="7" value="Rectangle[110.0;0.0;40.0;150.0]"/>
+<element id="8" value="Rectangle[110.0;150.0;40.0;120.0]"/>
+<element id="9" value="Text[80;30.0;120.0]"/>
+<element id="10" value="Text[70;75.0;105.0]"/>
+<element id="11" value="Text[50;120.0;75.0]"/>
+<element id="12" value="Text[40;120.0;210.0]"/>
+<element id="13" value="Text[30;75.0;255.0]"/>
+<element id="14" value="Text[20;30.0;270.0]"/>
+</geometricFigure>
+<visualGeometricFigure defaultColor="DDDDDD" defaultFont="Monospaced-PLAIN-16" defaultLineThickness="1.0" originX="0" originY="145">
+<visualGeometricObject id="0" color="DDDDDD" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="1" color="DDDDDD" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="2" color="DDDDDD" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="3" color="00FF00" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="4" color="FF00FF" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="5" color="00FF00" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="6" color="FF00FF" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="7" color="00FF00" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="8" color="FF00FF" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="9" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="10" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="11" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="12" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="13" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="14" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+</visualGeometricFigure>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="14">
+<structure name="Items" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="100"/>
+<element id="1" value="80"/>
+<element id="2" value="70"/>
+<element id="3" value="50"/>
+<element id="4" value="40"/>
+<element id="5" value="30"/>
+<element id="6" value="20"/>
+<element id="7" value="10"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="18.0" originX="20" originY="35">
+<visualMalleableElement id="0" color="FFFF00" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="1" color="999999" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="2" color="999999" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="3" color="999999" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="4" color="999999" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="5" color="999999" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="6" color="999999" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="7" color="00FFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+</visualArray>
+<message content="A new item (in azure) has to be analyzed in order to decide in which bin it will be packed.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="6">
+<element id="0" value=" 1  FirstFitDecreasing( A ):"/>
+<element id="1" value=" 2    Sort A in non-increasing order;"/>
+<element id="2" value=" 3    For any a in A {"/>
+<element id="3" value=" 4      If there exists bin which can contain a, insert a in this bin;"/>
+<element id="4" value=" 5      Else insert a in new bin;"/>
+<element id="5" value=" 6    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="500.0" originX="20" originY="60">
+<visualMalleableElement id="2" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+<structure name="Bins" type="GeometricFigure">
+<geometricFigure size="15">
+<element id="0" value="Rectangle[20.0;0.0;40.0;300.0]"/>
+<element id="1" value="Rectangle[65.0;0.0;40.0;300.0]"/>
+<element id="2" value="Rectangle[110.0;0.0;40.0;300.0]"/>
+<element id="3" value="Rectangle[20.0;0.0;40.0;240.0]"/>
+<element id="4" value="Rectangle[20.0;240.0;40.0;60.0]"/>
+<element id="5" value="Rectangle[65.0;0.0;40.0;210.0]"/>
+<element id="6" value="Rectangle[65.0;210.0;40.0;90.0]"/>
+<element id="7" value="Rectangle[110.0;0.0;40.0;150.0]"/>
+<element id="8" value="Rectangle[110.0;150.0;40.0;120.0]"/>
+<element id="9" value="Text[80;30.0;120.0]"/>
+<element id="10" value="Text[70;75.0;105.0]"/>
+<element id="11" value="Text[50;120.0;75.0]"/>
+<element id="12" value="Text[40;120.0;210.0]"/>
+<element id="13" value="Text[30;75.0;255.0]"/>
+<element id="14" value="Text[20;30.0;270.0]"/>
+</geometricFigure>
+<visualGeometricFigure defaultColor="DDDDDD" defaultFont="Monospaced-PLAIN-16" defaultLineThickness="1.0" originX="0" originY="145">
+<visualGeometricObject id="0" color="DDDDDD" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="1" color="DDDDDD" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="2" color="DDDDDD" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="3" color="00FF00" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="4" color="FF00FF" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="5" color="00FF00" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="6" color="FF00FF" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="7" color="00FF00" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="8" color="FF00FF" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="9" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="10" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="11" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="12" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="13" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="14" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+</visualGeometricFigure>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="15">
+<structure name="Items" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="100"/>
+<element id="1" value="80"/>
+<element id="2" value="70"/>
+<element id="3" value="50"/>
+<element id="4" value="40"/>
+<element id="5" value="30"/>
+<element id="6" value="20"/>
+<element id="7" value="10"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="18.0" originX="20" originY="35">
+<visualMalleableElement id="0" color="FFFF00" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="1" color="999999" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="2" color="999999" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="3" color="999999" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="4" color="999999" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="5" color="999999" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="6" color="999999" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+<visualMalleableElement id="7" color="00FFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="18.0"/>
+</visualArray>
+<message content="The item has been added to the first bin which could contain it.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="6">
+<element id="0" value=" 1  FirstFitDecreasing( A ):"/>
+<element id="1" value=" 2    Sort A in non-increasing order;"/>
+<element id="2" value=" 3    For any a in A {"/>
+<element id="3" value=" 4      If there exists bin which can contain a, insert a in this bin;"/>
+<element id="4" value=" 5      Else insert a in new bin;"/>
+<element id="5" value=" 6    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="500.0" originX="20" originY="60">
+<visualMalleableElement id="3" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+<structure name="Bins" type="GeometricFigure">
+<geometricFigure size="17">
+<element id="0" value="Rectangle[20.0;0.0;40.0;300.0]"/>
+<element id="1" value="Rectangle[65.0;0.0;40.0;300.0]"/>
+<element id="2" value="Rectangle[110.0;0.0;40.0;300.0]"/>
+<element id="3" value="Rectangle[20.0;0.0;40.0;240.0]"/>
+<element id="4" value="Rectangle[20.0;240.0;40.0;60.0]"/>
+<element id="5" value="Rectangle[65.0;0.0;40.0;210.0]"/>
+<element id="6" value="Rectangle[65.0;210.0;40.0;90.0]"/>
+<element id="7" value="Rectangle[110.0;0.0;40.0;150.0]"/>
+<element id="8" value="Rectangle[110.0;150.0;40.0;120.0]"/>
+<element id="9" value="Rectangle[110.0;270.0;40.0;30.0]"/>
+<element id="10" value="Text[80;30.0;120.0]"/>
+<element id="11" value="Text[70;75.0;105.0]"/>
+<element id="12" value="Text[50;120.0;75.0]"/>
+<element id="13" value="Text[40;120.0;210.0]"/>
+<element id="14" value="Text[30;75.0;255.0]"/>
+<element id="15" value="Text[20;30.0;270.0]"/>
+<element id="16" value="Text[10;120.0;285.0]"/>
+</geometricFigure>
+<visualGeometricFigure defaultColor="DDDDDD" defaultFont="Monospaced-PLAIN-16" defaultLineThickness="1.0" originX="0" originY="145">
+<visualGeometricObject id="0" color="DDDDDD" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="1" color="DDDDDD" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="2" color="DDDDDD" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="3" color="00FF00" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="4" color="FF00FF" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="5" color="00FF00" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="6" color="FF00FF" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="7" color="00FF00" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="8" color="FF00FF" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="9" color="00FF00" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="10" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="11" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="12" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="13" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="14" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="15" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="16" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+</visualGeometricFigure>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="16">
+<structure name="Bins" type="GeometricFigure">
+<geometricFigure size="17">
+<element id="0" value="Rectangle[20.0;0.0;40.0;300.0]"/>
+<element id="1" value="Rectangle[65.0;0.0;40.0;300.0]"/>
+<element id="2" value="Rectangle[110.0;0.0;40.0;300.0]"/>
+<element id="3" value="Rectangle[20.0;0.0;40.0;240.0]"/>
+<element id="4" value="Rectangle[20.0;240.0;40.0;60.0]"/>
+<element id="5" value="Rectangle[65.0;0.0;40.0;210.0]"/>
+<element id="6" value="Rectangle[65.0;210.0;40.0;90.0]"/>
+<element id="7" value="Rectangle[110.0;0.0;40.0;150.0]"/>
+<element id="8" value="Rectangle[110.0;150.0;40.0;120.0]"/>
+<element id="9" value="Rectangle[110.0;270.0;40.0;30.0]"/>
+<element id="10" value="Text[80;30.0;120.0]"/>
+<element id="11" value="Text[70;75.0;105.0]"/>
+<element id="12" value="Text[50;120.0;75.0]"/>
+<element id="13" value="Text[40;120.0;210.0]"/>
+<element id="14" value="Text[30;75.0;255.0]"/>
+<element id="15" value="Text[20;30.0;270.0]"/>
+<element id="16" value="Text[10;120.0;285.0]"/>
+</geometricFigure>
+<visualGeometricFigure defaultColor="DDDDDD" defaultFont="Monospaced-PLAIN-16" defaultLineThickness="1.0" originX="0" originY="145">
+<visualGeometricObject id="0" color="DDDDDD" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="1" color="DDDDDD" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="2" color="DDDDDD" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="3" color="00FF00" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="4" color="FF00FF" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="5" color="00FF00" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="6" color="FF00FF" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="7" color="00FF00" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="8" color="FF00FF" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="9" color="00FF00" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="10" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="11" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="12" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="13" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="14" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="15" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+<visualGeometricObject id="16" color="000000" font="Monospaced-PLAIN-16" lineThickness="1.0"/>
+</visualGeometricFigure>
+<message content="All the items have been packed.">
+</message>
+</structure>
+</step>
+</algorithm>

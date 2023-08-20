@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure name="Fast exponentiation algorithm" type="Pseudocode">
+	<pseudocode size="9">
+		<element id="0"  value=" 1  FastExp( a, b, n ):" />
+		<element id="1"  value=" 2    c = 0; d = 1;" />
+		<element id="2"  value=" 3    FOR (i = k; i >= 0; i--) {" />
+		<element id="3"  value=" 4      c = 2 *c; d = (d*d) % n;" />
+		<element id="4"  value=" 5      IF (b[i] == 1) {" />
+		<element id="5"  value=" 6        c = c+1; d = (d*a) % n;" />
+		<element id="6"  value=" 7      }" />
+		<element id="7"  value=" 8    }" />
+		<element id="8"  value=" 9    RETURN d;" />
+	</pseudocode>
+</structure>

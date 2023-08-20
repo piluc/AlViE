@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure name="Fibonacci" type="Pseudocode">
+	<pseudocode size="9">
+		<element id="0" value="DPChange(M, c, d)" />
+		<element id="1" value=" 1    bestNumCoins[0] = 0;" />
+		<element id="2" value=" 2    FOR m = 1 TO M" />
+		<element id="3" value=" 3      bestNumCoins[m] = oo" />
+		<element id="4" value=" 4      FOR i = 1 TO d" />
+		<element id="5" value=" 5        IF m >= c[i]" />
+		<element id="6" value=" 6          IF bestNumCoins[m] > bestNumCoins[m-c[i]]+1" />
+		<element id="7" value=" 7            bestNumCoins[m] = bestNumCoins[m-c[i]]+1 " />
+		<element id="8" value=" 8    RETURN bestNumCoins[M]" />
+	</pseudocode>
+</structure>

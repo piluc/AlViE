@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure name="Binary counter" type="Pseudocode">
+	<pseudocode size="6">
+		<element id="0" value=" 1  FirstFitDecreasing( A ):" />
+		<element id="1" value=" 2    Sort A in non-increasing order;" />
+		<element id="2" value=" 3    For any a in A {" />
+		<element id="3" value=" 4      If there exists bin which can contain a, insert a in this bin;" />
+		<element id="4" value=" 5      Else insert a in new bin;" />
+		<element id="5" value=" 6    }" />
+	</pseudocode>
+</structure>

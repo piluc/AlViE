@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure name="Fibonacci" type="Pseudocode">
+	<pseudocode size="6">
+		<element id="0" value=" 1  Fib( n )" />
+		<element id="1" value=" 2    F[0] = 0;" />
+		<element id="2" value=" 3    F[1] = 1;" />
+		<element id="3" value=" 4    FOR (k = 2; k &#60; n; k = k+1)" />
+		<element id="4" value=" 5      F[k] = F[k-1]+F[k-2];" />
+		<element id="5" value=" 6    RETURN F[n];" />
+	</pseudocode>
+</structure>

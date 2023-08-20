@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure name="Array" type="Array">
+	<array size="2" type="IntInformation">
+		<element id="0" value="99" />
+		<element id="1" value="78" />
+	</array>
+</structure>

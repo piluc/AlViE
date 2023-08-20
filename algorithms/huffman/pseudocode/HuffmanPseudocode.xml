@@ -1,0 +1,13 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<structure name = "Huffman coding" type = "Pseudocode">
+  <pseudocode size = "8">
+    <element id="0" value = "1. Start with as many leaves as there are symbols"/>
+    <element id="1" value = "2. Enqueue all leaf nodes into the first queue (by probability in increasing order)"/>
+    <element id="2" value = "3. While there is more than one node in the two queues:"/>
+    <element id="3" value = "     1. Dequeue the two nodes with the lowest weight by examining the front of both queues"/>
+    <element id="4" value = "     2. Create a new internal node, with the two just-removed nodes as children (either node can be"/>
+    <element id="5" value = "        either child) and the sum of their weights as the new weight"/>
+    <element id="6" value = "     3. Enqueue the new node into the rear of the second queue"/>
+    <element id="7" value = "4. The remaining node is the root node; the tree has now been generated"/>
+  </pseudocode>
+</structure>

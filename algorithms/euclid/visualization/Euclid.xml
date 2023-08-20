@@ -1,0 +1,2270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm name="Extended Euclid's algorithm">
+<step number="0">
+<structure name="Data table" type="Matrix">
+<matrix height="7" width="7" type="StringInformation">
+	<element id="0" value="a"/>
+	<element id="1" value="b"/>
+	<element id="2" value="a/b"/>
+	<element id="3" value="a%b"/>
+	<element id="4" value="d"/>
+	<element id="5" value="x"/>
+	<element id="6" value="y"/>
+	<element id="7" value="99"/>
+	<element id="8" value="78"/>
+	<element id="9" value=" "/>
+	<element id="10" value=" "/>
+	<element id="11" value=" "/>
+	<element id="12" value=" "/>
+	<element id="13" value=" "/>
+	<element id="14" value=" "/>
+	<element id="15" value=" "/>
+	<element id="16" value=" "/>
+	<element id="17" value=" "/>
+	<element id="18" value=" "/>
+	<element id="19" value=" "/>
+	<element id="20" value=" "/>
+	<element id="21" value=" "/>
+	<element id="22" value=" "/>
+	<element id="23" value=" "/>
+	<element id="24" value=" "/>
+	<element id="25" value=" "/>
+	<element id="26" value=" "/>
+	<element id="27" value=" "/>
+	<element id="28" value=" "/>
+	<element id="29" value=" "/>
+	<element id="30" value=" "/>
+	<element id="31" value=" "/>
+	<element id="32" value=" "/>
+	<element id="33" value=" "/>
+	<element id="34" value=" "/>
+	<element id="35" value=" "/>
+	<element id="36" value=" "/>
+	<element id="37" value=" "/>
+	<element id="38" value=" "/>
+	<element id="39" value=" "/>
+	<element id="40" value=" "/>
+	<element id="41" value=" "/>
+	<element id="42" value=" "/>
+	<element id="43" value=" "/>
+	<element id="44" value=" "/>
+	<element id="45" value=" "/>
+	<element id="46" value=" "/>
+	<element id="47" value=" "/>
+	<element id="48" value=" "/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Times-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="50.0" originX="20" originY="40">
+<visualElement id="0" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="1" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="2" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="3" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="4" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="5" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="6" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="7" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="8" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="9" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="10" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="11" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="12" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="13" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="14" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="15" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="16" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="17" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="18" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="19" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="20" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="21" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="22" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="23" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="24" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="25" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="26" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="27" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="28" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="29" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="30" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="31" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="32" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="33" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="34" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="35" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="36" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="37" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="38" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="39" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="40" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="41" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="42" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="43" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="44" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="45" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="46" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="47" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="48" color="AAAAAA" font="Times-PLAIN-16"/>
+</visualMatrix>
+<message content="The algorithm is invoked for the first time with input the two values a and b">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="7">
+<element id="0" value=" 1  Euclid( a, b ):"/>
+<element id="1" value=" 2    IF (b == 0)"/>
+<element id="2" value=" 3      RETURN (a,1,0);"/>
+<element id="3" value=" 4    q = a / b;"/>
+<element id="4" value=" 5    r = a % b;"/>
+<element id="5" value=" 6    (d, x, y) = Euclid( b, r);"/>
+<element id="6" value=" 7    RETURN (d, y, x - q * y);"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Times-PLAIN-28" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="400" originY="20">
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm name="Extended Euclid's algorithm">
+<step number="1">
+<structure name="Data table" type="Matrix">
+<matrix height="7" width="7" type="StringInformation">
+	<element id="0" value="a"/>
+	<element id="1" value="b"/>
+	<element id="2" value="a/b"/>
+	<element id="3" value="a%b"/>
+	<element id="4" value="d"/>
+	<element id="5" value="x"/>
+	<element id="6" value="y"/>
+	<element id="7" value="99"/>
+	<element id="8" value="78"/>
+	<element id="9" value="1"/>
+	<element id="10" value="21"/>
+	<element id="11" value=" "/>
+	<element id="12" value=" "/>
+	<element id="13" value=" "/>
+	<element id="14" value=" "/>
+	<element id="15" value=" "/>
+	<element id="16" value=" "/>
+	<element id="17" value=" "/>
+	<element id="18" value=" "/>
+	<element id="19" value=" "/>
+	<element id="20" value=" "/>
+	<element id="21" value=" "/>
+	<element id="22" value=" "/>
+	<element id="23" value=" "/>
+	<element id="24" value=" "/>
+	<element id="25" value=" "/>
+	<element id="26" value=" "/>
+	<element id="27" value=" "/>
+	<element id="28" value=" "/>
+	<element id="29" value=" "/>
+	<element id="30" value=" "/>
+	<element id="31" value=" "/>
+	<element id="32" value=" "/>
+	<element id="33" value=" "/>
+	<element id="34" value=" "/>
+	<element id="35" value=" "/>
+	<element id="36" value=" "/>
+	<element id="37" value=" "/>
+	<element id="38" value=" "/>
+	<element id="39" value=" "/>
+	<element id="40" value=" "/>
+	<element id="41" value=" "/>
+	<element id="42" value=" "/>
+	<element id="43" value=" "/>
+	<element id="44" value=" "/>
+	<element id="45" value=" "/>
+	<element id="46" value=" "/>
+	<element id="47" value=" "/>
+	<element id="48" value=" "/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Times-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="50.0" originX="20" originY="40">
+<visualElement id="0" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="1" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="2" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="3" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="4" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="5" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="6" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="7" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="8" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="9" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="10" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="11" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="12" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="13" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="14" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="15" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="16" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="17" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="18" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="19" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="20" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="21" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="22" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="23" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="24" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="25" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="26" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="27" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="28" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="29" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="30" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="31" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="32" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="33" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="34" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="35" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="36" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="37" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="38" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="39" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="40" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="41" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="42" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="43" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="44" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="45" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="46" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="47" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="48" color="AAAAAA" font="Times-PLAIN-16"/>
+</visualMatrix>
+<message content="The quotient and the remainder of the division of a by b have been computed">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="7">
+<element id="0" value=" 1  Euclid( a, b ):"/>
+<element id="1" value=" 2    IF (b == 0)"/>
+<element id="2" value=" 3      RETURN (a,1,0);"/>
+<element id="3" value=" 4    q = a / b;"/>
+<element id="4" value=" 5    r = a % b;"/>
+<element id="5" value=" 6    (d, x, y) = Euclid( b, r);"/>
+<element id="6" value=" 7    RETURN (d, y, x - q * y);"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Times-PLAIN-28" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="400" originY="20">
+<visualMalleableElement id="3" color="FFFF00" font="Times-PLAIN-28" shapeHeight="15" shapeWidth="400"/>
+<visualMalleableElement id="4" color="FFFF00" font="Times-PLAIN-28" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm name="Extended Euclid's algorithm">
+<step number="2">
+<structure name="Data table" type="Matrix">
+<matrix height="7" width="7" type="StringInformation">
+	<element id="0" value="a"/>
+	<element id="1" value="b"/>
+	<element id="2" value="a/b"/>
+	<element id="3" value="a%b"/>
+	<element id="4" value="d"/>
+	<element id="5" value="x"/>
+	<element id="6" value="y"/>
+	<element id="7" value="99"/>
+	<element id="8" value="78"/>
+	<element id="9" value="1"/>
+	<element id="10" value="21"/>
+	<element id="11" value=" "/>
+	<element id="12" value=" "/>
+	<element id="13" value=" "/>
+	<element id="14" value="78"/>
+	<element id="15" value="21"/>
+	<element id="16" value=" "/>
+	<element id="17" value=" "/>
+	<element id="18" value=" "/>
+	<element id="19" value=" "/>
+	<element id="20" value=" "/>
+	<element id="21" value=" "/>
+	<element id="22" value=" "/>
+	<element id="23" value=" "/>
+	<element id="24" value=" "/>
+	<element id="25" value=" "/>
+	<element id="26" value=" "/>
+	<element id="27" value=" "/>
+	<element id="28" value=" "/>
+	<element id="29" value=" "/>
+	<element id="30" value=" "/>
+	<element id="31" value=" "/>
+	<element id="32" value=" "/>
+	<element id="33" value=" "/>
+	<element id="34" value=" "/>
+	<element id="35" value=" "/>
+	<element id="36" value=" "/>
+	<element id="37" value=" "/>
+	<element id="38" value=" "/>
+	<element id="39" value=" "/>
+	<element id="40" value=" "/>
+	<element id="41" value=" "/>
+	<element id="42" value=" "/>
+	<element id="43" value=" "/>
+	<element id="44" value=" "/>
+	<element id="45" value=" "/>
+	<element id="46" value=" "/>
+	<element id="47" value=" "/>
+	<element id="48" value=" "/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Times-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="50.0" originX="20" originY="40">
+<visualElement id="0" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="1" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="2" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="3" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="4" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="5" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="6" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="7" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="8" color="FFFF00" font="Times-PLAIN-16"/>
+<visualElement id="9" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="10" color="00FFFF" font="Times-PLAIN-16"/>
+<visualElement id="11" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="12" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="13" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="14" color="FFFF00" font="Times-PLAIN-16"/>
+<visualElement id="15" color="00FFFF" font="Times-PLAIN-16"/>
+<visualElement id="16" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="17" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="18" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="19" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="20" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="21" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="22" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="23" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="24" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="25" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="26" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="27" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="28" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="29" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="30" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="31" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="32" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="33" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="34" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="35" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="36" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="37" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="38" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="39" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="40" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="41" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="42" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="43" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="44" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="45" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="46" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="47" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="48" color="AAAAAA" font="Times-PLAIN-16"/>
+</visualMatrix>
+<message content="The recursive function will be invoked with the new two parameters shown in yellow and azure">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="7">
+<element id="0" value=" 1  Euclid( a, b ):"/>
+<element id="1" value=" 2    IF (b == 0)"/>
+<element id="2" value=" 3      RETURN (a,1,0);"/>
+<element id="3" value=" 4    q = a / b;"/>
+<element id="4" value=" 5    r = a % b;"/>
+<element id="5" value=" 6    (d, x, y) = Euclid( b, r);"/>
+<element id="6" value=" 7    RETURN (d, y, x - q * y);"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Times-PLAIN-28" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="400" originY="20">
+<visualMalleableElement id="5" color="FFFF00" font="Times-PLAIN-28" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm name="Extended Euclid's algorithm">
+<step number="3">
+<structure name="Data table" type="Matrix">
+<matrix height="7" width="7" type="StringInformation">
+	<element id="0" value="a"/>
+	<element id="1" value="b"/>
+	<element id="2" value="a/b"/>
+	<element id="3" value="a%b"/>
+	<element id="4" value="d"/>
+	<element id="5" value="x"/>
+	<element id="6" value="y"/>
+	<element id="7" value="99"/>
+	<element id="8" value="78"/>
+	<element id="9" value="1"/>
+	<element id="10" value="21"/>
+	<element id="11" value=" "/>
+	<element id="12" value=" "/>
+	<element id="13" value=" "/>
+	<element id="14" value="78"/>
+	<element id="15" value="21"/>
+	<element id="16" value="3"/>
+	<element id="17" value="15"/>
+	<element id="18" value=" "/>
+	<element id="19" value=" "/>
+	<element id="20" value=" "/>
+	<element id="21" value=" "/>
+	<element id="22" value=" "/>
+	<element id="23" value=" "/>
+	<element id="24" value=" "/>
+	<element id="25" value=" "/>
+	<element id="26" value=" "/>
+	<element id="27" value=" "/>
+	<element id="28" value=" "/>
+	<element id="29" value=" "/>
+	<element id="30" value=" "/>
+	<element id="31" value=" "/>
+	<element id="32" value=" "/>
+	<element id="33" value=" "/>
+	<element id="34" value=" "/>
+	<element id="35" value=" "/>
+	<element id="36" value=" "/>
+	<element id="37" value=" "/>
+	<element id="38" value=" "/>
+	<element id="39" value=" "/>
+	<element id="40" value=" "/>
+	<element id="41" value=" "/>
+	<element id="42" value=" "/>
+	<element id="43" value=" "/>
+	<element id="44" value=" "/>
+	<element id="45" value=" "/>
+	<element id="46" value=" "/>
+	<element id="47" value=" "/>
+	<element id="48" value=" "/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Times-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="50.0" originX="20" originY="40">
+<visualElement id="0" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="1" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="2" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="3" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="4" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="5" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="6" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="7" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="8" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="9" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="10" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="11" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="12" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="13" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="14" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="15" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="16" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="17" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="18" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="19" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="20" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="21" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="22" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="23" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="24" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="25" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="26" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="27" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="28" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="29" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="30" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="31" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="32" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="33" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="34" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="35" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="36" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="37" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="38" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="39" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="40" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="41" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="42" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="43" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="44" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="45" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="46" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="47" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="48" color="AAAAAA" font="Times-PLAIN-16"/>
+</visualMatrix>
+<message content="The quotient and the remainder of the division of a by b have been computed">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="7">
+<element id="0" value=" 1  Euclid( a, b ):"/>
+<element id="1" value=" 2    IF (b == 0)"/>
+<element id="2" value=" 3      RETURN (a,1,0);"/>
+<element id="3" value=" 4    q = a / b;"/>
+<element id="4" value=" 5    r = a % b;"/>
+<element id="5" value=" 6    (d, x, y) = Euclid( b, r);"/>
+<element id="6" value=" 7    RETURN (d, y, x - q * y);"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Times-PLAIN-28" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="400" originY="20">
+<visualMalleableElement id="3" color="FFFF00" font="Times-PLAIN-28" shapeHeight="15" shapeWidth="400"/>
+<visualMalleableElement id="4" color="FFFF00" font="Times-PLAIN-28" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm name="Extended Euclid's algorithm">
+<step number="4">
+<structure name="Data table" type="Matrix">
+<matrix height="7" width="7" type="StringInformation">
+	<element id="0" value="a"/>
+	<element id="1" value="b"/>
+	<element id="2" value="a/b"/>
+	<element id="3" value="a%b"/>
+	<element id="4" value="d"/>
+	<element id="5" value="x"/>
+	<element id="6" value="y"/>
+	<element id="7" value="99"/>
+	<element id="8" value="78"/>
+	<element id="9" value="1"/>
+	<element id="10" value="21"/>
+	<element id="11" value=" "/>
+	<element id="12" value=" "/>
+	<element id="13" value=" "/>
+	<element id="14" value="78"/>
+	<element id="15" value="21"/>
+	<element id="16" value="3"/>
+	<element id="17" value="15"/>
+	<element id="18" value=" "/>
+	<element id="19" value=" "/>
+	<element id="20" value=" "/>
+	<element id="21" value="21"/>
+	<element id="22" value="15"/>
+	<element id="23" value=" "/>
+	<element id="24" value=" "/>
+	<element id="25" value=" "/>
+	<element id="26" value=" "/>
+	<element id="27" value=" "/>
+	<element id="28" value=" "/>
+	<element id="29" value=" "/>
+	<element id="30" value=" "/>
+	<element id="31" value=" "/>
+	<element id="32" value=" "/>
+	<element id="33" value=" "/>
+	<element id="34" value=" "/>
+	<element id="35" value=" "/>
+	<element id="36" value=" "/>
+	<element id="37" value=" "/>
+	<element id="38" value=" "/>
+	<element id="39" value=" "/>
+	<element id="40" value=" "/>
+	<element id="41" value=" "/>
+	<element id="42" value=" "/>
+	<element id="43" value=" "/>
+	<element id="44" value=" "/>
+	<element id="45" value=" "/>
+	<element id="46" value=" "/>
+	<element id="47" value=" "/>
+	<element id="48" value=" "/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Times-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="50.0" originX="20" originY="40">
+<visualElement id="0" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="1" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="2" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="3" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="4" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="5" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="6" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="7" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="8" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="9" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="10" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="11" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="12" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="13" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="14" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="15" color="FFFF00" font="Times-PLAIN-16"/>
+<visualElement id="16" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="17" color="00FFFF" font="Times-PLAIN-16"/>
+<visualElement id="18" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="19" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="20" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="21" color="FFFF00" font="Times-PLAIN-16"/>
+<visualElement id="22" color="00FFFF" font="Times-PLAIN-16"/>
+<visualElement id="23" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="24" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="25" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="26" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="27" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="28" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="29" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="30" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="31" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="32" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="33" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="34" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="35" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="36" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="37" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="38" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="39" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="40" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="41" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="42" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="43" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="44" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="45" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="46" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="47" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="48" color="AAAAAA" font="Times-PLAIN-16"/>
+</visualMatrix>
+<message content="The recursive function will be invoked with the new two parameters shown in yellow and azure">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="7">
+<element id="0" value=" 1  Euclid( a, b ):"/>
+<element id="1" value=" 2    IF (b == 0)"/>
+<element id="2" value=" 3      RETURN (a,1,0);"/>
+<element id="3" value=" 4    q = a / b;"/>
+<element id="4" value=" 5    r = a % b;"/>
+<element id="5" value=" 6    (d, x, y) = Euclid( b, r);"/>
+<element id="6" value=" 7    RETURN (d, y, x - q * y);"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Times-PLAIN-28" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="400" originY="20">
+<visualMalleableElement id="5" color="FFFF00" font="Times-PLAIN-28" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm name="Extended Euclid's algorithm">
+<step number="5">
+<structure name="Data table" type="Matrix">
+<matrix height="7" width="7" type="StringInformation">
+	<element id="0" value="a"/>
+	<element id="1" value="b"/>
+	<element id="2" value="a/b"/>
+	<element id="3" value="a%b"/>
+	<element id="4" value="d"/>
+	<element id="5" value="x"/>
+	<element id="6" value="y"/>
+	<element id="7" value="99"/>
+	<element id="8" value="78"/>
+	<element id="9" value="1"/>
+	<element id="10" value="21"/>
+	<element id="11" value=" "/>
+	<element id="12" value=" "/>
+	<element id="13" value=" "/>
+	<element id="14" value="78"/>
+	<element id="15" value="21"/>
+	<element id="16" value="3"/>
+	<element id="17" value="15"/>
+	<element id="18" value=" "/>
+	<element id="19" value=" "/>
+	<element id="20" value=" "/>
+	<element id="21" value="21"/>
+	<element id="22" value="15"/>
+	<element id="23" value="1"/>
+	<element id="24" value="6"/>
+	<element id="25" value=" "/>
+	<element id="26" value=" "/>
+	<element id="27" value=" "/>
+	<element id="28" value=" "/>
+	<element id="29" value=" "/>
+	<element id="30" value=" "/>
+	<element id="31" value=" "/>
+	<element id="32" value=" "/>
+	<element id="33" value=" "/>
+	<element id="34" value=" "/>
+	<element id="35" value=" "/>
+	<element id="36" value=" "/>
+	<element id="37" value=" "/>
+	<element id="38" value=" "/>
+	<element id="39" value=" "/>
+	<element id="40" value=" "/>
+	<element id="41" value=" "/>
+	<element id="42" value=" "/>
+	<element id="43" value=" "/>
+	<element id="44" value=" "/>
+	<element id="45" value=" "/>
+	<element id="46" value=" "/>
+	<element id="47" value=" "/>
+	<element id="48" value=" "/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Times-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="50.0" originX="20" originY="40">
+<visualElement id="0" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="1" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="2" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="3" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="4" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="5" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="6" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="7" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="8" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="9" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="10" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="11" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="12" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="13" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="14" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="15" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="16" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="17" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="18" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="19" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="20" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="21" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="22" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="23" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="24" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="25" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="26" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="27" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="28" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="29" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="30" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="31" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="32" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="33" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="34" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="35" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="36" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="37" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="38" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="39" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="40" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="41" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="42" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="43" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="44" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="45" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="46" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="47" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="48" color="AAAAAA" font="Times-PLAIN-16"/>
+</visualMatrix>
+<message content="The quotient and the remainder of the division of a by b have been computed">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="7">
+<element id="0" value=" 1  Euclid( a, b ):"/>
+<element id="1" value=" 2    IF (b == 0)"/>
+<element id="2" value=" 3      RETURN (a,1,0);"/>
+<element id="3" value=" 4    q = a / b;"/>
+<element id="4" value=" 5    r = a % b;"/>
+<element id="5" value=" 6    (d, x, y) = Euclid( b, r);"/>
+<element id="6" value=" 7    RETURN (d, y, x - q * y);"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Times-PLAIN-28" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="400" originY="20">
+<visualMalleableElement id="3" color="FFFF00" font="Times-PLAIN-28" shapeHeight="15" shapeWidth="400"/>
+<visualMalleableElement id="4" color="FFFF00" font="Times-PLAIN-28" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm name="Extended Euclid's algorithm">
+<step number="6">
+<structure name="Data table" type="Matrix">
+<matrix height="7" width="7" type="StringInformation">
+	<element id="0" value="a"/>
+	<element id="1" value="b"/>
+	<element id="2" value="a/b"/>
+	<element id="3" value="a%b"/>
+	<element id="4" value="d"/>
+	<element id="5" value="x"/>
+	<element id="6" value="y"/>
+	<element id="7" value="99"/>
+	<element id="8" value="78"/>
+	<element id="9" value="1"/>
+	<element id="10" value="21"/>
+	<element id="11" value=" "/>
+	<element id="12" value=" "/>
+	<element id="13" value=" "/>
+	<element id="14" value="78"/>
+	<element id="15" value="21"/>
+	<element id="16" value="3"/>
+	<element id="17" value="15"/>
+	<element id="18" value=" "/>
+	<element id="19" value=" "/>
+	<element id="20" value=" "/>
+	<element id="21" value="21"/>
+	<element id="22" value="15"/>
+	<element id="23" value="1"/>
+	<element id="24" value="6"/>
+	<element id="25" value=" "/>
+	<element id="26" value=" "/>
+	<element id="27" value=" "/>
+	<element id="28" value="15"/>
+	<element id="29" value="6"/>
+	<element id="30" value=" "/>
+	<element id="31" value=" "/>
+	<element id="32" value=" "/>
+	<element id="33" value=" "/>
+	<element id="34" value=" "/>
+	<element id="35" value=" "/>
+	<element id="36" value=" "/>
+	<element id="37" value=" "/>
+	<element id="38" value=" "/>
+	<element id="39" value=" "/>
+	<element id="40" value=" "/>
+	<element id="41" value=" "/>
+	<element id="42" value=" "/>
+	<element id="43" value=" "/>
+	<element id="44" value=" "/>
+	<element id="45" value=" "/>
+	<element id="46" value=" "/>
+	<element id="47" value=" "/>
+	<element id="48" value=" "/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Times-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="50.0" originX="20" originY="40">
+<visualElement id="0" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="1" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="2" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="3" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="4" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="5" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="6" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="7" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="8" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="9" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="10" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="11" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="12" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="13" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="14" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="15" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="16" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="17" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="18" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="19" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="20" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="21" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="22" color="FFFF00" font="Times-PLAIN-16"/>
+<visualElement id="23" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="24" color="00FFFF" font="Times-PLAIN-16"/>
+<visualElement id="25" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="26" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="27" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="28" color="FFFF00" font="Times-PLAIN-16"/>
+<visualElement id="29" color="00FFFF" font="Times-PLAIN-16"/>
+<visualElement id="30" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="31" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="32" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="33" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="34" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="35" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="36" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="37" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="38" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="39" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="40" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="41" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="42" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="43" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="44" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="45" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="46" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="47" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="48" color="AAAAAA" font="Times-PLAIN-16"/>
+</visualMatrix>
+<message content="The recursive function will be invoked with the new two parameters shown in yellow and azure">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="7">
+<element id="0" value=" 1  Euclid( a, b ):"/>
+<element id="1" value=" 2    IF (b == 0)"/>
+<element id="2" value=" 3      RETURN (a,1,0);"/>
+<element id="3" value=" 4    q = a / b;"/>
+<element id="4" value=" 5    r = a % b;"/>
+<element id="5" value=" 6    (d, x, y) = Euclid( b, r);"/>
+<element id="6" value=" 7    RETURN (d, y, x - q * y);"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Times-PLAIN-28" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="400" originY="20">
+<visualMalleableElement id="5" color="FFFF00" font="Times-PLAIN-28" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm name="Extended Euclid's algorithm">
+<step number="7">
+<structure name="Data table" type="Matrix">
+<matrix height="7" width="7" type="StringInformation">
+	<element id="0" value="a"/>
+	<element id="1" value="b"/>
+	<element id="2" value="a/b"/>
+	<element id="3" value="a%b"/>
+	<element id="4" value="d"/>
+	<element id="5" value="x"/>
+	<element id="6" value="y"/>
+	<element id="7" value="99"/>
+	<element id="8" value="78"/>
+	<element id="9" value="1"/>
+	<element id="10" value="21"/>
+	<element id="11" value=" "/>
+	<element id="12" value=" "/>
+	<element id="13" value=" "/>
+	<element id="14" value="78"/>
+	<element id="15" value="21"/>
+	<element id="16" value="3"/>
+	<element id="17" value="15"/>
+	<element id="18" value=" "/>
+	<element id="19" value=" "/>
+	<element id="20" value=" "/>
+	<element id="21" value="21"/>
+	<element id="22" value="15"/>
+	<element id="23" value="1"/>
+	<element id="24" value="6"/>
+	<element id="25" value=" "/>
+	<element id="26" value=" "/>
+	<element id="27" value=" "/>
+	<element id="28" value="15"/>
+	<element id="29" value="6"/>
+	<element id="30" value="2"/>
+	<element id="31" value="3"/>
+	<element id="32" value=" "/>
+	<element id="33" value=" "/>
+	<element id="34" value=" "/>
+	<element id="35" value=" "/>
+	<element id="36" value=" "/>
+	<element id="37" value=" "/>
+	<element id="38" value=" "/>
+	<element id="39" value=" "/>
+	<element id="40" value=" "/>
+	<element id="41" value=" "/>
+	<element id="42" value=" "/>
+	<element id="43" value=" "/>
+	<element id="44" value=" "/>
+	<element id="45" value=" "/>
+	<element id="46" value=" "/>
+	<element id="47" value=" "/>
+	<element id="48" value=" "/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Times-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="50.0" originX="20" originY="40">
+<visualElement id="0" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="1" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="2" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="3" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="4" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="5" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="6" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="7" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="8" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="9" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="10" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="11" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="12" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="13" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="14" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="15" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="16" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="17" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="18" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="19" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="20" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="21" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="22" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="23" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="24" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="25" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="26" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="27" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="28" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="29" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="30" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="31" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="32" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="33" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="34" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="35" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="36" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="37" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="38" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="39" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="40" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="41" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="42" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="43" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="44" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="45" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="46" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="47" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="48" color="AAAAAA" font="Times-PLAIN-16"/>
+</visualMatrix>
+<message content="The quotient and the remainder of the division of a by b have been computed">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="7">
+<element id="0" value=" 1  Euclid( a, b ):"/>
+<element id="1" value=" 2    IF (b == 0)"/>
+<element id="2" value=" 3      RETURN (a,1,0);"/>
+<element id="3" value=" 4    q = a / b;"/>
+<element id="4" value=" 5    r = a % b;"/>
+<element id="5" value=" 6    (d, x, y) = Euclid( b, r);"/>
+<element id="6" value=" 7    RETURN (d, y, x - q * y);"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Times-PLAIN-28" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="400" originY="20">
+<visualMalleableElement id="3" color="FFFF00" font="Times-PLAIN-28" shapeHeight="15" shapeWidth="400"/>
+<visualMalleableElement id="4" color="FFFF00" font="Times-PLAIN-28" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm name="Extended Euclid's algorithm">
+<step number="8">
+<structure name="Data table" type="Matrix">
+<matrix height="7" width="7" type="StringInformation">
+	<element id="0" value="a"/>
+	<element id="1" value="b"/>
+	<element id="2" value="a/b"/>
+	<element id="3" value="a%b"/>
+	<element id="4" value="d"/>
+	<element id="5" value="x"/>
+	<element id="6" value="y"/>
+	<element id="7" value="99"/>
+	<element id="8" value="78"/>
+	<element id="9" value="1"/>
+	<element id="10" value="21"/>
+	<element id="11" value=" "/>
+	<element id="12" value=" "/>
+	<element id="13" value=" "/>
+	<element id="14" value="78"/>
+	<element id="15" value="21"/>
+	<element id="16" value="3"/>
+	<element id="17" value="15"/>
+	<element id="18" value=" "/>
+	<element id="19" value=" "/>
+	<element id="20" value=" "/>
+	<element id="21" value="21"/>
+	<element id="22" value="15"/>
+	<element id="23" value="1"/>
+	<element id="24" value="6"/>
+	<element id="25" value=" "/>
+	<element id="26" value=" "/>
+	<element id="27" value=" "/>
+	<element id="28" value="15"/>
+	<element id="29" value="6"/>
+	<element id="30" value="2"/>
+	<element id="31" value="3"/>
+	<element id="32" value=" "/>
+	<element id="33" value=" "/>
+	<element id="34" value=" "/>
+	<element id="35" value="6"/>
+	<element id="36" value="3"/>
+	<element id="37" value=" "/>
+	<element id="38" value=" "/>
+	<element id="39" value=" "/>
+	<element id="40" value=" "/>
+	<element id="41" value=" "/>
+	<element id="42" value=" "/>
+	<element id="43" value=" "/>
+	<element id="44" value=" "/>
+	<element id="45" value=" "/>
+	<element id="46" value=" "/>
+	<element id="47" value=" "/>
+	<element id="48" value=" "/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Times-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="50.0" originX="20" originY="40">
+<visualElement id="0" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="1" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="2" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="3" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="4" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="5" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="6" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="7" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="8" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="9" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="10" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="11" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="12" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="13" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="14" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="15" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="16" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="17" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="18" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="19" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="20" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="21" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="22" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="23" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="24" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="25" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="26" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="27" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="28" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="29" color="FFFF00" font="Times-PLAIN-16"/>
+<visualElement id="30" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="31" color="00FFFF" font="Times-PLAIN-16"/>
+<visualElement id="32" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="33" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="34" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="35" color="FFFF00" font="Times-PLAIN-16"/>
+<visualElement id="36" color="00FFFF" font="Times-PLAIN-16"/>
+<visualElement id="37" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="38" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="39" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="40" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="41" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="42" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="43" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="44" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="45" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="46" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="47" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="48" color="AAAAAA" font="Times-PLAIN-16"/>
+</visualMatrix>
+<message content="The recursive function will be invoked with the new two parameters shown in yellow and azure">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="7">
+<element id="0" value=" 1  Euclid( a, b ):"/>
+<element id="1" value=" 2    IF (b == 0)"/>
+<element id="2" value=" 3      RETURN (a,1,0);"/>
+<element id="3" value=" 4    q = a / b;"/>
+<element id="4" value=" 5    r = a % b;"/>
+<element id="5" value=" 6    (d, x, y) = Euclid( b, r);"/>
+<element id="6" value=" 7    RETURN (d, y, x - q * y);"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Times-PLAIN-28" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="400" originY="20">
+<visualMalleableElement id="5" color="FFFF00" font="Times-PLAIN-28" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm name="Extended Euclid's algorithm">
+<step number="9">
+<structure name="Data table" type="Matrix">
+<matrix height="7" width="7" type="StringInformation">
+	<element id="0" value="a"/>
+	<element id="1" value="b"/>
+	<element id="2" value="a/b"/>
+	<element id="3" value="a%b"/>
+	<element id="4" value="d"/>
+	<element id="5" value="x"/>
+	<element id="6" value="y"/>
+	<element id="7" value="99"/>
+	<element id="8" value="78"/>
+	<element id="9" value="1"/>
+	<element id="10" value="21"/>
+	<element id="11" value=" "/>
+	<element id="12" value=" "/>
+	<element id="13" value=" "/>
+	<element id="14" value="78"/>
+	<element id="15" value="21"/>
+	<element id="16" value="3"/>
+	<element id="17" value="15"/>
+	<element id="18" value=" "/>
+	<element id="19" value=" "/>
+	<element id="20" value=" "/>
+	<element id="21" value="21"/>
+	<element id="22" value="15"/>
+	<element id="23" value="1"/>
+	<element id="24" value="6"/>
+	<element id="25" value=" "/>
+	<element id="26" value=" "/>
+	<element id="27" value=" "/>
+	<element id="28" value="15"/>
+	<element id="29" value="6"/>
+	<element id="30" value="2"/>
+	<element id="31" value="3"/>
+	<element id="32" value=" "/>
+	<element id="33" value=" "/>
+	<element id="34" value=" "/>
+	<element id="35" value="6"/>
+	<element id="36" value="3"/>
+	<element id="37" value="2"/>
+	<element id="38" value="0"/>
+	<element id="39" value=" "/>
+	<element id="40" value=" "/>
+	<element id="41" value=" "/>
+	<element id="42" value=" "/>
+	<element id="43" value=" "/>
+	<element id="44" value=" "/>
+	<element id="45" value=" "/>
+	<element id="46" value=" "/>
+	<element id="47" value=" "/>
+	<element id="48" value=" "/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Times-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="50.0" originX="20" originY="40">
+<visualElement id="0" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="1" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="2" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="3" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="4" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="5" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="6" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="7" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="8" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="9" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="10" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="11" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="12" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="13" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="14" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="15" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="16" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="17" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="18" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="19" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="20" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="21" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="22" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="23" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="24" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="25" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="26" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="27" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="28" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="29" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="30" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="31" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="32" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="33" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="34" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="35" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="36" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="37" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="38" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="39" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="40" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="41" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="42" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="43" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="44" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="45" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="46" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="47" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="48" color="AAAAAA" font="Times-PLAIN-16"/>
+</visualMatrix>
+<message content="The quotient and the remainder of the division of a by b have been computed">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="7">
+<element id="0" value=" 1  Euclid( a, b ):"/>
+<element id="1" value=" 2    IF (b == 0)"/>
+<element id="2" value=" 3      RETURN (a,1,0);"/>
+<element id="3" value=" 4    q = a / b;"/>
+<element id="4" value=" 5    r = a % b;"/>
+<element id="5" value=" 6    (d, x, y) = Euclid( b, r);"/>
+<element id="6" value=" 7    RETURN (d, y, x - q * y);"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Times-PLAIN-28" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="400" originY="20">
+<visualMalleableElement id="3" color="FFFF00" font="Times-PLAIN-28" shapeHeight="15" shapeWidth="400"/>
+<visualMalleableElement id="4" color="FFFF00" font="Times-PLAIN-28" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm name="Extended Euclid's algorithm">
+<step number="10">
+<structure name="Data table" type="Matrix">
+<matrix height="7" width="7" type="StringInformation">
+	<element id="0" value="a"/>
+	<element id="1" value="b"/>
+	<element id="2" value="a/b"/>
+	<element id="3" value="a%b"/>
+	<element id="4" value="d"/>
+	<element id="5" value="x"/>
+	<element id="6" value="y"/>
+	<element id="7" value="99"/>
+	<element id="8" value="78"/>
+	<element id="9" value="1"/>
+	<element id="10" value="21"/>
+	<element id="11" value=" "/>
+	<element id="12" value=" "/>
+	<element id="13" value=" "/>
+	<element id="14" value="78"/>
+	<element id="15" value="21"/>
+	<element id="16" value="3"/>
+	<element id="17" value="15"/>
+	<element id="18" value=" "/>
+	<element id="19" value=" "/>
+	<element id="20" value=" "/>
+	<element id="21" value="21"/>
+	<element id="22" value="15"/>
+	<element id="23" value="1"/>
+	<element id="24" value="6"/>
+	<element id="25" value=" "/>
+	<element id="26" value=" "/>
+	<element id="27" value=" "/>
+	<element id="28" value="15"/>
+	<element id="29" value="6"/>
+	<element id="30" value="2"/>
+	<element id="31" value="3"/>
+	<element id="32" value=" "/>
+	<element id="33" value=" "/>
+	<element id="34" value=" "/>
+	<element id="35" value="6"/>
+	<element id="36" value="3"/>
+	<element id="37" value="2"/>
+	<element id="38" value="0"/>
+	<element id="39" value=" "/>
+	<element id="40" value=" "/>
+	<element id="41" value=" "/>
+	<element id="42" value="3"/>
+	<element id="43" value="0"/>
+	<element id="44" value=" "/>
+	<element id="45" value=" "/>
+	<element id="46" value=" "/>
+	<element id="47" value=" "/>
+	<element id="48" value=" "/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Times-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="50.0" originX="20" originY="40">
+<visualElement id="0" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="1" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="2" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="3" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="4" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="5" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="6" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="7" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="8" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="9" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="10" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="11" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="12" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="13" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="14" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="15" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="16" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="17" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="18" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="19" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="20" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="21" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="22" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="23" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="24" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="25" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="26" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="27" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="28" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="29" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="30" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="31" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="32" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="33" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="34" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="35" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="36" color="FFFF00" font="Times-PLAIN-16"/>
+<visualElement id="37" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="38" color="00FFFF" font="Times-PLAIN-16"/>
+<visualElement id="39" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="40" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="41" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="42" color="FFFF00" font="Times-PLAIN-16"/>
+<visualElement id="43" color="00FFFF" font="Times-PLAIN-16"/>
+<visualElement id="44" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="45" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="46" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="47" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="48" color="AAAAAA" font="Times-PLAIN-16"/>
+</visualMatrix>
+<message content="The recursive function will be invoked with the new two parameters shown in yellow and azure">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="7">
+<element id="0" value=" 1  Euclid( a, b ):"/>
+<element id="1" value=" 2    IF (b == 0)"/>
+<element id="2" value=" 3      RETURN (a,1,0);"/>
+<element id="3" value=" 4    q = a / b;"/>
+<element id="4" value=" 5    r = a % b;"/>
+<element id="5" value=" 6    (d, x, y) = Euclid( b, r);"/>
+<element id="6" value=" 7    RETURN (d, y, x - q * y);"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Times-PLAIN-28" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="400" originY="20">
+<visualMalleableElement id="5" color="FFFF00" font="Times-PLAIN-28" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm name="Extended Euclid's algorithm">
+<step number="11">
+<structure name="Data table" type="Matrix">
+<matrix height="7" width="7" type="StringInformation">
+	<element id="0" value="a"/>
+	<element id="1" value="b"/>
+	<element id="2" value="a/b"/>
+	<element id="3" value="a%b"/>
+	<element id="4" value="d"/>
+	<element id="5" value="x"/>
+	<element id="6" value="y"/>
+	<element id="7" value="99"/>
+	<element id="8" value="78"/>
+	<element id="9" value="1"/>
+	<element id="10" value="21"/>
+	<element id="11" value=" "/>
+	<element id="12" value=" "/>
+	<element id="13" value=" "/>
+	<element id="14" value="78"/>
+	<element id="15" value="21"/>
+	<element id="16" value="3"/>
+	<element id="17" value="15"/>
+	<element id="18" value=" "/>
+	<element id="19" value=" "/>
+	<element id="20" value=" "/>
+	<element id="21" value="21"/>
+	<element id="22" value="15"/>
+	<element id="23" value="1"/>
+	<element id="24" value="6"/>
+	<element id="25" value=" "/>
+	<element id="26" value=" "/>
+	<element id="27" value=" "/>
+	<element id="28" value="15"/>
+	<element id="29" value="6"/>
+	<element id="30" value="2"/>
+	<element id="31" value="3"/>
+	<element id="32" value=" "/>
+	<element id="33" value=" "/>
+	<element id="34" value=" "/>
+	<element id="35" value="6"/>
+	<element id="36" value="3"/>
+	<element id="37" value="2"/>
+	<element id="38" value="0"/>
+	<element id="39" value=" "/>
+	<element id="40" value=" "/>
+	<element id="41" value=" "/>
+	<element id="42" value="3"/>
+	<element id="43" value="0"/>
+	<element id="44" value="--"/>
+	<element id="45" value="--"/>
+	<element id="46" value="3"/>
+	<element id="47" value="1"/>
+	<element id="48" value="0"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Times-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="50.0" originX="20" originY="40">
+<visualElement id="0" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="1" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="2" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="3" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="4" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="5" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="6" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="7" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="8" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="9" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="10" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="11" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="12" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="13" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="14" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="15" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="16" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="17" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="18" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="19" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="20" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="21" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="22" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="23" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="24" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="25" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="26" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="27" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="28" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="29" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="30" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="31" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="32" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="33" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="34" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="35" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="36" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="37" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="38" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="39" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="40" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="41" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="42" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="43" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="44" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="45" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="46" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="47" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="48" color="FFFFFF" font="Times-PLAIN-16"/>
+</visualMatrix>
+<message content="The second number is zero: in this case the GCD is the first number and x and y are equal to 1 and 0, respectively">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="7">
+<element id="0" value=" 1  Euclid( a, b ):"/>
+<element id="1" value=" 2    IF (b == 0)"/>
+<element id="2" value=" 3      RETURN (a,1,0);"/>
+<element id="3" value=" 4    q = a / b;"/>
+<element id="4" value=" 5    r = a % b;"/>
+<element id="5" value=" 6    (d, x, y) = Euclid( b, r);"/>
+<element id="6" value=" 7    RETURN (d, y, x - q * y);"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Times-PLAIN-28" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="400" originY="20">
+<visualMalleableElement id="2" color="FFFF00" font="Times-PLAIN-28" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm name="Extended Euclid's algorithm">
+<step number="12">
+<structure name="Data table" type="Matrix">
+<matrix height="7" width="7" type="StringInformation">
+	<element id="0" value="a"/>
+	<element id="1" value="b"/>
+	<element id="2" value="a/b"/>
+	<element id="3" value="a%b"/>
+	<element id="4" value="d"/>
+	<element id="5" value="x"/>
+	<element id="6" value="y"/>
+	<element id="7" value="99"/>
+	<element id="8" value="78"/>
+	<element id="9" value="1"/>
+	<element id="10" value="21"/>
+	<element id="11" value=" "/>
+	<element id="12" value=" "/>
+	<element id="13" value=" "/>
+	<element id="14" value="78"/>
+	<element id="15" value="21"/>
+	<element id="16" value="3"/>
+	<element id="17" value="15"/>
+	<element id="18" value=" "/>
+	<element id="19" value=" "/>
+	<element id="20" value=" "/>
+	<element id="21" value="21"/>
+	<element id="22" value="15"/>
+	<element id="23" value="1"/>
+	<element id="24" value="6"/>
+	<element id="25" value=" "/>
+	<element id="26" value=" "/>
+	<element id="27" value=" "/>
+	<element id="28" value="15"/>
+	<element id="29" value="6"/>
+	<element id="30" value="2"/>
+	<element id="31" value="3"/>
+	<element id="32" value=" "/>
+	<element id="33" value=" "/>
+	<element id="34" value=" "/>
+	<element id="35" value="6"/>
+	<element id="36" value="3"/>
+	<element id="37" value="2"/>
+	<element id="38" value="0"/>
+	<element id="39" value="3"/>
+	<element id="40" value="0"/>
+	<element id="41" value="1"/>
+	<element id="42" value="3"/>
+	<element id="43" value="0"/>
+	<element id="44" value="--"/>
+	<element id="45" value="--"/>
+	<element id="46" value="3"/>
+	<element id="47" value="1"/>
+	<element id="48" value="0"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Times-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="50.0" originX="20" originY="40">
+<visualElement id="0" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="1" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="2" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="3" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="4" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="5" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="6" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="7" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="8" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="9" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="10" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="11" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="12" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="13" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="14" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="15" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="16" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="17" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="18" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="19" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="20" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="21" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="22" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="23" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="24" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="25" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="26" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="27" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="28" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="29" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="30" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="31" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="32" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="33" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="34" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="35" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="36" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="37" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="38" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="39" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="40" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="41" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="42" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="43" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="44" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="45" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="46" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="47" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="48" color="AAAAAA" font="Times-PLAIN-16"/>
+</visualMatrix>
+<message content="The recursive invocation terminated: the returned values correspond to the GCD, x, and y of the current invocation">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="7">
+<element id="0" value=" 1  Euclid( a, b ):"/>
+<element id="1" value=" 2    IF (b == 0)"/>
+<element id="2" value=" 3      RETURN (a,1,0);"/>
+<element id="3" value=" 4    q = a / b;"/>
+<element id="4" value=" 5    r = a % b;"/>
+<element id="5" value=" 6    (d, x, y) = Euclid( b, r);"/>
+<element id="6" value=" 7    RETURN (d, y, x - q * y);"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Times-PLAIN-28" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="400" originY="20">
+<visualMalleableElement id="6" color="FFFF00" font="Times-PLAIN-28" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm name="Extended Euclid's algorithm">
+<step number="13">
+<structure name="Data table" type="Matrix">
+<matrix height="7" width="7" type="StringInformation">
+	<element id="0" value="a"/>
+	<element id="1" value="b"/>
+	<element id="2" value="a/b"/>
+	<element id="3" value="a%b"/>
+	<element id="4" value="d"/>
+	<element id="5" value="x"/>
+	<element id="6" value="y"/>
+	<element id="7" value="99"/>
+	<element id="8" value="78"/>
+	<element id="9" value="1"/>
+	<element id="10" value="21"/>
+	<element id="11" value=" "/>
+	<element id="12" value=" "/>
+	<element id="13" value=" "/>
+	<element id="14" value="78"/>
+	<element id="15" value="21"/>
+	<element id="16" value="3"/>
+	<element id="17" value="15"/>
+	<element id="18" value=" "/>
+	<element id="19" value=" "/>
+	<element id="20" value=" "/>
+	<element id="21" value="21"/>
+	<element id="22" value="15"/>
+	<element id="23" value="1"/>
+	<element id="24" value="6"/>
+	<element id="25" value=" "/>
+	<element id="26" value=" "/>
+	<element id="27" value=" "/>
+	<element id="28" value="15"/>
+	<element id="29" value="6"/>
+	<element id="30" value="2"/>
+	<element id="31" value="3"/>
+	<element id="32" value="3"/>
+	<element id="33" value="1"/>
+	<element id="34" value="-2"/>
+	<element id="35" value="6"/>
+	<element id="36" value="3"/>
+	<element id="37" value="2"/>
+	<element id="38" value="0"/>
+	<element id="39" value="3"/>
+	<element id="40" value="0"/>
+	<element id="41" value="1"/>
+	<element id="42" value="3"/>
+	<element id="43" value="0"/>
+	<element id="44" value="--"/>
+	<element id="45" value="--"/>
+	<element id="46" value="3"/>
+	<element id="47" value="1"/>
+	<element id="48" value="0"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Times-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="50.0" originX="20" originY="40">
+<visualElement id="0" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="1" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="2" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="3" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="4" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="5" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="6" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="7" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="8" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="9" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="10" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="11" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="12" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="13" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="14" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="15" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="16" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="17" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="18" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="19" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="20" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="21" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="22" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="23" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="24" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="25" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="26" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="27" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="28" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="29" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="30" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="31" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="32" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="33" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="34" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="35" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="36" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="37" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="38" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="39" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="40" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="41" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="42" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="43" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="44" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="45" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="46" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="47" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="48" color="AAAAAA" font="Times-PLAIN-16"/>
+</visualMatrix>
+<message content="The recursive invocation terminated: the returned values correspond to the GCD, x, and y of the current invocation">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="7">
+<element id="0" value=" 1  Euclid( a, b ):"/>
+<element id="1" value=" 2    IF (b == 0)"/>
+<element id="2" value=" 3      RETURN (a,1,0);"/>
+<element id="3" value=" 4    q = a / b;"/>
+<element id="4" value=" 5    r = a % b;"/>
+<element id="5" value=" 6    (d, x, y) = Euclid( b, r);"/>
+<element id="6" value=" 7    RETURN (d, y, x - q * y);"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Times-PLAIN-28" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="400" originY="20">
+<visualMalleableElement id="6" color="FFFF00" font="Times-PLAIN-28" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm name="Extended Euclid's algorithm">
+<step number="14">
+<structure name="Data table" type="Matrix">
+<matrix height="7" width="7" type="StringInformation">
+	<element id="0" value="a"/>
+	<element id="1" value="b"/>
+	<element id="2" value="a/b"/>
+	<element id="3" value="a%b"/>
+	<element id="4" value="d"/>
+	<element id="5" value="x"/>
+	<element id="6" value="y"/>
+	<element id="7" value="99"/>
+	<element id="8" value="78"/>
+	<element id="9" value="1"/>
+	<element id="10" value="21"/>
+	<element id="11" value=" "/>
+	<element id="12" value=" "/>
+	<element id="13" value=" "/>
+	<element id="14" value="78"/>
+	<element id="15" value="21"/>
+	<element id="16" value="3"/>
+	<element id="17" value="15"/>
+	<element id="18" value=" "/>
+	<element id="19" value=" "/>
+	<element id="20" value=" "/>
+	<element id="21" value="21"/>
+	<element id="22" value="15"/>
+	<element id="23" value="1"/>
+	<element id="24" value="6"/>
+	<element id="25" value="3"/>
+	<element id="26" value="-2"/>
+	<element id="27" value="3"/>
+	<element id="28" value="15"/>
+	<element id="29" value="6"/>
+	<element id="30" value="2"/>
+	<element id="31" value="3"/>
+	<element id="32" value="3"/>
+	<element id="33" value="1"/>
+	<element id="34" value="-2"/>
+	<element id="35" value="6"/>
+	<element id="36" value="3"/>
+	<element id="37" value="2"/>
+	<element id="38" value="0"/>
+	<element id="39" value="3"/>
+	<element id="40" value="0"/>
+	<element id="41" value="1"/>
+	<element id="42" value="3"/>
+	<element id="43" value="0"/>
+	<element id="44" value="--"/>
+	<element id="45" value="--"/>
+	<element id="46" value="3"/>
+	<element id="47" value="1"/>
+	<element id="48" value="0"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Times-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="50.0" originX="20" originY="40">
+<visualElement id="0" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="1" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="2" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="3" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="4" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="5" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="6" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="7" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="8" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="9" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="10" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="11" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="12" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="13" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="14" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="15" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="16" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="17" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="18" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="19" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="20" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="21" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="22" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="23" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="24" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="25" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="26" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="27" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="28" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="29" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="30" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="31" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="32" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="33" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="34" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="35" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="36" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="37" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="38" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="39" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="40" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="41" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="42" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="43" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="44" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="45" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="46" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="47" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="48" color="AAAAAA" font="Times-PLAIN-16"/>
+</visualMatrix>
+<message content="The recursive invocation terminated: the returned values correspond to the GCD, x, and y of the current invocation">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="7">
+<element id="0" value=" 1  Euclid( a, b ):"/>
+<element id="1" value=" 2    IF (b == 0)"/>
+<element id="2" value=" 3      RETURN (a,1,0);"/>
+<element id="3" value=" 4    q = a / b;"/>
+<element id="4" value=" 5    r = a % b;"/>
+<element id="5" value=" 6    (d, x, y) = Euclid( b, r);"/>
+<element id="6" value=" 7    RETURN (d, y, x - q * y);"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Times-PLAIN-28" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="400" originY="20">
+<visualMalleableElement id="6" color="FFFF00" font="Times-PLAIN-28" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm name="Extended Euclid's algorithm">
+<step number="15">
+<structure name="Data table" type="Matrix">
+<matrix height="7" width="7" type="StringInformation">
+	<element id="0" value="a"/>
+	<element id="1" value="b"/>
+	<element id="2" value="a/b"/>
+	<element id="3" value="a%b"/>
+	<element id="4" value="d"/>
+	<element id="5" value="x"/>
+	<element id="6" value="y"/>
+	<element id="7" value="99"/>
+	<element id="8" value="78"/>
+	<element id="9" value="1"/>
+	<element id="10" value="21"/>
+	<element id="11" value=" "/>
+	<element id="12" value=" "/>
+	<element id="13" value=" "/>
+	<element id="14" value="78"/>
+	<element id="15" value="21"/>
+	<element id="16" value="3"/>
+	<element id="17" value="15"/>
+	<element id="18" value="3"/>
+	<element id="19" value="3"/>
+	<element id="20" value="-11"/>
+	<element id="21" value="21"/>
+	<element id="22" value="15"/>
+	<element id="23" value="1"/>
+	<element id="24" value="6"/>
+	<element id="25" value="3"/>
+	<element id="26" value="-2"/>
+	<element id="27" value="3"/>
+	<element id="28" value="15"/>
+	<element id="29" value="6"/>
+	<element id="30" value="2"/>
+	<element id="31" value="3"/>
+	<element id="32" value="3"/>
+	<element id="33" value="1"/>
+	<element id="34" value="-2"/>
+	<element id="35" value="6"/>
+	<element id="36" value="3"/>
+	<element id="37" value="2"/>
+	<element id="38" value="0"/>
+	<element id="39" value="3"/>
+	<element id="40" value="0"/>
+	<element id="41" value="1"/>
+	<element id="42" value="3"/>
+	<element id="43" value="0"/>
+	<element id="44" value="--"/>
+	<element id="45" value="--"/>
+	<element id="46" value="3"/>
+	<element id="47" value="1"/>
+	<element id="48" value="0"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Times-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="50.0" originX="20" originY="40">
+<visualElement id="0" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="1" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="2" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="3" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="4" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="5" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="6" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="7" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="8" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="9" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="10" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="11" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="12" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="13" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="14" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="15" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="16" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="17" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="18" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="19" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="20" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="21" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="22" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="23" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="24" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="25" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="26" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="27" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="28" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="29" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="30" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="31" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="32" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="33" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="34" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="35" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="36" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="37" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="38" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="39" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="40" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="41" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="42" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="43" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="44" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="45" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="46" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="47" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="48" color="AAAAAA" font="Times-PLAIN-16"/>
+</visualMatrix>
+<message content="The recursive invocation terminated: the returned values correspond to the GCD, x, and y of the current invocation">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="7">
+<element id="0" value=" 1  Euclid( a, b ):"/>
+<element id="1" value=" 2    IF (b == 0)"/>
+<element id="2" value=" 3      RETURN (a,1,0);"/>
+<element id="3" value=" 4    q = a / b;"/>
+<element id="4" value=" 5    r = a % b;"/>
+<element id="5" value=" 6    (d, x, y) = Euclid( b, r);"/>
+<element id="6" value=" 7    RETURN (d, y, x - q * y);"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Times-PLAIN-28" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="400" originY="20">
+<visualMalleableElement id="6" color="FFFF00" font="Times-PLAIN-28" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm name="Extended Euclid's algorithm">
+<step number="16">
+<structure name="Data table" type="Matrix">
+<matrix height="7" width="7" type="StringInformation">
+	<element id="0" value="a"/>
+	<element id="1" value="b"/>
+	<element id="2" value="a/b"/>
+	<element id="3" value="a%b"/>
+	<element id="4" value="d"/>
+	<element id="5" value="x"/>
+	<element id="6" value="y"/>
+	<element id="7" value="99"/>
+	<element id="8" value="78"/>
+	<element id="9" value="1"/>
+	<element id="10" value="21"/>
+	<element id="11" value="3"/>
+	<element id="12" value="-11"/>
+	<element id="13" value="14"/>
+	<element id="14" value="78"/>
+	<element id="15" value="21"/>
+	<element id="16" value="3"/>
+	<element id="17" value="15"/>
+	<element id="18" value="3"/>
+	<element id="19" value="3"/>
+	<element id="20" value="-11"/>
+	<element id="21" value="21"/>
+	<element id="22" value="15"/>
+	<element id="23" value="1"/>
+	<element id="24" value="6"/>
+	<element id="25" value="3"/>
+	<element id="26" value="-2"/>
+	<element id="27" value="3"/>
+	<element id="28" value="15"/>
+	<element id="29" value="6"/>
+	<element id="30" value="2"/>
+	<element id="31" value="3"/>
+	<element id="32" value="3"/>
+	<element id="33" value="1"/>
+	<element id="34" value="-2"/>
+	<element id="35" value="6"/>
+	<element id="36" value="3"/>
+	<element id="37" value="2"/>
+	<element id="38" value="0"/>
+	<element id="39" value="3"/>
+	<element id="40" value="0"/>
+	<element id="41" value="1"/>
+	<element id="42" value="3"/>
+	<element id="43" value="0"/>
+	<element id="44" value="--"/>
+	<element id="45" value="--"/>
+	<element id="46" value="3"/>
+	<element id="47" value="1"/>
+	<element id="48" value="0"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Times-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="50.0" originX="20" originY="40">
+<visualElement id="0" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="1" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="2" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="3" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="4" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="5" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="6" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="7" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="8" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="9" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="10" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="11" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="12" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="13" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="14" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="15" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="16" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="17" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="18" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="19" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="20" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="21" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="22" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="23" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="24" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="25" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="26" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="27" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="28" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="29" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="30" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="31" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="32" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="33" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="34" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="35" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="36" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="37" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="38" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="39" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="40" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="41" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="42" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="43" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="44" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="45" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="46" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="47" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="48" color="AAAAAA" font="Times-PLAIN-16"/>
+</visualMatrix>
+<message content="The recursive invocation terminated: the returned values correspond to the GCD, x, and y of the current invocation">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="7">
+<element id="0" value=" 1  Euclid( a, b ):"/>
+<element id="1" value=" 2    IF (b == 0)"/>
+<element id="2" value=" 3      RETURN (a,1,0);"/>
+<element id="3" value=" 4    q = a / b;"/>
+<element id="4" value=" 5    r = a % b;"/>
+<element id="5" value=" 6    (d, x, y) = Euclid( b, r);"/>
+<element id="6" value=" 7    RETURN (d, y, x - q * y);"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Times-PLAIN-28" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="400" originY="20">
+<visualMalleableElement id="6" color="FFFF00" font="Times-PLAIN-28" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="17">
+<structure name="Data table" type="Matrix">
+<matrix height="7" width="7" type="StringInformation">
+	<element id="0" value="a"/>
+	<element id="1" value="b"/>
+	<element id="2" value="a/b"/>
+	<element id="3" value="a%b"/>
+	<element id="4" value="d"/>
+	<element id="5" value="x"/>
+	<element id="6" value="y"/>
+	<element id="7" value="99"/>
+	<element id="8" value="78"/>
+	<element id="9" value="1"/>
+	<element id="10" value="21"/>
+	<element id="11" value="3"/>
+	<element id="12" value="-11"/>
+	<element id="13" value="14"/>
+	<element id="14" value="78"/>
+	<element id="15" value="21"/>
+	<element id="16" value="3"/>
+	<element id="17" value="15"/>
+	<element id="18" value="3"/>
+	<element id="19" value="3"/>
+	<element id="20" value="-11"/>
+	<element id="21" value="21"/>
+	<element id="22" value="15"/>
+	<element id="23" value="1"/>
+	<element id="24" value="6"/>
+	<element id="25" value="3"/>
+	<element id="26" value="-2"/>
+	<element id="27" value="3"/>
+	<element id="28" value="15"/>
+	<element id="29" value="6"/>
+	<element id="30" value="2"/>
+	<element id="31" value="3"/>
+	<element id="32" value="3"/>
+	<element id="33" value="1"/>
+	<element id="34" value="-2"/>
+	<element id="35" value="6"/>
+	<element id="36" value="3"/>
+	<element id="37" value="2"/>
+	<element id="38" value="0"/>
+	<element id="39" value="3"/>
+	<element id="40" value="0"/>
+	<element id="41" value="1"/>
+	<element id="42" value="3"/>
+	<element id="43" value="0"/>
+	<element id="44" value="--"/>
+	<element id="45" value="--"/>
+	<element id="46" value="3"/>
+	<element id="47" value="1"/>
+	<element id="48" value="0"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Times-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="50.0" originX="20" originY="40">
+<visualElement id="0" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="1" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="2" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="3" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="4" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="5" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="6" color="00FF00" font="Times-PLAIN-16"/>
+<visualElement id="7" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="8" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="9" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="10" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="11" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="12" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="13" color="FFFFFF" font="Times-PLAIN-16"/>
+<visualElement id="14" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="15" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="16" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="17" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="18" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="19" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="20" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="21" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="22" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="23" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="24" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="25" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="26" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="27" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="28" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="29" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="30" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="31" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="32" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="33" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="34" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="35" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="36" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="37" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="38" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="39" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="40" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="41" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="42" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="43" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="44" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="45" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="46" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="47" color="AAAAAA" font="Times-PLAIN-16"/>
+<visualElement id="48" color="AAAAAA" font="Times-PLAIN-16"/>
+</visualMatrix>
+<message content="The algorithm terminated: the GCD and the two coefficients x and y are shown in the last three columns of the first row">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="7">
+<element id="0" value=" 1  Euclid( a, b ):"/>
+<element id="1" value=" 2    IF (b == 0)"/>
+<element id="2" value=" 3      RETURN (a,1,0);"/>
+<element id="3" value=" 4    q = a / b;"/>
+<element id="4" value=" 5    r = a % b;"/>
+<element id="5" value=" 6    (d, x, y) = Euclid( b, r);"/>
+<element id="6" value=" 7    RETURN (d, y, x - q * y);"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Times-PLAIN-28" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="400" originY="20">
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+</algorithm>

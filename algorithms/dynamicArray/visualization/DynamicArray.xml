@@ -1,0 +1,1706 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm name="Dynamic array">
+<step number="0">
+<structure name="Array" type="Array">
+<array size="3" type="StringInformation">
+<element id="0" value=" "/>
+<element id="1" value=" "/>
+<element id="2" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+</visualArray>
+<message content="Initial state of the array: all the elements are empty.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="14">
+<element id="0" value=" 1  VerifyDoubling( ):"/>
+<element id="1" value=" 2    IF (m == s) {"/>
+<element id="2" value=" 3      b = NewArray( 2 x s );"/>
+<element id="3" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="4" value=" 5        b[i] = a[i];"/>
+<element id="5" value=" 6      a = b;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  VerifyHalving( ):"/>
+<element id="8" value=" 2    IF ((s > 1) &#38;&#38; (m == s/4)) {"/>
+<element id="9" value=" 3      b = NewArray( s/2 );"/>
+<element id="10" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="11" value=" 5        b[i] = a[i];"/>
+<element id="12" value=" 6      a = b;"/>
+<element id="13" value=" 7    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="50" originY="100">
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="1">
+<structure name="Array" type="Array">
+<array size="3" type="StringInformation">
+<element id="0" value=" "/>
+<element id="1" value=" "/>
+<element id="2" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+</visualArray>
+<message content="The insertion of 5 has to be executed.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="14">
+<element id="0" value=" 1  VerifyDoubling( ):"/>
+<element id="1" value=" 2    IF (m == s) {"/>
+<element id="2" value=" 3      b = NewArray( 2 x s );"/>
+<element id="3" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="4" value=" 5        b[i] = a[i];"/>
+<element id="5" value=" 6      a = b;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  VerifyHalving( ):"/>
+<element id="8" value=" 2    IF ((s > 1) &#38;&#38; (m == s/4)) {"/>
+<element id="9" value=" 3      b = NewArray( s/2 );"/>
+<element id="10" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="11" value=" 5        b[i] = a[i];"/>
+<element id="12" value=" 6      a = b;"/>
+<element id="13" value=" 7    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="50" originY="100">
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="2">
+<structure name="Array" type="Array">
+<array size="3" type="StringInformation">
+<element id="0" value=" "/>
+<element id="1" value=" "/>
+<element id="2" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+</visualArray>
+<message content="To execute the insertion operation the array dimension has not to be doubled, since the size of the array is greater than the number of its elements.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="14">
+<element id="0" value=" 1  VerifyDoubling( ):"/>
+<element id="1" value=" 2    IF (m == s) {"/>
+<element id="2" value=" 3      b = NewArray( 2 x s );"/>
+<element id="3" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="4" value=" 5        b[i] = a[i];"/>
+<element id="5" value=" 6      a = b;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  VerifyHalving( ):"/>
+<element id="8" value=" 2    IF ((s > 1) &#38;&#38; (m == s/4)) {"/>
+<element id="9" value=" 3      b = NewArray( s/2 );"/>
+<element id="10" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="11" value=" 5        b[i] = a[i];"/>
+<element id="12" value=" 6      a = b;"/>
+<element id="13" value=" 7    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="50" originY="100">
+<visualMalleableElement id="1" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="3">
+<structure name="Array" type="Array">
+<array size="3" type="StringInformation">
+<element id="0" value="5"/>
+<element id="1" value=" "/>
+<element id="2" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+</visualArray>
+<message content="The insertion operation has been executed.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="14">
+<element id="0" value=" 1  VerifyDoubling( ):"/>
+<element id="1" value=" 2    IF (m == s) {"/>
+<element id="2" value=" 3      b = NewArray( 2 x s );"/>
+<element id="3" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="4" value=" 5        b[i] = a[i];"/>
+<element id="5" value=" 6      a = b;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  VerifyHalving( ):"/>
+<element id="8" value=" 2    IF ((s > 1) &#38;&#38; (m == s/4)) {"/>
+<element id="9" value=" 3      b = NewArray( s/2 );"/>
+<element id="10" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="11" value=" 5        b[i] = a[i];"/>
+<element id="12" value=" 6      a = b;"/>
+<element id="13" value=" 7    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="50" originY="100">
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="4">
+<structure name="Array" type="Array">
+<array size="3" type="StringInformation">
+<element id="0" value="5"/>
+<element id="1" value=" "/>
+<element id="2" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+</visualArray>
+<message content="The insertion of 10 has to be executed.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="14">
+<element id="0" value=" 1  VerifyDoubling( ):"/>
+<element id="1" value=" 2    IF (m == s) {"/>
+<element id="2" value=" 3      b = NewArray( 2 x s );"/>
+<element id="3" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="4" value=" 5        b[i] = a[i];"/>
+<element id="5" value=" 6      a = b;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  VerifyHalving( ):"/>
+<element id="8" value=" 2    IF ((s > 1) &#38;&#38; (m == s/4)) {"/>
+<element id="9" value=" 3      b = NewArray( s/2 );"/>
+<element id="10" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="11" value=" 5        b[i] = a[i];"/>
+<element id="12" value=" 6      a = b;"/>
+<element id="13" value=" 7    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="50" originY="100">
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="5">
+<structure name="Array" type="Array">
+<array size="3" type="StringInformation">
+<element id="0" value="5"/>
+<element id="1" value=" "/>
+<element id="2" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+</visualArray>
+<message content="To execute the insertion operation the array dimension has not to be doubled, since the size of the array is greater than the number of its elements.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="14">
+<element id="0" value=" 1  VerifyDoubling( ):"/>
+<element id="1" value=" 2    IF (m == s) {"/>
+<element id="2" value=" 3      b = NewArray( 2 x s );"/>
+<element id="3" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="4" value=" 5        b[i] = a[i];"/>
+<element id="5" value=" 6      a = b;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  VerifyHalving( ):"/>
+<element id="8" value=" 2    IF ((s > 1) &#38;&#38; (m == s/4)) {"/>
+<element id="9" value=" 3      b = NewArray( s/2 );"/>
+<element id="10" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="11" value=" 5        b[i] = a[i];"/>
+<element id="12" value=" 6      a = b;"/>
+<element id="13" value=" 7    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="50" originY="100">
+<visualMalleableElement id="1" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="6">
+<structure name="Array" type="Array">
+<array size="3" type="StringInformation">
+<element id="0" value="5"/>
+<element id="1" value="10"/>
+<element id="2" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+</visualArray>
+<message content="The insertion operation has been executed.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="14">
+<element id="0" value=" 1  VerifyDoubling( ):"/>
+<element id="1" value=" 2    IF (m == s) {"/>
+<element id="2" value=" 3      b = NewArray( 2 x s );"/>
+<element id="3" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="4" value=" 5        b[i] = a[i];"/>
+<element id="5" value=" 6      a = b;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  VerifyHalving( ):"/>
+<element id="8" value=" 2    IF ((s > 1) &#38;&#38; (m == s/4)) {"/>
+<element id="9" value=" 3      b = NewArray( s/2 );"/>
+<element id="10" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="11" value=" 5        b[i] = a[i];"/>
+<element id="12" value=" 6      a = b;"/>
+<element id="13" value=" 7    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="50" originY="100">
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="7">
+<structure name="Array" type="Array">
+<array size="3" type="StringInformation">
+<element id="0" value="5"/>
+<element id="1" value="10"/>
+<element id="2" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+</visualArray>
+<message content="The insertion of 6 has to be executed.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="14">
+<element id="0" value=" 1  VerifyDoubling( ):"/>
+<element id="1" value=" 2    IF (m == s) {"/>
+<element id="2" value=" 3      b = NewArray( 2 x s );"/>
+<element id="3" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="4" value=" 5        b[i] = a[i];"/>
+<element id="5" value=" 6      a = b;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  VerifyHalving( ):"/>
+<element id="8" value=" 2    IF ((s > 1) &#38;&#38; (m == s/4)) {"/>
+<element id="9" value=" 3      b = NewArray( s/2 );"/>
+<element id="10" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="11" value=" 5        b[i] = a[i];"/>
+<element id="12" value=" 6      a = b;"/>
+<element id="13" value=" 7    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="50" originY="100">
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="8">
+<structure name="Array" type="Array">
+<array size="3" type="StringInformation">
+<element id="0" value="5"/>
+<element id="1" value="10"/>
+<element id="2" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+</visualArray>
+<message content="To execute the insertion operation the array dimension has not to be doubled, since the size of the array is greater than the number of its elements.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="14">
+<element id="0" value=" 1  VerifyDoubling( ):"/>
+<element id="1" value=" 2    IF (m == s) {"/>
+<element id="2" value=" 3      b = NewArray( 2 x s );"/>
+<element id="3" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="4" value=" 5        b[i] = a[i];"/>
+<element id="5" value=" 6      a = b;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  VerifyHalving( ):"/>
+<element id="8" value=" 2    IF ((s > 1) &#38;&#38; (m == s/4)) {"/>
+<element id="9" value=" 3      b = NewArray( s/2 );"/>
+<element id="10" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="11" value=" 5        b[i] = a[i];"/>
+<element id="12" value=" 6      a = b;"/>
+<element id="13" value=" 7    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="50" originY="100">
+<visualMalleableElement id="1" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="9">
+<structure name="Array" type="Array">
+<array size="3" type="StringInformation">
+<element id="0" value="5"/>
+<element id="1" value="10"/>
+<element id="2" value="6"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+</visualArray>
+<message content="The insertion operation has been executed.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="14">
+<element id="0" value=" 1  VerifyDoubling( ):"/>
+<element id="1" value=" 2    IF (m == s) {"/>
+<element id="2" value=" 3      b = NewArray( 2 x s );"/>
+<element id="3" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="4" value=" 5        b[i] = a[i];"/>
+<element id="5" value=" 6      a = b;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  VerifyHalving( ):"/>
+<element id="8" value=" 2    IF ((s > 1) &#38;&#38; (m == s/4)) {"/>
+<element id="9" value=" 3      b = NewArray( s/2 );"/>
+<element id="10" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="11" value=" 5        b[i] = a[i];"/>
+<element id="12" value=" 6      a = b;"/>
+<element id="13" value=" 7    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="50" originY="100">
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="10">
+<structure name="Array" type="Array">
+<array size="3" type="StringInformation">
+<element id="0" value="5"/>
+<element id="1" value="10"/>
+<element id="2" value="6"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+</visualArray>
+<message content="The insertion of 14 has to be executed.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="14">
+<element id="0" value=" 1  VerifyDoubling( ):"/>
+<element id="1" value=" 2    IF (m == s) {"/>
+<element id="2" value=" 3      b = NewArray( 2 x s );"/>
+<element id="3" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="4" value=" 5        b[i] = a[i];"/>
+<element id="5" value=" 6      a = b;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  VerifyHalving( ):"/>
+<element id="8" value=" 2    IF ((s > 1) &#38;&#38; (m == s/4)) {"/>
+<element id="9" value=" 3      b = NewArray( s/2 );"/>
+<element id="10" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="11" value=" 5        b[i] = a[i];"/>
+<element id="12" value=" 6      a = b;"/>
+<element id="13" value=" 7    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="50" originY="100">
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="11">
+<structure name="Array" type="Array">
+<array size="3" type="StringInformation">
+<element id="0" value="5"/>
+<element id="1" value="10"/>
+<element id="2" value="6"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+</visualArray>
+<message content="To execute the insertion operation the array dimension has to be doubled, since the size of the array is equal to the number of its elements.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="14">
+<element id="0" value=" 1  VerifyDoubling( ):"/>
+<element id="1" value=" 2    IF (m == s) {"/>
+<element id="2" value=" 3      b = NewArray( 2 x s );"/>
+<element id="3" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="4" value=" 5        b[i] = a[i];"/>
+<element id="5" value=" 6      a = b;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  VerifyHalving( ):"/>
+<element id="8" value=" 2    IF ((s > 1) &#38;&#38; (m == s/4)) {"/>
+<element id="9" value=" 3      b = NewArray( s/2 );"/>
+<element id="10" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="11" value=" 5        b[i] = a[i];"/>
+<element id="12" value=" 6      a = b;"/>
+<element id="13" value=" 7    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="50" originY="100">
+<visualMalleableElement id="2" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="400"/>
+<visualMalleableElement id="3" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="400"/>
+<visualMalleableElement id="4" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="400"/>
+<visualMalleableElement id="5" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="12">
+<structure name="Array" type="Array">
+<array size="6" type="StringInformation">
+<element id="0" value="5"/>
+<element id="1" value="10"/>
+<element id="2" value="6"/>
+<element id="3" value="14"/>
+<element id="4" value=" "/>
+<element id="5" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+</visualArray>
+<message content="The insertion operation has been executed.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="14">
+<element id="0" value=" 1  VerifyDoubling( ):"/>
+<element id="1" value=" 2    IF (m == s) {"/>
+<element id="2" value=" 3      b = NewArray( 2 x s );"/>
+<element id="3" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="4" value=" 5        b[i] = a[i];"/>
+<element id="5" value=" 6      a = b;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  VerifyHalving( ):"/>
+<element id="8" value=" 2    IF ((s > 1) &#38;&#38; (m == s/4)) {"/>
+<element id="9" value=" 3      b = NewArray( s/2 );"/>
+<element id="10" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="11" value=" 5        b[i] = a[i];"/>
+<element id="12" value=" 6      a = b;"/>
+<element id="13" value=" 7    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="50" originY="100">
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="13">
+<structure name="Array" type="Array">
+<array size="6" type="StringInformation">
+<element id="0" value="5"/>
+<element id="1" value="10"/>
+<element id="2" value="6"/>
+<element id="3" value="14"/>
+<element id="4" value=" "/>
+<element id="5" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+</visualArray>
+<message content="The insertion of 11 has to be executed.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="14">
+<element id="0" value=" 1  VerifyDoubling( ):"/>
+<element id="1" value=" 2    IF (m == s) {"/>
+<element id="2" value=" 3      b = NewArray( 2 x s );"/>
+<element id="3" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="4" value=" 5        b[i] = a[i];"/>
+<element id="5" value=" 6      a = b;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  VerifyHalving( ):"/>
+<element id="8" value=" 2    IF ((s > 1) &#38;&#38; (m == s/4)) {"/>
+<element id="9" value=" 3      b = NewArray( s/2 );"/>
+<element id="10" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="11" value=" 5        b[i] = a[i];"/>
+<element id="12" value=" 6      a = b;"/>
+<element id="13" value=" 7    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="50" originY="100">
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="14">
+<structure name="Array" type="Array">
+<array size="6" type="StringInformation">
+<element id="0" value="5"/>
+<element id="1" value="10"/>
+<element id="2" value="6"/>
+<element id="3" value="14"/>
+<element id="4" value=" "/>
+<element id="5" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+</visualArray>
+<message content="To execute the insertion operation the array dimension has not to be doubled, since the size of the array is greater than the number of its elements.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="14">
+<element id="0" value=" 1  VerifyDoubling( ):"/>
+<element id="1" value=" 2    IF (m == s) {"/>
+<element id="2" value=" 3      b = NewArray( 2 x s );"/>
+<element id="3" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="4" value=" 5        b[i] = a[i];"/>
+<element id="5" value=" 6      a = b;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  VerifyHalving( ):"/>
+<element id="8" value=" 2    IF ((s > 1) &#38;&#38; (m == s/4)) {"/>
+<element id="9" value=" 3      b = NewArray( s/2 );"/>
+<element id="10" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="11" value=" 5        b[i] = a[i];"/>
+<element id="12" value=" 6      a = b;"/>
+<element id="13" value=" 7    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="50" originY="100">
+<visualMalleableElement id="1" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="15">
+<structure name="Array" type="Array">
+<array size="6" type="StringInformation">
+<element id="0" value="5"/>
+<element id="1" value="10"/>
+<element id="2" value="6"/>
+<element id="3" value="14"/>
+<element id="4" value="11"/>
+<element id="5" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+</visualArray>
+<message content="The insertion operation has been executed.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="14">
+<element id="0" value=" 1  VerifyDoubling( ):"/>
+<element id="1" value=" 2    IF (m == s) {"/>
+<element id="2" value=" 3      b = NewArray( 2 x s );"/>
+<element id="3" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="4" value=" 5        b[i] = a[i];"/>
+<element id="5" value=" 6      a = b;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  VerifyHalving( ):"/>
+<element id="8" value=" 2    IF ((s > 1) &#38;&#38; (m == s/4)) {"/>
+<element id="9" value=" 3      b = NewArray( s/2 );"/>
+<element id="10" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="11" value=" 5        b[i] = a[i];"/>
+<element id="12" value=" 6      a = b;"/>
+<element id="13" value=" 7    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="50" originY="100">
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="16">
+<structure name="Array" type="Array">
+<array size="6" type="StringInformation">
+<element id="0" value="5"/>
+<element id="1" value="10"/>
+<element id="2" value="6"/>
+<element id="3" value="14"/>
+<element id="4" value="11"/>
+<element id="5" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+</visualArray>
+<message content="The insertion of 9 has to be executed.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="14">
+<element id="0" value=" 1  VerifyDoubling( ):"/>
+<element id="1" value=" 2    IF (m == s) {"/>
+<element id="2" value=" 3      b = NewArray( 2 x s );"/>
+<element id="3" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="4" value=" 5        b[i] = a[i];"/>
+<element id="5" value=" 6      a = b;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  VerifyHalving( ):"/>
+<element id="8" value=" 2    IF ((s > 1) &#38;&#38; (m == s/4)) {"/>
+<element id="9" value=" 3      b = NewArray( s/2 );"/>
+<element id="10" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="11" value=" 5        b[i] = a[i];"/>
+<element id="12" value=" 6      a = b;"/>
+<element id="13" value=" 7    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="50" originY="100">
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="17">
+<structure name="Array" type="Array">
+<array size="6" type="StringInformation">
+<element id="0" value="5"/>
+<element id="1" value="10"/>
+<element id="2" value="6"/>
+<element id="3" value="14"/>
+<element id="4" value="11"/>
+<element id="5" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+</visualArray>
+<message content="To execute the insertion operation the array dimension has not to be doubled, since the size of the array is greater than the number of its elements.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="14">
+<element id="0" value=" 1  VerifyDoubling( ):"/>
+<element id="1" value=" 2    IF (m == s) {"/>
+<element id="2" value=" 3      b = NewArray( 2 x s );"/>
+<element id="3" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="4" value=" 5        b[i] = a[i];"/>
+<element id="5" value=" 6      a = b;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  VerifyHalving( ):"/>
+<element id="8" value=" 2    IF ((s > 1) &#38;&#38; (m == s/4)) {"/>
+<element id="9" value=" 3      b = NewArray( s/2 );"/>
+<element id="10" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="11" value=" 5        b[i] = a[i];"/>
+<element id="12" value=" 6      a = b;"/>
+<element id="13" value=" 7    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="50" originY="100">
+<visualMalleableElement id="1" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="18">
+<structure name="Array" type="Array">
+<array size="6" type="StringInformation">
+<element id="0" value="5"/>
+<element id="1" value="10"/>
+<element id="2" value="6"/>
+<element id="3" value="14"/>
+<element id="4" value="11"/>
+<element id="5" value="9"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+</visualArray>
+<message content="The insertion operation has been executed.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="14">
+<element id="0" value=" 1  VerifyDoubling( ):"/>
+<element id="1" value=" 2    IF (m == s) {"/>
+<element id="2" value=" 3      b = NewArray( 2 x s );"/>
+<element id="3" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="4" value=" 5        b[i] = a[i];"/>
+<element id="5" value=" 6      a = b;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  VerifyHalving( ):"/>
+<element id="8" value=" 2    IF ((s > 1) &#38;&#38; (m == s/4)) {"/>
+<element id="9" value=" 3      b = NewArray( s/2 );"/>
+<element id="10" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="11" value=" 5        b[i] = a[i];"/>
+<element id="12" value=" 6      a = b;"/>
+<element id="13" value=" 7    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="50" originY="100">
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="19">
+<structure name="Array" type="Array">
+<array size="6" type="StringInformation">
+<element id="0" value="5"/>
+<element id="1" value="10"/>
+<element id="2" value="6"/>
+<element id="3" value="14"/>
+<element id="4" value="11"/>
+<element id="5" value="9"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+</visualArray>
+<message content="The insertion of 2 has to be executed.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="14">
+<element id="0" value=" 1  VerifyDoubling( ):"/>
+<element id="1" value=" 2    IF (m == s) {"/>
+<element id="2" value=" 3      b = NewArray( 2 x s );"/>
+<element id="3" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="4" value=" 5        b[i] = a[i];"/>
+<element id="5" value=" 6      a = b;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  VerifyHalving( ):"/>
+<element id="8" value=" 2    IF ((s > 1) &#38;&#38; (m == s/4)) {"/>
+<element id="9" value=" 3      b = NewArray( s/2 );"/>
+<element id="10" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="11" value=" 5        b[i] = a[i];"/>
+<element id="12" value=" 6      a = b;"/>
+<element id="13" value=" 7    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="50" originY="100">
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="20">
+<structure name="Array" type="Array">
+<array size="6" type="StringInformation">
+<element id="0" value="5"/>
+<element id="1" value="10"/>
+<element id="2" value="6"/>
+<element id="3" value="14"/>
+<element id="4" value="11"/>
+<element id="5" value="9"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+</visualArray>
+<message content="To execute the insertion operation the array dimension has to be doubled, since the size of the array is equal to the number of its elements.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="14">
+<element id="0" value=" 1  VerifyDoubling( ):"/>
+<element id="1" value=" 2    IF (m == s) {"/>
+<element id="2" value=" 3      b = NewArray( 2 x s );"/>
+<element id="3" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="4" value=" 5        b[i] = a[i];"/>
+<element id="5" value=" 6      a = b;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  VerifyHalving( ):"/>
+<element id="8" value=" 2    IF ((s > 1) &#38;&#38; (m == s/4)) {"/>
+<element id="9" value=" 3      b = NewArray( s/2 );"/>
+<element id="10" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="11" value=" 5        b[i] = a[i];"/>
+<element id="12" value=" 6      a = b;"/>
+<element id="13" value=" 7    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="50" originY="100">
+<visualMalleableElement id="2" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="400"/>
+<visualMalleableElement id="3" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="400"/>
+<visualMalleableElement id="4" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="400"/>
+<visualMalleableElement id="5" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="21">
+<structure name="Array" type="Array">
+<array size="12" type="StringInformation">
+<element id="0" value="5"/>
+<element id="1" value="10"/>
+<element id="2" value="6"/>
+<element id="3" value="14"/>
+<element id="4" value="11"/>
+<element id="5" value="9"/>
+<element id="6" value="2"/>
+<element id="7" value=" "/>
+<element id="8" value=" "/>
+<element id="9" value=" "/>
+<element id="10" value=" "/>
+<element id="11" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+</visualArray>
+<message content="The insertion operation has been executed.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="14">
+<element id="0" value=" 1  VerifyDoubling( ):"/>
+<element id="1" value=" 2    IF (m == s) {"/>
+<element id="2" value=" 3      b = NewArray( 2 x s );"/>
+<element id="3" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="4" value=" 5        b[i] = a[i];"/>
+<element id="5" value=" 6      a = b;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  VerifyHalving( ):"/>
+<element id="8" value=" 2    IF ((s > 1) &#38;&#38; (m == s/4)) {"/>
+<element id="9" value=" 3      b = NewArray( s/2 );"/>
+<element id="10" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="11" value=" 5        b[i] = a[i];"/>
+<element id="12" value=" 6      a = b;"/>
+<element id="13" value=" 7    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="50" originY="100">
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="22">
+<structure name="Array" type="Array">
+<array size="12" type="StringInformation">
+<element id="0" value="5"/>
+<element id="1" value="10"/>
+<element id="2" value="6"/>
+<element id="3" value="14"/>
+<element id="4" value="11"/>
+<element id="5" value="9"/>
+<element id="6" value="2"/>
+<element id="7" value=" "/>
+<element id="8" value=" "/>
+<element id="9" value=" "/>
+<element id="10" value=" "/>
+<element id="11" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="6" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The yellow element has to be deleted.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="14">
+<element id="0" value=" 1  VerifyDoubling( ):"/>
+<element id="1" value=" 2    IF (m == s) {"/>
+<element id="2" value=" 3      b = NewArray( 2 x s );"/>
+<element id="3" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="4" value=" 5        b[i] = a[i];"/>
+<element id="5" value=" 6      a = b;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  VerifyHalving( ):"/>
+<element id="8" value=" 2    IF ((s > 1) &#38;&#38; (m == s/4)) {"/>
+<element id="9" value=" 3      b = NewArray( s/2 );"/>
+<element id="10" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="11" value=" 5        b[i] = a[i];"/>
+<element id="12" value=" 6      a = b;"/>
+<element id="13" value=" 7    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="50" originY="100">
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="23">
+<structure name="Array" type="Array">
+<array size="12" type="StringInformation">
+<element id="0" value="5"/>
+<element id="1" value="10"/>
+<element id="2" value="6"/>
+<element id="3" value="14"/>
+<element id="4" value="11"/>
+<element id="5" value="9"/>
+<element id="6" value=" "/>
+<element id="7" value=" "/>
+<element id="8" value=" "/>
+<element id="9" value=" "/>
+<element id="10" value=" "/>
+<element id="11" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+</visualArray>
+<message content="The deletion operation did not reduce the number of elements to one fourth of the array dimension, then it is not necessary to halve the array dimension.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="14">
+<element id="0" value=" 1  VerifyDoubling( ):"/>
+<element id="1" value=" 2    IF (m == s) {"/>
+<element id="2" value=" 3      b = NewArray( 2 x s );"/>
+<element id="3" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="4" value=" 5        b[i] = a[i];"/>
+<element id="5" value=" 6      a = b;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  VerifyHalving( ):"/>
+<element id="8" value=" 2    IF ((s > 1) &#38;&#38; (m == s/4)) {"/>
+<element id="9" value=" 3      b = NewArray( s/2 );"/>
+<element id="10" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="11" value=" 5        b[i] = a[i];"/>
+<element id="12" value=" 6      a = b;"/>
+<element id="13" value=" 7    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="50" originY="100">
+<visualMalleableElement id="8" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="24">
+<structure name="Array" type="Array">
+<array size="12" type="StringInformation">
+<element id="0" value="5"/>
+<element id="1" value="10"/>
+<element id="2" value="6"/>
+<element id="3" value="14"/>
+<element id="4" value="11"/>
+<element id="5" value="9"/>
+<element id="6" value=" "/>
+<element id="7" value=" "/>
+<element id="8" value=" "/>
+<element id="9" value=" "/>
+<element id="10" value=" "/>
+<element id="11" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+</visualArray>
+<message content="The deletion operation has been executed.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="14">
+<element id="0" value=" 1  VerifyDoubling( ):"/>
+<element id="1" value=" 2    IF (m == s) {"/>
+<element id="2" value=" 3      b = NewArray( 2 x s );"/>
+<element id="3" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="4" value=" 5        b[i] = a[i];"/>
+<element id="5" value=" 6      a = b;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  VerifyHalving( ):"/>
+<element id="8" value=" 2    IF ((s > 1) &#38;&#38; (m == s/4)) {"/>
+<element id="9" value=" 3      b = NewArray( s/2 );"/>
+<element id="10" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="11" value=" 5        b[i] = a[i];"/>
+<element id="12" value=" 6      a = b;"/>
+<element id="13" value=" 7    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="50" originY="100">
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="25">
+<structure name="Array" type="Array">
+<array size="12" type="StringInformation">
+<element id="0" value="5"/>
+<element id="1" value="10"/>
+<element id="2" value="6"/>
+<element id="3" value="14"/>
+<element id="4" value="11"/>
+<element id="5" value="9"/>
+<element id="6" value=" "/>
+<element id="7" value=" "/>
+<element id="8" value=" "/>
+<element id="9" value=" "/>
+<element id="10" value=" "/>
+<element id="11" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="5" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The yellow element has to be deleted.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="14">
+<element id="0" value=" 1  VerifyDoubling( ):"/>
+<element id="1" value=" 2    IF (m == s) {"/>
+<element id="2" value=" 3      b = NewArray( 2 x s );"/>
+<element id="3" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="4" value=" 5        b[i] = a[i];"/>
+<element id="5" value=" 6      a = b;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  VerifyHalving( ):"/>
+<element id="8" value=" 2    IF ((s > 1) &#38;&#38; (m == s/4)) {"/>
+<element id="9" value=" 3      b = NewArray( s/2 );"/>
+<element id="10" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="11" value=" 5        b[i] = a[i];"/>
+<element id="12" value=" 6      a = b;"/>
+<element id="13" value=" 7    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="50" originY="100">
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="26">
+<structure name="Array" type="Array">
+<array size="12" type="StringInformation">
+<element id="0" value="5"/>
+<element id="1" value="10"/>
+<element id="2" value="6"/>
+<element id="3" value="14"/>
+<element id="4" value="11"/>
+<element id="5" value=" "/>
+<element id="6" value=" "/>
+<element id="7" value=" "/>
+<element id="8" value=" "/>
+<element id="9" value=" "/>
+<element id="10" value=" "/>
+<element id="11" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+</visualArray>
+<message content="The deletion operation did not reduce the number of elements to one fourth of the array dimension, then it is not necessary to halve the array dimension.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="14">
+<element id="0" value=" 1  VerifyDoubling( ):"/>
+<element id="1" value=" 2    IF (m == s) {"/>
+<element id="2" value=" 3      b = NewArray( 2 x s );"/>
+<element id="3" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="4" value=" 5        b[i] = a[i];"/>
+<element id="5" value=" 6      a = b;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  VerifyHalving( ):"/>
+<element id="8" value=" 2    IF ((s > 1) &#38;&#38; (m == s/4)) {"/>
+<element id="9" value=" 3      b = NewArray( s/2 );"/>
+<element id="10" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="11" value=" 5        b[i] = a[i];"/>
+<element id="12" value=" 6      a = b;"/>
+<element id="13" value=" 7    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="50" originY="100">
+<visualMalleableElement id="8" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="27">
+<structure name="Array" type="Array">
+<array size="12" type="StringInformation">
+<element id="0" value="5"/>
+<element id="1" value="10"/>
+<element id="2" value="6"/>
+<element id="3" value="14"/>
+<element id="4" value="11"/>
+<element id="5" value=" "/>
+<element id="6" value=" "/>
+<element id="7" value=" "/>
+<element id="8" value=" "/>
+<element id="9" value=" "/>
+<element id="10" value=" "/>
+<element id="11" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+</visualArray>
+<message content="The deletion operation has been executed.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="14">
+<element id="0" value=" 1  VerifyDoubling( ):"/>
+<element id="1" value=" 2    IF (m == s) {"/>
+<element id="2" value=" 3      b = NewArray( 2 x s );"/>
+<element id="3" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="4" value=" 5        b[i] = a[i];"/>
+<element id="5" value=" 6      a = b;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  VerifyHalving( ):"/>
+<element id="8" value=" 2    IF ((s > 1) &#38;&#38; (m == s/4)) {"/>
+<element id="9" value=" 3      b = NewArray( s/2 );"/>
+<element id="10" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="11" value=" 5        b[i] = a[i];"/>
+<element id="12" value=" 6      a = b;"/>
+<element id="13" value=" 7    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="50" originY="100">
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="28">
+<structure name="Array" type="Array">
+<array size="12" type="StringInformation">
+<element id="0" value="5"/>
+<element id="1" value="10"/>
+<element id="2" value="6"/>
+<element id="3" value="14"/>
+<element id="4" value="11"/>
+<element id="5" value=" "/>
+<element id="6" value=" "/>
+<element id="7" value=" "/>
+<element id="8" value=" "/>
+<element id="9" value=" "/>
+<element id="10" value=" "/>
+<element id="11" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="4" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The yellow element has to be deleted.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="14">
+<element id="0" value=" 1  VerifyDoubling( ):"/>
+<element id="1" value=" 2    IF (m == s) {"/>
+<element id="2" value=" 3      b = NewArray( 2 x s );"/>
+<element id="3" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="4" value=" 5        b[i] = a[i];"/>
+<element id="5" value=" 6      a = b;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  VerifyHalving( ):"/>
+<element id="8" value=" 2    IF ((s > 1) &#38;&#38; (m == s/4)) {"/>
+<element id="9" value=" 3      b = NewArray( s/2 );"/>
+<element id="10" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="11" value=" 5        b[i] = a[i];"/>
+<element id="12" value=" 6      a = b;"/>
+<element id="13" value=" 7    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="50" originY="100">
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="29">
+<structure name="Array" type="Array">
+<array size="12" type="StringInformation">
+<element id="0" value="5"/>
+<element id="1" value="10"/>
+<element id="2" value="6"/>
+<element id="3" value="14"/>
+<element id="4" value=" "/>
+<element id="5" value=" "/>
+<element id="6" value=" "/>
+<element id="7" value=" "/>
+<element id="8" value=" "/>
+<element id="9" value=" "/>
+<element id="10" value=" "/>
+<element id="11" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+</visualArray>
+<message content="The deletion operation did not reduce the number of elements to one fourth of the array dimension, then it is not necessary to halve the array dimension.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="14">
+<element id="0" value=" 1  VerifyDoubling( ):"/>
+<element id="1" value=" 2    IF (m == s) {"/>
+<element id="2" value=" 3      b = NewArray( 2 x s );"/>
+<element id="3" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="4" value=" 5        b[i] = a[i];"/>
+<element id="5" value=" 6      a = b;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  VerifyHalving( ):"/>
+<element id="8" value=" 2    IF ((s > 1) &#38;&#38; (m == s/4)) {"/>
+<element id="9" value=" 3      b = NewArray( s/2 );"/>
+<element id="10" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="11" value=" 5        b[i] = a[i];"/>
+<element id="12" value=" 6      a = b;"/>
+<element id="13" value=" 7    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="50" originY="100">
+<visualMalleableElement id="8" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="30">
+<structure name="Array" type="Array">
+<array size="12" type="StringInformation">
+<element id="0" value="5"/>
+<element id="1" value="10"/>
+<element id="2" value="6"/>
+<element id="3" value="14"/>
+<element id="4" value=" "/>
+<element id="5" value=" "/>
+<element id="6" value=" "/>
+<element id="7" value=" "/>
+<element id="8" value=" "/>
+<element id="9" value=" "/>
+<element id="10" value=" "/>
+<element id="11" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+</visualArray>
+<message content="The deletion operation has been executed.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="14">
+<element id="0" value=" 1  VerifyDoubling( ):"/>
+<element id="1" value=" 2    IF (m == s) {"/>
+<element id="2" value=" 3      b = NewArray( 2 x s );"/>
+<element id="3" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="4" value=" 5        b[i] = a[i];"/>
+<element id="5" value=" 6      a = b;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  VerifyHalving( ):"/>
+<element id="8" value=" 2    IF ((s > 1) &#38;&#38; (m == s/4)) {"/>
+<element id="9" value=" 3      b = NewArray( s/2 );"/>
+<element id="10" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="11" value=" 5        b[i] = a[i];"/>
+<element id="12" value=" 6      a = b;"/>
+<element id="13" value=" 7    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="50" originY="100">
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="31">
+<structure name="Array" type="Array">
+<array size="12" type="StringInformation">
+<element id="0" value="5"/>
+<element id="1" value="10"/>
+<element id="2" value="6"/>
+<element id="3" value="14"/>
+<element id="4" value=" "/>
+<element id="5" value=" "/>
+<element id="6" value=" "/>
+<element id="7" value=" "/>
+<element id="8" value=" "/>
+<element id="9" value=" "/>
+<element id="10" value=" "/>
+<element id="11" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="3" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The yellow element has to be deleted.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="14">
+<element id="0" value=" 1  VerifyDoubling( ):"/>
+<element id="1" value=" 2    IF (m == s) {"/>
+<element id="2" value=" 3      b = NewArray( 2 x s );"/>
+<element id="3" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="4" value=" 5        b[i] = a[i];"/>
+<element id="5" value=" 6      a = b;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  VerifyHalving( ):"/>
+<element id="8" value=" 2    IF ((s > 1) &#38;&#38; (m == s/4)) {"/>
+<element id="9" value=" 3      b = NewArray( s/2 );"/>
+<element id="10" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="11" value=" 5        b[i] = a[i];"/>
+<element id="12" value=" 6      a = b;"/>
+<element id="13" value=" 7    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="50" originY="100">
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="32">
+<structure name="Array" type="Array">
+<array size="12" type="StringInformation">
+<element id="0" value="5"/>
+<element id="1" value="10"/>
+<element id="2" value="6"/>
+<element id="3" value=" "/>
+<element id="4" value=" "/>
+<element id="5" value=" "/>
+<element id="6" value=" "/>
+<element id="7" value=" "/>
+<element id="8" value=" "/>
+<element id="9" value=" "/>
+<element id="10" value=" "/>
+<element id="11" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+</visualArray>
+<message content="The deletion operation reduced the number of elements to one fourth of the array dimension, it is then necessary to halve the array dimension.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="14">
+<element id="0" value=" 1  VerifyDoubling( ):"/>
+<element id="1" value=" 2    IF (m == s) {"/>
+<element id="2" value=" 3      b = NewArray( 2 x s );"/>
+<element id="3" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="4" value=" 5        b[i] = a[i];"/>
+<element id="5" value=" 6      a = b;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  VerifyHalving( ):"/>
+<element id="8" value=" 2    IF ((s > 1) &#38;&#38; (m == s/4)) {"/>
+<element id="9" value=" 3      b = NewArray( s/2 );"/>
+<element id="10" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="11" value=" 5        b[i] = a[i];"/>
+<element id="12" value=" 6      a = b;"/>
+<element id="13" value=" 7    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="50" originY="100">
+<visualMalleableElement id="9" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="400"/>
+<visualMalleableElement id="10" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="400"/>
+<visualMalleableElement id="11" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="400"/>
+<visualMalleableElement id="12" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="33">
+<structure name="Array" type="Array">
+<array size="6" type="StringInformation">
+<element id="0" value="5"/>
+<element id="1" value="10"/>
+<element id="2" value="6"/>
+<element id="3" value=" "/>
+<element id="4" value=" "/>
+<element id="5" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+</visualArray>
+<message content="The deletion operation has been executed.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="14">
+<element id="0" value=" 1  VerifyDoubling( ):"/>
+<element id="1" value=" 2    IF (m == s) {"/>
+<element id="2" value=" 3      b = NewArray( 2 x s );"/>
+<element id="3" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="4" value=" 5        b[i] = a[i];"/>
+<element id="5" value=" 6      a = b;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  VerifyHalving( ):"/>
+<element id="8" value=" 2    IF ((s > 1) &#38;&#38; (m == s/4)) {"/>
+<element id="9" value=" 3      b = NewArray( s/2 );"/>
+<element id="10" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="11" value=" 5        b[i] = a[i];"/>
+<element id="12" value=" 6      a = b;"/>
+<element id="13" value=" 7    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="50" originY="100">
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="34">
+<structure name="Array" type="Array">
+<array size="6" type="StringInformation">
+<element id="0" value="5"/>
+<element id="1" value="10"/>
+<element id="2" value="6"/>
+<element id="3" value=" "/>
+<element id="4" value=" "/>
+<element id="5" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="2" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The yellow element has to be deleted.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="14">
+<element id="0" value=" 1  VerifyDoubling( ):"/>
+<element id="1" value=" 2    IF (m == s) {"/>
+<element id="2" value=" 3      b = NewArray( 2 x s );"/>
+<element id="3" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="4" value=" 5        b[i] = a[i];"/>
+<element id="5" value=" 6      a = b;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  VerifyHalving( ):"/>
+<element id="8" value=" 2    IF ((s > 1) &#38;&#38; (m == s/4)) {"/>
+<element id="9" value=" 3      b = NewArray( s/2 );"/>
+<element id="10" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="11" value=" 5        b[i] = a[i];"/>
+<element id="12" value=" 6      a = b;"/>
+<element id="13" value=" 7    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="50" originY="100">
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="35">
+<structure name="Array" type="Array">
+<array size="6" type="StringInformation">
+<element id="0" value="5"/>
+<element id="1" value="10"/>
+<element id="2" value=" "/>
+<element id="3" value=" "/>
+<element id="4" value=" "/>
+<element id="5" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+</visualArray>
+<message content="The deletion operation did not reduce the number of elements to one fourth of the array dimension, then it is not necessary to halve the array dimension.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="14">
+<element id="0" value=" 1  VerifyDoubling( ):"/>
+<element id="1" value=" 2    IF (m == s) {"/>
+<element id="2" value=" 3      b = NewArray( 2 x s );"/>
+<element id="3" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="4" value=" 5        b[i] = a[i];"/>
+<element id="5" value=" 6      a = b;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  VerifyHalving( ):"/>
+<element id="8" value=" 2    IF ((s > 1) &#38;&#38; (m == s/4)) {"/>
+<element id="9" value=" 3      b = NewArray( s/2 );"/>
+<element id="10" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="11" value=" 5        b[i] = a[i];"/>
+<element id="12" value=" 6      a = b;"/>
+<element id="13" value=" 7    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="50" originY="100">
+<visualMalleableElement id="8" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="36">
+<structure name="Array" type="Array">
+<array size="6" type="StringInformation">
+<element id="0" value="5"/>
+<element id="1" value="10"/>
+<element id="2" value=" "/>
+<element id="3" value=" "/>
+<element id="4" value=" "/>
+<element id="5" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+</visualArray>
+<message content="The deletion operation has been executed.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="14">
+<element id="0" value=" 1  VerifyDoubling( ):"/>
+<element id="1" value=" 2    IF (m == s) {"/>
+<element id="2" value=" 3      b = NewArray( 2 x s );"/>
+<element id="3" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="4" value=" 5        b[i] = a[i];"/>
+<element id="5" value=" 6      a = b;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  VerifyHalving( ):"/>
+<element id="8" value=" 2    IF ((s > 1) &#38;&#38; (m == s/4)) {"/>
+<element id="9" value=" 3      b = NewArray( s/2 );"/>
+<element id="10" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="11" value=" 5        b[i] = a[i];"/>
+<element id="12" value=" 6      a = b;"/>
+<element id="13" value=" 7    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="50" originY="100">
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="37">
+<structure name="Array" type="Array">
+<array size="6" type="StringInformation">
+<element id="0" value="5"/>
+<element id="1" value="10"/>
+<element id="2" value=" "/>
+<element id="3" value=" "/>
+<element id="4" value=" "/>
+<element id="5" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="1" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The yellow element has to be deleted.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="14">
+<element id="0" value=" 1  VerifyDoubling( ):"/>
+<element id="1" value=" 2    IF (m == s) {"/>
+<element id="2" value=" 3      b = NewArray( 2 x s );"/>
+<element id="3" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="4" value=" 5        b[i] = a[i];"/>
+<element id="5" value=" 6      a = b;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  VerifyHalving( ):"/>
+<element id="8" value=" 2    IF ((s > 1) &#38;&#38; (m == s/4)) {"/>
+<element id="9" value=" 3      b = NewArray( s/2 );"/>
+<element id="10" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="11" value=" 5        b[i] = a[i];"/>
+<element id="12" value=" 6      a = b;"/>
+<element id="13" value=" 7    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="50" originY="100">
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="38">
+<structure name="Array" type="Array">
+<array size="6" type="StringInformation">
+<element id="0" value="5"/>
+<element id="1" value=" "/>
+<element id="2" value=" "/>
+<element id="3" value=" "/>
+<element id="4" value=" "/>
+<element id="5" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+</visualArray>
+<message content="The deletion operation reduced the number of elements to one fourth of the array dimension, it is then necessary to halve the array dimension.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="14">
+<element id="0" value=" 1  VerifyDoubling( ):"/>
+<element id="1" value=" 2    IF (m == s) {"/>
+<element id="2" value=" 3      b = NewArray( 2 x s );"/>
+<element id="3" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="4" value=" 5        b[i] = a[i];"/>
+<element id="5" value=" 6      a = b;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  VerifyHalving( ):"/>
+<element id="8" value=" 2    IF ((s > 1) &#38;&#38; (m == s/4)) {"/>
+<element id="9" value=" 3      b = NewArray( s/2 );"/>
+<element id="10" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="11" value=" 5        b[i] = a[i];"/>
+<element id="12" value=" 6      a = b;"/>
+<element id="13" value=" 7    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="50" originY="100">
+<visualMalleableElement id="9" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="400"/>
+<visualMalleableElement id="10" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="400"/>
+<visualMalleableElement id="11" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="400"/>
+<visualMalleableElement id="12" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="39">
+<structure name="Array" type="Array">
+<array size="3" type="StringInformation">
+<element id="0" value="5"/>
+<element id="1" value=" "/>
+<element id="2" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+</visualArray>
+<message content="The deletion operation has been executed.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="14">
+<element id="0" value=" 1  VerifyDoubling( ):"/>
+<element id="1" value=" 2    IF (m == s) {"/>
+<element id="2" value=" 3      b = NewArray( 2 x s );"/>
+<element id="3" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="4" value=" 5        b[i] = a[i];"/>
+<element id="5" value=" 6      a = b;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  VerifyHalving( ):"/>
+<element id="8" value=" 2    IF ((s > 1) &#38;&#38; (m == s/4)) {"/>
+<element id="9" value=" 3      b = NewArray( s/2 );"/>
+<element id="10" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="11" value=" 5        b[i] = a[i];"/>
+<element id="12" value=" 6      a = b;"/>
+<element id="13" value=" 7    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="50" originY="100">
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="40">
+<structure name="Array" type="Array">
+<array size="3" type="StringInformation">
+<element id="0" value="5"/>
+<element id="1" value=" "/>
+<element id="2" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The yellow element has to be deleted.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="14">
+<element id="0" value=" 1  VerifyDoubling( ):"/>
+<element id="1" value=" 2    IF (m == s) {"/>
+<element id="2" value=" 3      b = NewArray( 2 x s );"/>
+<element id="3" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="4" value=" 5        b[i] = a[i];"/>
+<element id="5" value=" 6      a = b;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  VerifyHalving( ):"/>
+<element id="8" value=" 2    IF ((s > 1) &#38;&#38; (m == s/4)) {"/>
+<element id="9" value=" 3      b = NewArray( s/2 );"/>
+<element id="10" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="11" value=" 5        b[i] = a[i];"/>
+<element id="12" value=" 6      a = b;"/>
+<element id="13" value=" 7    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="50" originY="100">
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="41">
+<structure name="Array" type="Array">
+<array size="3" type="StringInformation">
+<element id="0" value=" "/>
+<element id="1" value=" "/>
+<element id="2" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+</visualArray>
+<message content="The deletion operation reduced the number of elements to one fourth of the array dimension, it is then necessary to halve the array dimension.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="14">
+<element id="0" value=" 1  VerifyDoubling( ):"/>
+<element id="1" value=" 2    IF (m == s) {"/>
+<element id="2" value=" 3      b = NewArray( 2 x s );"/>
+<element id="3" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="4" value=" 5        b[i] = a[i];"/>
+<element id="5" value=" 6      a = b;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  VerifyHalving( ):"/>
+<element id="8" value=" 2    IF ((s > 1) &#38;&#38; (m == s/4)) {"/>
+<element id="9" value=" 3      b = NewArray( s/2 );"/>
+<element id="10" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="11" value=" 5        b[i] = a[i];"/>
+<element id="12" value=" 6      a = b;"/>
+<element id="13" value=" 7    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="50" originY="100">
+<visualMalleableElement id="9" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="400"/>
+<visualMalleableElement id="10" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="400"/>
+<visualMalleableElement id="11" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="400"/>
+<visualMalleableElement id="12" color="FFFF00" font="Monospaced-PLAIN-16" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="42">
+<structure name="Array" type="Array">
+<array size="1" type="StringInformation">
+<element id="0" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+</visualArray>
+<message content="The deletion operation has been executed.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="14">
+<element id="0" value=" 1  VerifyDoubling( ):"/>
+<element id="1" value=" 2    IF (m == s) {"/>
+<element id="2" value=" 3      b = NewArray( 2 x s );"/>
+<element id="3" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="4" value=" 5        b[i] = a[i];"/>
+<element id="5" value=" 6      a = b;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 1  VerifyHalving( ):"/>
+<element id="8" value=" 2    IF ((s > 1) &#38;&#38; (m == s/4)) {"/>
+<element id="9" value=" 3      b = NewArray( s/2 );"/>
+<element id="10" value=" 4      FOR (i = 0; i &#60; m; i = i +1)"/>
+<element id="11" value=" 5        b[i] = a[i];"/>
+<element id="12" value=" 6      a = b;"/>
+<element id="13" value=" 7    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="50" originY="100">
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="43">
+<structure name="Array" type="Array">
+<array size="1" type="StringInformation">
+<element id="0" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+</visualArray>
+<message content="Final state of the array after the execution of all insertion and deletion operations.">
+</message>
+</structure>
+</step>
+</algorithm>

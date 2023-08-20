@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure name="Closest pair distance" type="Pseudocode">
+	<pseudocode size="22">
+		<element id="0"  value=" 1  Main( S, n ):" />
+		<element id="1"  value=" 2    sort S w.r.t. x-coordinate;" />
+		<element id="2"  value=" 3    RETURN ClosestPair( S,0,n-1 );" />
+		<element id="3"  value=" " />
+		<element id="4"  value=" 1  ClosestPair( S, l, r ):" />
+		<element id="5"  value=" 2    IF (r-l == 1) {" />
+		<element id="6"  value=" 3      sort S[l..r] w.r.t y-coordinate;" />
+		<element id="7"  value=" 4      RETURN distance between S[l] and P[r];" />
+		<element id="8"  value=" 5    }" />
+		<element id="9"  value=" 6    IF (r-l == 2) {" />
+		<element id="10" value=" 7      sort S[l..r] w.r.t y-coordinate;" />
+		<element id="11" value=" 8      RETURN minimum distance in S[l..r];" />
+		<element id="12" value=" 9    }" />
+		<element id="13" value="10    m = (l+r)/2; mX = S[mid].x;" />
+		<element id="14" value="11    dL = ClosestPair( S,l,m );" />
+		<element id="15" value="12    dR = ClosestPair( S,m+1,l );" />
+		<element id="16" value="13    w = Min(dl, dr);" />
+		<element id="17" value="14    L = SelectVSTripNodes( S,l,m,w,mX );" />
+		<element id="18" value="15    R = SelectVStripNodes( S,m+1,r,w,mX );" />
+		<element id="19" value="16    dM = MinDist(L, R, w);" />
+		<element id="20" value="17    Merge( S,l,m,r );" />
+		<element id="21" value="18    RETURN dM;" />
+	</pseudocode>
+</structure>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure name="Closest pair distance subroutines" type="Pseudocode">
+	<pseudocode size="18">
+		<element id="0" value=" 1  SelectVStripNodes( S, l, r, d, x ):" />
+		<element id="1" value=" 2    Q = new empty queue;" />
+		<element id="2" value=" 3    FOR (i = l; i &#60;= r; i = i+1)" />
+		<element id="3" value=" 4      IF (Abs(S[i].x-x)&#60;= d) Q.Enqueue(P[i]);" />
+		<element id="4" value=" 5    RETURN Q.ToArray;" />
+		<element id="5" value=" " />
+		<element id="6" value=" 1  MinDist( AL, AR, d ):" />
+		<element id="7" value=" 2    j = 1; dM = d;" />
+		<element id="8" value=" 3    FOR (i = 0; i&#60; AL.Size(); i = i+1) {" />
+		<element id="9" value=" 4      WHILE (j&#60;= n &#38;&#38; AR[j].y&#60;= AL[i].y-d)" />
+		<element id="10" value=" 5        j = j+1;" />
+		<element id="11" value=" 6      k = j;" />
+		<element id="12" value=" 7      WHILE (k&#60;= n &#38;&#38; AR[k].y&#60;= AL[i].y + d) {" />
+		<element id="13" value=" 8        dM = min(d,Distance(AR[k],AL[i]));" />
+		<element id="14" value=" 9        k = k+1;" />
+		<element id="15" value="10      }" />
+		<element id="16" value="11    }" />
+		<element id="17" value="12    RETURN dM;" />
+	</pseudocode>
+</structure>

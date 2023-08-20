@@ -1,0 +1,979 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm name="Fibonacci">
+<step number="0">
+<structure name="Fibonacci numbers" type="Array">
+<array size="11" type="StringInformation">
+<element id="0" value=" "/>
+<element id="1" value=" "/>
+<element id="2" value=" "/>
+<element id="3" value=" "/>
+<element id="4" value=" "/>
+<element id="5" value=" "/>
+<element id="6" value=" "/>
+<element id="7" value=" "/>
+<element id="8" value=" "/>
+<element id="9" value=" "/>
+<element id="10" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+<visualMalleableElement id="0" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="We calculate the Fibonacci numbers using the dynamic programming paradigm.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="6">
+<element id="0" value=" 1  Fib( n )"/>
+<element id="1" value=" 2    F[0] = 0;"/>
+<element id="2" value=" 3    F[1] = 1;"/>
+<element id="3" value=" 4    FOR (k = 2; k &#60; n; k = k+1)"/>
+<element id="4" value=" 5      F[k] = F[k-1]+F[k-2];"/>
+<element id="5" value=" 6    RETURN F[n];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="560.0" originX="20" originY="180">
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="1">
+<structure name="Fibonacci numbers" type="Array">
+<array size="11" type="StringInformation">
+<element id="0" value="0"/>
+<element id="1" value="1"/>
+<element id="2" value=" "/>
+<element id="3" value=" "/>
+<element id="4" value=" "/>
+<element id="5" value=" "/>
+<element id="6" value=" "/>
+<element id="7" value=" "/>
+<element id="8" value=" "/>
+<element id="9" value=" "/>
+<element id="10" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The first two Fibonacci numbers are 0 and 1.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="6">
+<element id="0" value=" 1  Fib( n )"/>
+<element id="1" value=" 2    F[0] = 0;"/>
+<element id="2" value=" 3    F[1] = 1;"/>
+<element id="3" value=" 4    FOR (k = 2; k &#60; n; k = k+1)"/>
+<element id="4" value=" 5      F[k] = F[k-1]+F[k-2];"/>
+<element id="5" value=" 6    RETURN F[n];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="560.0" originX="20" originY="180">
+<visualMalleableElement id="1" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="560"/>
+<visualMalleableElement id="2" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="560"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="2">
+<structure name="Fibonacci numbers" type="Array">
+<array size="11" type="StringInformation">
+<element id="0" value="0"/>
+<element id="1" value="1"/>
+<element id="2" value=" "/>
+<element id="3" value=" "/>
+<element id="4" value=" "/>
+<element id="5" value=" "/>
+<element id="6" value=" "/>
+<element id="7" value=" "/>
+<element id="8" value=" "/>
+<element id="9" value=" "/>
+<element id="10" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="To calculate the Fibonacci number in red we have to sum the two previous numbers in green.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="6">
+<element id="0" value=" 1  Fib( n )"/>
+<element id="1" value=" 2    F[0] = 0;"/>
+<element id="2" value=" 3    F[1] = 1;"/>
+<element id="3" value=" 4    FOR (k = 2; k &#60; n; k = k+1)"/>
+<element id="4" value=" 5      F[k] = F[k-1]+F[k-2];"/>
+<element id="5" value=" 6    RETURN F[n];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="560.0" originX="20" originY="180">
+<visualMalleableElement id="4" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="560"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="3">
+<structure name="Fibonacci numbers" type="Array">
+<array size="11" type="StringInformation">
+<element id="0" value="0"/>
+<element id="1" value="1"/>
+<element id="2" value="1"/>
+<element id="3" value=" "/>
+<element id="4" value=" "/>
+<element id="5" value=" "/>
+<element id="6" value=" "/>
+<element id="7" value=" "/>
+<element id="8" value=" "/>
+<element id="9" value=" "/>
+<element id="10" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The Fibonacci number in red has been calculated.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="6">
+<element id="0" value=" 1  Fib( n )"/>
+<element id="1" value=" 2    F[0] = 0;"/>
+<element id="2" value=" 3    F[1] = 1;"/>
+<element id="3" value=" 4    FOR (k = 2; k &#60; n; k = k+1)"/>
+<element id="4" value=" 5      F[k] = F[k-1]+F[k-2];"/>
+<element id="5" value=" 6    RETURN F[n];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="560.0" originX="20" originY="180">
+<visualMalleableElement id="4" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="560"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="4">
+<structure name="Fibonacci numbers" type="Array">
+<array size="11" type="StringInformation">
+<element id="0" value="0"/>
+<element id="1" value="1"/>
+<element id="2" value="1"/>
+<element id="3" value=" "/>
+<element id="4" value=" "/>
+<element id="5" value=" "/>
+<element id="6" value=" "/>
+<element id="7" value=" "/>
+<element id="8" value=" "/>
+<element id="9" value=" "/>
+<element id="10" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="To calculate the Fibonacci number in red we have to sum the two previous numbers in green.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="6">
+<element id="0" value=" 1  Fib( n )"/>
+<element id="1" value=" 2    F[0] = 0;"/>
+<element id="2" value=" 3    F[1] = 1;"/>
+<element id="3" value=" 4    FOR (k = 2; k &#60; n; k = k+1)"/>
+<element id="4" value=" 5      F[k] = F[k-1]+F[k-2];"/>
+<element id="5" value=" 6    RETURN F[n];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="560.0" originX="20" originY="180">
+<visualMalleableElement id="4" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="560"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="5">
+<structure name="Fibonacci numbers" type="Array">
+<array size="11" type="StringInformation">
+<element id="0" value="0"/>
+<element id="1" value="1"/>
+<element id="2" value="1"/>
+<element id="3" value="2"/>
+<element id="4" value=" "/>
+<element id="5" value=" "/>
+<element id="6" value=" "/>
+<element id="7" value=" "/>
+<element id="8" value=" "/>
+<element id="9" value=" "/>
+<element id="10" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The Fibonacci number in red has been calculated.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="6">
+<element id="0" value=" 1  Fib( n )"/>
+<element id="1" value=" 2    F[0] = 0;"/>
+<element id="2" value=" 3    F[1] = 1;"/>
+<element id="3" value=" 4    FOR (k = 2; k &#60; n; k = k+1)"/>
+<element id="4" value=" 5      F[k] = F[k-1]+F[k-2];"/>
+<element id="5" value=" 6    RETURN F[n];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="560.0" originX="20" originY="180">
+<visualMalleableElement id="4" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="560"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="6">
+<structure name="Fibonacci numbers" type="Array">
+<array size="11" type="StringInformation">
+<element id="0" value="0"/>
+<element id="1" value="1"/>
+<element id="2" value="1"/>
+<element id="3" value="2"/>
+<element id="4" value=" "/>
+<element id="5" value=" "/>
+<element id="6" value=" "/>
+<element id="7" value=" "/>
+<element id="8" value=" "/>
+<element id="9" value=" "/>
+<element id="10" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="To calculate the Fibonacci number in red we have to sum the two previous numbers in green.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="6">
+<element id="0" value=" 1  Fib( n )"/>
+<element id="1" value=" 2    F[0] = 0;"/>
+<element id="2" value=" 3    F[1] = 1;"/>
+<element id="3" value=" 4    FOR (k = 2; k &#60; n; k = k+1)"/>
+<element id="4" value=" 5      F[k] = F[k-1]+F[k-2];"/>
+<element id="5" value=" 6    RETURN F[n];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="560.0" originX="20" originY="180">
+<visualMalleableElement id="4" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="560"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="7">
+<structure name="Fibonacci numbers" type="Array">
+<array size="11" type="StringInformation">
+<element id="0" value="0"/>
+<element id="1" value="1"/>
+<element id="2" value="1"/>
+<element id="3" value="2"/>
+<element id="4" value="3"/>
+<element id="5" value=" "/>
+<element id="6" value=" "/>
+<element id="7" value=" "/>
+<element id="8" value=" "/>
+<element id="9" value=" "/>
+<element id="10" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The Fibonacci number in red has been calculated.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="6">
+<element id="0" value=" 1  Fib( n )"/>
+<element id="1" value=" 2    F[0] = 0;"/>
+<element id="2" value=" 3    F[1] = 1;"/>
+<element id="3" value=" 4    FOR (k = 2; k &#60; n; k = k+1)"/>
+<element id="4" value=" 5      F[k] = F[k-1]+F[k-2];"/>
+<element id="5" value=" 6    RETURN F[n];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="560.0" originX="20" originY="180">
+<visualMalleableElement id="4" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="560"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="8">
+<structure name="Fibonacci numbers" type="Array">
+<array size="11" type="StringInformation">
+<element id="0" value="0"/>
+<element id="1" value="1"/>
+<element id="2" value="1"/>
+<element id="3" value="2"/>
+<element id="4" value="3"/>
+<element id="5" value=" "/>
+<element id="6" value=" "/>
+<element id="7" value=" "/>
+<element id="8" value=" "/>
+<element id="9" value=" "/>
+<element id="10" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="To calculate the Fibonacci number in red we have to sum the two previous numbers in green.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="6">
+<element id="0" value=" 1  Fib( n )"/>
+<element id="1" value=" 2    F[0] = 0;"/>
+<element id="2" value=" 3    F[1] = 1;"/>
+<element id="3" value=" 4    FOR (k = 2; k &#60; n; k = k+1)"/>
+<element id="4" value=" 5      F[k] = F[k-1]+F[k-2];"/>
+<element id="5" value=" 6    RETURN F[n];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="560.0" originX="20" originY="180">
+<visualMalleableElement id="4" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="560"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="9">
+<structure name="Fibonacci numbers" type="Array">
+<array size="11" type="StringInformation">
+<element id="0" value="0"/>
+<element id="1" value="1"/>
+<element id="2" value="1"/>
+<element id="3" value="2"/>
+<element id="4" value="3"/>
+<element id="5" value="5"/>
+<element id="6" value=" "/>
+<element id="7" value=" "/>
+<element id="8" value=" "/>
+<element id="9" value=" "/>
+<element id="10" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The Fibonacci number in red has been calculated.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="6">
+<element id="0" value=" 1  Fib( n )"/>
+<element id="1" value=" 2    F[0] = 0;"/>
+<element id="2" value=" 3    F[1] = 1;"/>
+<element id="3" value=" 4    FOR (k = 2; k &#60; n; k = k+1)"/>
+<element id="4" value=" 5      F[k] = F[k-1]+F[k-2];"/>
+<element id="5" value=" 6    RETURN F[n];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="560.0" originX="20" originY="180">
+<visualMalleableElement id="4" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="560"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="10">
+<structure name="Fibonacci numbers" type="Array">
+<array size="11" type="StringInformation">
+<element id="0" value="0"/>
+<element id="1" value="1"/>
+<element id="2" value="1"/>
+<element id="3" value="2"/>
+<element id="4" value="3"/>
+<element id="5" value="5"/>
+<element id="6" value=" "/>
+<element id="7" value=" "/>
+<element id="8" value=" "/>
+<element id="9" value=" "/>
+<element id="10" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="To calculate the Fibonacci number in red we have to sum the two previous numbers in green.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="6">
+<element id="0" value=" 1  Fib( n )"/>
+<element id="1" value=" 2    F[0] = 0;"/>
+<element id="2" value=" 3    F[1] = 1;"/>
+<element id="3" value=" 4    FOR (k = 2; k &#60; n; k = k+1)"/>
+<element id="4" value=" 5      F[k] = F[k-1]+F[k-2];"/>
+<element id="5" value=" 6    RETURN F[n];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="560.0" originX="20" originY="180">
+<visualMalleableElement id="4" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="560"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="11">
+<structure name="Fibonacci numbers" type="Array">
+<array size="11" type="StringInformation">
+<element id="0" value="0"/>
+<element id="1" value="1"/>
+<element id="2" value="1"/>
+<element id="3" value="2"/>
+<element id="4" value="3"/>
+<element id="5" value="5"/>
+<element id="6" value="8"/>
+<element id="7" value=" "/>
+<element id="8" value=" "/>
+<element id="9" value=" "/>
+<element id="10" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The Fibonacci number in red has been calculated.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="6">
+<element id="0" value=" 1  Fib( n )"/>
+<element id="1" value=" 2    F[0] = 0;"/>
+<element id="2" value=" 3    F[1] = 1;"/>
+<element id="3" value=" 4    FOR (k = 2; k &#60; n; k = k+1)"/>
+<element id="4" value=" 5      F[k] = F[k-1]+F[k-2];"/>
+<element id="5" value=" 6    RETURN F[n];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="560.0" originX="20" originY="180">
+<visualMalleableElement id="4" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="560"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="12">
+<structure name="Fibonacci numbers" type="Array">
+<array size="11" type="StringInformation">
+<element id="0" value="0"/>
+<element id="1" value="1"/>
+<element id="2" value="1"/>
+<element id="3" value="2"/>
+<element id="4" value="3"/>
+<element id="5" value="5"/>
+<element id="6" value="8"/>
+<element id="7" value=" "/>
+<element id="8" value=" "/>
+<element id="9" value=" "/>
+<element id="10" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="To calculate the Fibonacci number in red we have to sum the two previous numbers in green.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="6">
+<element id="0" value=" 1  Fib( n )"/>
+<element id="1" value=" 2    F[0] = 0;"/>
+<element id="2" value=" 3    F[1] = 1;"/>
+<element id="3" value=" 4    FOR (k = 2; k &#60; n; k = k+1)"/>
+<element id="4" value=" 5      F[k] = F[k-1]+F[k-2];"/>
+<element id="5" value=" 6    RETURN F[n];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="560.0" originX="20" originY="180">
+<visualMalleableElement id="4" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="560"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="13">
+<structure name="Fibonacci numbers" type="Array">
+<array size="11" type="StringInformation">
+<element id="0" value="0"/>
+<element id="1" value="1"/>
+<element id="2" value="1"/>
+<element id="3" value="2"/>
+<element id="4" value="3"/>
+<element id="5" value="5"/>
+<element id="6" value="8"/>
+<element id="7" value="13"/>
+<element id="8" value=" "/>
+<element id="9" value=" "/>
+<element id="10" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The Fibonacci number in red has been calculated.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="6">
+<element id="0" value=" 1  Fib( n )"/>
+<element id="1" value=" 2    F[0] = 0;"/>
+<element id="2" value=" 3    F[1] = 1;"/>
+<element id="3" value=" 4    FOR (k = 2; k &#60; n; k = k+1)"/>
+<element id="4" value=" 5      F[k] = F[k-1]+F[k-2];"/>
+<element id="5" value=" 6    RETURN F[n];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="560.0" originX="20" originY="180">
+<visualMalleableElement id="4" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="560"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="14">
+<structure name="Fibonacci numbers" type="Array">
+<array size="11" type="StringInformation">
+<element id="0" value="0"/>
+<element id="1" value="1"/>
+<element id="2" value="1"/>
+<element id="3" value="2"/>
+<element id="4" value="3"/>
+<element id="5" value="5"/>
+<element id="6" value="8"/>
+<element id="7" value="13"/>
+<element id="8" value=" "/>
+<element id="9" value=" "/>
+<element id="10" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="To calculate the Fibonacci number in red we have to sum the two previous numbers in green.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="6">
+<element id="0" value=" 1  Fib( n )"/>
+<element id="1" value=" 2    F[0] = 0;"/>
+<element id="2" value=" 3    F[1] = 1;"/>
+<element id="3" value=" 4    FOR (k = 2; k &#60; n; k = k+1)"/>
+<element id="4" value=" 5      F[k] = F[k-1]+F[k-2];"/>
+<element id="5" value=" 6    RETURN F[n];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="560.0" originX="20" originY="180">
+<visualMalleableElement id="4" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="560"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="15">
+<structure name="Fibonacci numbers" type="Array">
+<array size="11" type="StringInformation">
+<element id="0" value="0"/>
+<element id="1" value="1"/>
+<element id="2" value="1"/>
+<element id="3" value="2"/>
+<element id="4" value="3"/>
+<element id="5" value="5"/>
+<element id="6" value="8"/>
+<element id="7" value="13"/>
+<element id="8" value="21"/>
+<element id="9" value=" "/>
+<element id="10" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The Fibonacci number in red has been calculated.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="6">
+<element id="0" value=" 1  Fib( n )"/>
+<element id="1" value=" 2    F[0] = 0;"/>
+<element id="2" value=" 3    F[1] = 1;"/>
+<element id="3" value=" 4    FOR (k = 2; k &#60; n; k = k+1)"/>
+<element id="4" value=" 5      F[k] = F[k-1]+F[k-2];"/>
+<element id="5" value=" 6    RETURN F[n];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="560.0" originX="20" originY="180">
+<visualMalleableElement id="4" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="560"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="16">
+<structure name="Fibonacci numbers" type="Array">
+<array size="11" type="StringInformation">
+<element id="0" value="0"/>
+<element id="1" value="1"/>
+<element id="2" value="1"/>
+<element id="3" value="2"/>
+<element id="4" value="3"/>
+<element id="5" value="5"/>
+<element id="6" value="8"/>
+<element id="7" value="13"/>
+<element id="8" value="21"/>
+<element id="9" value=" "/>
+<element id="10" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="To calculate the Fibonacci number in red we have to sum the two previous numbers in green.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="6">
+<element id="0" value=" 1  Fib( n )"/>
+<element id="1" value=" 2    F[0] = 0;"/>
+<element id="2" value=" 3    F[1] = 1;"/>
+<element id="3" value=" 4    FOR (k = 2; k &#60; n; k = k+1)"/>
+<element id="4" value=" 5      F[k] = F[k-1]+F[k-2];"/>
+<element id="5" value=" 6    RETURN F[n];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="560.0" originX="20" originY="180">
+<visualMalleableElement id="4" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="560"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="17">
+<structure name="Fibonacci numbers" type="Array">
+<array size="11" type="StringInformation">
+<element id="0" value="0"/>
+<element id="1" value="1"/>
+<element id="2" value="1"/>
+<element id="3" value="2"/>
+<element id="4" value="3"/>
+<element id="5" value="5"/>
+<element id="6" value="8"/>
+<element id="7" value="13"/>
+<element id="8" value="21"/>
+<element id="9" value="34"/>
+<element id="10" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="BBBBBB" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The Fibonacci number in red has been calculated.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="6">
+<element id="0" value=" 1  Fib( n )"/>
+<element id="1" value=" 2    F[0] = 0;"/>
+<element id="2" value=" 3    F[1] = 1;"/>
+<element id="3" value=" 4    FOR (k = 2; k &#60; n; k = k+1)"/>
+<element id="4" value=" 5      F[k] = F[k-1]+F[k-2];"/>
+<element id="5" value=" 6    RETURN F[n];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="560.0" originX="20" originY="180">
+<visualMalleableElement id="4" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="560"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="18">
+<structure name="Fibonacci numbers" type="Array">
+<array size="11" type="StringInformation">
+<element id="0" value="0"/>
+<element id="1" value="1"/>
+<element id="2" value="1"/>
+<element id="3" value="2"/>
+<element id="4" value="3"/>
+<element id="5" value="5"/>
+<element id="6" value="8"/>
+<element id="7" value="13"/>
+<element id="8" value="21"/>
+<element id="9" value="34"/>
+<element id="10" value=" "/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="To calculate the Fibonacci number in red we have to sum the two previous numbers in green.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="6">
+<element id="0" value=" 1  Fib( n )"/>
+<element id="1" value=" 2    F[0] = 0;"/>
+<element id="2" value=" 3    F[1] = 1;"/>
+<element id="3" value=" 4    FOR (k = 2; k &#60; n; k = k+1)"/>
+<element id="4" value=" 5      F[k] = F[k-1]+F[k-2];"/>
+<element id="5" value=" 6    RETURN F[n];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="560.0" originX="20" originY="180">
+<visualMalleableElement id="4" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="560"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="19">
+<structure name="Fibonacci numbers" type="Array">
+<array size="11" type="StringInformation">
+<element id="0" value="0"/>
+<element id="1" value="1"/>
+<element id="2" value="1"/>
+<element id="3" value="2"/>
+<element id="4" value="3"/>
+<element id="5" value="5"/>
+<element id="6" value="8"/>
+<element id="7" value="13"/>
+<element id="8" value="21"/>
+<element id="9" value="34"/>
+<element id="10" value="55"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="9" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="10" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The Fibonacci number in red has been calculated.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="6">
+<element id="0" value=" 1  Fib( n )"/>
+<element id="1" value=" 2    F[0] = 0;"/>
+<element id="2" value=" 3    F[1] = 1;"/>
+<element id="3" value=" 4    FOR (k = 2; k &#60; n; k = k+1)"/>
+<element id="4" value=" 5      F[k] = F[k-1]+F[k-2];"/>
+<element id="5" value=" 6    RETURN F[n];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="560.0" originX="20" originY="180">
+<visualMalleableElement id="4" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="560"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="20">
+<structure name="Fibonacci numbers" type="Array">
+<array size="11" type="StringInformation">
+<element id="0" value="0"/>
+<element id="1" value="1"/>
+<element id="2" value="1"/>
+<element id="3" value="2"/>
+<element id="4" value="3"/>
+<element id="5" value="5"/>
+<element id="6" value="8"/>
+<element id="7" value="13"/>
+<element id="8" value="21"/>
+<element id="9" value="34"/>
+<element id="10" value="55"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+</visualArray>
+<message content="All the requested Fibonacci numbers have been calculated.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="6">
+<element id="0" value=" 1  Fib( n )"/>
+<element id="1" value=" 2    F[0] = 0;"/>
+<element id="2" value=" 3    F[1] = 1;"/>
+<element id="3" value=" 4    FOR (k = 2; k &#60; n; k = k+1)"/>
+<element id="4" value=" 5      F[k] = F[k-1]+F[k-2];"/>
+<element id="5" value=" 6    RETURN F[n];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="560.0" originX="20" originY="180">
+<visualMalleableElement id="5" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="560"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+</algorithm>
