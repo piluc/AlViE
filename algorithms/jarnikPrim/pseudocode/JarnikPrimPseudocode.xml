@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure name="Jarnik-Prim" type="Pseudocode">
+	<pseudocode size="22">
+		<element id="0" value=" 1  Jarnik-Prim(  )" />
+		<element id="1" value=" 2    FOR (u = 0; u &#60; n; u = u + 1) {" />
+		<element id="2" value=" 3      included[u] = false;" />
+		<element id="3" value=" 4      pred[u] = u;" />
+		<element id="4" value=" 5      element.weight = weight[u] = +oo;" />
+		<element id="5" value=" 6      element.data = u;" />
+		<element id="6" value=" 7      PQ.Enqueue( element );" />
+		<element id="7" value=" 8    }" />
+		<element id="8" value=" 9    WHILE (!PQ.Empty( )) {" />
+		<element id="9" value="10      element = PQ.Dequeue( );" />
+		<element id="10" value="11      v = element.data;" />
+		<element id="11" value="12      included[v] = true;" />
+		<element id="12" value="13      mst.TailInsert ( &#60; pred [ v ], v> );" />
+		<element id="13" value="14      FOR (x = adjList[v].begin; x != null; x = x.succ) {" />
+		<element id="14" value="15        u = x.data;" />
+		<element id="15" value="16        IF (!included[u] &#38;&#38; x.weight &#60; weight[u]) {" />
+		<element id="16" value="17          pred[u] = v;" />
+		<element id="17" value="18          weight[u] = x.weight;" />
+		<element id="18" value="19          PQ.DecreaseKey( u, weight[u] );" />
+		<element id="19" value="20        }" />
+		<element id="20" value="21      }" />
+		<element id="21" value="22    }" />
+	</pseudocode>
+</structure>

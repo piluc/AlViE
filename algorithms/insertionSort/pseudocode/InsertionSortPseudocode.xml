@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure name="Insertion Sort" type="Pseudocode">
+	<pseudocode size="10">
+		<element id="0" value=" 1  InsertionSort( a )" />
+		<element id="1"
+			value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {" />
+		<element id="2" value=" 3      next = a[i];" />
+		<element id="3" value=" 4      j = i;" />
+		<element id="4"
+			value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {" />
+		<element id="5" value=" 6        a[j] = a[j-1];" />
+		<element id="6" value=" 7        j = j-1;" />
+		<element id="7" value=" 8      }" />
+		<element id="8" value=" 9      a[j] = next;" />
+		<element id="9" value="10    }" />
+	</pseudocode>
+</structure>

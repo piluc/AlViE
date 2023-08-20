@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure name="Interval graph coloring" type = "Pseudocode">
+<pseudocode size="20">
+	<element id="0"  value=" 1  IntervalGraphColoring([a[0],b[0]],...,[a[n-1],b[n-1]])"/>
+	<element id="1"  value=" 2    freeColors = colorsNumber = 0;"/>
+	<element id="2"  value=" 3    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+	<element id="3"  value=" 4      bound[2 x i] = &#60;a[i],0,i>"/>
+	<element id="4"  value=" 5      bound[2 x i + 1] = &#60;b[i],1,i>"/>
+	<element id="5"  value=" 6    }"/>
+	<element id="6"  value=" 7    IncreasingSort( bound );"/>
+	<element id="7"  value=" 8    FOR (j = 0; i &#60; 2 x n; j = j + 1) {"/>
+	<element id="8"  value=" 9      &#60;x,rightBound,i> = bound[j]"/>
+	<element id="9"  value="10      IF (rightBound == 1) {"/>
+	<element id="10" value="11        palette[freeColors] = color[i];"/>
+	<element id="11" value="12        freeColors = freeColors + 1;"/>
+	<element id="12" value="13      } ELSE IF (freeColors > 0) {"/>
+	<element id="13" value="14        color[i] = palette[freeColors-1]"/>
+	<element id="14" value="15        freeColors = freeColors - 1;"/>
+	<element id="15" value="16      } ELSE {"/>
+	<element id="16" value="17        color[i] = colorsNumber;"/>
+	<element id="17" value="18        colorsNumber = colorsNumber + 1;"/>
+	<element id="18" value="19      }"/>
+	<element id="19" value="20    }"/>
+</pseudocode>
+</structure>

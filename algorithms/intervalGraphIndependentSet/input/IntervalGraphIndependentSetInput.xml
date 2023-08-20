@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure name="Array" type="Array">
+  <array size="9" type="IntPairInformation">
+	<element id="0" value="[15;75]"/>
+	<element id="1" value="[90;95]"/>
+	<element id="2" value="[20;30]"/>
+	<element id="3" value="[35;50]"/>
+	<element id="4" value="[60;70]"/>
+	<element id="5" value="[85;100]"/>
+ 	<element id="6" value="[25;40]"/>
+ 	<element id="7" value="[45;55]"/>
+ 	<element id="8" value="[65;80]"/>
+  </array>
+</structure>

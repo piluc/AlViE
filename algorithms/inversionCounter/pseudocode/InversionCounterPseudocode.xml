@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure name="Inversion counter" type="Pseudocode">
+	<pseudocode size="24">
+		<element id="0" value=" 1  InversionCounter( a, left, right )" />
+		<element id="1" value=" 2    IF (left &#60; right) {" />
+		<element id="2" value=" 3      center = (left+right)/2;" />
+		<element id="3" value=" 4      il = InversionCounter( a, left, center );" />
+		<element id="4" value=" 5      ir = InversionCounter( a, center+1, right );" />
+		<element id="5" value=" 6      im = MergeCount( a, left, center, right );" />
+		<element id="6" value=" 7      RETURN il + ir + im;" />
+		<element id="7" value=" 8    } ELSE" />
+		<element id="8" value=" 9      RETURN 0;" />
+		<element id="9" value=" " />
+		<element id="10" value=" 1  MergeCount( a, sx, cx, dx )" />
+		<element id="11" value=" 2    i = sx; j = cx+1; k = 0; c = 0;" />
+		<element id="12" value=" 3    WHILE ((i &#60;= cx) &#38;&#38; (j &#60;= dx)) {" />
+		<element id="13" value=" 4      IF (a[i] &#60;= a[j]) {" />
+		<element id="14" value=" 5        b[k] = a[i]; i = i+1;" />
+		<element id="15" value=" 6      } ELSE {" />
+		<element id="16" value=" 7        b[k] = a[j]; j = j+1; c = c + (cx-i) + 1;" />
+		<element id="17" value=" 8      }" />
+		<element id="18" value=" 9      k = k+1;" />
+		<element id="19" value="10    }" />
+		<element id="20" value="11    FOR ( ; i &#60;= cx; i = i+1, k = k+1) b[k] = a[i];" />
+		<element id="21" value="12    FOR ( ; j &#60;= dx; j = j+1, k = k+1) b[k] = a[j];" />
+		<element id="22" value="13    FOR (i = sx; i &#60;= dx; i = i+1) a[i] = b[i-sx];" />
+		<element id="23" value="14    RETURN c;" />
+	</pseudocode>
+</structure>

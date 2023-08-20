@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure name="Matrix Product Ordering" type="Pseudocode">
+	<pseudocode size="13">
+		<element id="0" value=" 1  IterativeMinimumCost( )" />
+		<element id="1"
+			value=" 2    FOR (i = 0; i &#60; n; i = i+1) costs[i][i] = 0;" />
+		<element id="2" value=" 3    FOR (diagonal = 1; diagonal &#60; n; diagonal++) {" />
+		<element id="3" value=" 4      FOR (i = 0; i &#60; n-diagonal; i = i+1)" />
+		<element id="4" value=" 5        j = i + diagonal;" />
+		<element id="5" value=" 6        costs[i][j] = +oo;" />
+		<element id="6" value=" 7        FOR (r = i; r &#60; j; r = r+1)" />
+		<element id="7" value=" 8          IF (costs[i][r]+costs[r+1][j]+d[i]xd[r+1]xd[j+1] &#60; costs[i][j]) {" />
+		<element id="8" value=" 9            costs[i][j] = costs[i][r]+costs[r+1][j]+d[i]xd[r+1]xd[j+1];" />
+		<element id="9" value="10            index[i][j] = r;" />
+		<element id="10" value="11          }" />
+		<element id="11" value="12      }" />
+		<element id="12" value="13    RETURN costs[0][n-1];" />
+	</pseudocode>
+</structure>

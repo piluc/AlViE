@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure name="x" type="Array">
+	<array size="2" type="StringInformation">
+		<element id="0" value="BERLUSCONI" />
+		<element id="1" value="BERSANI" />
+	</array>
+</structure>

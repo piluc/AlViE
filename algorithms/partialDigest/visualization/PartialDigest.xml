@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm name="PartialDigest">
+<step number="0">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="1" type="StringInformation">
+<element id="0" value="X={0,10}
+ L={2,2,3,3,4,5,6,7,8}"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Rectangular" defaultShapeHeight="40.0" defaultShapeWidth="200.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="500" originY="50">
+</visualBinaryTree>
+<message content="The algorithm starts by invoking the recursive function for the first time with arguments the array extremes.">
+</message>
+</structure>
+<structure name="PartialDigest" type="Pseudocode">
+<pseudocode size="7">
+<element id="0" value=" 1  QuickSort( a, left, right )"/>
+<element id="1" value=" 2    IF (left &#60; right) {"/>
+<element id="2" value=" 3      select pivot in the interval [left...right];"/>
+<element id="3" value=" 4      center = Distribution( a, left, pivot, right );"/>
+<element id="4" value=" 5      QuickSort( a, left, pivot-1 );"/>
+<element id="5" value=" 6      QuickSort( a, pivot+1, right );"/>
+<element id="6" value=" 7    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="20" originY="120">
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="1">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="2" type="StringInformation">
+<element id="0" value="X={0,10}
+ L={2,2,3,3,4,5,6,7,8}"/>
+<element id="1" value="X={0,8,10}
+ L={2,3,3,4,5,6,7}"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Rectangular" defaultShapeHeight="40.0" defaultShapeWidth="200.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="500" originY="50">
+<visualLinkedElement id="0" color="FFFF00" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="40.0" shapeWidth="200.0"/>
+<visualLinkedElement id="1" color="00FF00" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="40.0" shapeWidth="200.0"/>
+</visualBinaryTree>
+<message content="The algorithm continues on the green left part of the yellow sub-array.">
+</message>
+</structure>
+</step>
+<step number="2">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="2" type="StringInformation">
+<element id="0" value="X={0,10}
+ L={2,2,3,3,4,5,6,7,8}"/>
+<element id="1" value="X={0,8,10}
+ L={2,3,3,4,5,6,7}"/>
+<element id="4" value="X={0,3,8,10}
+ L={2,3,4,6}"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Rectangular" defaultShapeHeight="40.0" defaultShapeWidth="200.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="500" originY="50">
+<visualLinkedElement id="1" color="FFFF00" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="40.0" shapeWidth="200.0"/>
+<visualLinkedElement id="4" color="00FF00" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="40.0" shapeWidth="200.0"/>
+</visualBinaryTree>
+<message content="The algorithm continues on the green right part of the yellow sub-array.">
+</message>
+</structure>
+</step>
+<step number="3">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="2" type="StringInformation">
+<element id="0" value="X={0,10}
+ L={2,2,3,3,4,5,6,7,8}"/>
+<element id="1" value="X={0,8,10}
+ L={2,3,3,4,5,6,7}"/>
+<element id="4" value="X={0,3,8,10}
+ L={2,3,4,6}"/>
+<element id="9" value="X={0,3,6,8,10}
+ L={}"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Rectangular" defaultShapeHeight="40.0" defaultShapeWidth="200.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="500" originY="50">
+<visualLinkedElement id="4" color="FFFF00" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="40.0" shapeWidth="200.0"/>
+<visualLinkedElement id="9" color="00FF00" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="40.0" shapeWidth="200.0"/>
+</visualBinaryTree>
+<message content="The algorithm continues on the green left part of the yellow sub-array.">
+</message>
+</structure>
+</step>
+<step number="4">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="2" type="StringInformation">
+<element id="0" value="X={0,10}
+ L={2,2,3,3,4,5,6,7,8}"/>
+<element id="1" value="X={0,8,10}
+ L={2,3,3,4,5,6,7}"/>
+<element id="4" value="X={0,3,8,10}
+ L={2,3,4,6}"/>
+<element id="9" value="X={0,3,6,8,10}
+ L={}"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Rectangular" defaultShapeHeight="40.0" defaultShapeWidth="200.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="500" originY="50">
+</visualBinaryTree>
+<message content="The part of the yellow sub-array on the left of the pivot is now sorted.">
+</message>
+</structure>
+</step>
+<step number="5">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="2" type="StringInformation">
+<element id="0" value="X={0,10}
+ L={2,2,3,3,4,5,6,7,8}"/>
+<element id="1" value="X={0,8,10}
+ L={2,3,3,4,5,6,7}"/>
+<element id="4" value="X={0,3,8,10}
+ L={2,3,4,6}"/>
+<element id="9" value="X={0,3,6,8,10}
+ L={}"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Rectangular" defaultShapeHeight="40.0" defaultShapeWidth="200.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="500" originY="50">
+</visualBinaryTree>
+<message content="The yellow sub-array is now sorted.">
+</message>
+</structure>
+</step>
+<step number="6">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="2" type="StringInformation">
+<element id="0" value="X={0,10}
+ L={2,2,3,3,4,5,6,7,8}"/>
+<element id="1" value="X={0,8,10}
+ L={2,3,3,4,5,6,7}"/>
+<element id="4" value="X={0,3,8,10}
+ L={2,3,4,6}"/>
+<element id="9" value="X={0,3,6,8,10}
+ L={}"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Rectangular" defaultShapeHeight="40.0" defaultShapeWidth="200.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="500" originY="50">
+</visualBinaryTree>
+<message content="The part of the yellow sub-array on the left of the pivot is now sorted.">
+</message>
+</structure>
+</step>
+<step number="7">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="4" type="StringInformation">
+<element id="0" value="X={0,10}
+ L={2,2,3,3,4,5,6,7,8}"/>
+<element id="1" value="X={0,8,10}
+ L={2,3,3,4,5,6,7}"/>
+<element id="4" value="X={0,3,8,10}
+ L={2,3,4,6}"/>
+<element id="9" value="X={0,3,6,8,10}
+ L={}"/>
+<element id="2" value="X={0,2,10}
+ L={2,3,3,4,5,6,7}"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Rectangular" defaultShapeHeight="40.0" defaultShapeWidth="200.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="500" originY="50">
+<visualLinkedElement id="0" color="FFFF00" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="40.0" shapeWidth="200.0"/>
+<visualLinkedElement id="2" color="00FF00" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="40.0" shapeWidth="200.0"/>
+</visualBinaryTree>
+<message content="The algorithm continues on the green right part of the yellow sub-array.">
+</message>
+</structure>
+</step>
+<step number="8">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="4" type="StringInformation">
+<element id="0" value="X={0,10}
+ L={2,2,3,3,4,5,6,7,8}"/>
+<element id="1" value="X={0,8,10}
+ L={2,3,3,4,5,6,7}"/>
+<element id="4" value="X={0,3,8,10}
+ L={2,3,4,6}"/>
+<element id="9" value="X={0,3,6,8,10}
+ L={}"/>
+<element id="2" value="X={0,2,10}
+ L={2,3,3,4,5,6,7}"/>
+<element id="5" value="X={0,2,7,10}
+ L={2,3,4,6}"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Rectangular" defaultShapeHeight="40.0" defaultShapeWidth="200.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="500" originY="50">
+<visualLinkedElement id="2" color="FFFF00" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="40.0" shapeWidth="200.0"/>
+<visualLinkedElement id="5" color="00FF00" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="40.0" shapeWidth="200.0"/>
+</visualBinaryTree>
+<message content="The algorithm continues on the green left part of the yellow sub-array.">
+</message>
+</structure>
+</step>
+<step number="9">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="4" type="StringInformation">
+<element id="0" value="X={0,10}
+ L={2,2,3,3,4,5,6,7,8}"/>
+<element id="1" value="X={0,8,10}
+ L={2,3,3,4,5,6,7}"/>
+<element id="4" value="X={0,3,8,10}
+ L={2,3,4,6}"/>
+<element id="9" value="X={0,3,6,8,10}
+ L={}"/>
+<element id="2" value="X={0,2,10}
+ L={2,3,3,4,5,6,7}"/>
+<element id="5" value="X={0,2,7,10}
+ L={2,3,4,6}"/>
+<element id="12" value="X={0,2,4,7,10}
+ L={}"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Rectangular" defaultShapeHeight="40.0" defaultShapeWidth="200.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="500" originY="50">
+<visualLinkedElement id="5" color="FFFF00" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="40.0" shapeWidth="200.0"/>
+<visualLinkedElement id="12" color="00FF00" font="Monospaced-PLAIN-16" shape="Rectangular" shapeHeight="40.0" shapeWidth="200.0"/>
+</visualBinaryTree>
+<message content="The algorithm continues on the green right part of the yellow sub-array.">
+</message>
+</structure>
+</step>
+<step number="10">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="4" type="StringInformation">
+<element id="0" value="X={0,10}
+ L={2,2,3,3,4,5,6,7,8}"/>
+<element id="1" value="X={0,8,10}
+ L={2,3,3,4,5,6,7}"/>
+<element id="4" value="X={0,3,8,10}
+ L={2,3,4,6}"/>
+<element id="9" value="X={0,3,6,8,10}
+ L={}"/>
+<element id="2" value="X={0,2,10}
+ L={2,3,3,4,5,6,7}"/>
+<element id="5" value="X={0,2,7,10}
+ L={2,3,4,6}"/>
+<element id="12" value="X={0,2,4,7,10}
+ L={}"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Rectangular" defaultShapeHeight="40.0" defaultShapeWidth="200.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="500" originY="50">
+</visualBinaryTree>
+<message content="The yellow sub-array is now sorted.">
+</message>
+</structure>
+</step>
+<step number="11">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="4" type="StringInformation">
+<element id="0" value="X={0,10}
+ L={2,2,3,3,4,5,6,7,8}"/>
+<element id="1" value="X={0,8,10}
+ L={2,3,3,4,5,6,7}"/>
+<element id="4" value="X={0,3,8,10}
+ L={2,3,4,6}"/>
+<element id="9" value="X={0,3,6,8,10}
+ L={}"/>
+<element id="2" value="X={0,2,10}
+ L={2,3,3,4,5,6,7}"/>
+<element id="5" value="X={0,2,7,10}
+ L={2,3,4,6}"/>
+<element id="12" value="X={0,2,4,7,10}
+ L={}"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Rectangular" defaultShapeHeight="40.0" defaultShapeWidth="200.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="500" originY="50">
+</visualBinaryTree>
+<message content="The part of the yellow sub-array on the left of the pivot is now sorted.">
+</message>
+</structure>
+</step>
+<step number="12">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="4" type="StringInformation">
+<element id="0" value="X={0,10}
+ L={2,2,3,3,4,5,6,7,8}"/>
+<element id="1" value="X={0,8,10}
+ L={2,3,3,4,5,6,7}"/>
+<element id="4" value="X={0,3,8,10}
+ L={2,3,4,6}"/>
+<element id="9" value="X={0,3,6,8,10}
+ L={}"/>
+<element id="2" value="X={0,2,10}
+ L={2,3,3,4,5,6,7}"/>
+<element id="5" value="X={0,2,7,10}
+ L={2,3,4,6}"/>
+<element id="12" value="X={0,2,4,7,10}
+ L={}"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Rectangular" defaultShapeHeight="40.0" defaultShapeWidth="200.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="500" originY="50">
+</visualBinaryTree>
+<message content="The yellow sub-array is now sorted.">
+</message>
+</structure>
+</step>
+<step number="13">
+<structure name="Recursive call tree" type="BinaryTree">
+<binaryTree size="4" type="StringInformation">
+<element id="0" value="X={0,10}
+ L={2,2,3,3,4,5,6,7,8}"/>
+<element id="1" value="X={0,8,10}
+ L={2,3,3,4,5,6,7}"/>
+<element id="4" value="X={0,3,8,10}
+ L={2,3,4,6}"/>
+<element id="9" value="X={0,3,6,8,10}
+ L={}"/>
+<element id="2" value="X={0,2,10}
+ L={2,3,3,4,5,6,7}"/>
+<element id="5" value="X={0,2,7,10}
+ L={2,3,4,6}"/>
+<element id="12" value="X={0,2,4,7,10}
+ L={}"/>
+</binaryTree>
+<visualBinaryTree defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Rectangular" defaultShapeHeight="40.0" defaultShapeWidth="200.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="500" originY="50">
+</visualBinaryTree>
+<message content="The array has been sorted.">
+</message>
+</structure>
+</step>
+</algorithm>

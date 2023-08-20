@@ -1,0 +1,2648 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm name="Insertion sort">
+<step number="0">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="5"/>
+<element id="1" value="3"/>
+<element id="2" value="6"/>
+<element id="3" value="2"/>
+<element id="4" value="7"/>
+<element id="5" value="1"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+</visualArray>
+<message content="Initial array that has to be sorted by means of the insertion sort algorithm.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="1">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="5"/>
+<element id="1" value="3"/>
+<element id="2" value="6"/>
+<element id="3" value="2"/>
+<element id="4" value="7"/>
+<element id="5" value="1"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The green elements (if any) have already been examined. The red element has to be inserted within the preceding ones.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="2">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="5"/>
+<element id="1" value="3"/>
+<element id="2" value="6"/>
+<element id="3" value="2"/>
+<element id="4" value="7"/>
+<element id="5" value="1"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The yellow element has to be stored in the red position.">
+</message>
+</structure>
+<structure name="Next" type="Array">
+<array size="1" type="StringInformation">
+<element id="0" value="5"/>
+</array>
+<visualArray defaultColor="FFFF00" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="3">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="5"/>
+<element id="1" value="3"/>
+<element id="2" value="6"/>
+<element id="3" value="2"/>
+<element id="4" value="7"/>
+<element id="5" value="1"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The red element has been inserted in the right position.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="9" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="4">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="5"/>
+<element id="1" value="3"/>
+<element id="2" value="6"/>
+<element id="3" value="2"/>
+<element id="4" value="7"/>
+<element id="5" value="1"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The green elements (if any) have already been examined. The red element has to be inserted within the preceding ones.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="5">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="5"/>
+<element id="1" value="3"/>
+<element id="2" value="6"/>
+<element id="3" value="2"/>
+<element id="4" value="7"/>
+<element id="5" value="1"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The yellow element is smaller than the element immediately on the left of the red position: hence, this latter element has to be shifted to the right.">
+</message>
+</structure>
+<structure name="Next" type="Array">
+<array size="1" type="StringInformation">
+<element id="0" value="3"/>
+</array>
+<visualArray defaultColor="FFFF00" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="6">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="5"/>
+<element id="1" value="5"/>
+<element id="2" value="6"/>
+<element id="3" value="2"/>
+<element id="4" value="7"/>
+<element id="5" value="1"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The green elements on the right of the red position have already been compared with the yellow element, that has to be inserted within the elements on the left of the red positions (if any).">
+</message>
+</structure>
+<structure name="Next" type="Array">
+<array size="1" type="StringInformation">
+<element id="0" value="3"/>
+</array>
+<visualArray defaultColor="FFFF00" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="7">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="5"/>
+<element id="1" value="5"/>
+<element id="2" value="6"/>
+<element id="3" value="2"/>
+<element id="4" value="7"/>
+<element id="5" value="1"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The yellow element has to be stored in the red position.">
+</message>
+</structure>
+<structure name="Next" type="Array">
+<array size="1" type="StringInformation">
+<element id="0" value="3"/>
+</array>
+<visualArray defaultColor="FFFF00" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="8">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="3"/>
+<element id="1" value="5"/>
+<element id="2" value="6"/>
+<element id="3" value="2"/>
+<element id="4" value="7"/>
+<element id="5" value="1"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The red element has been inserted in the right position.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="9" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="9">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="3"/>
+<element id="1" value="5"/>
+<element id="2" value="6"/>
+<element id="3" value="2"/>
+<element id="4" value="7"/>
+<element id="5" value="1"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The green elements (if any) have already been examined. The red element has to be inserted within the preceding ones.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="10">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="3"/>
+<element id="1" value="5"/>
+<element id="2" value="6"/>
+<element id="3" value="2"/>
+<element id="4" value="7"/>
+<element id="5" value="1"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The yellow element has to be stored in the red position.">
+</message>
+</structure>
+<structure name="Next" type="Array">
+<array size="1" type="StringInformation">
+<element id="0" value="6"/>
+</array>
+<visualArray defaultColor="FFFF00" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="11">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="3"/>
+<element id="1" value="5"/>
+<element id="2" value="6"/>
+<element id="3" value="2"/>
+<element id="4" value="7"/>
+<element id="5" value="1"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The red element has been inserted in the right position.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="9" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="12">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="3"/>
+<element id="1" value="5"/>
+<element id="2" value="6"/>
+<element id="3" value="2"/>
+<element id="4" value="7"/>
+<element id="5" value="1"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The green elements (if any) have already been examined. The red element has to be inserted within the preceding ones.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="13">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="3"/>
+<element id="1" value="5"/>
+<element id="2" value="6"/>
+<element id="3" value="2"/>
+<element id="4" value="7"/>
+<element id="5" value="1"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The yellow element is smaller than the element immediately on the left of the red position: hence, this latter element has to be shifted to the right.">
+</message>
+</structure>
+<structure name="Next" type="Array">
+<array size="1" type="StringInformation">
+<element id="0" value="2"/>
+</array>
+<visualArray defaultColor="FFFF00" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="14">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="3"/>
+<element id="1" value="5"/>
+<element id="2" value="6"/>
+<element id="3" value="6"/>
+<element id="4" value="7"/>
+<element id="5" value="1"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The green elements on the right of the red position have already been compared with the yellow element, that has to be inserted within the elements on the left of the red positions (if any).">
+</message>
+</structure>
+<structure name="Next" type="Array">
+<array size="1" type="StringInformation">
+<element id="0" value="2"/>
+</array>
+<visualArray defaultColor="FFFF00" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="15">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="3"/>
+<element id="1" value="5"/>
+<element id="2" value="6"/>
+<element id="3" value="6"/>
+<element id="4" value="7"/>
+<element id="5" value="1"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The yellow element is smaller than the element immediately on the left of the red position: hence, this latter element has to be shifted to the right.">
+</message>
+</structure>
+<structure name="Next" type="Array">
+<array size="1" type="StringInformation">
+<element id="0" value="2"/>
+</array>
+<visualArray defaultColor="FFFF00" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="16">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="3"/>
+<element id="1" value="5"/>
+<element id="2" value="5"/>
+<element id="3" value="6"/>
+<element id="4" value="7"/>
+<element id="5" value="1"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The green elements on the right of the red position have already been compared with the yellow element, that has to be inserted within the elements on the left of the red positions (if any).">
+</message>
+</structure>
+<structure name="Next" type="Array">
+<array size="1" type="StringInformation">
+<element id="0" value="2"/>
+</array>
+<visualArray defaultColor="FFFF00" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="17">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="3"/>
+<element id="1" value="5"/>
+<element id="2" value="5"/>
+<element id="3" value="6"/>
+<element id="4" value="7"/>
+<element id="5" value="1"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The yellow element is smaller than the element immediately on the left of the red position: hence, this latter element has to be shifted to the right.">
+</message>
+</structure>
+<structure name="Next" type="Array">
+<array size="1" type="StringInformation">
+<element id="0" value="2"/>
+</array>
+<visualArray defaultColor="FFFF00" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="18">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="3"/>
+<element id="1" value="3"/>
+<element id="2" value="5"/>
+<element id="3" value="6"/>
+<element id="4" value="7"/>
+<element id="5" value="1"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The green elements on the right of the red position have already been compared with the yellow element, that has to be inserted within the elements on the left of the red positions (if any).">
+</message>
+</structure>
+<structure name="Next" type="Array">
+<array size="1" type="StringInformation">
+<element id="0" value="2"/>
+</array>
+<visualArray defaultColor="FFFF00" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="19">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="3"/>
+<element id="1" value="3"/>
+<element id="2" value="5"/>
+<element id="3" value="6"/>
+<element id="4" value="7"/>
+<element id="5" value="1"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The yellow element has to be stored in the red position.">
+</message>
+</structure>
+<structure name="Next" type="Array">
+<array size="1" type="StringInformation">
+<element id="0" value="2"/>
+</array>
+<visualArray defaultColor="FFFF00" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="20">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="2"/>
+<element id="1" value="3"/>
+<element id="2" value="5"/>
+<element id="3" value="6"/>
+<element id="4" value="7"/>
+<element id="5" value="1"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The red element has been inserted in the right position.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="9" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="21">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="2"/>
+<element id="1" value="3"/>
+<element id="2" value="5"/>
+<element id="3" value="6"/>
+<element id="4" value="7"/>
+<element id="5" value="1"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The green elements (if any) have already been examined. The red element has to be inserted within the preceding ones.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="22">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="2"/>
+<element id="1" value="3"/>
+<element id="2" value="5"/>
+<element id="3" value="6"/>
+<element id="4" value="7"/>
+<element id="5" value="1"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The yellow element has to be stored in the red position.">
+</message>
+</structure>
+<structure name="Next" type="Array">
+<array size="1" type="StringInformation">
+<element id="0" value="7"/>
+</array>
+<visualArray defaultColor="FFFF00" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="23">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="2"/>
+<element id="1" value="3"/>
+<element id="2" value="5"/>
+<element id="3" value="6"/>
+<element id="4" value="7"/>
+<element id="5" value="1"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The red element has been inserted in the right position.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="9" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="24">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="2"/>
+<element id="1" value="3"/>
+<element id="2" value="5"/>
+<element id="3" value="6"/>
+<element id="4" value="7"/>
+<element id="5" value="1"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The green elements (if any) have already been examined. The red element has to be inserted within the preceding ones.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="25">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="2"/>
+<element id="1" value="3"/>
+<element id="2" value="5"/>
+<element id="3" value="6"/>
+<element id="4" value="7"/>
+<element id="5" value="1"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The yellow element is smaller than the element immediately on the left of the red position: hence, this latter element has to be shifted to the right.">
+</message>
+</structure>
+<structure name="Next" type="Array">
+<array size="1" type="StringInformation">
+<element id="0" value="1"/>
+</array>
+<visualArray defaultColor="FFFF00" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="26">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="2"/>
+<element id="1" value="3"/>
+<element id="2" value="5"/>
+<element id="3" value="6"/>
+<element id="4" value="7"/>
+<element id="5" value="7"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The green elements on the right of the red position have already been compared with the yellow element, that has to be inserted within the elements on the left of the red positions (if any).">
+</message>
+</structure>
+<structure name="Next" type="Array">
+<array size="1" type="StringInformation">
+<element id="0" value="1"/>
+</array>
+<visualArray defaultColor="FFFF00" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="27">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="2"/>
+<element id="1" value="3"/>
+<element id="2" value="5"/>
+<element id="3" value="6"/>
+<element id="4" value="7"/>
+<element id="5" value="7"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The yellow element is smaller than the element immediately on the left of the red position: hence, this latter element has to be shifted to the right.">
+</message>
+</structure>
+<structure name="Next" type="Array">
+<array size="1" type="StringInformation">
+<element id="0" value="1"/>
+</array>
+<visualArray defaultColor="FFFF00" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="28">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="2"/>
+<element id="1" value="3"/>
+<element id="2" value="5"/>
+<element id="3" value="6"/>
+<element id="4" value="6"/>
+<element id="5" value="7"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The green elements on the right of the red position have already been compared with the yellow element, that has to be inserted within the elements on the left of the red positions (if any).">
+</message>
+</structure>
+<structure name="Next" type="Array">
+<array size="1" type="StringInformation">
+<element id="0" value="1"/>
+</array>
+<visualArray defaultColor="FFFF00" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="29">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="2"/>
+<element id="1" value="3"/>
+<element id="2" value="5"/>
+<element id="3" value="6"/>
+<element id="4" value="6"/>
+<element id="5" value="7"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The yellow element is smaller than the element immediately on the left of the red position: hence, this latter element has to be shifted to the right.">
+</message>
+</structure>
+<structure name="Next" type="Array">
+<array size="1" type="StringInformation">
+<element id="0" value="1"/>
+</array>
+<visualArray defaultColor="FFFF00" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="30">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="2"/>
+<element id="1" value="3"/>
+<element id="2" value="5"/>
+<element id="3" value="5"/>
+<element id="4" value="6"/>
+<element id="5" value="7"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The green elements on the right of the red position have already been compared with the yellow element, that has to be inserted within the elements on the left of the red positions (if any).">
+</message>
+</structure>
+<structure name="Next" type="Array">
+<array size="1" type="StringInformation">
+<element id="0" value="1"/>
+</array>
+<visualArray defaultColor="FFFF00" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="31">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="2"/>
+<element id="1" value="3"/>
+<element id="2" value="5"/>
+<element id="3" value="5"/>
+<element id="4" value="6"/>
+<element id="5" value="7"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The yellow element is smaller than the element immediately on the left of the red position: hence, this latter element has to be shifted to the right.">
+</message>
+</structure>
+<structure name="Next" type="Array">
+<array size="1" type="StringInformation">
+<element id="0" value="1"/>
+</array>
+<visualArray defaultColor="FFFF00" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="32">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="2"/>
+<element id="1" value="3"/>
+<element id="2" value="3"/>
+<element id="3" value="5"/>
+<element id="4" value="6"/>
+<element id="5" value="7"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The green elements on the right of the red position have already been compared with the yellow element, that has to be inserted within the elements on the left of the red positions (if any).">
+</message>
+</structure>
+<structure name="Next" type="Array">
+<array size="1" type="StringInformation">
+<element id="0" value="1"/>
+</array>
+<visualArray defaultColor="FFFF00" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="33">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="2"/>
+<element id="1" value="3"/>
+<element id="2" value="3"/>
+<element id="3" value="5"/>
+<element id="4" value="6"/>
+<element id="5" value="7"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The yellow element is smaller than the element immediately on the left of the red position: hence, this latter element has to be shifted to the right.">
+</message>
+</structure>
+<structure name="Next" type="Array">
+<array size="1" type="StringInformation">
+<element id="0" value="1"/>
+</array>
+<visualArray defaultColor="FFFF00" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="34">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="2"/>
+<element id="1" value="2"/>
+<element id="2" value="3"/>
+<element id="3" value="5"/>
+<element id="4" value="6"/>
+<element id="5" value="7"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The green elements on the right of the red position have already been compared with the yellow element, that has to be inserted within the elements on the left of the red positions (if any).">
+</message>
+</structure>
+<structure name="Next" type="Array">
+<array size="1" type="StringInformation">
+<element id="0" value="1"/>
+</array>
+<visualArray defaultColor="FFFF00" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="35">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="2"/>
+<element id="1" value="2"/>
+<element id="2" value="3"/>
+<element id="3" value="5"/>
+<element id="4" value="6"/>
+<element id="5" value="7"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The yellow element has to be stored in the red position.">
+</message>
+</structure>
+<structure name="Next" type="Array">
+<array size="1" type="StringInformation">
+<element id="0" value="1"/>
+</array>
+<visualArray defaultColor="FFFF00" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="36">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="1"/>
+<element id="1" value="2"/>
+<element id="2" value="3"/>
+<element id="3" value="5"/>
+<element id="4" value="6"/>
+<element id="5" value="7"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The red element has been inserted in the right position.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="9" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="37">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="1"/>
+<element id="1" value="2"/>
+<element id="2" value="3"/>
+<element id="3" value="5"/>
+<element id="4" value="6"/>
+<element id="5" value="7"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The green elements (if any) have already been examined. The red element has to be inserted within the preceding ones.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="38">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="1"/>
+<element id="1" value="2"/>
+<element id="2" value="3"/>
+<element id="3" value="5"/>
+<element id="4" value="6"/>
+<element id="5" value="7"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The yellow element has to be stored in the red position.">
+</message>
+</structure>
+<structure name="Next" type="Array">
+<array size="1" type="StringInformation">
+<element id="0" value="8"/>
+</array>
+<visualArray defaultColor="FFFF00" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="39">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="1"/>
+<element id="1" value="2"/>
+<element id="2" value="3"/>
+<element id="3" value="5"/>
+<element id="4" value="6"/>
+<element id="5" value="7"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The red element has been inserted in the right position.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="9" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="40">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="1"/>
+<element id="1" value="2"/>
+<element id="2" value="3"/>
+<element id="3" value="5"/>
+<element id="4" value="6"/>
+<element id="5" value="7"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The green elements (if any) have already been examined. The red element has to be inserted within the preceding ones.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="41">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="1"/>
+<element id="1" value="2"/>
+<element id="2" value="3"/>
+<element id="3" value="5"/>
+<element id="4" value="6"/>
+<element id="5" value="7"/>
+<element id="6" value="8"/>
+<element id="7" value="4"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The yellow element is smaller than the element immediately on the left of the red position: hence, this latter element has to be shifted to the right.">
+</message>
+</structure>
+<structure name="Next" type="Array">
+<array size="1" type="StringInformation">
+<element id="0" value="4"/>
+</array>
+<visualArray defaultColor="FFFF00" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="42">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="1"/>
+<element id="1" value="2"/>
+<element id="2" value="3"/>
+<element id="3" value="5"/>
+<element id="4" value="6"/>
+<element id="5" value="7"/>
+<element id="6" value="8"/>
+<element id="7" value="8"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The green elements on the right of the red position have already been compared with the yellow element, that has to be inserted within the elements on the left of the red positions (if any).">
+</message>
+</structure>
+<structure name="Next" type="Array">
+<array size="1" type="StringInformation">
+<element id="0" value="4"/>
+</array>
+<visualArray defaultColor="FFFF00" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="43">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="1"/>
+<element id="1" value="2"/>
+<element id="2" value="3"/>
+<element id="3" value="5"/>
+<element id="4" value="6"/>
+<element id="5" value="7"/>
+<element id="6" value="8"/>
+<element id="7" value="8"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The yellow element is smaller than the element immediately on the left of the red position: hence, this latter element has to be shifted to the right.">
+</message>
+</structure>
+<structure name="Next" type="Array">
+<array size="1" type="StringInformation">
+<element id="0" value="4"/>
+</array>
+<visualArray defaultColor="FFFF00" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="44">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="1"/>
+<element id="1" value="2"/>
+<element id="2" value="3"/>
+<element id="3" value="5"/>
+<element id="4" value="6"/>
+<element id="5" value="7"/>
+<element id="6" value="7"/>
+<element id="7" value="8"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The green elements on the right of the red position have already been compared with the yellow element, that has to be inserted within the elements on the left of the red positions (if any).">
+</message>
+</structure>
+<structure name="Next" type="Array">
+<array size="1" type="StringInformation">
+<element id="0" value="4"/>
+</array>
+<visualArray defaultColor="FFFF00" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="45">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="1"/>
+<element id="1" value="2"/>
+<element id="2" value="3"/>
+<element id="3" value="5"/>
+<element id="4" value="6"/>
+<element id="5" value="7"/>
+<element id="6" value="7"/>
+<element id="7" value="8"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The yellow element is smaller than the element immediately on the left of the red position: hence, this latter element has to be shifted to the right.">
+</message>
+</structure>
+<structure name="Next" type="Array">
+<array size="1" type="StringInformation">
+<element id="0" value="4"/>
+</array>
+<visualArray defaultColor="FFFF00" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="46">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="1"/>
+<element id="1" value="2"/>
+<element id="2" value="3"/>
+<element id="3" value="5"/>
+<element id="4" value="6"/>
+<element id="5" value="6"/>
+<element id="6" value="7"/>
+<element id="7" value="8"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The green elements on the right of the red position have already been compared with the yellow element, that has to be inserted within the elements on the left of the red positions (if any).">
+</message>
+</structure>
+<structure name="Next" type="Array">
+<array size="1" type="StringInformation">
+<element id="0" value="4"/>
+</array>
+<visualArray defaultColor="FFFF00" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="47">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="1"/>
+<element id="1" value="2"/>
+<element id="2" value="3"/>
+<element id="3" value="5"/>
+<element id="4" value="6"/>
+<element id="5" value="6"/>
+<element id="6" value="7"/>
+<element id="7" value="8"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The yellow element is smaller than the element immediately on the left of the red position: hence, this latter element has to be shifted to the right.">
+</message>
+</structure>
+<structure name="Next" type="Array">
+<array size="1" type="StringInformation">
+<element id="0" value="4"/>
+</array>
+<visualArray defaultColor="FFFF00" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="48">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="1"/>
+<element id="1" value="2"/>
+<element id="2" value="3"/>
+<element id="3" value="5"/>
+<element id="4" value="5"/>
+<element id="5" value="6"/>
+<element id="6" value="7"/>
+<element id="7" value="8"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The green elements on the right of the red position have already been compared with the yellow element, that has to be inserted within the elements on the left of the red positions (if any).">
+</message>
+</structure>
+<structure name="Next" type="Array">
+<array size="1" type="StringInformation">
+<element id="0" value="4"/>
+</array>
+<visualArray defaultColor="FFFF00" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="49">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="1"/>
+<element id="1" value="2"/>
+<element id="2" value="3"/>
+<element id="3" value="5"/>
+<element id="4" value="5"/>
+<element id="5" value="6"/>
+<element id="6" value="7"/>
+<element id="7" value="8"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The yellow element has to be stored in the red position.">
+</message>
+</structure>
+<structure name="Next" type="Array">
+<array size="1" type="StringInformation">
+<element id="0" value="4"/>
+</array>
+<visualArray defaultColor="FFFF00" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="100">
+</visualArray>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="50">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="1"/>
+<element id="1" value="2"/>
+<element id="2" value="3"/>
+<element id="3" value="4"/>
+<element id="4" value="5"/>
+<element id="5" value="6"/>
+<element id="6" value="7"/>
+<element id="7" value="8"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+<visualMalleableElement id="0" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="1" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="2" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="3" color="FF0000" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="4" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="5" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="6" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualMalleableElement id="7" color="00FF00" font="Monospaced-PLAIN-14" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The red element has been inserted in the right position.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="10">
+<element id="0" value=" 1  InsertionSort( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      next = a[i];"/>
+<element id="3" value=" 4      j = i;"/>
+<element id="4" value=" 5      WHILE ((j > 0) &#38;&#38; (a[j-1] > next)) {"/>
+<element id="5" value=" 6        a[j] = a[j-1];"/>
+<element id="6" value=" 7        j = j-1;"/>
+<element id="7" value=" 8      }"/>
+<element id="8" value=" 9      a[j] = next;"/>
+<element id="9" value="10    }"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="15.0" defaultShapeWidth="450.0" originX="50" originY="150">
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+<visualMalleableElement id="9" color="FFFFFF" font="Monospaced-PLAIN-14" shapeHeight="15" shapeWidth="450"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="51">
+<structure name="Array" type="Array">
+<array size="8" type="IntInformation">
+<element id="0" value="1"/>
+<element id="1" value="2"/>
+<element id="2" value="3"/>
+<element id="3" value="4"/>
+<element id="4" value="5"/>
+<element id="5" value="6"/>
+<element id="6" value="7"/>
+<element id="7" value="8"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="50" originY="50">
+</visualArray>
+<message content="The array has been sorted.">
+</message>
+</structure>
+</step>
+</algorithm>

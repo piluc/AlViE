@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure name="Array of intervals" type="Array">
+  <array size="6" type="IntPairInformation">
+	<element id="0" value="[15;75]"/>
+	<element id="1" value="[90;95]"/>
+	<element id="2" value="[20;30]"/>
+	<element id="3" value="[35;50]"/>
+	<element id="4" value="[60;70]"/>
+	<element id="5" value="[85;100]"/>
+  </array>
+</structure>

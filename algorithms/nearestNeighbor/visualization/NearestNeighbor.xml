@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm name="Nearest neighbor">
+<step number="0">
+<structure name="Grafo" type="Graph">
+<graph isOriented="false" type="StringInformation" arcLabelType="IntInformation">
+<node id="0" value="   " x="0" y="0"/>
+<node id="1" value="   " x="400" y="80"/>
+<node id="2" value="   " x="160" y="80"/>
+<node id="3" value="   " x="0" y="160"/>
+<node id="4" value="   " x="400" y="0"/>
+<node id="5" value="   " x="400" y="240"/>
+<node id="6" value="   " x="160" y="160"/>
+<node id="7" value="   " x="160" y="240"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="50" originY="40">
+</visualGraph>
+<message content="Set of points on the plane on which we want to compute a traveling salesperson tour by means of the nearest neighbor algorithm.">
+</message>
+</structure>
+<structure name="Bellman-Ford" type="Pseudocode">
+<pseudocode size="8">
+<element id="0" value=" 1  NearestNeighbor( s )"/>
+<element id="1" value=" 2    c[0] = s;"/>
+<element id="2" value=" 3    v[s] = true;"/>
+<element id="3" value=" 4    FOR (i = 1; i &#60; n; i = i + 1) {"/>
+<element id="4" value=" 5      c[i] = closest point x to c[i-1] such that v[x] is false;"/>
+<element id="5" value=" 6      v[x] = true;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 8    c[n] = s;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="500.0" originX="20" originY="300">
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="1">
+<structure name="Grafo" type="Graph">
+<graph isOriented="false" type="StringInformation" arcLabelType="IntInformation">
+<node id="0" value="   " x="0" y="0"/>
+<node id="1" value="   " x="400" y="80"/>
+<node id="2" value="   " x="160" y="80"/>
+<node id="3" value="   " x="0" y="160"/>
+<node id="4" value="   " x="400" y="0"/>
+<node id="5" value="   " x="400" y="240"/>
+<node id="6" value="   " x="160" y="160"/>
+<node id="7" value="   " x="160" y="240"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="50" originY="40">
+<visualNode id="0" color="BBBBBB" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="6" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="7" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="The tour starts from the gray node.">
+</message>
+</structure>
+<structure name="Bellman-Ford" type="Pseudocode">
+<pseudocode size="8">
+<element id="0" value=" 1  NearestNeighbor( s )"/>
+<element id="1" value=" 2    c[0] = s;"/>
+<element id="2" value=" 3    v[s] = true;"/>
+<element id="3" value=" 4    FOR (i = 1; i &#60; n; i = i + 1) {"/>
+<element id="4" value=" 5      c[i] = closest point x to c[i-1] such that v[x] is false;"/>
+<element id="5" value=" 6      v[x] = true;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 8    c[n] = s;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="500.0" originX="20" originY="300">
+<visualMalleableElement id="1" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="500"/>
+<visualMalleableElement id="2" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="2">
+<structure name="Grafo" type="Graph">
+<graph isOriented="false" type="StringInformation" arcLabelType="IntInformation">
+<node id="0" value="   " x="0" y="0"/>
+<node id="1" value="   " x="400" y="80"/>
+<node id="2" value="   " x="160" y="80"/>
+<node id="3" value="   " x="0" y="160"/>
+<node id="4" value="   " x="400" y="0"/>
+<node id="5" value="   " x="400" y="240"/>
+<node id="6" value="   " x="160" y="160"/>
+<node id="7" value="   " x="160" y="240"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="0" idFirstNode="3" idSecondNode="0"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="50" originY="40">
+<visualNode id="0" color="BBBBBB" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="6" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="7" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="A new arc has been added to the traveling salesperson tour.">
+</message>
+</structure>
+<structure name="Bellman-Ford" type="Pseudocode">
+<pseudocode size="8">
+<element id="0" value=" 1  NearestNeighbor( s )"/>
+<element id="1" value=" 2    c[0] = s;"/>
+<element id="2" value=" 3    v[s] = true;"/>
+<element id="3" value=" 4    FOR (i = 1; i &#60; n; i = i + 1) {"/>
+<element id="4" value=" 5      c[i] = closest point x to c[i-1] such that v[x] is false;"/>
+<element id="5" value=" 6      v[x] = true;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 8    c[n] = s;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="500.0" originX="20" originY="300">
+<visualMalleableElement id="4" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="500"/>
+<visualMalleableElement id="5" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="3">
+<structure name="Grafo" type="Graph">
+<graph isOriented="false" type="StringInformation" arcLabelType="IntInformation">
+<node id="0" value="   " x="0" y="0"/>
+<node id="1" value="   " x="400" y="80"/>
+<node id="2" value="   " x="160" y="80"/>
+<node id="3" value="   " x="0" y="160"/>
+<node id="4" value="   " x="400" y="0"/>
+<node id="5" value="   " x="400" y="240"/>
+<node id="6" value="   " x="160" y="160"/>
+<node id="7" value="   " x="160" y="240"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="0" idFirstNode="3" idSecondNode="0"/>
+<arc id="1" idFirstNode="3" idSecondNode="6"/>
+<arc id="1" idFirstNode="6" idSecondNode="3"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="50" originY="40">
+<visualNode id="0" color="BBBBBB" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFF00" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="6" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="7" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="A new arc has been added to the traveling salesperson tour.">
+</message>
+</structure>
+<structure name="Bellman-Ford" type="Pseudocode">
+<pseudocode size="8">
+<element id="0" value=" 1  NearestNeighbor( s )"/>
+<element id="1" value=" 2    c[0] = s;"/>
+<element id="2" value=" 3    v[s] = true;"/>
+<element id="3" value=" 4    FOR (i = 1; i &#60; n; i = i + 1) {"/>
+<element id="4" value=" 5      c[i] = closest point x to c[i-1] such that v[x] is false;"/>
+<element id="5" value=" 6      v[x] = true;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 8    c[n] = s;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="500.0" originX="20" originY="300">
+<visualMalleableElement id="4" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="500"/>
+<visualMalleableElement id="5" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="4">
+<structure name="Grafo" type="Graph">
+<graph isOriented="false" type="StringInformation" arcLabelType="IntInformation">
+<node id="0" value="   " x="0" y="0"/>
+<node id="1" value="   " x="400" y="80"/>
+<node id="2" value="   " x="160" y="80"/>
+<node id="3" value="   " x="0" y="160"/>
+<node id="4" value="   " x="400" y="0"/>
+<node id="5" value="   " x="400" y="240"/>
+<node id="6" value="   " x="160" y="160"/>
+<node id="7" value="   " x="160" y="240"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="2" idFirstNode="2" idSecondNode="6"/>
+<arc id="0" idFirstNode="3" idSecondNode="0"/>
+<arc id="1" idFirstNode="3" idSecondNode="6"/>
+<arc id="2" idFirstNode="6" idSecondNode="2"/>
+<arc id="1" idFirstNode="6" idSecondNode="3"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="50" originY="40">
+<visualNode id="0" color="BBBBBB" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFF00" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="6" color="FFFF00" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="7" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="A new arc has been added to the traveling salesperson tour.">
+</message>
+</structure>
+<structure name="Bellman-Ford" type="Pseudocode">
+<pseudocode size="8">
+<element id="0" value=" 1  NearestNeighbor( s )"/>
+<element id="1" value=" 2    c[0] = s;"/>
+<element id="2" value=" 3    v[s] = true;"/>
+<element id="3" value=" 4    FOR (i = 1; i &#60; n; i = i + 1) {"/>
+<element id="4" value=" 5      c[i] = closest point x to c[i-1] such that v[x] is false;"/>
+<element id="5" value=" 6      v[x] = true;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 8    c[n] = s;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="500.0" originX="20" originY="300">
+<visualMalleableElement id="4" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="500"/>
+<visualMalleableElement id="5" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="5">
+<structure name="Grafo" type="Graph">
+<graph isOriented="false" type="StringInformation" arcLabelType="IntInformation">
+<node id="0" value="   " x="0" y="0"/>
+<node id="1" value="   " x="400" y="80"/>
+<node id="2" value="   " x="160" y="80"/>
+<node id="3" value="   " x="0" y="160"/>
+<node id="4" value="   " x="400" y="0"/>
+<node id="5" value="   " x="400" y="240"/>
+<node id="6" value="   " x="160" y="160"/>
+<node id="7" value="   " x="160" y="240"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="2" idFirstNode="2" idSecondNode="6"/>
+<arc id="3" idFirstNode="2" idSecondNode="7"/>
+<arc id="0" idFirstNode="3" idSecondNode="0"/>
+<arc id="1" idFirstNode="3" idSecondNode="6"/>
+<arc id="2" idFirstNode="6" idSecondNode="2"/>
+<arc id="1" idFirstNode="6" idSecondNode="3"/>
+<arc id="3" idFirstNode="7" idSecondNode="2"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="50" originY="40">
+<visualNode id="0" color="BBBBBB" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFF00" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFF00" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="6" color="FFFF00" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="7" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="A new arc has been added to the traveling salesperson tour.">
+</message>
+</structure>
+<structure name="Bellman-Ford" type="Pseudocode">
+<pseudocode size="8">
+<element id="0" value=" 1  NearestNeighbor( s )"/>
+<element id="1" value=" 2    c[0] = s;"/>
+<element id="2" value=" 3    v[s] = true;"/>
+<element id="3" value=" 4    FOR (i = 1; i &#60; n; i = i + 1) {"/>
+<element id="4" value=" 5      c[i] = closest point x to c[i-1] such that v[x] is false;"/>
+<element id="5" value=" 6      v[x] = true;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 8    c[n] = s;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="500.0" originX="20" originY="300">
+<visualMalleableElement id="4" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="500"/>
+<visualMalleableElement id="5" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="6">
+<structure name="Grafo" type="Graph">
+<graph isOriented="false" type="StringInformation" arcLabelType="IntInformation">
+<node id="0" value="   " x="0" y="0"/>
+<node id="1" value="   " x="400" y="80"/>
+<node id="2" value="   " x="160" y="80"/>
+<node id="3" value="   " x="0" y="160"/>
+<node id="4" value="   " x="400" y="0"/>
+<node id="5" value="   " x="400" y="240"/>
+<node id="6" value="   " x="160" y="160"/>
+<node id="7" value="   " x="160" y="240"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="2" idFirstNode="2" idSecondNode="6"/>
+<arc id="3" idFirstNode="2" idSecondNode="7"/>
+<arc id="0" idFirstNode="3" idSecondNode="0"/>
+<arc id="1" idFirstNode="3" idSecondNode="6"/>
+<arc id="4" idFirstNode="5" idSecondNode="7"/>
+<arc id="2" idFirstNode="6" idSecondNode="2"/>
+<arc id="1" idFirstNode="6" idSecondNode="3"/>
+<arc id="3" idFirstNode="7" idSecondNode="2"/>
+<arc id="4" idFirstNode="7" idSecondNode="5"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="50" originY="40">
+<visualNode id="0" color="BBBBBB" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFF00" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFF00" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="6" color="FFFF00" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="7" color="FFFF00" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="A new arc has been added to the traveling salesperson tour.">
+</message>
+</structure>
+<structure name="Bellman-Ford" type="Pseudocode">
+<pseudocode size="8">
+<element id="0" value=" 1  NearestNeighbor( s )"/>
+<element id="1" value=" 2    c[0] = s;"/>
+<element id="2" value=" 3    v[s] = true;"/>
+<element id="3" value=" 4    FOR (i = 1; i &#60; n; i = i + 1) {"/>
+<element id="4" value=" 5      c[i] = closest point x to c[i-1] such that v[x] is false;"/>
+<element id="5" value=" 6      v[x] = true;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 8    c[n] = s;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="500.0" originX="20" originY="300">
+<visualMalleableElement id="4" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="500"/>
+<visualMalleableElement id="5" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="7">
+<structure name="Grafo" type="Graph">
+<graph isOriented="false" type="StringInformation" arcLabelType="IntInformation">
+<node id="0" value="   " x="0" y="0"/>
+<node id="1" value="   " x="400" y="80"/>
+<node id="2" value="   " x="160" y="80"/>
+<node id="3" value="   " x="0" y="160"/>
+<node id="4" value="   " x="400" y="0"/>
+<node id="5" value="   " x="400" y="240"/>
+<node id="6" value="   " x="160" y="160"/>
+<node id="7" value="   " x="160" y="240"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="5" idFirstNode="1" idSecondNode="5"/>
+<arc id="2" idFirstNode="2" idSecondNode="6"/>
+<arc id="3" idFirstNode="2" idSecondNode="7"/>
+<arc id="0" idFirstNode="3" idSecondNode="0"/>
+<arc id="1" idFirstNode="3" idSecondNode="6"/>
+<arc id="5" idFirstNode="5" idSecondNode="1"/>
+<arc id="4" idFirstNode="5" idSecondNode="7"/>
+<arc id="2" idFirstNode="6" idSecondNode="2"/>
+<arc id="1" idFirstNode="6" idSecondNode="3"/>
+<arc id="3" idFirstNode="7" idSecondNode="2"/>
+<arc id="4" idFirstNode="7" idSecondNode="5"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="50" originY="40">
+<visualNode id="0" color="BBBBBB" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFF00" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFF00" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="FFFF00" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="6" color="FFFF00" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="7" color="FFFF00" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="A new arc has been added to the traveling salesperson tour.">
+</message>
+</structure>
+<structure name="Bellman-Ford" type="Pseudocode">
+<pseudocode size="8">
+<element id="0" value=" 1  NearestNeighbor( s )"/>
+<element id="1" value=" 2    c[0] = s;"/>
+<element id="2" value=" 3    v[s] = true;"/>
+<element id="3" value=" 4    FOR (i = 1; i &#60; n; i = i + 1) {"/>
+<element id="4" value=" 5      c[i] = closest point x to c[i-1] such that v[x] is false;"/>
+<element id="5" value=" 6      v[x] = true;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 8    c[n] = s;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="500.0" originX="20" originY="300">
+<visualMalleableElement id="4" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="500"/>
+<visualMalleableElement id="5" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="8">
+<structure name="Grafo" type="Graph">
+<graph isOriented="false" type="StringInformation" arcLabelType="IntInformation">
+<node id="0" value="   " x="0" y="0"/>
+<node id="1" value="   " x="400" y="80"/>
+<node id="2" value="   " x="160" y="80"/>
+<node id="3" value="   " x="0" y="160"/>
+<node id="4" value="   " x="400" y="0"/>
+<node id="5" value="   " x="400" y="240"/>
+<node id="6" value="   " x="160" y="160"/>
+<node id="7" value="   " x="160" y="240"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="6" idFirstNode="1" idSecondNode="4"/>
+<arc id="5" idFirstNode="1" idSecondNode="5"/>
+<arc id="2" idFirstNode="2" idSecondNode="6"/>
+<arc id="3" idFirstNode="2" idSecondNode="7"/>
+<arc id="0" idFirstNode="3" idSecondNode="0"/>
+<arc id="1" idFirstNode="3" idSecondNode="6"/>
+<arc id="6" idFirstNode="4" idSecondNode="1"/>
+<arc id="5" idFirstNode="5" idSecondNode="1"/>
+<arc id="4" idFirstNode="5" idSecondNode="7"/>
+<arc id="2" idFirstNode="6" idSecondNode="2"/>
+<arc id="1" idFirstNode="6" idSecondNode="3"/>
+<arc id="3" idFirstNode="7" idSecondNode="2"/>
+<arc id="4" idFirstNode="7" idSecondNode="5"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="50" originY="40">
+<visualNode id="0" color="BBBBBB" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="FFFF00" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFF00" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFF00" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFFFF" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="FFFF00" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="6" color="FFFF00" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="7" color="FFFF00" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="A new arc has been added to the traveling salesperson tour.">
+</message>
+</structure>
+<structure name="Bellman-Ford" type="Pseudocode">
+<pseudocode size="8">
+<element id="0" value=" 1  NearestNeighbor( s )"/>
+<element id="1" value=" 2    c[0] = s;"/>
+<element id="2" value=" 3    v[s] = true;"/>
+<element id="3" value=" 4    FOR (i = 1; i &#60; n; i = i + 1) {"/>
+<element id="4" value=" 5      c[i] = closest point x to c[i-1] such that v[x] is false;"/>
+<element id="5" value=" 6      v[x] = true;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 8    c[n] = s;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="500.0" originX="20" originY="300">
+<visualMalleableElement id="4" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="500"/>
+<visualMalleableElement id="5" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="9">
+<structure name="Grafo" type="Graph">
+<graph isOriented="false" type="StringInformation" arcLabelType="IntInformation">
+<node id="0" value="   " x="0" y="0"/>
+<node id="1" value="   " x="400" y="80"/>
+<node id="2" value="   " x="160" y="80"/>
+<node id="3" value="   " x="0" y="160"/>
+<node id="4" value="   " x="400" y="0"/>
+<node id="5" value="   " x="400" y="240"/>
+<node id="6" value="   " x="160" y="160"/>
+<node id="7" value="   " x="160" y="240"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="7" idFirstNode="0" idSecondNode="4"/>
+<arc id="6" idFirstNode="1" idSecondNode="4"/>
+<arc id="5" idFirstNode="1" idSecondNode="5"/>
+<arc id="2" idFirstNode="2" idSecondNode="6"/>
+<arc id="3" idFirstNode="2" idSecondNode="7"/>
+<arc id="0" idFirstNode="3" idSecondNode="0"/>
+<arc id="1" idFirstNode="3" idSecondNode="6"/>
+<arc id="7" idFirstNode="4" idSecondNode="0"/>
+<arc id="6" idFirstNode="4" idSecondNode="1"/>
+<arc id="5" idFirstNode="5" idSecondNode="1"/>
+<arc id="4" idFirstNode="5" idSecondNode="7"/>
+<arc id="2" idFirstNode="6" idSecondNode="2"/>
+<arc id="1" idFirstNode="6" idSecondNode="3"/>
+<arc id="3" idFirstNode="7" idSecondNode="2"/>
+<arc id="4" idFirstNode="7" idSecondNode="5"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="50" originY="40">
+<visualNode id="0" color="BBBBBB" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="1" color="FFFF00" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="2" color="FFFF00" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="3" color="FFFF00" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="4" color="FFFF00" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="5" color="FFFF00" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="6" color="FFFF00" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+<visualNode id="7" color="FFFF00" font="Monospaced-PLAIN-16" shape="Elliptical" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualGraph>
+<message content="A last arc has been added closing the traveling salesperson tour.">
+</message>
+</structure>
+<structure name="Bellman-Ford" type="Pseudocode">
+<pseudocode size="8">
+<element id="0" value=" 1  NearestNeighbor( s )"/>
+<element id="1" value=" 2    c[0] = s;"/>
+<element id="2" value=" 3    v[s] = true;"/>
+<element id="3" value=" 4    FOR (i = 1; i &#60; n; i = i + 1) {"/>
+<element id="4" value=" 5      c[i] = closest point x to c[i-1] such that v[x] is false;"/>
+<element id="5" value=" 6      v[x] = true;"/>
+<element id="6" value=" 7    }"/>
+<element id="7" value=" 8    c[n] = s;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="500.0" originX="20" originY="300">
+<visualMalleableElement id="7" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="500"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="10">
+<structure name="Grafo" type="Graph">
+<graph isOriented="false" type="StringInformation" arcLabelType="IntInformation">
+<node id="0" value="   " x="0" y="0"/>
+<node id="1" value="   " x="400" y="80"/>
+<node id="2" value="   " x="160" y="80"/>
+<node id="3" value="   " x="0" y="160"/>
+<node id="4" value="   " x="400" y="0"/>
+<node id="5" value="   " x="400" y="240"/>
+<node id="6" value="   " x="160" y="160"/>
+<node id="7" value="   " x="160" y="240"/>
+<arc id="0" idFirstNode="0" idSecondNode="3"/>
+<arc id="7" idFirstNode="0" idSecondNode="4"/>
+<arc id="6" idFirstNode="1" idSecondNode="4"/>
+<arc id="5" idFirstNode="1" idSecondNode="5"/>
+<arc id="2" idFirstNode="2" idSecondNode="6"/>
+<arc id="3" idFirstNode="2" idSecondNode="7"/>
+<arc id="0" idFirstNode="3" idSecondNode="0"/>
+<arc id="1" idFirstNode="3" idSecondNode="6"/>
+<arc id="7" idFirstNode="4" idSecondNode="0"/>
+<arc id="6" idFirstNode="4" idSecondNode="1"/>
+<arc id="5" idFirstNode="5" idSecondNode="1"/>
+<arc id="4" idFirstNode="5" idSecondNode="7"/>
+<arc id="2" idFirstNode="6" idSecondNode="2"/>
+<arc id="1" idFirstNode="6" idSecondNode="3"/>
+<arc id="3" idFirstNode="7" idSecondNode="2"/>
+<arc id="4" idFirstNode="7" idSecondNode="5"/>
+</graph>
+<visualGraph defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-16" defaultShape="Elliptical" defaultShapeHeight="30.0" defaultShapeWidth="30.0"  defaultLineColor="000000" defaultLineType="CONTINUE" defaultLineThickness="0.5" originX="50" originY="40">
+</visualGraph>
+<message content="The traveling salesperson tour computation ended.">
+</message>
+</structure>
+</step>
+</algorithm>

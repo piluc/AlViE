@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure name="Partition" type="Pseudocode">
+	<pseudocode size="16">
+		<element id="0" value=" 1  Partition( a )" />
+		<element id="1" value=" 2    FOR (i = 0; i &#60;= n; i = i+1)" />
+		<element id="2" value=" 3      FOR (j = 0; j &#60;= s; j = j +1) {" />
+		<element id="3" value=" 4        p[i][j] = FALSE;" />
+		<element id="4" value=" 5      }" />
+		<element id="5" value=" 6    p[0][0] = TRUE;" />
+		<element id="6" value=" 7    FOR (i = 1; i &#60;= n; i = i+1)" />
+		<element id="7" value=" 8      FOR (j = 0; j &#60;= s; j = j+1) {" />
+		<element id="8" value=" 9        IF (p[i-1][j]) {" />
+		<element id="9" value="10          p[i][j] = TRUE;" />
+		<element id="10" value="11        }" />
+		<element id="11" value="12        IF (!p[i][j] &#38;&#38; j>=a[i-1] &#38;&#38; p[i-1][j-a[i-1]]) {" />
+		<element id="12" value="13          p[i][j] = TRUE;" />
+		<element id="13" value="14        }" />
+		<element id="14" value="15      }" />
+		<element id="15" value="16    RETURN p[n][s];" />
+	</pseudocode>
+</structure>

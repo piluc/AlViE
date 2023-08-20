@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure name="Sequence of strings" type="Array">
+  <array size="4" type="StringInformation">
+    <element id="0" value="a" />
+    <element id="1" value="b" />
+    <element id="2" value="c" />
+    <element id="3" value="d" />
+  </array>
+</structure>

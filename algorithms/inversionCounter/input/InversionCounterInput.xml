@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure name="x" type="Array">
+<array size="5" type="IntInformation">
+<element id="0" value="1"/>
+<element id="1" value="3"/>
+<element id="2" value="0"/>
+<element id="3" value="2"/>
+<element id="4" value="4"/>
+</array>
+</structure>

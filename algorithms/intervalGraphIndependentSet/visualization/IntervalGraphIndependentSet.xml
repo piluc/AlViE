@@ -1,0 +1,2864 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm name="Independent set in interval graphs">
+<step number="0">
+<structure name="A" type="Array">
+<array size="9" type="IntPairInformation">
+<element id="0" value="[15;75]"/>
+<element id="1" value="[90;95]"/>
+<element id="2" value="[20;30]"/>
+<element id="3" value="[35;50]"/>
+<element id="4" value="[60;70]"/>
+<element id="5" value="[85;100]"/>
+<element id="6" value="[25;40]"/>
+<element id="7" value="[45;55]"/>
+<element id="8" value="[65;80]"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="50.0" originX="20" originY="40">
+</visualArray>
+<message content="Set of the intervals defining the graph whose maximum independent set we want to compute.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  IndependentSet( [a[0],b[0]],...,[a[n-1],b[n-1]] ):"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      rightBound[i] = &#60;b[i],i>;"/>
+<element id="3" value=" 4    }"/>
+<element id="4" value=" 5    IncreasingSort( rightBound );"/>
+<element id="5" value=" 6    last = -1;"/>
+<element id="6" value=" 7    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="7" value=" 8      &#60;x,i> = bound[j];"/>
+<element id="8" value=" 9      IF ((last &#60; 0) || (a[i] > b[last])) {"/>
+<element id="9" value="10        assign[i] = true;"/>
+<element id="10" value="11        last = i;"/>
+<element id="11" value="12      } ELSE {"/>
+<element id="12" value="13        assign[i] = false;"/>
+<element id="13" value="14      }"/>
+<element id="14" value="15    }"/>
+<element id="15" value="16    RETURN assign;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="20" originY="200">
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="1">
+<structure name="A" type="Array">
+<array size="9" type="IntPairInformation">
+<element id="0" value="[15;75]"/>
+<element id="1" value="[90;95]"/>
+<element id="2" value="[20;30]"/>
+<element id="3" value="[35;50]"/>
+<element id="4" value="[60;70]"/>
+<element id="5" value="[85;100]"/>
+<element id="6" value="[25;40]"/>
+<element id="7" value="[45;55]"/>
+<element id="8" value="[65;80]"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="50.0" originX="20" originY="40">
+</visualArray>
+<message content="The matrix of the right extremes has been computed.">
+</message>
+</structure>
+<structure name="Right bound" type="Matrix">
+<matrix height="2" width="9" type="IntInformation">
+	<element id="0" value="75"/>
+	<element id="1" value="95"/>
+	<element id="2" value="30"/>
+	<element id="3" value="50"/>
+	<element id="4" value="70"/>
+	<element id="5" value="100"/>
+	<element id="6" value="40"/>
+	<element id="7" value="55"/>
+	<element id="8" value="80"/>
+	<element id="9" value="0"/>
+	<element id="10" value="1"/>
+	<element id="11" value="2"/>
+	<element id="12" value="3"/>
+	<element id="13" value="4"/>
+	<element id="14" value="5"/>
+	<element id="15" value="6"/>
+	<element id="16" value="7"/>
+	<element id="17" value="8"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="100">
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  IndependentSet( [a[0],b[0]],...,[a[n-1],b[n-1]] ):"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      rightBound[i] = &#60;b[i],i>;"/>
+<element id="3" value=" 4    }"/>
+<element id="4" value=" 5    IncreasingSort( rightBound );"/>
+<element id="5" value=" 6    last = -1;"/>
+<element id="6" value=" 7    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="7" value=" 8      &#60;x,i> = bound[j];"/>
+<element id="8" value=" 9      IF ((last &#60; 0) || (a[i] > b[last])) {"/>
+<element id="9" value="10        assign[i] = true;"/>
+<element id="10" value="11        last = i;"/>
+<element id="11" value="12      } ELSE {"/>
+<element id="12" value="13        assign[i] = false;"/>
+<element id="13" value="14      }"/>
+<element id="14" value="15    }"/>
+<element id="15" value="16    RETURN assign;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="20" originY="200">
+<visualMalleableElement id="1" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="400"/>
+<visualMalleableElement id="2" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="400"/>
+<visualMalleableElement id="3" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="2">
+<structure name="A" type="Array">
+<array size="9" type="IntPairInformation">
+<element id="0" value="[15;75]"/>
+<element id="1" value="[90;95]"/>
+<element id="2" value="[20;30]"/>
+<element id="3" value="[35;50]"/>
+<element id="4" value="[60;70]"/>
+<element id="5" value="[85;100]"/>
+<element id="6" value="[25;40]"/>
+<element id="7" value="[45;55]"/>
+<element id="8" value="[65;80]"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="50.0" originX="20" originY="40">
+</visualArray>
+<message content="The right extremes have been ordered.">
+</message>
+</structure>
+<structure name="Right bound" type="Matrix">
+<matrix height="2" width="9" type="IntInformation">
+	<element id="0" value="30"/>
+	<element id="1" value="40"/>
+	<element id="2" value="50"/>
+	<element id="3" value="55"/>
+	<element id="4" value="70"/>
+	<element id="5" value="75"/>
+	<element id="6" value="80"/>
+	<element id="7" value="95"/>
+	<element id="8" value="100"/>
+	<element id="9" value="2"/>
+	<element id="10" value="6"/>
+	<element id="11" value="3"/>
+	<element id="12" value="7"/>
+	<element id="13" value="4"/>
+	<element id="14" value="0"/>
+	<element id="15" value="8"/>
+	<element id="16" value="1"/>
+	<element id="17" value="5"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="100">
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  IndependentSet( [a[0],b[0]],...,[a[n-1],b[n-1]] ):"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      rightBound[i] = &#60;b[i],i>;"/>
+<element id="3" value=" 4    }"/>
+<element id="4" value=" 5    IncreasingSort( rightBound );"/>
+<element id="5" value=" 6    last = -1;"/>
+<element id="6" value=" 7    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="7" value=" 8      &#60;x,i> = bound[j];"/>
+<element id="8" value=" 9      IF ((last &#60; 0) || (a[i] > b[last])) {"/>
+<element id="9" value="10        assign[i] = true;"/>
+<element id="10" value="11        last = i;"/>
+<element id="11" value="12      } ELSE {"/>
+<element id="12" value="13        assign[i] = false;"/>
+<element id="13" value="14      }"/>
+<element id="14" value="15    }"/>
+<element id="15" value="16    RETURN assign;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="20" originY="200">
+<visualMalleableElement id="4" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="3">
+<structure name="A" type="Array">
+<array size="9" type="IntPairInformation">
+<element id="0" value="[15;75]"/>
+<element id="1" value="[90;95]"/>
+<element id="2" value="[20;30]"/>
+<element id="3" value="[35;50]"/>
+<element id="4" value="[60;70]"/>
+<element id="5" value="[85;100]"/>
+<element id="6" value="[25;40]"/>
+<element id="7" value="[45;55]"/>
+<element id="8" value="[65;80]"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="50.0" originX="20" originY="40">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="2" color="00FFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+</visualArray>
+<message content="A new right extreme (colored in green) is analyzed: the extreme corresponds to the azure interval.">
+</message>
+</structure>
+<structure name="Right bound" type="Matrix">
+<matrix height="2" width="9" type="IntInformation">
+	<element id="0" value="30"/>
+	<element id="1" value="40"/>
+	<element id="2" value="50"/>
+	<element id="3" value="55"/>
+	<element id="4" value="70"/>
+	<element id="5" value="75"/>
+	<element id="6" value="80"/>
+	<element id="7" value="95"/>
+	<element id="8" value="100"/>
+	<element id="9" value="2"/>
+	<element id="10" value="6"/>
+	<element id="11" value="3"/>
+	<element id="12" value="7"/>
+	<element id="13" value="4"/>
+	<element id="14" value="0"/>
+	<element id="15" value="8"/>
+	<element id="16" value="1"/>
+	<element id="17" value="5"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="100">
+<visualElement id="0" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="9" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="10" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="11" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="12" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="13" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="14" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="15" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="16" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="17" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  IndependentSet( [a[0],b[0]],...,[a[n-1],b[n-1]] ):"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      rightBound[i] = &#60;b[i],i>;"/>
+<element id="3" value=" 4    }"/>
+<element id="4" value=" 5    IncreasingSort( rightBound );"/>
+<element id="5" value=" 6    last = -1;"/>
+<element id="6" value=" 7    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="7" value=" 8      &#60;x,i> = bound[j];"/>
+<element id="8" value=" 9      IF ((last &#60; 0) || (a[i] > b[last])) {"/>
+<element id="9" value="10        assign[i] = true;"/>
+<element id="10" value="11        last = i;"/>
+<element id="11" value="12      } ELSE {"/>
+<element id="12" value="13        assign[i] = false;"/>
+<element id="13" value="14      }"/>
+<element id="14" value="15    }"/>
+<element id="15" value="16    RETURN assign;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="20" originY="200">
+<visualMalleableElement id="7" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="4">
+<structure name="A" type="Array">
+<array size="9" type="IntPairInformation">
+<element id="0" value="[15;75]"/>
+<element id="1" value="[90;95]"/>
+<element id="2" value="[20;30]"/>
+<element id="3" value="[35;50]"/>
+<element id="4" value="[60;70]"/>
+<element id="5" value="[85;100]"/>
+<element id="6" value="[25;40]"/>
+<element id="7" value="[45;55]"/>
+<element id="8" value="[65;80]"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="50.0" originX="20" originY="40">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="2" color="00FFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+</visualArray>
+<message content="The azure interval begins after the end of the yellow one (if any): then, this interval can be included in the independent set.">
+</message>
+</structure>
+<structure name="Right bound" type="Matrix">
+<matrix height="2" width="9" type="IntInformation">
+	<element id="0" value="30"/>
+	<element id="1" value="40"/>
+	<element id="2" value="50"/>
+	<element id="3" value="55"/>
+	<element id="4" value="70"/>
+	<element id="5" value="75"/>
+	<element id="6" value="80"/>
+	<element id="7" value="95"/>
+	<element id="8" value="100"/>
+	<element id="9" value="2"/>
+	<element id="10" value="6"/>
+	<element id="11" value="3"/>
+	<element id="12" value="7"/>
+	<element id="13" value="4"/>
+	<element id="14" value="0"/>
+	<element id="15" value="8"/>
+	<element id="16" value="1"/>
+	<element id="17" value="5"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="100">
+<visualElement id="0" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="9" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="10" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="11" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="12" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="13" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="14" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="15" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="16" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="17" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  IndependentSet( [a[0],b[0]],...,[a[n-1],b[n-1]] ):"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      rightBound[i] = &#60;b[i],i>;"/>
+<element id="3" value=" 4    }"/>
+<element id="4" value=" 5    IncreasingSort( rightBound );"/>
+<element id="5" value=" 6    last = -1;"/>
+<element id="6" value=" 7    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="7" value=" 8      &#60;x,i> = bound[j];"/>
+<element id="8" value=" 9      IF ((last &#60; 0) || (a[i] > b[last])) {"/>
+<element id="9" value="10        assign[i] = true;"/>
+<element id="10" value="11        last = i;"/>
+<element id="11" value="12      } ELSE {"/>
+<element id="12" value="13        assign[i] = false;"/>
+<element id="13" value="14      }"/>
+<element id="14" value="15    }"/>
+<element id="15" value="16    RETURN assign;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="20" originY="200">
+<visualMalleableElement id="8" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="5">
+<structure name="A" type="Array">
+<array size="9" type="IntPairInformation">
+<element id="0" value="[15;75]"/>
+<element id="1" value="[90;95]"/>
+<element id="2" value="[20;30]"/>
+<element id="3" value="[35;50]"/>
+<element id="4" value="[60;70]"/>
+<element id="5" value="[85;100]"/>
+<element id="6" value="[25;40]"/>
+<element id="7" value="[45;55]"/>
+<element id="8" value="[65;80]"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="50.0" originX="20" originY="40">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="2" color="FFFF00" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+</visualArray>
+<message content="The yellow interval has been included as the last one in the independent set together with the other red intervals (if any).">
+</message>
+</structure>
+<structure name="Right bound" type="Matrix">
+<matrix height="2" width="9" type="IntInformation">
+	<element id="0" value="30"/>
+	<element id="1" value="40"/>
+	<element id="2" value="50"/>
+	<element id="3" value="55"/>
+	<element id="4" value="70"/>
+	<element id="5" value="75"/>
+	<element id="6" value="80"/>
+	<element id="7" value="95"/>
+	<element id="8" value="100"/>
+	<element id="9" value="2"/>
+	<element id="10" value="6"/>
+	<element id="11" value="3"/>
+	<element id="12" value="7"/>
+	<element id="13" value="4"/>
+	<element id="14" value="0"/>
+	<element id="15" value="8"/>
+	<element id="16" value="1"/>
+	<element id="17" value="5"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="100">
+<visualElement id="0" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="1" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="9" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="10" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="11" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="12" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="13" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="14" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="15" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="16" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="17" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  IndependentSet( [a[0],b[0]],...,[a[n-1],b[n-1]] ):"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      rightBound[i] = &#60;b[i],i>;"/>
+<element id="3" value=" 4    }"/>
+<element id="4" value=" 5    IncreasingSort( rightBound );"/>
+<element id="5" value=" 6    last = -1;"/>
+<element id="6" value=" 7    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="7" value=" 8      &#60;x,i> = bound[j];"/>
+<element id="8" value=" 9      IF ((last &#60; 0) || (a[i] > b[last])) {"/>
+<element id="9" value="10        assign[i] = true;"/>
+<element id="10" value="11        last = i;"/>
+<element id="11" value="12      } ELSE {"/>
+<element id="12" value="13        assign[i] = false;"/>
+<element id="13" value="14      }"/>
+<element id="14" value="15    }"/>
+<element id="15" value="16    RETURN assign;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="20" originY="200">
+<visualMalleableElement id="9" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="400"/>
+<visualMalleableElement id="10" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="6">
+<structure name="A" type="Array">
+<array size="9" type="IntPairInformation">
+<element id="0" value="[15;75]"/>
+<element id="1" value="[90;95]"/>
+<element id="2" value="[20;30]"/>
+<element id="3" value="[35;50]"/>
+<element id="4" value="[60;70]"/>
+<element id="5" value="[85;100]"/>
+<element id="6" value="[25;40]"/>
+<element id="7" value="[45;55]"/>
+<element id="8" value="[65;80]"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="50.0" originX="20" originY="40">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="2" color="FFFF00" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="6" color="00FFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+</visualArray>
+<message content="A new right extreme (colored in green) is analyzed: the extreme corresponds to the azure interval.">
+</message>
+</structure>
+<structure name="Right bound" type="Matrix">
+<matrix height="2" width="9" type="IntInformation">
+	<element id="0" value="30"/>
+	<element id="1" value="40"/>
+	<element id="2" value="50"/>
+	<element id="3" value="55"/>
+	<element id="4" value="70"/>
+	<element id="5" value="75"/>
+	<element id="6" value="80"/>
+	<element id="7" value="95"/>
+	<element id="8" value="100"/>
+	<element id="9" value="2"/>
+	<element id="10" value="6"/>
+	<element id="11" value="3"/>
+	<element id="12" value="7"/>
+	<element id="13" value="4"/>
+	<element id="14" value="0"/>
+	<element id="15" value="8"/>
+	<element id="16" value="1"/>
+	<element id="17" value="5"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="100">
+<visualElement id="0" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="1" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="9" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="10" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="11" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="12" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="13" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="14" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="15" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="16" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="17" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  IndependentSet( [a[0],b[0]],...,[a[n-1],b[n-1]] ):"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      rightBound[i] = &#60;b[i],i>;"/>
+<element id="3" value=" 4    }"/>
+<element id="4" value=" 5    IncreasingSort( rightBound );"/>
+<element id="5" value=" 6    last = -1;"/>
+<element id="6" value=" 7    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="7" value=" 8      &#60;x,i> = bound[j];"/>
+<element id="8" value=" 9      IF ((last &#60; 0) || (a[i] > b[last])) {"/>
+<element id="9" value="10        assign[i] = true;"/>
+<element id="10" value="11        last = i;"/>
+<element id="11" value="12      } ELSE {"/>
+<element id="12" value="13        assign[i] = false;"/>
+<element id="13" value="14      }"/>
+<element id="14" value="15    }"/>
+<element id="15" value="16    RETURN assign;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="20" originY="200">
+<visualMalleableElement id="7" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="7">
+<structure name="A" type="Array">
+<array size="9" type="IntPairInformation">
+<element id="0" value="[15;75]"/>
+<element id="1" value="[90;95]"/>
+<element id="2" value="[20;30]"/>
+<element id="3" value="[35;50]"/>
+<element id="4" value="[60;70]"/>
+<element id="5" value="[85;100]"/>
+<element id="6" value="[25;40]"/>
+<element id="7" value="[45;55]"/>
+<element id="8" value="[65;80]"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="50.0" originX="20" originY="40">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="2" color="FFFF00" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="6" color="00FFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+</visualArray>
+<message content="The azure interval begins before the end of the yellow one: then, this interval cannot be included in the independent set.">
+</message>
+</structure>
+<structure name="Right bound" type="Matrix">
+<matrix height="2" width="9" type="IntInformation">
+	<element id="0" value="30"/>
+	<element id="1" value="40"/>
+	<element id="2" value="50"/>
+	<element id="3" value="55"/>
+	<element id="4" value="70"/>
+	<element id="5" value="75"/>
+	<element id="6" value="80"/>
+	<element id="7" value="95"/>
+	<element id="8" value="100"/>
+	<element id="9" value="2"/>
+	<element id="10" value="6"/>
+	<element id="11" value="3"/>
+	<element id="12" value="7"/>
+	<element id="13" value="4"/>
+	<element id="14" value="0"/>
+	<element id="15" value="8"/>
+	<element id="16" value="1"/>
+	<element id="17" value="5"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="100">
+<visualElement id="0" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="1" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="9" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="10" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="11" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="12" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="13" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="14" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="15" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="16" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="17" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  IndependentSet( [a[0],b[0]],...,[a[n-1],b[n-1]] ):"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      rightBound[i] = &#60;b[i],i>;"/>
+<element id="3" value=" 4    }"/>
+<element id="4" value=" 5    IncreasingSort( rightBound );"/>
+<element id="5" value=" 6    last = -1;"/>
+<element id="6" value=" 7    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="7" value=" 8      &#60;x,i> = bound[j];"/>
+<element id="8" value=" 9      IF ((last &#60; 0) || (a[i] > b[last])) {"/>
+<element id="9" value="10        assign[i] = true;"/>
+<element id="10" value="11        last = i;"/>
+<element id="11" value="12      } ELSE {"/>
+<element id="12" value="13        assign[i] = false;"/>
+<element id="13" value="14      }"/>
+<element id="14" value="15    }"/>
+<element id="15" value="16    RETURN assign;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="20" originY="200">
+<visualMalleableElement id="8" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="8">
+<structure name="A" type="Array">
+<array size="9" type="IntPairInformation">
+<element id="0" value="[15;75]"/>
+<element id="1" value="[90;95]"/>
+<element id="2" value="[20;30]"/>
+<element id="3" value="[35;50]"/>
+<element id="4" value="[60;70]"/>
+<element id="5" value="[85;100]"/>
+<element id="6" value="[25;40]"/>
+<element id="7" value="[45;55]"/>
+<element id="8" value="[65;80]"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="50.0" originX="20" originY="40">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="2" color="FFFF00" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="3" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="6" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+</visualArray>
+<message content="The red intervals (if any) and the yellow one are included in the independent set, while the gray ones (if any) are not included in the independent set.">
+</message>
+</structure>
+<structure name="Right bound" type="Matrix">
+<matrix height="2" width="9" type="IntInformation">
+	<element id="0" value="30"/>
+	<element id="1" value="40"/>
+	<element id="2" value="50"/>
+	<element id="3" value="55"/>
+	<element id="4" value="70"/>
+	<element id="5" value="75"/>
+	<element id="6" value="80"/>
+	<element id="7" value="95"/>
+	<element id="8" value="100"/>
+	<element id="9" value="2"/>
+	<element id="10" value="6"/>
+	<element id="11" value="3"/>
+	<element id="12" value="7"/>
+	<element id="13" value="4"/>
+	<element id="14" value="0"/>
+	<element id="15" value="8"/>
+	<element id="16" value="1"/>
+	<element id="17" value="5"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="100">
+<visualElement id="0" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="1" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="2" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="9" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="10" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="11" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="12" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="13" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="14" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="15" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="16" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="17" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  IndependentSet( [a[0],b[0]],...,[a[n-1],b[n-1]] ):"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      rightBound[i] = &#60;b[i],i>;"/>
+<element id="3" value=" 4    }"/>
+<element id="4" value=" 5    IncreasingSort( rightBound );"/>
+<element id="5" value=" 6    last = -1;"/>
+<element id="6" value=" 7    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="7" value=" 8      &#60;x,i> = bound[j];"/>
+<element id="8" value=" 9      IF ((last &#60; 0) || (a[i] > b[last])) {"/>
+<element id="9" value="10        assign[i] = true;"/>
+<element id="10" value="11        last = i;"/>
+<element id="11" value="12      } ELSE {"/>
+<element id="12" value="13        assign[i] = false;"/>
+<element id="13" value="14      }"/>
+<element id="14" value="15    }"/>
+<element id="15" value="16    RETURN assign;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="20" originY="200">
+<visualMalleableElement id="12" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="9">
+<structure name="A" type="Array">
+<array size="9" type="IntPairInformation">
+<element id="0" value="[15;75]"/>
+<element id="1" value="[90;95]"/>
+<element id="2" value="[20;30]"/>
+<element id="3" value="[35;50]"/>
+<element id="4" value="[60;70]"/>
+<element id="5" value="[85;100]"/>
+<element id="6" value="[25;40]"/>
+<element id="7" value="[45;55]"/>
+<element id="8" value="[65;80]"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="50.0" originX="20" originY="40">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="2" color="FFFF00" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="3" color="00FFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="6" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+</visualArray>
+<message content="A new right extreme (colored in green) is analyzed: the extreme corresponds to the azure interval.">
+</message>
+</structure>
+<structure name="Right bound" type="Matrix">
+<matrix height="2" width="9" type="IntInformation">
+	<element id="0" value="30"/>
+	<element id="1" value="40"/>
+	<element id="2" value="50"/>
+	<element id="3" value="55"/>
+	<element id="4" value="70"/>
+	<element id="5" value="75"/>
+	<element id="6" value="80"/>
+	<element id="7" value="95"/>
+	<element id="8" value="100"/>
+	<element id="9" value="2"/>
+	<element id="10" value="6"/>
+	<element id="11" value="3"/>
+	<element id="12" value="7"/>
+	<element id="13" value="4"/>
+	<element id="14" value="0"/>
+	<element id="15" value="8"/>
+	<element id="16" value="1"/>
+	<element id="17" value="5"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="100">
+<visualElement id="0" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="1" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="2" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="9" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="10" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="11" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="12" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="13" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="14" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="15" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="16" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="17" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  IndependentSet( [a[0],b[0]],...,[a[n-1],b[n-1]] ):"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      rightBound[i] = &#60;b[i],i>;"/>
+<element id="3" value=" 4    }"/>
+<element id="4" value=" 5    IncreasingSort( rightBound );"/>
+<element id="5" value=" 6    last = -1;"/>
+<element id="6" value=" 7    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="7" value=" 8      &#60;x,i> = bound[j];"/>
+<element id="8" value=" 9      IF ((last &#60; 0) || (a[i] > b[last])) {"/>
+<element id="9" value="10        assign[i] = true;"/>
+<element id="10" value="11        last = i;"/>
+<element id="11" value="12      } ELSE {"/>
+<element id="12" value="13        assign[i] = false;"/>
+<element id="13" value="14      }"/>
+<element id="14" value="15    }"/>
+<element id="15" value="16    RETURN assign;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="20" originY="200">
+<visualMalleableElement id="7" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="10">
+<structure name="A" type="Array">
+<array size="9" type="IntPairInformation">
+<element id="0" value="[15;75]"/>
+<element id="1" value="[90;95]"/>
+<element id="2" value="[20;30]"/>
+<element id="3" value="[35;50]"/>
+<element id="4" value="[60;70]"/>
+<element id="5" value="[85;100]"/>
+<element id="6" value="[25;40]"/>
+<element id="7" value="[45;55]"/>
+<element id="8" value="[65;80]"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="50.0" originX="20" originY="40">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="2" color="FFFF00" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="3" color="00FFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="6" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+</visualArray>
+<message content="The azure interval begins after the end of the yellow one (if any): then, this interval can be included in the independent set.">
+</message>
+</structure>
+<structure name="Right bound" type="Matrix">
+<matrix height="2" width="9" type="IntInformation">
+	<element id="0" value="30"/>
+	<element id="1" value="40"/>
+	<element id="2" value="50"/>
+	<element id="3" value="55"/>
+	<element id="4" value="70"/>
+	<element id="5" value="75"/>
+	<element id="6" value="80"/>
+	<element id="7" value="95"/>
+	<element id="8" value="100"/>
+	<element id="9" value="2"/>
+	<element id="10" value="6"/>
+	<element id="11" value="3"/>
+	<element id="12" value="7"/>
+	<element id="13" value="4"/>
+	<element id="14" value="0"/>
+	<element id="15" value="8"/>
+	<element id="16" value="1"/>
+	<element id="17" value="5"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="100">
+<visualElement id="0" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="1" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="2" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="9" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="10" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="11" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="12" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="13" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="14" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="15" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="16" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="17" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  IndependentSet( [a[0],b[0]],...,[a[n-1],b[n-1]] ):"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      rightBound[i] = &#60;b[i],i>;"/>
+<element id="3" value=" 4    }"/>
+<element id="4" value=" 5    IncreasingSort( rightBound );"/>
+<element id="5" value=" 6    last = -1;"/>
+<element id="6" value=" 7    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="7" value=" 8      &#60;x,i> = bound[j];"/>
+<element id="8" value=" 9      IF ((last &#60; 0) || (a[i] > b[last])) {"/>
+<element id="9" value="10        assign[i] = true;"/>
+<element id="10" value="11        last = i;"/>
+<element id="11" value="12      } ELSE {"/>
+<element id="12" value="13        assign[i] = false;"/>
+<element id="13" value="14      }"/>
+<element id="14" value="15    }"/>
+<element id="15" value="16    RETURN assign;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="20" originY="200">
+<visualMalleableElement id="8" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="11">
+<structure name="A" type="Array">
+<array size="9" type="IntPairInformation">
+<element id="0" value="[15;75]"/>
+<element id="1" value="[90;95]"/>
+<element id="2" value="[20;30]"/>
+<element id="3" value="[35;50]"/>
+<element id="4" value="[60;70]"/>
+<element id="5" value="[85;100]"/>
+<element id="6" value="[25;40]"/>
+<element id="7" value="[45;55]"/>
+<element id="8" value="[65;80]"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="50.0" originX="20" originY="40">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="2" color="FF0000" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="3" color="FFFF00" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="6" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+</visualArray>
+<message content="The yellow interval has been included as the last one in the independent set together with the other red intervals (if any).">
+</message>
+</structure>
+<structure name="Right bound" type="Matrix">
+<matrix height="2" width="9" type="IntInformation">
+	<element id="0" value="30"/>
+	<element id="1" value="40"/>
+	<element id="2" value="50"/>
+	<element id="3" value="55"/>
+	<element id="4" value="70"/>
+	<element id="5" value="75"/>
+	<element id="6" value="80"/>
+	<element id="7" value="95"/>
+	<element id="8" value="100"/>
+	<element id="9" value="2"/>
+	<element id="10" value="6"/>
+	<element id="11" value="3"/>
+	<element id="12" value="7"/>
+	<element id="13" value="4"/>
+	<element id="14" value="0"/>
+	<element id="15" value="8"/>
+	<element id="16" value="1"/>
+	<element id="17" value="5"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="100">
+<visualElement id="0" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="1" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="2" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="3" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="9" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="10" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="11" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="12" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="13" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="14" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="15" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="16" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="17" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  IndependentSet( [a[0],b[0]],...,[a[n-1],b[n-1]] ):"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      rightBound[i] = &#60;b[i],i>;"/>
+<element id="3" value=" 4    }"/>
+<element id="4" value=" 5    IncreasingSort( rightBound );"/>
+<element id="5" value=" 6    last = -1;"/>
+<element id="6" value=" 7    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="7" value=" 8      &#60;x,i> = bound[j];"/>
+<element id="8" value=" 9      IF ((last &#60; 0) || (a[i] > b[last])) {"/>
+<element id="9" value="10        assign[i] = true;"/>
+<element id="10" value="11        last = i;"/>
+<element id="11" value="12      } ELSE {"/>
+<element id="12" value="13        assign[i] = false;"/>
+<element id="13" value="14      }"/>
+<element id="14" value="15    }"/>
+<element id="15" value="16    RETURN assign;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="20" originY="200">
+<visualMalleableElement id="9" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="400"/>
+<visualMalleableElement id="10" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="12">
+<structure name="A" type="Array">
+<array size="9" type="IntPairInformation">
+<element id="0" value="[15;75]"/>
+<element id="1" value="[90;95]"/>
+<element id="2" value="[20;30]"/>
+<element id="3" value="[35;50]"/>
+<element id="4" value="[60;70]"/>
+<element id="5" value="[85;100]"/>
+<element id="6" value="[25;40]"/>
+<element id="7" value="[45;55]"/>
+<element id="8" value="[65;80]"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="50.0" originX="20" originY="40">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="2" color="FF0000" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="3" color="FFFF00" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="6" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="7" color="00FFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+</visualArray>
+<message content="A new right extreme (colored in green) is analyzed: the extreme corresponds to the azure interval.">
+</message>
+</structure>
+<structure name="Right bound" type="Matrix">
+<matrix height="2" width="9" type="IntInformation">
+	<element id="0" value="30"/>
+	<element id="1" value="40"/>
+	<element id="2" value="50"/>
+	<element id="3" value="55"/>
+	<element id="4" value="70"/>
+	<element id="5" value="75"/>
+	<element id="6" value="80"/>
+	<element id="7" value="95"/>
+	<element id="8" value="100"/>
+	<element id="9" value="2"/>
+	<element id="10" value="6"/>
+	<element id="11" value="3"/>
+	<element id="12" value="7"/>
+	<element id="13" value="4"/>
+	<element id="14" value="0"/>
+	<element id="15" value="8"/>
+	<element id="16" value="1"/>
+	<element id="17" value="5"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="100">
+<visualElement id="0" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="1" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="2" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="3" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="9" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="10" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="11" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="12" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="13" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="14" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="15" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="16" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="17" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  IndependentSet( [a[0],b[0]],...,[a[n-1],b[n-1]] ):"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      rightBound[i] = &#60;b[i],i>;"/>
+<element id="3" value=" 4    }"/>
+<element id="4" value=" 5    IncreasingSort( rightBound );"/>
+<element id="5" value=" 6    last = -1;"/>
+<element id="6" value=" 7    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="7" value=" 8      &#60;x,i> = bound[j];"/>
+<element id="8" value=" 9      IF ((last &#60; 0) || (a[i] > b[last])) {"/>
+<element id="9" value="10        assign[i] = true;"/>
+<element id="10" value="11        last = i;"/>
+<element id="11" value="12      } ELSE {"/>
+<element id="12" value="13        assign[i] = false;"/>
+<element id="13" value="14      }"/>
+<element id="14" value="15    }"/>
+<element id="15" value="16    RETURN assign;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="20" originY="200">
+<visualMalleableElement id="7" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="13">
+<structure name="A" type="Array">
+<array size="9" type="IntPairInformation">
+<element id="0" value="[15;75]"/>
+<element id="1" value="[90;95]"/>
+<element id="2" value="[20;30]"/>
+<element id="3" value="[35;50]"/>
+<element id="4" value="[60;70]"/>
+<element id="5" value="[85;100]"/>
+<element id="6" value="[25;40]"/>
+<element id="7" value="[45;55]"/>
+<element id="8" value="[65;80]"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="50.0" originX="20" originY="40">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="2" color="FF0000" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="3" color="FFFF00" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="6" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="7" color="00FFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+</visualArray>
+<message content="The azure interval begins before the end of the yellow one: then, this interval cannot be included in the independent set.">
+</message>
+</structure>
+<structure name="Right bound" type="Matrix">
+<matrix height="2" width="9" type="IntInformation">
+	<element id="0" value="30"/>
+	<element id="1" value="40"/>
+	<element id="2" value="50"/>
+	<element id="3" value="55"/>
+	<element id="4" value="70"/>
+	<element id="5" value="75"/>
+	<element id="6" value="80"/>
+	<element id="7" value="95"/>
+	<element id="8" value="100"/>
+	<element id="9" value="2"/>
+	<element id="10" value="6"/>
+	<element id="11" value="3"/>
+	<element id="12" value="7"/>
+	<element id="13" value="4"/>
+	<element id="14" value="0"/>
+	<element id="15" value="8"/>
+	<element id="16" value="1"/>
+	<element id="17" value="5"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="100">
+<visualElement id="0" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="1" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="2" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="3" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="9" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="10" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="11" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="12" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="13" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="14" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="15" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="16" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="17" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  IndependentSet( [a[0],b[0]],...,[a[n-1],b[n-1]] ):"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      rightBound[i] = &#60;b[i],i>;"/>
+<element id="3" value=" 4    }"/>
+<element id="4" value=" 5    IncreasingSort( rightBound );"/>
+<element id="5" value=" 6    last = -1;"/>
+<element id="6" value=" 7    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="7" value=" 8      &#60;x,i> = bound[j];"/>
+<element id="8" value=" 9      IF ((last &#60; 0) || (a[i] > b[last])) {"/>
+<element id="9" value="10        assign[i] = true;"/>
+<element id="10" value="11        last = i;"/>
+<element id="11" value="12      } ELSE {"/>
+<element id="12" value="13        assign[i] = false;"/>
+<element id="13" value="14      }"/>
+<element id="14" value="15    }"/>
+<element id="15" value="16    RETURN assign;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="20" originY="200">
+<visualMalleableElement id="8" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="14">
+<structure name="A" type="Array">
+<array size="9" type="IntPairInformation">
+<element id="0" value="[15;75]"/>
+<element id="1" value="[90;95]"/>
+<element id="2" value="[20;30]"/>
+<element id="3" value="[35;50]"/>
+<element id="4" value="[60;70]"/>
+<element id="5" value="[85;100]"/>
+<element id="6" value="[25;40]"/>
+<element id="7" value="[45;55]"/>
+<element id="8" value="[65;80]"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="50.0" originX="20" originY="40">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="2" color="FF0000" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="3" color="FFFF00" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="4" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="6" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="7" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+</visualArray>
+<message content="The red intervals (if any) and the yellow one are included in the independent set, while the gray ones (if any) are not included in the independent set.">
+</message>
+</structure>
+<structure name="Right bound" type="Matrix">
+<matrix height="2" width="9" type="IntInformation">
+	<element id="0" value="30"/>
+	<element id="1" value="40"/>
+	<element id="2" value="50"/>
+	<element id="3" value="55"/>
+	<element id="4" value="70"/>
+	<element id="5" value="75"/>
+	<element id="6" value="80"/>
+	<element id="7" value="95"/>
+	<element id="8" value="100"/>
+	<element id="9" value="2"/>
+	<element id="10" value="6"/>
+	<element id="11" value="3"/>
+	<element id="12" value="7"/>
+	<element id="13" value="4"/>
+	<element id="14" value="0"/>
+	<element id="15" value="8"/>
+	<element id="16" value="1"/>
+	<element id="17" value="5"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="100">
+<visualElement id="0" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="1" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="2" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="3" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="4" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="9" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="10" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="11" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="12" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="13" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="14" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="15" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="16" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="17" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  IndependentSet( [a[0],b[0]],...,[a[n-1],b[n-1]] ):"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      rightBound[i] = &#60;b[i],i>;"/>
+<element id="3" value=" 4    }"/>
+<element id="4" value=" 5    IncreasingSort( rightBound );"/>
+<element id="5" value=" 6    last = -1;"/>
+<element id="6" value=" 7    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="7" value=" 8      &#60;x,i> = bound[j];"/>
+<element id="8" value=" 9      IF ((last &#60; 0) || (a[i] > b[last])) {"/>
+<element id="9" value="10        assign[i] = true;"/>
+<element id="10" value="11        last = i;"/>
+<element id="11" value="12      } ELSE {"/>
+<element id="12" value="13        assign[i] = false;"/>
+<element id="13" value="14      }"/>
+<element id="14" value="15    }"/>
+<element id="15" value="16    RETURN assign;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="20" originY="200">
+<visualMalleableElement id="12" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="15">
+<structure name="A" type="Array">
+<array size="9" type="IntPairInformation">
+<element id="0" value="[15;75]"/>
+<element id="1" value="[90;95]"/>
+<element id="2" value="[20;30]"/>
+<element id="3" value="[35;50]"/>
+<element id="4" value="[60;70]"/>
+<element id="5" value="[85;100]"/>
+<element id="6" value="[25;40]"/>
+<element id="7" value="[45;55]"/>
+<element id="8" value="[65;80]"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="50.0" originX="20" originY="40">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="2" color="FF0000" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="3" color="FFFF00" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="4" color="00FFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="6" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="7" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+</visualArray>
+<message content="A new right extreme (colored in green) is analyzed: the extreme corresponds to the azure interval.">
+</message>
+</structure>
+<structure name="Right bound" type="Matrix">
+<matrix height="2" width="9" type="IntInformation">
+	<element id="0" value="30"/>
+	<element id="1" value="40"/>
+	<element id="2" value="50"/>
+	<element id="3" value="55"/>
+	<element id="4" value="70"/>
+	<element id="5" value="75"/>
+	<element id="6" value="80"/>
+	<element id="7" value="95"/>
+	<element id="8" value="100"/>
+	<element id="9" value="2"/>
+	<element id="10" value="6"/>
+	<element id="11" value="3"/>
+	<element id="12" value="7"/>
+	<element id="13" value="4"/>
+	<element id="14" value="0"/>
+	<element id="15" value="8"/>
+	<element id="16" value="1"/>
+	<element id="17" value="5"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="100">
+<visualElement id="0" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="1" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="2" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="3" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="4" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="9" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="10" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="11" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="12" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="13" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="14" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="15" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="16" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="17" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  IndependentSet( [a[0],b[0]],...,[a[n-1],b[n-1]] ):"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      rightBound[i] = &#60;b[i],i>;"/>
+<element id="3" value=" 4    }"/>
+<element id="4" value=" 5    IncreasingSort( rightBound );"/>
+<element id="5" value=" 6    last = -1;"/>
+<element id="6" value=" 7    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="7" value=" 8      &#60;x,i> = bound[j];"/>
+<element id="8" value=" 9      IF ((last &#60; 0) || (a[i] > b[last])) {"/>
+<element id="9" value="10        assign[i] = true;"/>
+<element id="10" value="11        last = i;"/>
+<element id="11" value="12      } ELSE {"/>
+<element id="12" value="13        assign[i] = false;"/>
+<element id="13" value="14      }"/>
+<element id="14" value="15    }"/>
+<element id="15" value="16    RETURN assign;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="20" originY="200">
+<visualMalleableElement id="7" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="16">
+<structure name="A" type="Array">
+<array size="9" type="IntPairInformation">
+<element id="0" value="[15;75]"/>
+<element id="1" value="[90;95]"/>
+<element id="2" value="[20;30]"/>
+<element id="3" value="[35;50]"/>
+<element id="4" value="[60;70]"/>
+<element id="5" value="[85;100]"/>
+<element id="6" value="[25;40]"/>
+<element id="7" value="[45;55]"/>
+<element id="8" value="[65;80]"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="50.0" originX="20" originY="40">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="2" color="FF0000" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="3" color="FFFF00" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="4" color="00FFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="6" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="7" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+</visualArray>
+<message content="The azure interval begins after the end of the yellow one (if any): then, this interval can be included in the independent set.">
+</message>
+</structure>
+<structure name="Right bound" type="Matrix">
+<matrix height="2" width="9" type="IntInformation">
+	<element id="0" value="30"/>
+	<element id="1" value="40"/>
+	<element id="2" value="50"/>
+	<element id="3" value="55"/>
+	<element id="4" value="70"/>
+	<element id="5" value="75"/>
+	<element id="6" value="80"/>
+	<element id="7" value="95"/>
+	<element id="8" value="100"/>
+	<element id="9" value="2"/>
+	<element id="10" value="6"/>
+	<element id="11" value="3"/>
+	<element id="12" value="7"/>
+	<element id="13" value="4"/>
+	<element id="14" value="0"/>
+	<element id="15" value="8"/>
+	<element id="16" value="1"/>
+	<element id="17" value="5"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="100">
+<visualElement id="0" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="1" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="2" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="3" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="4" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="9" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="10" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="11" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="12" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="13" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="14" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="15" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="16" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="17" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  IndependentSet( [a[0],b[0]],...,[a[n-1],b[n-1]] ):"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      rightBound[i] = &#60;b[i],i>;"/>
+<element id="3" value=" 4    }"/>
+<element id="4" value=" 5    IncreasingSort( rightBound );"/>
+<element id="5" value=" 6    last = -1;"/>
+<element id="6" value=" 7    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="7" value=" 8      &#60;x,i> = bound[j];"/>
+<element id="8" value=" 9      IF ((last &#60; 0) || (a[i] > b[last])) {"/>
+<element id="9" value="10        assign[i] = true;"/>
+<element id="10" value="11        last = i;"/>
+<element id="11" value="12      } ELSE {"/>
+<element id="12" value="13        assign[i] = false;"/>
+<element id="13" value="14      }"/>
+<element id="14" value="15    }"/>
+<element id="15" value="16    RETURN assign;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="20" originY="200">
+<visualMalleableElement id="8" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="17">
+<structure name="A" type="Array">
+<array size="9" type="IntPairInformation">
+<element id="0" value="[15;75]"/>
+<element id="1" value="[90;95]"/>
+<element id="2" value="[20;30]"/>
+<element id="3" value="[35;50]"/>
+<element id="4" value="[60;70]"/>
+<element id="5" value="[85;100]"/>
+<element id="6" value="[25;40]"/>
+<element id="7" value="[45;55]"/>
+<element id="8" value="[65;80]"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="50.0" originX="20" originY="40">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="2" color="FF0000" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="3" color="FF0000" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="4" color="FFFF00" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="6" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="7" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+</visualArray>
+<message content="The yellow interval has been included as the last one in the independent set together with the other red intervals (if any).">
+</message>
+</structure>
+<structure name="Right bound" type="Matrix">
+<matrix height="2" width="9" type="IntInformation">
+	<element id="0" value="30"/>
+	<element id="1" value="40"/>
+	<element id="2" value="50"/>
+	<element id="3" value="55"/>
+	<element id="4" value="70"/>
+	<element id="5" value="75"/>
+	<element id="6" value="80"/>
+	<element id="7" value="95"/>
+	<element id="8" value="100"/>
+	<element id="9" value="2"/>
+	<element id="10" value="6"/>
+	<element id="11" value="3"/>
+	<element id="12" value="7"/>
+	<element id="13" value="4"/>
+	<element id="14" value="0"/>
+	<element id="15" value="8"/>
+	<element id="16" value="1"/>
+	<element id="17" value="5"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="100">
+<visualElement id="0" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="1" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="2" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="3" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="4" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="5" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="9" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="10" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="11" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="12" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="13" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="14" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="15" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="16" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="17" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  IndependentSet( [a[0],b[0]],...,[a[n-1],b[n-1]] ):"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      rightBound[i] = &#60;b[i],i>;"/>
+<element id="3" value=" 4    }"/>
+<element id="4" value=" 5    IncreasingSort( rightBound );"/>
+<element id="5" value=" 6    last = -1;"/>
+<element id="6" value=" 7    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="7" value=" 8      &#60;x,i> = bound[j];"/>
+<element id="8" value=" 9      IF ((last &#60; 0) || (a[i] > b[last])) {"/>
+<element id="9" value="10        assign[i] = true;"/>
+<element id="10" value="11        last = i;"/>
+<element id="11" value="12      } ELSE {"/>
+<element id="12" value="13        assign[i] = false;"/>
+<element id="13" value="14      }"/>
+<element id="14" value="15    }"/>
+<element id="15" value="16    RETURN assign;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="20" originY="200">
+<visualMalleableElement id="9" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="400"/>
+<visualMalleableElement id="10" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="18">
+<structure name="A" type="Array">
+<array size="9" type="IntPairInformation">
+<element id="0" value="[15;75]"/>
+<element id="1" value="[90;95]"/>
+<element id="2" value="[20;30]"/>
+<element id="3" value="[35;50]"/>
+<element id="4" value="[60;70]"/>
+<element id="5" value="[85;100]"/>
+<element id="6" value="[25;40]"/>
+<element id="7" value="[45;55]"/>
+<element id="8" value="[65;80]"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="50.0" originX="20" originY="40">
+<visualMalleableElement id="0" color="00FFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="2" color="FF0000" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="3" color="FF0000" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="4" color="FFFF00" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="6" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="7" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+</visualArray>
+<message content="A new right extreme (colored in green) is analyzed: the extreme corresponds to the azure interval.">
+</message>
+</structure>
+<structure name="Right bound" type="Matrix">
+<matrix height="2" width="9" type="IntInformation">
+	<element id="0" value="30"/>
+	<element id="1" value="40"/>
+	<element id="2" value="50"/>
+	<element id="3" value="55"/>
+	<element id="4" value="70"/>
+	<element id="5" value="75"/>
+	<element id="6" value="80"/>
+	<element id="7" value="95"/>
+	<element id="8" value="100"/>
+	<element id="9" value="2"/>
+	<element id="10" value="6"/>
+	<element id="11" value="3"/>
+	<element id="12" value="7"/>
+	<element id="13" value="4"/>
+	<element id="14" value="0"/>
+	<element id="15" value="8"/>
+	<element id="16" value="1"/>
+	<element id="17" value="5"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="100">
+<visualElement id="0" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="1" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="2" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="3" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="4" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="5" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="9" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="10" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="11" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="12" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="13" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="14" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="15" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="16" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="17" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  IndependentSet( [a[0],b[0]],...,[a[n-1],b[n-1]] ):"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      rightBound[i] = &#60;b[i],i>;"/>
+<element id="3" value=" 4    }"/>
+<element id="4" value=" 5    IncreasingSort( rightBound );"/>
+<element id="5" value=" 6    last = -1;"/>
+<element id="6" value=" 7    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="7" value=" 8      &#60;x,i> = bound[j];"/>
+<element id="8" value=" 9      IF ((last &#60; 0) || (a[i] > b[last])) {"/>
+<element id="9" value="10        assign[i] = true;"/>
+<element id="10" value="11        last = i;"/>
+<element id="11" value="12      } ELSE {"/>
+<element id="12" value="13        assign[i] = false;"/>
+<element id="13" value="14      }"/>
+<element id="14" value="15    }"/>
+<element id="15" value="16    RETURN assign;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="20" originY="200">
+<visualMalleableElement id="7" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="19">
+<structure name="A" type="Array">
+<array size="9" type="IntPairInformation">
+<element id="0" value="[15;75]"/>
+<element id="1" value="[90;95]"/>
+<element id="2" value="[20;30]"/>
+<element id="3" value="[35;50]"/>
+<element id="4" value="[60;70]"/>
+<element id="5" value="[85;100]"/>
+<element id="6" value="[25;40]"/>
+<element id="7" value="[45;55]"/>
+<element id="8" value="[65;80]"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="50.0" originX="20" originY="40">
+<visualMalleableElement id="0" color="00FFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="2" color="FF0000" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="3" color="FF0000" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="4" color="FFFF00" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="6" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="7" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+</visualArray>
+<message content="The azure interval begins before the end of the yellow one: then, this interval cannot be included in the independent set.">
+</message>
+</structure>
+<structure name="Right bound" type="Matrix">
+<matrix height="2" width="9" type="IntInformation">
+	<element id="0" value="30"/>
+	<element id="1" value="40"/>
+	<element id="2" value="50"/>
+	<element id="3" value="55"/>
+	<element id="4" value="70"/>
+	<element id="5" value="75"/>
+	<element id="6" value="80"/>
+	<element id="7" value="95"/>
+	<element id="8" value="100"/>
+	<element id="9" value="2"/>
+	<element id="10" value="6"/>
+	<element id="11" value="3"/>
+	<element id="12" value="7"/>
+	<element id="13" value="4"/>
+	<element id="14" value="0"/>
+	<element id="15" value="8"/>
+	<element id="16" value="1"/>
+	<element id="17" value="5"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="100">
+<visualElement id="0" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="1" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="2" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="3" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="4" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="5" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="9" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="10" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="11" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="12" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="13" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="14" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="15" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="16" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="17" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  IndependentSet( [a[0],b[0]],...,[a[n-1],b[n-1]] ):"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      rightBound[i] = &#60;b[i],i>;"/>
+<element id="3" value=" 4    }"/>
+<element id="4" value=" 5    IncreasingSort( rightBound );"/>
+<element id="5" value=" 6    last = -1;"/>
+<element id="6" value=" 7    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="7" value=" 8      &#60;x,i> = bound[j];"/>
+<element id="8" value=" 9      IF ((last &#60; 0) || (a[i] > b[last])) {"/>
+<element id="9" value="10        assign[i] = true;"/>
+<element id="10" value="11        last = i;"/>
+<element id="11" value="12      } ELSE {"/>
+<element id="12" value="13        assign[i] = false;"/>
+<element id="13" value="14      }"/>
+<element id="14" value="15    }"/>
+<element id="15" value="16    RETURN assign;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="20" originY="200">
+<visualMalleableElement id="8" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="20">
+<structure name="A" type="Array">
+<array size="9" type="IntPairInformation">
+<element id="0" value="[15;75]"/>
+<element id="1" value="[90;95]"/>
+<element id="2" value="[20;30]"/>
+<element id="3" value="[35;50]"/>
+<element id="4" value="[60;70]"/>
+<element id="5" value="[85;100]"/>
+<element id="6" value="[25;40]"/>
+<element id="7" value="[45;55]"/>
+<element id="8" value="[65;80]"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="50.0" originX="20" originY="40">
+<visualMalleableElement id="0" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="2" color="FF0000" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="3" color="FF0000" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="4" color="FFFF00" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="6" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="7" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+</visualArray>
+<message content="The red intervals (if any) and the yellow one are included in the independent set, while the gray ones (if any) are not included in the independent set.">
+</message>
+</structure>
+<structure name="Right bound" type="Matrix">
+<matrix height="2" width="9" type="IntInformation">
+	<element id="0" value="30"/>
+	<element id="1" value="40"/>
+	<element id="2" value="50"/>
+	<element id="3" value="55"/>
+	<element id="4" value="70"/>
+	<element id="5" value="75"/>
+	<element id="6" value="80"/>
+	<element id="7" value="95"/>
+	<element id="8" value="100"/>
+	<element id="9" value="2"/>
+	<element id="10" value="6"/>
+	<element id="11" value="3"/>
+	<element id="12" value="7"/>
+	<element id="13" value="4"/>
+	<element id="14" value="0"/>
+	<element id="15" value="8"/>
+	<element id="16" value="1"/>
+	<element id="17" value="5"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="100">
+<visualElement id="0" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="1" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="2" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="3" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="4" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="5" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="6" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="9" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="10" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="11" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="12" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="13" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="14" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="15" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="16" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="17" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  IndependentSet( [a[0],b[0]],...,[a[n-1],b[n-1]] ):"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      rightBound[i] = &#60;b[i],i>;"/>
+<element id="3" value=" 4    }"/>
+<element id="4" value=" 5    IncreasingSort( rightBound );"/>
+<element id="5" value=" 6    last = -1;"/>
+<element id="6" value=" 7    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="7" value=" 8      &#60;x,i> = bound[j];"/>
+<element id="8" value=" 9      IF ((last &#60; 0) || (a[i] > b[last])) {"/>
+<element id="9" value="10        assign[i] = true;"/>
+<element id="10" value="11        last = i;"/>
+<element id="11" value="12      } ELSE {"/>
+<element id="12" value="13        assign[i] = false;"/>
+<element id="13" value="14      }"/>
+<element id="14" value="15    }"/>
+<element id="15" value="16    RETURN assign;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="20" originY="200">
+<visualMalleableElement id="12" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="21">
+<structure name="A" type="Array">
+<array size="9" type="IntPairInformation">
+<element id="0" value="[15;75]"/>
+<element id="1" value="[90;95]"/>
+<element id="2" value="[20;30]"/>
+<element id="3" value="[35;50]"/>
+<element id="4" value="[60;70]"/>
+<element id="5" value="[85;100]"/>
+<element id="6" value="[25;40]"/>
+<element id="7" value="[45;55]"/>
+<element id="8" value="[65;80]"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="50.0" originX="20" originY="40">
+<visualMalleableElement id="0" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="2" color="FF0000" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="3" color="FF0000" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="4" color="FFFF00" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="6" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="7" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="8" color="00FFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+</visualArray>
+<message content="A new right extreme (colored in green) is analyzed: the extreme corresponds to the azure interval.">
+</message>
+</structure>
+<structure name="Right bound" type="Matrix">
+<matrix height="2" width="9" type="IntInformation">
+	<element id="0" value="30"/>
+	<element id="1" value="40"/>
+	<element id="2" value="50"/>
+	<element id="3" value="55"/>
+	<element id="4" value="70"/>
+	<element id="5" value="75"/>
+	<element id="6" value="80"/>
+	<element id="7" value="95"/>
+	<element id="8" value="100"/>
+	<element id="9" value="2"/>
+	<element id="10" value="6"/>
+	<element id="11" value="3"/>
+	<element id="12" value="7"/>
+	<element id="13" value="4"/>
+	<element id="14" value="0"/>
+	<element id="15" value="8"/>
+	<element id="16" value="1"/>
+	<element id="17" value="5"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="100">
+<visualElement id="0" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="1" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="2" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="3" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="4" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="5" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="6" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="9" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="10" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="11" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="12" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="13" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="14" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="15" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="16" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="17" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  IndependentSet( [a[0],b[0]],...,[a[n-1],b[n-1]] ):"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      rightBound[i] = &#60;b[i],i>;"/>
+<element id="3" value=" 4    }"/>
+<element id="4" value=" 5    IncreasingSort( rightBound );"/>
+<element id="5" value=" 6    last = -1;"/>
+<element id="6" value=" 7    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="7" value=" 8      &#60;x,i> = bound[j];"/>
+<element id="8" value=" 9      IF ((last &#60; 0) || (a[i] > b[last])) {"/>
+<element id="9" value="10        assign[i] = true;"/>
+<element id="10" value="11        last = i;"/>
+<element id="11" value="12      } ELSE {"/>
+<element id="12" value="13        assign[i] = false;"/>
+<element id="13" value="14      }"/>
+<element id="14" value="15    }"/>
+<element id="15" value="16    RETURN assign;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="20" originY="200">
+<visualMalleableElement id="7" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="22">
+<structure name="A" type="Array">
+<array size="9" type="IntPairInformation">
+<element id="0" value="[15;75]"/>
+<element id="1" value="[90;95]"/>
+<element id="2" value="[20;30]"/>
+<element id="3" value="[35;50]"/>
+<element id="4" value="[60;70]"/>
+<element id="5" value="[85;100]"/>
+<element id="6" value="[25;40]"/>
+<element id="7" value="[45;55]"/>
+<element id="8" value="[65;80]"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="50.0" originX="20" originY="40">
+<visualMalleableElement id="0" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="2" color="FF0000" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="3" color="FF0000" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="4" color="FFFF00" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="6" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="7" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="8" color="00FFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+</visualArray>
+<message content="The azure interval begins before the end of the yellow one: then, this interval cannot be included in the independent set.">
+</message>
+</structure>
+<structure name="Right bound" type="Matrix">
+<matrix height="2" width="9" type="IntInformation">
+	<element id="0" value="30"/>
+	<element id="1" value="40"/>
+	<element id="2" value="50"/>
+	<element id="3" value="55"/>
+	<element id="4" value="70"/>
+	<element id="5" value="75"/>
+	<element id="6" value="80"/>
+	<element id="7" value="95"/>
+	<element id="8" value="100"/>
+	<element id="9" value="2"/>
+	<element id="10" value="6"/>
+	<element id="11" value="3"/>
+	<element id="12" value="7"/>
+	<element id="13" value="4"/>
+	<element id="14" value="0"/>
+	<element id="15" value="8"/>
+	<element id="16" value="1"/>
+	<element id="17" value="5"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="100">
+<visualElement id="0" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="1" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="2" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="3" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="4" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="5" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="6" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="9" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="10" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="11" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="12" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="13" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="14" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="15" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="16" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="17" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  IndependentSet( [a[0],b[0]],...,[a[n-1],b[n-1]] ):"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      rightBound[i] = &#60;b[i],i>;"/>
+<element id="3" value=" 4    }"/>
+<element id="4" value=" 5    IncreasingSort( rightBound );"/>
+<element id="5" value=" 6    last = -1;"/>
+<element id="6" value=" 7    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="7" value=" 8      &#60;x,i> = bound[j];"/>
+<element id="8" value=" 9      IF ((last &#60; 0) || (a[i] > b[last])) {"/>
+<element id="9" value="10        assign[i] = true;"/>
+<element id="10" value="11        last = i;"/>
+<element id="11" value="12      } ELSE {"/>
+<element id="12" value="13        assign[i] = false;"/>
+<element id="13" value="14      }"/>
+<element id="14" value="15    }"/>
+<element id="15" value="16    RETURN assign;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="20" originY="200">
+<visualMalleableElement id="8" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="23">
+<structure name="A" type="Array">
+<array size="9" type="IntPairInformation">
+<element id="0" value="[15;75]"/>
+<element id="1" value="[90;95]"/>
+<element id="2" value="[20;30]"/>
+<element id="3" value="[35;50]"/>
+<element id="4" value="[60;70]"/>
+<element id="5" value="[85;100]"/>
+<element id="6" value="[25;40]"/>
+<element id="7" value="[45;55]"/>
+<element id="8" value="[65;80]"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="50.0" originX="20" originY="40">
+<visualMalleableElement id="0" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="1" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="2" color="FF0000" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="3" color="FF0000" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="4" color="FFFF00" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="6" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="7" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="8" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+</visualArray>
+<message content="The red intervals (if any) and the yellow one are included in the independent set, while the gray ones (if any) are not included in the independent set.">
+</message>
+</structure>
+<structure name="Right bound" type="Matrix">
+<matrix height="2" width="9" type="IntInformation">
+	<element id="0" value="30"/>
+	<element id="1" value="40"/>
+	<element id="2" value="50"/>
+	<element id="3" value="55"/>
+	<element id="4" value="70"/>
+	<element id="5" value="75"/>
+	<element id="6" value="80"/>
+	<element id="7" value="95"/>
+	<element id="8" value="100"/>
+	<element id="9" value="2"/>
+	<element id="10" value="6"/>
+	<element id="11" value="3"/>
+	<element id="12" value="7"/>
+	<element id="13" value="4"/>
+	<element id="14" value="0"/>
+	<element id="15" value="8"/>
+	<element id="16" value="1"/>
+	<element id="17" value="5"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="100">
+<visualElement id="0" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="1" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="2" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="3" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="4" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="5" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="6" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="7" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="9" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="10" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="11" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="12" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="13" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="14" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="15" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="16" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="17" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  IndependentSet( [a[0],b[0]],...,[a[n-1],b[n-1]] ):"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      rightBound[i] = &#60;b[i],i>;"/>
+<element id="3" value=" 4    }"/>
+<element id="4" value=" 5    IncreasingSort( rightBound );"/>
+<element id="5" value=" 6    last = -1;"/>
+<element id="6" value=" 7    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="7" value=" 8      &#60;x,i> = bound[j];"/>
+<element id="8" value=" 9      IF ((last &#60; 0) || (a[i] > b[last])) {"/>
+<element id="9" value="10        assign[i] = true;"/>
+<element id="10" value="11        last = i;"/>
+<element id="11" value="12      } ELSE {"/>
+<element id="12" value="13        assign[i] = false;"/>
+<element id="13" value="14      }"/>
+<element id="14" value="15    }"/>
+<element id="15" value="16    RETURN assign;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="20" originY="200">
+<visualMalleableElement id="12" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="24">
+<structure name="A" type="Array">
+<array size="9" type="IntPairInformation">
+<element id="0" value="[15;75]"/>
+<element id="1" value="[90;95]"/>
+<element id="2" value="[20;30]"/>
+<element id="3" value="[35;50]"/>
+<element id="4" value="[60;70]"/>
+<element id="5" value="[85;100]"/>
+<element id="6" value="[25;40]"/>
+<element id="7" value="[45;55]"/>
+<element id="8" value="[65;80]"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="50.0" originX="20" originY="40">
+<visualMalleableElement id="0" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="1" color="00FFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="2" color="FF0000" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="3" color="FF0000" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="4" color="FFFF00" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="6" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="7" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="8" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+</visualArray>
+<message content="A new right extreme (colored in green) is analyzed: the extreme corresponds to the azure interval.">
+</message>
+</structure>
+<structure name="Right bound" type="Matrix">
+<matrix height="2" width="9" type="IntInformation">
+	<element id="0" value="30"/>
+	<element id="1" value="40"/>
+	<element id="2" value="50"/>
+	<element id="3" value="55"/>
+	<element id="4" value="70"/>
+	<element id="5" value="75"/>
+	<element id="6" value="80"/>
+	<element id="7" value="95"/>
+	<element id="8" value="100"/>
+	<element id="9" value="2"/>
+	<element id="10" value="6"/>
+	<element id="11" value="3"/>
+	<element id="12" value="7"/>
+	<element id="13" value="4"/>
+	<element id="14" value="0"/>
+	<element id="15" value="8"/>
+	<element id="16" value="1"/>
+	<element id="17" value="5"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="100">
+<visualElement id="0" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="1" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="2" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="3" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="4" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="5" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="6" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="7" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="9" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="10" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="11" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="12" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="13" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="14" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="15" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="16" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="17" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  IndependentSet( [a[0],b[0]],...,[a[n-1],b[n-1]] ):"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      rightBound[i] = &#60;b[i],i>;"/>
+<element id="3" value=" 4    }"/>
+<element id="4" value=" 5    IncreasingSort( rightBound );"/>
+<element id="5" value=" 6    last = -1;"/>
+<element id="6" value=" 7    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="7" value=" 8      &#60;x,i> = bound[j];"/>
+<element id="8" value=" 9      IF ((last &#60; 0) || (a[i] > b[last])) {"/>
+<element id="9" value="10        assign[i] = true;"/>
+<element id="10" value="11        last = i;"/>
+<element id="11" value="12      } ELSE {"/>
+<element id="12" value="13        assign[i] = false;"/>
+<element id="13" value="14      }"/>
+<element id="14" value="15    }"/>
+<element id="15" value="16    RETURN assign;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="20" originY="200">
+<visualMalleableElement id="7" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="25">
+<structure name="A" type="Array">
+<array size="9" type="IntPairInformation">
+<element id="0" value="[15;75]"/>
+<element id="1" value="[90;95]"/>
+<element id="2" value="[20;30]"/>
+<element id="3" value="[35;50]"/>
+<element id="4" value="[60;70]"/>
+<element id="5" value="[85;100]"/>
+<element id="6" value="[25;40]"/>
+<element id="7" value="[45;55]"/>
+<element id="8" value="[65;80]"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="50.0" originX="20" originY="40">
+<visualMalleableElement id="0" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="1" color="00FFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="2" color="FF0000" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="3" color="FF0000" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="4" color="FFFF00" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="6" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="7" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="8" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+</visualArray>
+<message content="The azure interval begins after the end of the yellow one (if any): then, this interval can be included in the independent set.">
+</message>
+</structure>
+<structure name="Right bound" type="Matrix">
+<matrix height="2" width="9" type="IntInformation">
+	<element id="0" value="30"/>
+	<element id="1" value="40"/>
+	<element id="2" value="50"/>
+	<element id="3" value="55"/>
+	<element id="4" value="70"/>
+	<element id="5" value="75"/>
+	<element id="6" value="80"/>
+	<element id="7" value="95"/>
+	<element id="8" value="100"/>
+	<element id="9" value="2"/>
+	<element id="10" value="6"/>
+	<element id="11" value="3"/>
+	<element id="12" value="7"/>
+	<element id="13" value="4"/>
+	<element id="14" value="0"/>
+	<element id="15" value="8"/>
+	<element id="16" value="1"/>
+	<element id="17" value="5"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="100">
+<visualElement id="0" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="1" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="2" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="3" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="4" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="5" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="6" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="7" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="9" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="10" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="11" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="12" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="13" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="14" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="15" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="16" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="17" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  IndependentSet( [a[0],b[0]],...,[a[n-1],b[n-1]] ):"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      rightBound[i] = &#60;b[i],i>;"/>
+<element id="3" value=" 4    }"/>
+<element id="4" value=" 5    IncreasingSort( rightBound );"/>
+<element id="5" value=" 6    last = -1;"/>
+<element id="6" value=" 7    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="7" value=" 8      &#60;x,i> = bound[j];"/>
+<element id="8" value=" 9      IF ((last &#60; 0) || (a[i] > b[last])) {"/>
+<element id="9" value="10        assign[i] = true;"/>
+<element id="10" value="11        last = i;"/>
+<element id="11" value="12      } ELSE {"/>
+<element id="12" value="13        assign[i] = false;"/>
+<element id="13" value="14      }"/>
+<element id="14" value="15    }"/>
+<element id="15" value="16    RETURN assign;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="20" originY="200">
+<visualMalleableElement id="8" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="26">
+<structure name="A" type="Array">
+<array size="9" type="IntPairInformation">
+<element id="0" value="[15;75]"/>
+<element id="1" value="[90;95]"/>
+<element id="2" value="[20;30]"/>
+<element id="3" value="[35;50]"/>
+<element id="4" value="[60;70]"/>
+<element id="5" value="[85;100]"/>
+<element id="6" value="[25;40]"/>
+<element id="7" value="[45;55]"/>
+<element id="8" value="[65;80]"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="50.0" originX="20" originY="40">
+<visualMalleableElement id="0" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="1" color="FFFF00" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="2" color="FF0000" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="3" color="FF0000" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="4" color="FF0000" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="6" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="7" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="8" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+</visualArray>
+<message content="The yellow interval has been included as the last one in the independent set together with the other red intervals (if any).">
+</message>
+</structure>
+<structure name="Right bound" type="Matrix">
+<matrix height="2" width="9" type="IntInformation">
+	<element id="0" value="30"/>
+	<element id="1" value="40"/>
+	<element id="2" value="50"/>
+	<element id="3" value="55"/>
+	<element id="4" value="70"/>
+	<element id="5" value="75"/>
+	<element id="6" value="80"/>
+	<element id="7" value="95"/>
+	<element id="8" value="100"/>
+	<element id="9" value="2"/>
+	<element id="10" value="6"/>
+	<element id="11" value="3"/>
+	<element id="12" value="7"/>
+	<element id="13" value="4"/>
+	<element id="14" value="0"/>
+	<element id="15" value="8"/>
+	<element id="16" value="1"/>
+	<element id="17" value="5"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="100">
+<visualElement id="0" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="1" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="2" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="3" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="4" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="5" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="6" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="7" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="8" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+<visualElement id="9" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="10" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="11" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="12" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="13" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="14" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="15" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="16" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="17" color="FFFFFF" font="Monospaced-PLAIN-14"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  IndependentSet( [a[0],b[0]],...,[a[n-1],b[n-1]] ):"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      rightBound[i] = &#60;b[i],i>;"/>
+<element id="3" value=" 4    }"/>
+<element id="4" value=" 5    IncreasingSort( rightBound );"/>
+<element id="5" value=" 6    last = -1;"/>
+<element id="6" value=" 7    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="7" value=" 8      &#60;x,i> = bound[j];"/>
+<element id="8" value=" 9      IF ((last &#60; 0) || (a[i] > b[last])) {"/>
+<element id="9" value="10        assign[i] = true;"/>
+<element id="10" value="11        last = i;"/>
+<element id="11" value="12      } ELSE {"/>
+<element id="12" value="13        assign[i] = false;"/>
+<element id="13" value="14      }"/>
+<element id="14" value="15    }"/>
+<element id="15" value="16    RETURN assign;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="20" originY="200">
+<visualMalleableElement id="9" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="400"/>
+<visualMalleableElement id="10" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="27">
+<structure name="A" type="Array">
+<array size="9" type="IntPairInformation">
+<element id="0" value="[15;75]"/>
+<element id="1" value="[90;95]"/>
+<element id="2" value="[20;30]"/>
+<element id="3" value="[35;50]"/>
+<element id="4" value="[60;70]"/>
+<element id="5" value="[85;100]"/>
+<element id="6" value="[25;40]"/>
+<element id="7" value="[45;55]"/>
+<element id="8" value="[65;80]"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="50.0" originX="20" originY="40">
+<visualMalleableElement id="0" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="1" color="FFFF00" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="2" color="FF0000" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="3" color="FF0000" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="4" color="FF0000" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="5" color="00FFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="6" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="7" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="8" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+</visualArray>
+<message content="A new right extreme (colored in green) is analyzed: the extreme corresponds to the azure interval.">
+</message>
+</structure>
+<structure name="Right bound" type="Matrix">
+<matrix height="2" width="9" type="IntInformation">
+	<element id="0" value="30"/>
+	<element id="1" value="40"/>
+	<element id="2" value="50"/>
+	<element id="3" value="55"/>
+	<element id="4" value="70"/>
+	<element id="5" value="75"/>
+	<element id="6" value="80"/>
+	<element id="7" value="95"/>
+	<element id="8" value="100"/>
+	<element id="9" value="2"/>
+	<element id="10" value="6"/>
+	<element id="11" value="3"/>
+	<element id="12" value="7"/>
+	<element id="13" value="4"/>
+	<element id="14" value="0"/>
+	<element id="15" value="8"/>
+	<element id="16" value="1"/>
+	<element id="17" value="5"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="100">
+<visualElement id="0" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="1" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="2" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="3" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="4" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="5" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="6" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="7" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="8" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="9" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="10" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="11" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="12" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="13" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="14" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="15" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="16" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="17" color="00FF00" font="Monospaced-PLAIN-14"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  IndependentSet( [a[0],b[0]],...,[a[n-1],b[n-1]] ):"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      rightBound[i] = &#60;b[i],i>;"/>
+<element id="3" value=" 4    }"/>
+<element id="4" value=" 5    IncreasingSort( rightBound );"/>
+<element id="5" value=" 6    last = -1;"/>
+<element id="6" value=" 7    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="7" value=" 8      &#60;x,i> = bound[j];"/>
+<element id="8" value=" 9      IF ((last &#60; 0) || (a[i] > b[last])) {"/>
+<element id="9" value="10        assign[i] = true;"/>
+<element id="10" value="11        last = i;"/>
+<element id="11" value="12      } ELSE {"/>
+<element id="12" value="13        assign[i] = false;"/>
+<element id="13" value="14      }"/>
+<element id="14" value="15    }"/>
+<element id="15" value="16    RETURN assign;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="20" originY="200">
+<visualMalleableElement id="7" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="28">
+<structure name="A" type="Array">
+<array size="9" type="IntPairInformation">
+<element id="0" value="[15;75]"/>
+<element id="1" value="[90;95]"/>
+<element id="2" value="[20;30]"/>
+<element id="3" value="[35;50]"/>
+<element id="4" value="[60;70]"/>
+<element id="5" value="[85;100]"/>
+<element id="6" value="[25;40]"/>
+<element id="7" value="[45;55]"/>
+<element id="8" value="[65;80]"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="50.0" originX="20" originY="40">
+<visualMalleableElement id="0" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="1" color="FFFF00" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="2" color="FF0000" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="3" color="FF0000" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="4" color="FF0000" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="5" color="00FFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="6" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="7" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="8" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+</visualArray>
+<message content="The azure interval begins before the end of the yellow one: then, this interval cannot be included in the independent set.">
+</message>
+</structure>
+<structure name="Right bound" type="Matrix">
+<matrix height="2" width="9" type="IntInformation">
+	<element id="0" value="30"/>
+	<element id="1" value="40"/>
+	<element id="2" value="50"/>
+	<element id="3" value="55"/>
+	<element id="4" value="70"/>
+	<element id="5" value="75"/>
+	<element id="6" value="80"/>
+	<element id="7" value="95"/>
+	<element id="8" value="100"/>
+	<element id="9" value="2"/>
+	<element id="10" value="6"/>
+	<element id="11" value="3"/>
+	<element id="12" value="7"/>
+	<element id="13" value="4"/>
+	<element id="14" value="0"/>
+	<element id="15" value="8"/>
+	<element id="16" value="1"/>
+	<element id="17" value="5"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="100">
+<visualElement id="0" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="1" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="2" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="3" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="4" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="5" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="6" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="7" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="8" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="9" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="10" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="11" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="12" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="13" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="14" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="15" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="16" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="17" color="00FF00" font="Monospaced-PLAIN-14"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  IndependentSet( [a[0],b[0]],...,[a[n-1],b[n-1]] ):"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      rightBound[i] = &#60;b[i],i>;"/>
+<element id="3" value=" 4    }"/>
+<element id="4" value=" 5    IncreasingSort( rightBound );"/>
+<element id="5" value=" 6    last = -1;"/>
+<element id="6" value=" 7    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="7" value=" 8      &#60;x,i> = bound[j];"/>
+<element id="8" value=" 9      IF ((last &#60; 0) || (a[i] > b[last])) {"/>
+<element id="9" value="10        assign[i] = true;"/>
+<element id="10" value="11        last = i;"/>
+<element id="11" value="12      } ELSE {"/>
+<element id="12" value="13        assign[i] = false;"/>
+<element id="13" value="14      }"/>
+<element id="14" value="15    }"/>
+<element id="15" value="16    RETURN assign;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="20" originY="200">
+<visualMalleableElement id="8" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="29">
+<structure name="A" type="Array">
+<array size="9" type="IntPairInformation">
+<element id="0" value="[15;75]"/>
+<element id="1" value="[90;95]"/>
+<element id="2" value="[20;30]"/>
+<element id="3" value="[35;50]"/>
+<element id="4" value="[60;70]"/>
+<element id="5" value="[85;100]"/>
+<element id="6" value="[25;40]"/>
+<element id="7" value="[45;55]"/>
+<element id="8" value="[65;80]"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="50.0" originX="20" originY="40">
+<visualMalleableElement id="0" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="1" color="FFFF00" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="2" color="FF0000" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="3" color="FF0000" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="4" color="FF0000" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="5" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="6" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="7" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="8" color="AAAAAA" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+</visualArray>
+<message content="The red intervals (if any) and the yellow one are included in the independent set, while the gray ones (if any) are not included in the independent set.">
+</message>
+</structure>
+<structure name="Right bound" type="Matrix">
+<matrix height="2" width="9" type="IntInformation">
+	<element id="0" value="30"/>
+	<element id="1" value="40"/>
+	<element id="2" value="50"/>
+	<element id="3" value="55"/>
+	<element id="4" value="70"/>
+	<element id="5" value="75"/>
+	<element id="6" value="80"/>
+	<element id="7" value="95"/>
+	<element id="8" value="100"/>
+	<element id="9" value="2"/>
+	<element id="10" value="6"/>
+	<element id="11" value="3"/>
+	<element id="12" value="7"/>
+	<element id="13" value="4"/>
+	<element id="14" value="0"/>
+	<element id="15" value="8"/>
+	<element id="16" value="1"/>
+	<element id="17" value="5"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-14" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="20" originY="100">
+<visualElement id="0" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="1" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="2" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="3" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="4" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="5" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="6" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="7" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="8" color="00FF00" font="Monospaced-PLAIN-14"/>
+<visualElement id="9" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="10" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="11" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="12" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="13" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="14" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="15" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="16" color="EEEEEE" font="Monospaced-PLAIN-14"/>
+<visualElement id="17" color="00FF00" font="Monospaced-PLAIN-14"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  IndependentSet( [a[0],b[0]],...,[a[n-1],b[n-1]] ):"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      rightBound[i] = &#60;b[i],i>;"/>
+<element id="3" value=" 4    }"/>
+<element id="4" value=" 5    IncreasingSort( rightBound );"/>
+<element id="5" value=" 6    last = -1;"/>
+<element id="6" value=" 7    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="7" value=" 8      &#60;x,i> = bound[j];"/>
+<element id="8" value=" 9      IF ((last &#60; 0) || (a[i] > b[last])) {"/>
+<element id="9" value="10        assign[i] = true;"/>
+<element id="10" value="11        last = i;"/>
+<element id="11" value="12      } ELSE {"/>
+<element id="12" value="13        assign[i] = false;"/>
+<element id="13" value="14      }"/>
+<element id="14" value="15    }"/>
+<element id="15" value="16    RETURN assign;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="20" originY="200">
+<visualMalleableElement id="12" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="30">
+<structure name="A" type="Array">
+<array size="9" type="IntPairInformation">
+<element id="0" value="[15;75]"/>
+<element id="1" value="[90;95]"/>
+<element id="2" value="[20;30]"/>
+<element id="3" value="[35;50]"/>
+<element id="4" value="[60;70]"/>
+<element id="5" value="[85;100]"/>
+<element id="6" value="[25;40]"/>
+<element id="7" value="[45;55]"/>
+<element id="8" value="[65;80]"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="50.0" originX="20" originY="40">
+<visualMalleableElement id="0" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="1" color="FF0000" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="2" color="FF0000" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="3" color="FF0000" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="4" color="FF0000" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="5" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="6" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="7" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+<visualMalleableElement id="8" color="FFFFFF" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="50.0"/>
+</visualArray>
+<message content="The maximum independent set has been computed and includes the red intervals.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  IndependentSet( [a[0],b[0]],...,[a[n-1],b[n-1]] ):"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60; n; i = i + 1) {"/>
+<element id="2" value=" 3      rightBound[i] = &#60;b[i],i>;"/>
+<element id="3" value=" 4    }"/>
+<element id="4" value=" 5    IncreasingSort( rightBound );"/>
+<element id="5" value=" 6    last = -1;"/>
+<element id="6" value=" 7    FOR (j = 0; j &#60; n; j = j + 1) {"/>
+<element id="7" value=" 8      &#60;x,i> = bound[j];"/>
+<element id="8" value=" 9      IF ((last &#60; 0) || (a[i] > b[last])) {"/>
+<element id="9" value="10        assign[i] = true;"/>
+<element id="10" value="11        last = i;"/>
+<element id="11" value="12      } ELSE {"/>
+<element id="12" value="13        assign[i] = false;"/>
+<element id="13" value="14      }"/>
+<element id="14" value="15    }"/>
+<element id="15" value="16    RETURN assign;"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="15.0" defaultShapeWidth="400.0" originX="20" originY="200">
+<visualMalleableElement id="15" color="AAAAAA" font="Monospaced-PLAIN-12" shapeHeight="15" shapeWidth="400"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+</algorithm>

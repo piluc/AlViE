@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure name="Figura 6.4" type="Matrix">
+	<matrix type="StringInformation" height="9" width="9">
+		<element id="1" value="3" />
+		<element id="3" value="2" />
+		<element id="5" value="4" />
+		<element id="7" value="0" />
+		<element id="9" value="1" />
+		<element id="11" value="0" />
+		<element id="13" value="2" />
+		<element id="15" value="4" />
+		<element id="17" value="3" />
+		<element id="19" value="3" />
+		<element id="21" value="2" />
+		<element id="23" value="4" />
+		<element id="25" value="2" />
+		<element id="27" value="4" />
+		<element id="29" value="6" />
+		<element id="31" value="5" />
+		<element id="33" value="2" />
+		<element id="35" value="1" />
+		<element id="37" value="0" />
+		<element id="39" value="7" />
+		<element id="41" value="3" />
+		<element id="43" value="4" />
+		<element id="45" value="4" />
+		<element id="47" value="4" />
+		<element id="49" value="5" />
+		<element id="51" value="2" />
+		<element id="53" value="1" />
+		<element id="55" value="3" />
+		<element id="57" value="3" />
+		<element id="59" value="0" />
+		<element id="61" value="2" />
+		<element id="63" value="5" />
+		<element id="65" value="6" />
+		<element id="67" value="8" />
+		<element id="69" value="5" />
+		<element id="71" value="3" />
+		<element id="73" value="1" />
+		<element id="75" value="3" />
+		<element id="77" value="2" />
+		<element id="79" value="2" />
+	</matrix>
+</structure>

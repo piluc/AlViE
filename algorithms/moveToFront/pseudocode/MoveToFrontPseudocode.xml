@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure name="Move to front" type="Pseudocode">
+	<pseudocode size="11">
+		<element id="0" value=" 1  MoveToFront( a, k ):" />
+		<element id="1" value=" 2    p = a;" />
+		<element id="2" value=" 3    If (p != null || p.data == k) RETURN p;" />
+		<element id="3" value=" 4    WHILE ((p.succ != null) &#38;&#38; (p.succ.data != k))" />
+		<element id="4" value=" 5      p = p.succ;" />
+		<element id="5" value=" 6    IF (p.succ == null) RETURN null;" />
+		<element id="6" value=" 7    tmp = a;" />
+		<element id="7" value=" 8    a = p.succ;" />
+		<element id="8" value=" 9    p.succ = p.succ.succ;" />
+		<element id="9" value="10    a.succ = tmp;" />
+		<element id="10" value="11    RETURN a;" />
+	</pseudocode>
+</structure>

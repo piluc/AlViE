@@ -1,0 +1,3124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm name="Partition">
+<step number="0">
+<structure name="a" type="Array">
+<array size="5" type="IntInformation">
+<element id="0" value="3"/>
+<element id="1" value="2"/>
+<element id="2" value="1"/>
+<element id="3" value="4"/>
+<element id="4" value="2"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="10" originY="50">
+</visualArray>
+<message content="Array of integers that we want to partition.">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  Partition( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60;= n; i = i+1)"/>
+<element id="2" value=" 3      FOR (j = 0; j &#60;= s; j = j +1) {"/>
+<element id="3" value=" 4        p[i][j] = FALSE;"/>
+<element id="4" value=" 5      }"/>
+<element id="5" value=" 6    p[0][0] = TRUE;"/>
+<element id="6" value=" 7    FOR (i = 1; i &#60;= n; i = i+1)"/>
+<element id="7" value=" 8      FOR (j = 0; j &#60;= s; j = j+1) {"/>
+<element id="8" value=" 9        IF (p[i-1][j]) {"/>
+<element id="9" value="10          p[i][j] = TRUE;"/>
+<element id="10" value="11        }"/>
+<element id="11" value="12        IF (!p[i][j] &#38;&#38; j>=a[i-1] &#38;&#38; p[i-1][j-a[i-1]]) {"/>
+<element id="12" value="13          p[i][j] = TRUE;"/>
+<element id="13" value="14        }"/>
+<element id="14" value="15      }"/>
+<element id="15" value="16    RETURN p[n][s];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="420.0" originX="510" originY="40">
+<visualMalleableElement id="0" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="420"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="1">
+<structure name="a" type="Array">
+<array size="5" type="IntInformation">
+<element id="0" value="3"/>
+<element id="1" value="2"/>
+<element id="2" value="1"/>
+<element id="3" value="4"/>
+<element id="4" value="2"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="10" originY="50">
+</visualArray>
+<message content="The matrix has been initialized.">
+</message>
+</structure>
+<structure name="p" type="Matrix">
+<matrix height="7" width="8" type="StringInformation">
+	<element id="0" value=" "/>
+	<element id="1" value="0"/>
+	<element id="2" value="1"/>
+	<element id="3" value="2"/>
+	<element id="4" value="3"/>
+	<element id="5" value="4"/>
+	<element id="6" value="5"/>
+	<element id="7" value="6"/>
+	<element id="8" value="{}"/>
+	<element id="9" value="TRUE"/>
+	<element id="10" value="FALSE"/>
+	<element id="11" value="FALSE"/>
+	<element id="12" value="FALSE"/>
+	<element id="13" value="FALSE"/>
+	<element id="14" value="FALSE"/>
+	<element id="15" value="FALSE"/>
+	<element id="16" value="{3}"/>
+	<element id="17" value="FALSE"/>
+	<element id="18" value="FALSE"/>
+	<element id="19" value="FALSE"/>
+	<element id="20" value="FALSE"/>
+	<element id="21" value="FALSE"/>
+	<element id="22" value="FALSE"/>
+	<element id="23" value="FALSE"/>
+	<element id="24" value="{3,2}"/>
+	<element id="25" value="FALSE"/>
+	<element id="26" value="FALSE"/>
+	<element id="27" value="FALSE"/>
+	<element id="28" value="FALSE"/>
+	<element id="29" value="FALSE"/>
+	<element id="30" value="FALSE"/>
+	<element id="31" value="FALSE"/>
+	<element id="32" value="{3,2,1}"/>
+	<element id="33" value="FALSE"/>
+	<element id="34" value="FALSE"/>
+	<element id="35" value="FALSE"/>
+	<element id="36" value="FALSE"/>
+	<element id="37" value="FALSE"/>
+	<element id="38" value="FALSE"/>
+	<element id="39" value="FALSE"/>
+	<element id="40" value="{3,2,1,4}"/>
+	<element id="41" value="FALSE"/>
+	<element id="42" value="FALSE"/>
+	<element id="43" value="FALSE"/>
+	<element id="44" value="FALSE"/>
+	<element id="45" value="FALSE"/>
+	<element id="46" value="FALSE"/>
+	<element id="47" value="FALSE"/>
+	<element id="48" value="{3,2,1,4,2}"/>
+	<element id="49" value="FALSE"/>
+	<element id="50" value="FALSE"/>
+	<element id="51" value="FALSE"/>
+	<element id="52" value="FALSE"/>
+	<element id="53" value="FALSE"/>
+	<element id="54" value="FALSE"/>
+	<element id="55" value="FALSE"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="60.0" originX="10" originY="100">
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  Partition( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60;= n; i = i+1)"/>
+<element id="2" value=" 3      FOR (j = 0; j &#60;= s; j = j +1) {"/>
+<element id="3" value=" 4        p[i][j] = FALSE;"/>
+<element id="4" value=" 5      }"/>
+<element id="5" value=" 6    p[0][0] = TRUE;"/>
+<element id="6" value=" 7    FOR (i = 1; i &#60;= n; i = i+1)"/>
+<element id="7" value=" 8      FOR (j = 0; j &#60;= s; j = j+1) {"/>
+<element id="8" value=" 9        IF (p[i-1][j]) {"/>
+<element id="9" value="10          p[i][j] = TRUE;"/>
+<element id="10" value="11        }"/>
+<element id="11" value="12        IF (!p[i][j] &#38;&#38; j>=a[i-1] &#38;&#38; p[i-1][j-a[i-1]]) {"/>
+<element id="12" value="13          p[i][j] = TRUE;"/>
+<element id="13" value="14        }"/>
+<element id="14" value="15      }"/>
+<element id="15" value="16    RETURN p[n][s];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="420.0" originX="510" originY="40">
+<visualMalleableElement id="1" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="420"/>
+<visualMalleableElement id="2" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="420"/>
+<visualMalleableElement id="3" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="420"/>
+<visualMalleableElement id="4" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="420"/>
+<visualMalleableElement id="5" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="420"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="2">
+<structure name="a" type="Array">
+<array size="5" type="IntInformation">
+<element id="0" value="3"/>
+<element id="1" value="2"/>
+<element id="2" value="1"/>
+<element id="3" value="4"/>
+<element id="4" value="2"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="10" originY="50">
+</visualArray>
+<message content="The gray element can be set equal to TRUE since the element immediately above (in azure) is already TRUE.">
+</message>
+</structure>
+<structure name="p" type="Matrix">
+<matrix height="7" width="8" type="StringInformation">
+	<element id="0" value=" "/>
+	<element id="1" value="0"/>
+	<element id="2" value="1"/>
+	<element id="3" value="2"/>
+	<element id="4" value="3"/>
+	<element id="5" value="4"/>
+	<element id="6" value="5"/>
+	<element id="7" value="6"/>
+	<element id="8" value="{}"/>
+	<element id="9" value="TRUE"/>
+	<element id="10" value="FALSE"/>
+	<element id="11" value="FALSE"/>
+	<element id="12" value="FALSE"/>
+	<element id="13" value="FALSE"/>
+	<element id="14" value="FALSE"/>
+	<element id="15" value="FALSE"/>
+	<element id="16" value="{3}"/>
+	<element id="17" value="FALSE"/>
+	<element id="18" value="FALSE"/>
+	<element id="19" value="FALSE"/>
+	<element id="20" value="FALSE"/>
+	<element id="21" value="FALSE"/>
+	<element id="22" value="FALSE"/>
+	<element id="23" value="FALSE"/>
+	<element id="24" value="{3,2}"/>
+	<element id="25" value="FALSE"/>
+	<element id="26" value="FALSE"/>
+	<element id="27" value="FALSE"/>
+	<element id="28" value="FALSE"/>
+	<element id="29" value="FALSE"/>
+	<element id="30" value="FALSE"/>
+	<element id="31" value="FALSE"/>
+	<element id="32" value="{3,2,1}"/>
+	<element id="33" value="FALSE"/>
+	<element id="34" value="FALSE"/>
+	<element id="35" value="FALSE"/>
+	<element id="36" value="FALSE"/>
+	<element id="37" value="FALSE"/>
+	<element id="38" value="FALSE"/>
+	<element id="39" value="FALSE"/>
+	<element id="40" value="{3,2,1,4}"/>
+	<element id="41" value="FALSE"/>
+	<element id="42" value="FALSE"/>
+	<element id="43" value="FALSE"/>
+	<element id="44" value="FALSE"/>
+	<element id="45" value="FALSE"/>
+	<element id="46" value="FALSE"/>
+	<element id="47" value="FALSE"/>
+	<element id="48" value="{3,2,1,4,2}"/>
+	<element id="49" value="FALSE"/>
+	<element id="50" value="FALSE"/>
+	<element id="51" value="FALSE"/>
+	<element id="52" value="FALSE"/>
+	<element id="53" value="FALSE"/>
+	<element id="54" value="FALSE"/>
+	<element id="55" value="FALSE"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="60.0" originX="10" originY="100">
+<visualElement id="17" color="AAAAAA" font="Monospaced-PLAIN-10"/>
+<visualElement id="9" color="00FFFF" font="Monospaced-PLAIN-10"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  Partition( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60;= n; i = i+1)"/>
+<element id="2" value=" 3      FOR (j = 0; j &#60;= s; j = j +1) {"/>
+<element id="3" value=" 4        p[i][j] = FALSE;"/>
+<element id="4" value=" 5      }"/>
+<element id="5" value=" 6    p[0][0] = TRUE;"/>
+<element id="6" value=" 7    FOR (i = 1; i &#60;= n; i = i+1)"/>
+<element id="7" value=" 8      FOR (j = 0; j &#60;= s; j = j+1) {"/>
+<element id="8" value=" 9        IF (p[i-1][j]) {"/>
+<element id="9" value="10          p[i][j] = TRUE;"/>
+<element id="10" value="11        }"/>
+<element id="11" value="12        IF (!p[i][j] &#38;&#38; j>=a[i-1] &#38;&#38; p[i-1][j-a[i-1]]) {"/>
+<element id="12" value="13          p[i][j] = TRUE;"/>
+<element id="13" value="14        }"/>
+<element id="14" value="15      }"/>
+<element id="15" value="16    RETURN p[n][s];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="420.0" originX="510" originY="40">
+<visualMalleableElement id="9" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="420"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="3">
+<structure name="a" type="Array">
+<array size="5" type="IntInformation">
+<element id="0" value="3"/>
+<element id="1" value="2"/>
+<element id="2" value="1"/>
+<element id="3" value="4"/>
+<element id="4" value="2"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="10" originY="50">
+<visualMalleableElement id="0" color="FFFF00" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The gray element can be set equal to TRUE since the azure element is TRUE and the yellow array element can be added to it.">
+</message>
+</structure>
+<structure name="p" type="Matrix">
+<matrix height="7" width="8" type="StringInformation">
+	<element id="0" value=" "/>
+	<element id="1" value="0"/>
+	<element id="2" value="1"/>
+	<element id="3" value="2"/>
+	<element id="4" value="3"/>
+	<element id="5" value="4"/>
+	<element id="6" value="5"/>
+	<element id="7" value="6"/>
+	<element id="8" value="{}"/>
+	<element id="9" value="TRUE"/>
+	<element id="10" value="FALSE"/>
+	<element id="11" value="FALSE"/>
+	<element id="12" value="FALSE"/>
+	<element id="13" value="FALSE"/>
+	<element id="14" value="FALSE"/>
+	<element id="15" value="FALSE"/>
+	<element id="16" value="{3}"/>
+	<element id="17" value="TRUE"/>
+	<element id="18" value="FALSE"/>
+	<element id="19" value="FALSE"/>
+	<element id="20" value="FALSE"/>
+	<element id="21" value="FALSE"/>
+	<element id="22" value="FALSE"/>
+	<element id="23" value="FALSE"/>
+	<element id="24" value="{3,2}"/>
+	<element id="25" value="FALSE"/>
+	<element id="26" value="FALSE"/>
+	<element id="27" value="FALSE"/>
+	<element id="28" value="FALSE"/>
+	<element id="29" value="FALSE"/>
+	<element id="30" value="FALSE"/>
+	<element id="31" value="FALSE"/>
+	<element id="32" value="{3,2,1}"/>
+	<element id="33" value="FALSE"/>
+	<element id="34" value="FALSE"/>
+	<element id="35" value="FALSE"/>
+	<element id="36" value="FALSE"/>
+	<element id="37" value="FALSE"/>
+	<element id="38" value="FALSE"/>
+	<element id="39" value="FALSE"/>
+	<element id="40" value="{3,2,1,4}"/>
+	<element id="41" value="FALSE"/>
+	<element id="42" value="FALSE"/>
+	<element id="43" value="FALSE"/>
+	<element id="44" value="FALSE"/>
+	<element id="45" value="FALSE"/>
+	<element id="46" value="FALSE"/>
+	<element id="47" value="FALSE"/>
+	<element id="48" value="{3,2,1,4,2}"/>
+	<element id="49" value="FALSE"/>
+	<element id="50" value="FALSE"/>
+	<element id="51" value="FALSE"/>
+	<element id="52" value="FALSE"/>
+	<element id="53" value="FALSE"/>
+	<element id="54" value="FALSE"/>
+	<element id="55" value="FALSE"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="60.0" originX="10" originY="100">
+<visualElement id="20" color="AAAAAA" font="Monospaced-PLAIN-10"/>
+<visualElement id="9" color="00FFFF" font="Monospaced-PLAIN-10"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  Partition( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60;= n; i = i+1)"/>
+<element id="2" value=" 3      FOR (j = 0; j &#60;= s; j = j +1) {"/>
+<element id="3" value=" 4        p[i][j] = FALSE;"/>
+<element id="4" value=" 5      }"/>
+<element id="5" value=" 6    p[0][0] = TRUE;"/>
+<element id="6" value=" 7    FOR (i = 1; i &#60;= n; i = i+1)"/>
+<element id="7" value=" 8      FOR (j = 0; j &#60;= s; j = j+1) {"/>
+<element id="8" value=" 9        IF (p[i-1][j]) {"/>
+<element id="9" value="10          p[i][j] = TRUE;"/>
+<element id="10" value="11        }"/>
+<element id="11" value="12        IF (!p[i][j] &#38;&#38; j>=a[i-1] &#38;&#38; p[i-1][j-a[i-1]]) {"/>
+<element id="12" value="13          p[i][j] = TRUE;"/>
+<element id="13" value="14        }"/>
+<element id="14" value="15      }"/>
+<element id="15" value="16    RETURN p[n][s];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="420.0" originX="510" originY="40">
+<visualMalleableElement id="12" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="420"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="4">
+<structure name="a" type="Array">
+<array size="5" type="IntInformation">
+<element id="0" value="3"/>
+<element id="1" value="2"/>
+<element id="2" value="1"/>
+<element id="3" value="4"/>
+<element id="4" value="2"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="10" originY="50">
+</visualArray>
+<message content="The gray element can be set equal to TRUE since the element immediately above (in azure) is already TRUE.">
+</message>
+</structure>
+<structure name="p" type="Matrix">
+<matrix height="7" width="8" type="StringInformation">
+	<element id="0" value=" "/>
+	<element id="1" value="0"/>
+	<element id="2" value="1"/>
+	<element id="3" value="2"/>
+	<element id="4" value="3"/>
+	<element id="5" value="4"/>
+	<element id="6" value="5"/>
+	<element id="7" value="6"/>
+	<element id="8" value="{}"/>
+	<element id="9" value="TRUE"/>
+	<element id="10" value="FALSE"/>
+	<element id="11" value="FALSE"/>
+	<element id="12" value="FALSE"/>
+	<element id="13" value="FALSE"/>
+	<element id="14" value="FALSE"/>
+	<element id="15" value="FALSE"/>
+	<element id="16" value="{3}"/>
+	<element id="17" value="TRUE"/>
+	<element id="18" value="FALSE"/>
+	<element id="19" value="FALSE"/>
+	<element id="20" value="TRUE"/>
+	<element id="21" value="FALSE"/>
+	<element id="22" value="FALSE"/>
+	<element id="23" value="FALSE"/>
+	<element id="24" value="{3,2}"/>
+	<element id="25" value="FALSE"/>
+	<element id="26" value="FALSE"/>
+	<element id="27" value="FALSE"/>
+	<element id="28" value="FALSE"/>
+	<element id="29" value="FALSE"/>
+	<element id="30" value="FALSE"/>
+	<element id="31" value="FALSE"/>
+	<element id="32" value="{3,2,1}"/>
+	<element id="33" value="FALSE"/>
+	<element id="34" value="FALSE"/>
+	<element id="35" value="FALSE"/>
+	<element id="36" value="FALSE"/>
+	<element id="37" value="FALSE"/>
+	<element id="38" value="FALSE"/>
+	<element id="39" value="FALSE"/>
+	<element id="40" value="{3,2,1,4}"/>
+	<element id="41" value="FALSE"/>
+	<element id="42" value="FALSE"/>
+	<element id="43" value="FALSE"/>
+	<element id="44" value="FALSE"/>
+	<element id="45" value="FALSE"/>
+	<element id="46" value="FALSE"/>
+	<element id="47" value="FALSE"/>
+	<element id="48" value="{3,2,1,4,2}"/>
+	<element id="49" value="FALSE"/>
+	<element id="50" value="FALSE"/>
+	<element id="51" value="FALSE"/>
+	<element id="52" value="FALSE"/>
+	<element id="53" value="FALSE"/>
+	<element id="54" value="FALSE"/>
+	<element id="55" value="FALSE"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="60.0" originX="10" originY="100">
+<visualElement id="25" color="AAAAAA" font="Monospaced-PLAIN-10"/>
+<visualElement id="17" color="00FFFF" font="Monospaced-PLAIN-10"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  Partition( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60;= n; i = i+1)"/>
+<element id="2" value=" 3      FOR (j = 0; j &#60;= s; j = j +1) {"/>
+<element id="3" value=" 4        p[i][j] = FALSE;"/>
+<element id="4" value=" 5      }"/>
+<element id="5" value=" 6    p[0][0] = TRUE;"/>
+<element id="6" value=" 7    FOR (i = 1; i &#60;= n; i = i+1)"/>
+<element id="7" value=" 8      FOR (j = 0; j &#60;= s; j = j+1) {"/>
+<element id="8" value=" 9        IF (p[i-1][j]) {"/>
+<element id="9" value="10          p[i][j] = TRUE;"/>
+<element id="10" value="11        }"/>
+<element id="11" value="12        IF (!p[i][j] &#38;&#38; j>=a[i-1] &#38;&#38; p[i-1][j-a[i-1]]) {"/>
+<element id="12" value="13          p[i][j] = TRUE;"/>
+<element id="13" value="14        }"/>
+<element id="14" value="15      }"/>
+<element id="15" value="16    RETURN p[n][s];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="420.0" originX="510" originY="40">
+<visualMalleableElement id="9" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="420"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="5">
+<structure name="a" type="Array">
+<array size="5" type="IntInformation">
+<element id="0" value="3"/>
+<element id="1" value="2"/>
+<element id="2" value="1"/>
+<element id="3" value="4"/>
+<element id="4" value="2"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="10" originY="50">
+<visualMalleableElement id="1" color="FFFF00" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The gray element can be set equal to TRUE since the azure element is TRUE and the yellow array element can be added to it.">
+</message>
+</structure>
+<structure name="p" type="Matrix">
+<matrix height="7" width="8" type="StringInformation">
+	<element id="0" value=" "/>
+	<element id="1" value="0"/>
+	<element id="2" value="1"/>
+	<element id="3" value="2"/>
+	<element id="4" value="3"/>
+	<element id="5" value="4"/>
+	<element id="6" value="5"/>
+	<element id="7" value="6"/>
+	<element id="8" value="{}"/>
+	<element id="9" value="TRUE"/>
+	<element id="10" value="FALSE"/>
+	<element id="11" value="FALSE"/>
+	<element id="12" value="FALSE"/>
+	<element id="13" value="FALSE"/>
+	<element id="14" value="FALSE"/>
+	<element id="15" value="FALSE"/>
+	<element id="16" value="{3}"/>
+	<element id="17" value="TRUE"/>
+	<element id="18" value="FALSE"/>
+	<element id="19" value="FALSE"/>
+	<element id="20" value="TRUE"/>
+	<element id="21" value="FALSE"/>
+	<element id="22" value="FALSE"/>
+	<element id="23" value="FALSE"/>
+	<element id="24" value="{3,2}"/>
+	<element id="25" value="TRUE"/>
+	<element id="26" value="FALSE"/>
+	<element id="27" value="FALSE"/>
+	<element id="28" value="FALSE"/>
+	<element id="29" value="FALSE"/>
+	<element id="30" value="FALSE"/>
+	<element id="31" value="FALSE"/>
+	<element id="32" value="{3,2,1}"/>
+	<element id="33" value="FALSE"/>
+	<element id="34" value="FALSE"/>
+	<element id="35" value="FALSE"/>
+	<element id="36" value="FALSE"/>
+	<element id="37" value="FALSE"/>
+	<element id="38" value="FALSE"/>
+	<element id="39" value="FALSE"/>
+	<element id="40" value="{3,2,1,4}"/>
+	<element id="41" value="FALSE"/>
+	<element id="42" value="FALSE"/>
+	<element id="43" value="FALSE"/>
+	<element id="44" value="FALSE"/>
+	<element id="45" value="FALSE"/>
+	<element id="46" value="FALSE"/>
+	<element id="47" value="FALSE"/>
+	<element id="48" value="{3,2,1,4,2}"/>
+	<element id="49" value="FALSE"/>
+	<element id="50" value="FALSE"/>
+	<element id="51" value="FALSE"/>
+	<element id="52" value="FALSE"/>
+	<element id="53" value="FALSE"/>
+	<element id="54" value="FALSE"/>
+	<element id="55" value="FALSE"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="60.0" originX="10" originY="100">
+<visualElement id="27" color="AAAAAA" font="Monospaced-PLAIN-10"/>
+<visualElement id="17" color="00FFFF" font="Monospaced-PLAIN-10"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  Partition( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60;= n; i = i+1)"/>
+<element id="2" value=" 3      FOR (j = 0; j &#60;= s; j = j +1) {"/>
+<element id="3" value=" 4        p[i][j] = FALSE;"/>
+<element id="4" value=" 5      }"/>
+<element id="5" value=" 6    p[0][0] = TRUE;"/>
+<element id="6" value=" 7    FOR (i = 1; i &#60;= n; i = i+1)"/>
+<element id="7" value=" 8      FOR (j = 0; j &#60;= s; j = j+1) {"/>
+<element id="8" value=" 9        IF (p[i-1][j]) {"/>
+<element id="9" value="10          p[i][j] = TRUE;"/>
+<element id="10" value="11        }"/>
+<element id="11" value="12        IF (!p[i][j] &#38;&#38; j>=a[i-1] &#38;&#38; p[i-1][j-a[i-1]]) {"/>
+<element id="12" value="13          p[i][j] = TRUE;"/>
+<element id="13" value="14        }"/>
+<element id="14" value="15      }"/>
+<element id="15" value="16    RETURN p[n][s];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="420.0" originX="510" originY="40">
+<visualMalleableElement id="12" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="420"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="6">
+<structure name="a" type="Array">
+<array size="5" type="IntInformation">
+<element id="0" value="3"/>
+<element id="1" value="2"/>
+<element id="2" value="1"/>
+<element id="3" value="4"/>
+<element id="4" value="2"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="10" originY="50">
+</visualArray>
+<message content="The gray element can be set equal to TRUE since the element immediately above (in azure) is already TRUE.">
+</message>
+</structure>
+<structure name="p" type="Matrix">
+<matrix height="7" width="8" type="StringInformation">
+	<element id="0" value=" "/>
+	<element id="1" value="0"/>
+	<element id="2" value="1"/>
+	<element id="3" value="2"/>
+	<element id="4" value="3"/>
+	<element id="5" value="4"/>
+	<element id="6" value="5"/>
+	<element id="7" value="6"/>
+	<element id="8" value="{}"/>
+	<element id="9" value="TRUE"/>
+	<element id="10" value="FALSE"/>
+	<element id="11" value="FALSE"/>
+	<element id="12" value="FALSE"/>
+	<element id="13" value="FALSE"/>
+	<element id="14" value="FALSE"/>
+	<element id="15" value="FALSE"/>
+	<element id="16" value="{3}"/>
+	<element id="17" value="TRUE"/>
+	<element id="18" value="FALSE"/>
+	<element id="19" value="FALSE"/>
+	<element id="20" value="TRUE"/>
+	<element id="21" value="FALSE"/>
+	<element id="22" value="FALSE"/>
+	<element id="23" value="FALSE"/>
+	<element id="24" value="{3,2}"/>
+	<element id="25" value="TRUE"/>
+	<element id="26" value="FALSE"/>
+	<element id="27" value="TRUE"/>
+	<element id="28" value="FALSE"/>
+	<element id="29" value="FALSE"/>
+	<element id="30" value="FALSE"/>
+	<element id="31" value="FALSE"/>
+	<element id="32" value="{3,2,1}"/>
+	<element id="33" value="FALSE"/>
+	<element id="34" value="FALSE"/>
+	<element id="35" value="FALSE"/>
+	<element id="36" value="FALSE"/>
+	<element id="37" value="FALSE"/>
+	<element id="38" value="FALSE"/>
+	<element id="39" value="FALSE"/>
+	<element id="40" value="{3,2,1,4}"/>
+	<element id="41" value="FALSE"/>
+	<element id="42" value="FALSE"/>
+	<element id="43" value="FALSE"/>
+	<element id="44" value="FALSE"/>
+	<element id="45" value="FALSE"/>
+	<element id="46" value="FALSE"/>
+	<element id="47" value="FALSE"/>
+	<element id="48" value="{3,2,1,4,2}"/>
+	<element id="49" value="FALSE"/>
+	<element id="50" value="FALSE"/>
+	<element id="51" value="FALSE"/>
+	<element id="52" value="FALSE"/>
+	<element id="53" value="FALSE"/>
+	<element id="54" value="FALSE"/>
+	<element id="55" value="FALSE"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="60.0" originX="10" originY="100">
+<visualElement id="28" color="AAAAAA" font="Monospaced-PLAIN-10"/>
+<visualElement id="20" color="00FFFF" font="Monospaced-PLAIN-10"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  Partition( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60;= n; i = i+1)"/>
+<element id="2" value=" 3      FOR (j = 0; j &#60;= s; j = j +1) {"/>
+<element id="3" value=" 4        p[i][j] = FALSE;"/>
+<element id="4" value=" 5      }"/>
+<element id="5" value=" 6    p[0][0] = TRUE;"/>
+<element id="6" value=" 7    FOR (i = 1; i &#60;= n; i = i+1)"/>
+<element id="7" value=" 8      FOR (j = 0; j &#60;= s; j = j+1) {"/>
+<element id="8" value=" 9        IF (p[i-1][j]) {"/>
+<element id="9" value="10          p[i][j] = TRUE;"/>
+<element id="10" value="11        }"/>
+<element id="11" value="12        IF (!p[i][j] &#38;&#38; j>=a[i-1] &#38;&#38; p[i-1][j-a[i-1]]) {"/>
+<element id="12" value="13          p[i][j] = TRUE;"/>
+<element id="13" value="14        }"/>
+<element id="14" value="15      }"/>
+<element id="15" value="16    RETURN p[n][s];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="420.0" originX="510" originY="40">
+<visualMalleableElement id="9" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="420"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="7">
+<structure name="a" type="Array">
+<array size="5" type="IntInformation">
+<element id="0" value="3"/>
+<element id="1" value="2"/>
+<element id="2" value="1"/>
+<element id="3" value="4"/>
+<element id="4" value="2"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="10" originY="50">
+<visualMalleableElement id="1" color="FFFF00" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The gray element can be set equal to TRUE since the azure element is TRUE and the yellow array element can be added to it.">
+</message>
+</structure>
+<structure name="p" type="Matrix">
+<matrix height="7" width="8" type="StringInformation">
+	<element id="0" value=" "/>
+	<element id="1" value="0"/>
+	<element id="2" value="1"/>
+	<element id="3" value="2"/>
+	<element id="4" value="3"/>
+	<element id="5" value="4"/>
+	<element id="6" value="5"/>
+	<element id="7" value="6"/>
+	<element id="8" value="{}"/>
+	<element id="9" value="TRUE"/>
+	<element id="10" value="FALSE"/>
+	<element id="11" value="FALSE"/>
+	<element id="12" value="FALSE"/>
+	<element id="13" value="FALSE"/>
+	<element id="14" value="FALSE"/>
+	<element id="15" value="FALSE"/>
+	<element id="16" value="{3}"/>
+	<element id="17" value="TRUE"/>
+	<element id="18" value="FALSE"/>
+	<element id="19" value="FALSE"/>
+	<element id="20" value="TRUE"/>
+	<element id="21" value="FALSE"/>
+	<element id="22" value="FALSE"/>
+	<element id="23" value="FALSE"/>
+	<element id="24" value="{3,2}"/>
+	<element id="25" value="TRUE"/>
+	<element id="26" value="FALSE"/>
+	<element id="27" value="TRUE"/>
+	<element id="28" value="TRUE"/>
+	<element id="29" value="FALSE"/>
+	<element id="30" value="FALSE"/>
+	<element id="31" value="FALSE"/>
+	<element id="32" value="{3,2,1}"/>
+	<element id="33" value="FALSE"/>
+	<element id="34" value="FALSE"/>
+	<element id="35" value="FALSE"/>
+	<element id="36" value="FALSE"/>
+	<element id="37" value="FALSE"/>
+	<element id="38" value="FALSE"/>
+	<element id="39" value="FALSE"/>
+	<element id="40" value="{3,2,1,4}"/>
+	<element id="41" value="FALSE"/>
+	<element id="42" value="FALSE"/>
+	<element id="43" value="FALSE"/>
+	<element id="44" value="FALSE"/>
+	<element id="45" value="FALSE"/>
+	<element id="46" value="FALSE"/>
+	<element id="47" value="FALSE"/>
+	<element id="48" value="{3,2,1,4,2}"/>
+	<element id="49" value="FALSE"/>
+	<element id="50" value="FALSE"/>
+	<element id="51" value="FALSE"/>
+	<element id="52" value="FALSE"/>
+	<element id="53" value="FALSE"/>
+	<element id="54" value="FALSE"/>
+	<element id="55" value="FALSE"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="60.0" originX="10" originY="100">
+<visualElement id="30" color="AAAAAA" font="Monospaced-PLAIN-10"/>
+<visualElement id="20" color="00FFFF" font="Monospaced-PLAIN-10"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  Partition( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60;= n; i = i+1)"/>
+<element id="2" value=" 3      FOR (j = 0; j &#60;= s; j = j +1) {"/>
+<element id="3" value=" 4        p[i][j] = FALSE;"/>
+<element id="4" value=" 5      }"/>
+<element id="5" value=" 6    p[0][0] = TRUE;"/>
+<element id="6" value=" 7    FOR (i = 1; i &#60;= n; i = i+1)"/>
+<element id="7" value=" 8      FOR (j = 0; j &#60;= s; j = j+1) {"/>
+<element id="8" value=" 9        IF (p[i-1][j]) {"/>
+<element id="9" value="10          p[i][j] = TRUE;"/>
+<element id="10" value="11        }"/>
+<element id="11" value="12        IF (!p[i][j] &#38;&#38; j>=a[i-1] &#38;&#38; p[i-1][j-a[i-1]]) {"/>
+<element id="12" value="13          p[i][j] = TRUE;"/>
+<element id="13" value="14        }"/>
+<element id="14" value="15      }"/>
+<element id="15" value="16    RETURN p[n][s];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="420.0" originX="510" originY="40">
+<visualMalleableElement id="12" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="420"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="8">
+<structure name="a" type="Array">
+<array size="5" type="IntInformation">
+<element id="0" value="3"/>
+<element id="1" value="2"/>
+<element id="2" value="1"/>
+<element id="3" value="4"/>
+<element id="4" value="2"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="10" originY="50">
+</visualArray>
+<message content="The gray element can be set equal to TRUE since the element immediately above (in azure) is already TRUE.">
+</message>
+</structure>
+<structure name="p" type="Matrix">
+<matrix height="7" width="8" type="StringInformation">
+	<element id="0" value=" "/>
+	<element id="1" value="0"/>
+	<element id="2" value="1"/>
+	<element id="3" value="2"/>
+	<element id="4" value="3"/>
+	<element id="5" value="4"/>
+	<element id="6" value="5"/>
+	<element id="7" value="6"/>
+	<element id="8" value="{}"/>
+	<element id="9" value="TRUE"/>
+	<element id="10" value="FALSE"/>
+	<element id="11" value="FALSE"/>
+	<element id="12" value="FALSE"/>
+	<element id="13" value="FALSE"/>
+	<element id="14" value="FALSE"/>
+	<element id="15" value="FALSE"/>
+	<element id="16" value="{3}"/>
+	<element id="17" value="TRUE"/>
+	<element id="18" value="FALSE"/>
+	<element id="19" value="FALSE"/>
+	<element id="20" value="TRUE"/>
+	<element id="21" value="FALSE"/>
+	<element id="22" value="FALSE"/>
+	<element id="23" value="FALSE"/>
+	<element id="24" value="{3,2}"/>
+	<element id="25" value="TRUE"/>
+	<element id="26" value="FALSE"/>
+	<element id="27" value="TRUE"/>
+	<element id="28" value="TRUE"/>
+	<element id="29" value="FALSE"/>
+	<element id="30" value="TRUE"/>
+	<element id="31" value="FALSE"/>
+	<element id="32" value="{3,2,1}"/>
+	<element id="33" value="FALSE"/>
+	<element id="34" value="FALSE"/>
+	<element id="35" value="FALSE"/>
+	<element id="36" value="FALSE"/>
+	<element id="37" value="FALSE"/>
+	<element id="38" value="FALSE"/>
+	<element id="39" value="FALSE"/>
+	<element id="40" value="{3,2,1,4}"/>
+	<element id="41" value="FALSE"/>
+	<element id="42" value="FALSE"/>
+	<element id="43" value="FALSE"/>
+	<element id="44" value="FALSE"/>
+	<element id="45" value="FALSE"/>
+	<element id="46" value="FALSE"/>
+	<element id="47" value="FALSE"/>
+	<element id="48" value="{3,2,1,4,2}"/>
+	<element id="49" value="FALSE"/>
+	<element id="50" value="FALSE"/>
+	<element id="51" value="FALSE"/>
+	<element id="52" value="FALSE"/>
+	<element id="53" value="FALSE"/>
+	<element id="54" value="FALSE"/>
+	<element id="55" value="FALSE"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="60.0" originX="10" originY="100">
+<visualElement id="33" color="AAAAAA" font="Monospaced-PLAIN-10"/>
+<visualElement id="25" color="00FFFF" font="Monospaced-PLAIN-10"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  Partition( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60;= n; i = i+1)"/>
+<element id="2" value=" 3      FOR (j = 0; j &#60;= s; j = j +1) {"/>
+<element id="3" value=" 4        p[i][j] = FALSE;"/>
+<element id="4" value=" 5      }"/>
+<element id="5" value=" 6    p[0][0] = TRUE;"/>
+<element id="6" value=" 7    FOR (i = 1; i &#60;= n; i = i+1)"/>
+<element id="7" value=" 8      FOR (j = 0; j &#60;= s; j = j+1) {"/>
+<element id="8" value=" 9        IF (p[i-1][j]) {"/>
+<element id="9" value="10          p[i][j] = TRUE;"/>
+<element id="10" value="11        }"/>
+<element id="11" value="12        IF (!p[i][j] &#38;&#38; j>=a[i-1] &#38;&#38; p[i-1][j-a[i-1]]) {"/>
+<element id="12" value="13          p[i][j] = TRUE;"/>
+<element id="13" value="14        }"/>
+<element id="14" value="15      }"/>
+<element id="15" value="16    RETURN p[n][s];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="420.0" originX="510" originY="40">
+<visualMalleableElement id="9" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="420"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="9">
+<structure name="a" type="Array">
+<array size="5" type="IntInformation">
+<element id="0" value="3"/>
+<element id="1" value="2"/>
+<element id="2" value="1"/>
+<element id="3" value="4"/>
+<element id="4" value="2"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="10" originY="50">
+<visualMalleableElement id="2" color="FFFF00" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The gray element can be set equal to TRUE since the azure element is TRUE and the yellow array element can be added to it.">
+</message>
+</structure>
+<structure name="p" type="Matrix">
+<matrix height="7" width="8" type="StringInformation">
+	<element id="0" value=" "/>
+	<element id="1" value="0"/>
+	<element id="2" value="1"/>
+	<element id="3" value="2"/>
+	<element id="4" value="3"/>
+	<element id="5" value="4"/>
+	<element id="6" value="5"/>
+	<element id="7" value="6"/>
+	<element id="8" value="{}"/>
+	<element id="9" value="TRUE"/>
+	<element id="10" value="FALSE"/>
+	<element id="11" value="FALSE"/>
+	<element id="12" value="FALSE"/>
+	<element id="13" value="FALSE"/>
+	<element id="14" value="FALSE"/>
+	<element id="15" value="FALSE"/>
+	<element id="16" value="{3}"/>
+	<element id="17" value="TRUE"/>
+	<element id="18" value="FALSE"/>
+	<element id="19" value="FALSE"/>
+	<element id="20" value="TRUE"/>
+	<element id="21" value="FALSE"/>
+	<element id="22" value="FALSE"/>
+	<element id="23" value="FALSE"/>
+	<element id="24" value="{3,2}"/>
+	<element id="25" value="TRUE"/>
+	<element id="26" value="FALSE"/>
+	<element id="27" value="TRUE"/>
+	<element id="28" value="TRUE"/>
+	<element id="29" value="FALSE"/>
+	<element id="30" value="TRUE"/>
+	<element id="31" value="FALSE"/>
+	<element id="32" value="{3,2,1}"/>
+	<element id="33" value="TRUE"/>
+	<element id="34" value="FALSE"/>
+	<element id="35" value="FALSE"/>
+	<element id="36" value="FALSE"/>
+	<element id="37" value="FALSE"/>
+	<element id="38" value="FALSE"/>
+	<element id="39" value="FALSE"/>
+	<element id="40" value="{3,2,1,4}"/>
+	<element id="41" value="FALSE"/>
+	<element id="42" value="FALSE"/>
+	<element id="43" value="FALSE"/>
+	<element id="44" value="FALSE"/>
+	<element id="45" value="FALSE"/>
+	<element id="46" value="FALSE"/>
+	<element id="47" value="FALSE"/>
+	<element id="48" value="{3,2,1,4,2}"/>
+	<element id="49" value="FALSE"/>
+	<element id="50" value="FALSE"/>
+	<element id="51" value="FALSE"/>
+	<element id="52" value="FALSE"/>
+	<element id="53" value="FALSE"/>
+	<element id="54" value="FALSE"/>
+	<element id="55" value="FALSE"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="60.0" originX="10" originY="100">
+<visualElement id="34" color="AAAAAA" font="Monospaced-PLAIN-10"/>
+<visualElement id="25" color="00FFFF" font="Monospaced-PLAIN-10"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  Partition( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60;= n; i = i+1)"/>
+<element id="2" value=" 3      FOR (j = 0; j &#60;= s; j = j +1) {"/>
+<element id="3" value=" 4        p[i][j] = FALSE;"/>
+<element id="4" value=" 5      }"/>
+<element id="5" value=" 6    p[0][0] = TRUE;"/>
+<element id="6" value=" 7    FOR (i = 1; i &#60;= n; i = i+1)"/>
+<element id="7" value=" 8      FOR (j = 0; j &#60;= s; j = j+1) {"/>
+<element id="8" value=" 9        IF (p[i-1][j]) {"/>
+<element id="9" value="10          p[i][j] = TRUE;"/>
+<element id="10" value="11        }"/>
+<element id="11" value="12        IF (!p[i][j] &#38;&#38; j>=a[i-1] &#38;&#38; p[i-1][j-a[i-1]]) {"/>
+<element id="12" value="13          p[i][j] = TRUE;"/>
+<element id="13" value="14        }"/>
+<element id="14" value="15      }"/>
+<element id="15" value="16    RETURN p[n][s];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="420.0" originX="510" originY="40">
+<visualMalleableElement id="12" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="420"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="10">
+<structure name="a" type="Array">
+<array size="5" type="IntInformation">
+<element id="0" value="3"/>
+<element id="1" value="2"/>
+<element id="2" value="1"/>
+<element id="3" value="4"/>
+<element id="4" value="2"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="10" originY="50">
+</visualArray>
+<message content="The gray element can be set equal to TRUE since the element immediately above (in azure) is already TRUE.">
+</message>
+</structure>
+<structure name="p" type="Matrix">
+<matrix height="7" width="8" type="StringInformation">
+	<element id="0" value=" "/>
+	<element id="1" value="0"/>
+	<element id="2" value="1"/>
+	<element id="3" value="2"/>
+	<element id="4" value="3"/>
+	<element id="5" value="4"/>
+	<element id="6" value="5"/>
+	<element id="7" value="6"/>
+	<element id="8" value="{}"/>
+	<element id="9" value="TRUE"/>
+	<element id="10" value="FALSE"/>
+	<element id="11" value="FALSE"/>
+	<element id="12" value="FALSE"/>
+	<element id="13" value="FALSE"/>
+	<element id="14" value="FALSE"/>
+	<element id="15" value="FALSE"/>
+	<element id="16" value="{3}"/>
+	<element id="17" value="TRUE"/>
+	<element id="18" value="FALSE"/>
+	<element id="19" value="FALSE"/>
+	<element id="20" value="TRUE"/>
+	<element id="21" value="FALSE"/>
+	<element id="22" value="FALSE"/>
+	<element id="23" value="FALSE"/>
+	<element id="24" value="{3,2}"/>
+	<element id="25" value="TRUE"/>
+	<element id="26" value="FALSE"/>
+	<element id="27" value="TRUE"/>
+	<element id="28" value="TRUE"/>
+	<element id="29" value="FALSE"/>
+	<element id="30" value="TRUE"/>
+	<element id="31" value="FALSE"/>
+	<element id="32" value="{3,2,1}"/>
+	<element id="33" value="TRUE"/>
+	<element id="34" value="TRUE"/>
+	<element id="35" value="FALSE"/>
+	<element id="36" value="FALSE"/>
+	<element id="37" value="FALSE"/>
+	<element id="38" value="FALSE"/>
+	<element id="39" value="FALSE"/>
+	<element id="40" value="{3,2,1,4}"/>
+	<element id="41" value="FALSE"/>
+	<element id="42" value="FALSE"/>
+	<element id="43" value="FALSE"/>
+	<element id="44" value="FALSE"/>
+	<element id="45" value="FALSE"/>
+	<element id="46" value="FALSE"/>
+	<element id="47" value="FALSE"/>
+	<element id="48" value="{3,2,1,4,2}"/>
+	<element id="49" value="FALSE"/>
+	<element id="50" value="FALSE"/>
+	<element id="51" value="FALSE"/>
+	<element id="52" value="FALSE"/>
+	<element id="53" value="FALSE"/>
+	<element id="54" value="FALSE"/>
+	<element id="55" value="FALSE"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="60.0" originX="10" originY="100">
+<visualElement id="35" color="AAAAAA" font="Monospaced-PLAIN-10"/>
+<visualElement id="27" color="00FFFF" font="Monospaced-PLAIN-10"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  Partition( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60;= n; i = i+1)"/>
+<element id="2" value=" 3      FOR (j = 0; j &#60;= s; j = j +1) {"/>
+<element id="3" value=" 4        p[i][j] = FALSE;"/>
+<element id="4" value=" 5      }"/>
+<element id="5" value=" 6    p[0][0] = TRUE;"/>
+<element id="6" value=" 7    FOR (i = 1; i &#60;= n; i = i+1)"/>
+<element id="7" value=" 8      FOR (j = 0; j &#60;= s; j = j+1) {"/>
+<element id="8" value=" 9        IF (p[i-1][j]) {"/>
+<element id="9" value="10          p[i][j] = TRUE;"/>
+<element id="10" value="11        }"/>
+<element id="11" value="12        IF (!p[i][j] &#38;&#38; j>=a[i-1] &#38;&#38; p[i-1][j-a[i-1]]) {"/>
+<element id="12" value="13          p[i][j] = TRUE;"/>
+<element id="13" value="14        }"/>
+<element id="14" value="15      }"/>
+<element id="15" value="16    RETURN p[n][s];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="420.0" originX="510" originY="40">
+<visualMalleableElement id="9" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="420"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="11">
+<structure name="a" type="Array">
+<array size="5" type="IntInformation">
+<element id="0" value="3"/>
+<element id="1" value="2"/>
+<element id="2" value="1"/>
+<element id="3" value="4"/>
+<element id="4" value="2"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="10" originY="50">
+</visualArray>
+<message content="The gray element can be set equal to TRUE since the element immediately above (in azure) is already TRUE.">
+</message>
+</structure>
+<structure name="p" type="Matrix">
+<matrix height="7" width="8" type="StringInformation">
+	<element id="0" value=" "/>
+	<element id="1" value="0"/>
+	<element id="2" value="1"/>
+	<element id="3" value="2"/>
+	<element id="4" value="3"/>
+	<element id="5" value="4"/>
+	<element id="6" value="5"/>
+	<element id="7" value="6"/>
+	<element id="8" value="{}"/>
+	<element id="9" value="TRUE"/>
+	<element id="10" value="FALSE"/>
+	<element id="11" value="FALSE"/>
+	<element id="12" value="FALSE"/>
+	<element id="13" value="FALSE"/>
+	<element id="14" value="FALSE"/>
+	<element id="15" value="FALSE"/>
+	<element id="16" value="{3}"/>
+	<element id="17" value="TRUE"/>
+	<element id="18" value="FALSE"/>
+	<element id="19" value="FALSE"/>
+	<element id="20" value="TRUE"/>
+	<element id="21" value="FALSE"/>
+	<element id="22" value="FALSE"/>
+	<element id="23" value="FALSE"/>
+	<element id="24" value="{3,2}"/>
+	<element id="25" value="TRUE"/>
+	<element id="26" value="FALSE"/>
+	<element id="27" value="TRUE"/>
+	<element id="28" value="TRUE"/>
+	<element id="29" value="FALSE"/>
+	<element id="30" value="TRUE"/>
+	<element id="31" value="FALSE"/>
+	<element id="32" value="{3,2,1}"/>
+	<element id="33" value="TRUE"/>
+	<element id="34" value="TRUE"/>
+	<element id="35" value="TRUE"/>
+	<element id="36" value="FALSE"/>
+	<element id="37" value="FALSE"/>
+	<element id="38" value="FALSE"/>
+	<element id="39" value="FALSE"/>
+	<element id="40" value="{3,2,1,4}"/>
+	<element id="41" value="FALSE"/>
+	<element id="42" value="FALSE"/>
+	<element id="43" value="FALSE"/>
+	<element id="44" value="FALSE"/>
+	<element id="45" value="FALSE"/>
+	<element id="46" value="FALSE"/>
+	<element id="47" value="FALSE"/>
+	<element id="48" value="{3,2,1,4,2}"/>
+	<element id="49" value="FALSE"/>
+	<element id="50" value="FALSE"/>
+	<element id="51" value="FALSE"/>
+	<element id="52" value="FALSE"/>
+	<element id="53" value="FALSE"/>
+	<element id="54" value="FALSE"/>
+	<element id="55" value="FALSE"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="60.0" originX="10" originY="100">
+<visualElement id="36" color="AAAAAA" font="Monospaced-PLAIN-10"/>
+<visualElement id="28" color="00FFFF" font="Monospaced-PLAIN-10"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  Partition( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60;= n; i = i+1)"/>
+<element id="2" value=" 3      FOR (j = 0; j &#60;= s; j = j +1) {"/>
+<element id="3" value=" 4        p[i][j] = FALSE;"/>
+<element id="4" value=" 5      }"/>
+<element id="5" value=" 6    p[0][0] = TRUE;"/>
+<element id="6" value=" 7    FOR (i = 1; i &#60;= n; i = i+1)"/>
+<element id="7" value=" 8      FOR (j = 0; j &#60;= s; j = j+1) {"/>
+<element id="8" value=" 9        IF (p[i-1][j]) {"/>
+<element id="9" value="10          p[i][j] = TRUE;"/>
+<element id="10" value="11        }"/>
+<element id="11" value="12        IF (!p[i][j] &#38;&#38; j>=a[i-1] &#38;&#38; p[i-1][j-a[i-1]]) {"/>
+<element id="12" value="13          p[i][j] = TRUE;"/>
+<element id="13" value="14        }"/>
+<element id="14" value="15      }"/>
+<element id="15" value="16    RETURN p[n][s];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="420.0" originX="510" originY="40">
+<visualMalleableElement id="9" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="420"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="12">
+<structure name="a" type="Array">
+<array size="5" type="IntInformation">
+<element id="0" value="3"/>
+<element id="1" value="2"/>
+<element id="2" value="1"/>
+<element id="3" value="4"/>
+<element id="4" value="2"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="10" originY="50">
+<visualMalleableElement id="2" color="FFFF00" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The gray element can be set equal to TRUE since the azure element is TRUE and the yellow array element can be added to it.">
+</message>
+</structure>
+<structure name="p" type="Matrix">
+<matrix height="7" width="8" type="StringInformation">
+	<element id="0" value=" "/>
+	<element id="1" value="0"/>
+	<element id="2" value="1"/>
+	<element id="3" value="2"/>
+	<element id="4" value="3"/>
+	<element id="5" value="4"/>
+	<element id="6" value="5"/>
+	<element id="7" value="6"/>
+	<element id="8" value="{}"/>
+	<element id="9" value="TRUE"/>
+	<element id="10" value="FALSE"/>
+	<element id="11" value="FALSE"/>
+	<element id="12" value="FALSE"/>
+	<element id="13" value="FALSE"/>
+	<element id="14" value="FALSE"/>
+	<element id="15" value="FALSE"/>
+	<element id="16" value="{3}"/>
+	<element id="17" value="TRUE"/>
+	<element id="18" value="FALSE"/>
+	<element id="19" value="FALSE"/>
+	<element id="20" value="TRUE"/>
+	<element id="21" value="FALSE"/>
+	<element id="22" value="FALSE"/>
+	<element id="23" value="FALSE"/>
+	<element id="24" value="{3,2}"/>
+	<element id="25" value="TRUE"/>
+	<element id="26" value="FALSE"/>
+	<element id="27" value="TRUE"/>
+	<element id="28" value="TRUE"/>
+	<element id="29" value="FALSE"/>
+	<element id="30" value="TRUE"/>
+	<element id="31" value="FALSE"/>
+	<element id="32" value="{3,2,1}"/>
+	<element id="33" value="TRUE"/>
+	<element id="34" value="TRUE"/>
+	<element id="35" value="TRUE"/>
+	<element id="36" value="TRUE"/>
+	<element id="37" value="FALSE"/>
+	<element id="38" value="FALSE"/>
+	<element id="39" value="FALSE"/>
+	<element id="40" value="{3,2,1,4}"/>
+	<element id="41" value="FALSE"/>
+	<element id="42" value="FALSE"/>
+	<element id="43" value="FALSE"/>
+	<element id="44" value="FALSE"/>
+	<element id="45" value="FALSE"/>
+	<element id="46" value="FALSE"/>
+	<element id="47" value="FALSE"/>
+	<element id="48" value="{3,2,1,4,2}"/>
+	<element id="49" value="FALSE"/>
+	<element id="50" value="FALSE"/>
+	<element id="51" value="FALSE"/>
+	<element id="52" value="FALSE"/>
+	<element id="53" value="FALSE"/>
+	<element id="54" value="FALSE"/>
+	<element id="55" value="FALSE"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="60.0" originX="10" originY="100">
+<visualElement id="37" color="AAAAAA" font="Monospaced-PLAIN-10"/>
+<visualElement id="28" color="00FFFF" font="Monospaced-PLAIN-10"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  Partition( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60;= n; i = i+1)"/>
+<element id="2" value=" 3      FOR (j = 0; j &#60;= s; j = j +1) {"/>
+<element id="3" value=" 4        p[i][j] = FALSE;"/>
+<element id="4" value=" 5      }"/>
+<element id="5" value=" 6    p[0][0] = TRUE;"/>
+<element id="6" value=" 7    FOR (i = 1; i &#60;= n; i = i+1)"/>
+<element id="7" value=" 8      FOR (j = 0; j &#60;= s; j = j+1) {"/>
+<element id="8" value=" 9        IF (p[i-1][j]) {"/>
+<element id="9" value="10          p[i][j] = TRUE;"/>
+<element id="10" value="11        }"/>
+<element id="11" value="12        IF (!p[i][j] &#38;&#38; j>=a[i-1] &#38;&#38; p[i-1][j-a[i-1]]) {"/>
+<element id="12" value="13          p[i][j] = TRUE;"/>
+<element id="13" value="14        }"/>
+<element id="14" value="15      }"/>
+<element id="15" value="16    RETURN p[n][s];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="420.0" originX="510" originY="40">
+<visualMalleableElement id="12" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="420"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="13">
+<structure name="a" type="Array">
+<array size="5" type="IntInformation">
+<element id="0" value="3"/>
+<element id="1" value="2"/>
+<element id="2" value="1"/>
+<element id="3" value="4"/>
+<element id="4" value="2"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="10" originY="50">
+</visualArray>
+<message content="The gray element can be set equal to TRUE since the element immediately above (in azure) is already TRUE.">
+</message>
+</structure>
+<structure name="p" type="Matrix">
+<matrix height="7" width="8" type="StringInformation">
+	<element id="0" value=" "/>
+	<element id="1" value="0"/>
+	<element id="2" value="1"/>
+	<element id="3" value="2"/>
+	<element id="4" value="3"/>
+	<element id="5" value="4"/>
+	<element id="6" value="5"/>
+	<element id="7" value="6"/>
+	<element id="8" value="{}"/>
+	<element id="9" value="TRUE"/>
+	<element id="10" value="FALSE"/>
+	<element id="11" value="FALSE"/>
+	<element id="12" value="FALSE"/>
+	<element id="13" value="FALSE"/>
+	<element id="14" value="FALSE"/>
+	<element id="15" value="FALSE"/>
+	<element id="16" value="{3}"/>
+	<element id="17" value="TRUE"/>
+	<element id="18" value="FALSE"/>
+	<element id="19" value="FALSE"/>
+	<element id="20" value="TRUE"/>
+	<element id="21" value="FALSE"/>
+	<element id="22" value="FALSE"/>
+	<element id="23" value="FALSE"/>
+	<element id="24" value="{3,2}"/>
+	<element id="25" value="TRUE"/>
+	<element id="26" value="FALSE"/>
+	<element id="27" value="TRUE"/>
+	<element id="28" value="TRUE"/>
+	<element id="29" value="FALSE"/>
+	<element id="30" value="TRUE"/>
+	<element id="31" value="FALSE"/>
+	<element id="32" value="{3,2,1}"/>
+	<element id="33" value="TRUE"/>
+	<element id="34" value="TRUE"/>
+	<element id="35" value="TRUE"/>
+	<element id="36" value="TRUE"/>
+	<element id="37" value="TRUE"/>
+	<element id="38" value="FALSE"/>
+	<element id="39" value="FALSE"/>
+	<element id="40" value="{3,2,1,4}"/>
+	<element id="41" value="FALSE"/>
+	<element id="42" value="FALSE"/>
+	<element id="43" value="FALSE"/>
+	<element id="44" value="FALSE"/>
+	<element id="45" value="FALSE"/>
+	<element id="46" value="FALSE"/>
+	<element id="47" value="FALSE"/>
+	<element id="48" value="{3,2,1,4,2}"/>
+	<element id="49" value="FALSE"/>
+	<element id="50" value="FALSE"/>
+	<element id="51" value="FALSE"/>
+	<element id="52" value="FALSE"/>
+	<element id="53" value="FALSE"/>
+	<element id="54" value="FALSE"/>
+	<element id="55" value="FALSE"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="60.0" originX="10" originY="100">
+<visualElement id="38" color="AAAAAA" font="Monospaced-PLAIN-10"/>
+<visualElement id="30" color="00FFFF" font="Monospaced-PLAIN-10"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  Partition( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60;= n; i = i+1)"/>
+<element id="2" value=" 3      FOR (j = 0; j &#60;= s; j = j +1) {"/>
+<element id="3" value=" 4        p[i][j] = FALSE;"/>
+<element id="4" value=" 5      }"/>
+<element id="5" value=" 6    p[0][0] = TRUE;"/>
+<element id="6" value=" 7    FOR (i = 1; i &#60;= n; i = i+1)"/>
+<element id="7" value=" 8      FOR (j = 0; j &#60;= s; j = j+1) {"/>
+<element id="8" value=" 9        IF (p[i-1][j]) {"/>
+<element id="9" value="10          p[i][j] = TRUE;"/>
+<element id="10" value="11        }"/>
+<element id="11" value="12        IF (!p[i][j] &#38;&#38; j>=a[i-1] &#38;&#38; p[i-1][j-a[i-1]]) {"/>
+<element id="12" value="13          p[i][j] = TRUE;"/>
+<element id="13" value="14        }"/>
+<element id="14" value="15      }"/>
+<element id="15" value="16    RETURN p[n][s];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="420.0" originX="510" originY="40">
+<visualMalleableElement id="9" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="420"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="14">
+<structure name="a" type="Array">
+<array size="5" type="IntInformation">
+<element id="0" value="3"/>
+<element id="1" value="2"/>
+<element id="2" value="1"/>
+<element id="3" value="4"/>
+<element id="4" value="2"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="10" originY="50">
+<visualMalleableElement id="2" color="FFFF00" font="Monospaced-PLAIN-10" shapeHeight="30.0" shapeWidth="30.0"/>
+</visualArray>
+<message content="The gray element can be set equal to TRUE since the azure element is TRUE and the yellow array element can be added to it.">
+</message>
+</structure>
+<structure name="p" type="Matrix">
+<matrix height="7" width="8" type="StringInformation">
+	<element id="0" value=" "/>
+	<element id="1" value="0"/>
+	<element id="2" value="1"/>
+	<element id="3" value="2"/>
+	<element id="4" value="3"/>
+	<element id="5" value="4"/>
+	<element id="6" value="5"/>
+	<element id="7" value="6"/>
+	<element id="8" value="{}"/>
+	<element id="9" value="TRUE"/>
+	<element id="10" value="FALSE"/>
+	<element id="11" value="FALSE"/>
+	<element id="12" value="FALSE"/>
+	<element id="13" value="FALSE"/>
+	<element id="14" value="FALSE"/>
+	<element id="15" value="FALSE"/>
+	<element id="16" value="{3}"/>
+	<element id="17" value="TRUE"/>
+	<element id="18" value="FALSE"/>
+	<element id="19" value="FALSE"/>
+	<element id="20" value="TRUE"/>
+	<element id="21" value="FALSE"/>
+	<element id="22" value="FALSE"/>
+	<element id="23" value="FALSE"/>
+	<element id="24" value="{3,2}"/>
+	<element id="25" value="TRUE"/>
+	<element id="26" value="FALSE"/>
+	<element id="27" value="TRUE"/>
+	<element id="28" value="TRUE"/>
+	<element id="29" value="FALSE"/>
+	<element id="30" value="TRUE"/>
+	<element id="31" value="FALSE"/>
+	<element id="32" value="{3,2,1}"/>
+	<element id="33" value="TRUE"/>
+	<element id="34" value="TRUE"/>
+	<element id="35" value="TRUE"/>
+	<element id="36" value="TRUE"/>
+	<element id="37" value="TRUE"/>
+	<element id="38" value="TRUE"/>
+	<element id="39" value="FALSE"/>
+	<element id="40" value="{3,2,1,4}"/>
+	<element id="41" value="FALSE"/>
+	<element id="42" value="FALSE"/>
+	<element id="43" value="FALSE"/>
+	<element id="44" value="FALSE"/>
+	<element id="45" value="FALSE"/>
+	<element id="46" value="FALSE"/>
+	<element id="47" value="FALSE"/>
+	<element id="48" value="{3,2,1,4,2}"/>
+	<element id="49" value="FALSE"/>
+	<element id="50" value="FALSE"/>
+	<element id="51" value="FALSE"/>
+	<element id="52" value="FALSE"/>
+	<element id="53" value="FALSE"/>
+	<element id="54" value="FALSE"/>
+	<element id="55" value="FALSE"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="60.0" originX="10" originY="100">
+<visualElement id="39" color="AAAAAA" font="Monospaced-PLAIN-10"/>
+<visualElement id="30" color="00FFFF" font="Monospaced-PLAIN-10"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  Partition( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60;= n; i = i+1)"/>
+<element id="2" value=" 3      FOR (j = 0; j &#60;= s; j = j +1) {"/>
+<element id="3" value=" 4        p[i][j] = FALSE;"/>
+<element id="4" value=" 5      }"/>
+<element id="5" value=" 6    p[0][0] = TRUE;"/>
+<element id="6" value=" 7    FOR (i = 1; i &#60;= n; i = i+1)"/>
+<element id="7" value=" 8      FOR (j = 0; j &#60;= s; j = j+1) {"/>
+<element id="8" value=" 9        IF (p[i-1][j]) {"/>
+<element id="9" value="10          p[i][j] = TRUE;"/>
+<element id="10" value="11        }"/>
+<element id="11" value="12        IF (!p[i][j] &#38;&#38; j>=a[i-1] &#38;&#38; p[i-1][j-a[i-1]]) {"/>
+<element id="12" value="13          p[i][j] = TRUE;"/>
+<element id="13" value="14        }"/>
+<element id="14" value="15      }"/>
+<element id="15" value="16    RETURN p[n][s];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="420.0" originX="510" originY="40">
+<visualMalleableElement id="12" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="420"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="15">
+<structure name="a" type="Array">
+<array size="5" type="IntInformation">
+<element id="0" value="3"/>
+<element id="1" value="2"/>
+<element id="2" value="1"/>
+<element id="3" value="4"/>
+<element id="4" value="2"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="10" originY="50">
+</visualArray>
+<message content="The gray element can be set equal to TRUE since the element immediately above (in azure) is already TRUE.">
+</message>
+</structure>
+<structure name="p" type="Matrix">
+<matrix height="7" width="8" type="StringInformation">
+	<element id="0" value=" "/>
+	<element id="1" value="0"/>
+	<element id="2" value="1"/>
+	<element id="3" value="2"/>
+	<element id="4" value="3"/>
+	<element id="5" value="4"/>
+	<element id="6" value="5"/>
+	<element id="7" value="6"/>
+	<element id="8" value="{}"/>
+	<element id="9" value="TRUE"/>
+	<element id="10" value="FALSE"/>
+	<element id="11" value="FALSE"/>
+	<element id="12" value="FALSE"/>
+	<element id="13" value="FALSE"/>
+	<element id="14" value="FALSE"/>
+	<element id="15" value="FALSE"/>
+	<element id="16" value="{3}"/>
+	<element id="17" value="TRUE"/>
+	<element id="18" value="FALSE"/>
+	<element id="19" value="FALSE"/>
+	<element id="20" value="TRUE"/>
+	<element id="21" value="FALSE"/>
+	<element id="22" value="FALSE"/>
+	<element id="23" value="FALSE"/>
+	<element id="24" value="{3,2}"/>
+	<element id="25" value="TRUE"/>
+	<element id="26" value="FALSE"/>
+	<element id="27" value="TRUE"/>
+	<element id="28" value="TRUE"/>
+	<element id="29" value="FALSE"/>
+	<element id="30" value="TRUE"/>
+	<element id="31" value="FALSE"/>
+	<element id="32" value="{3,2,1}"/>
+	<element id="33" value="TRUE"/>
+	<element id="34" value="TRUE"/>
+	<element id="35" value="TRUE"/>
+	<element id="36" value="TRUE"/>
+	<element id="37" value="TRUE"/>
+	<element id="38" value="TRUE"/>
+	<element id="39" value="TRUE"/>
+	<element id="40" value="{3,2,1,4}"/>
+	<element id="41" value="FALSE"/>
+	<element id="42" value="FALSE"/>
+	<element id="43" value="FALSE"/>
+	<element id="44" value="FALSE"/>
+	<element id="45" value="FALSE"/>
+	<element id="46" value="FALSE"/>
+	<element id="47" value="FALSE"/>
+	<element id="48" value="{3,2,1,4,2}"/>
+	<element id="49" value="FALSE"/>
+	<element id="50" value="FALSE"/>
+	<element id="51" value="FALSE"/>
+	<element id="52" value="FALSE"/>
+	<element id="53" value="FALSE"/>
+	<element id="54" value="FALSE"/>
+	<element id="55" value="FALSE"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="60.0" originX="10" originY="100">
+<visualElement id="41" color="AAAAAA" font="Monospaced-PLAIN-10"/>
+<visualElement id="33" color="00FFFF" font="Monospaced-PLAIN-10"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  Partition( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60;= n; i = i+1)"/>
+<element id="2" value=" 3      FOR (j = 0; j &#60;= s; j = j +1) {"/>
+<element id="3" value=" 4        p[i][j] = FALSE;"/>
+<element id="4" value=" 5      }"/>
+<element id="5" value=" 6    p[0][0] = TRUE;"/>
+<element id="6" value=" 7    FOR (i = 1; i &#60;= n; i = i+1)"/>
+<element id="7" value=" 8      FOR (j = 0; j &#60;= s; j = j+1) {"/>
+<element id="8" value=" 9        IF (p[i-1][j]) {"/>
+<element id="9" value="10          p[i][j] = TRUE;"/>
+<element id="10" value="11        }"/>
+<element id="11" value="12        IF (!p[i][j] &#38;&#38; j>=a[i-1] &#38;&#38; p[i-1][j-a[i-1]]) {"/>
+<element id="12" value="13          p[i][j] = TRUE;"/>
+<element id="13" value="14        }"/>
+<element id="14" value="15      }"/>
+<element id="15" value="16    RETURN p[n][s];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="420.0" originX="510" originY="40">
+<visualMalleableElement id="9" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="420"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="16">
+<structure name="a" type="Array">
+<array size="5" type="IntInformation">
+<element id="0" value="3"/>
+<element id="1" value="2"/>
+<element id="2" value="1"/>
+<element id="3" value="4"/>
+<element id="4" value="2"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="10" originY="50">
+</visualArray>
+<message content="The gray element can be set equal to TRUE since the element immediately above (in azure) is already TRUE.">
+</message>
+</structure>
+<structure name="p" type="Matrix">
+<matrix height="7" width="8" type="StringInformation">
+	<element id="0" value=" "/>
+	<element id="1" value="0"/>
+	<element id="2" value="1"/>
+	<element id="3" value="2"/>
+	<element id="4" value="3"/>
+	<element id="5" value="4"/>
+	<element id="6" value="5"/>
+	<element id="7" value="6"/>
+	<element id="8" value="{}"/>
+	<element id="9" value="TRUE"/>
+	<element id="10" value="FALSE"/>
+	<element id="11" value="FALSE"/>
+	<element id="12" value="FALSE"/>
+	<element id="13" value="FALSE"/>
+	<element id="14" value="FALSE"/>
+	<element id="15" value="FALSE"/>
+	<element id="16" value="{3}"/>
+	<element id="17" value="TRUE"/>
+	<element id="18" value="FALSE"/>
+	<element id="19" value="FALSE"/>
+	<element id="20" value="TRUE"/>
+	<element id="21" value="FALSE"/>
+	<element id="22" value="FALSE"/>
+	<element id="23" value="FALSE"/>
+	<element id="24" value="{3,2}"/>
+	<element id="25" value="TRUE"/>
+	<element id="26" value="FALSE"/>
+	<element id="27" value="TRUE"/>
+	<element id="28" value="TRUE"/>
+	<element id="29" value="FALSE"/>
+	<element id="30" value="TRUE"/>
+	<element id="31" value="FALSE"/>
+	<element id="32" value="{3,2,1}"/>
+	<element id="33" value="TRUE"/>
+	<element id="34" value="TRUE"/>
+	<element id="35" value="TRUE"/>
+	<element id="36" value="TRUE"/>
+	<element id="37" value="TRUE"/>
+	<element id="38" value="TRUE"/>
+	<element id="39" value="TRUE"/>
+	<element id="40" value="{3,2,1,4}"/>
+	<element id="41" value="TRUE"/>
+	<element id="42" value="FALSE"/>
+	<element id="43" value="FALSE"/>
+	<element id="44" value="FALSE"/>
+	<element id="45" value="FALSE"/>
+	<element id="46" value="FALSE"/>
+	<element id="47" value="FALSE"/>
+	<element id="48" value="{3,2,1,4,2}"/>
+	<element id="49" value="FALSE"/>
+	<element id="50" value="FALSE"/>
+	<element id="51" value="FALSE"/>
+	<element id="52" value="FALSE"/>
+	<element id="53" value="FALSE"/>
+	<element id="54" value="FALSE"/>
+	<element id="55" value="FALSE"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="60.0" originX="10" originY="100">
+<visualElement id="42" color="AAAAAA" font="Monospaced-PLAIN-10"/>
+<visualElement id="34" color="00FFFF" font="Monospaced-PLAIN-10"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  Partition( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60;= n; i = i+1)"/>
+<element id="2" value=" 3      FOR (j = 0; j &#60;= s; j = j +1) {"/>
+<element id="3" value=" 4        p[i][j] = FALSE;"/>
+<element id="4" value=" 5      }"/>
+<element id="5" value=" 6    p[0][0] = TRUE;"/>
+<element id="6" value=" 7    FOR (i = 1; i &#60;= n; i = i+1)"/>
+<element id="7" value=" 8      FOR (j = 0; j &#60;= s; j = j+1) {"/>
+<element id="8" value=" 9        IF (p[i-1][j]) {"/>
+<element id="9" value="10          p[i][j] = TRUE;"/>
+<element id="10" value="11        }"/>
+<element id="11" value="12        IF (!p[i][j] &#38;&#38; j>=a[i-1] &#38;&#38; p[i-1][j-a[i-1]]) {"/>
+<element id="12" value="13          p[i][j] = TRUE;"/>
+<element id="13" value="14        }"/>
+<element id="14" value="15      }"/>
+<element id="15" value="16    RETURN p[n][s];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="420.0" originX="510" originY="40">
+<visualMalleableElement id="9" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="420"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="17">
+<structure name="a" type="Array">
+<array size="5" type="IntInformation">
+<element id="0" value="3"/>
+<element id="1" value="2"/>
+<element id="2" value="1"/>
+<element id="3" value="4"/>
+<element id="4" value="2"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="10" originY="50">
+</visualArray>
+<message content="The gray element can be set equal to TRUE since the element immediately above (in azure) is already TRUE.">
+</message>
+</structure>
+<structure name="p" type="Matrix">
+<matrix height="7" width="8" type="StringInformation">
+	<element id="0" value=" "/>
+	<element id="1" value="0"/>
+	<element id="2" value="1"/>
+	<element id="3" value="2"/>
+	<element id="4" value="3"/>
+	<element id="5" value="4"/>
+	<element id="6" value="5"/>
+	<element id="7" value="6"/>
+	<element id="8" value="{}"/>
+	<element id="9" value="TRUE"/>
+	<element id="10" value="FALSE"/>
+	<element id="11" value="FALSE"/>
+	<element id="12" value="FALSE"/>
+	<element id="13" value="FALSE"/>
+	<element id="14" value="FALSE"/>
+	<element id="15" value="FALSE"/>
+	<element id="16" value="{3}"/>
+	<element id="17" value="TRUE"/>
+	<element id="18" value="FALSE"/>
+	<element id="19" value="FALSE"/>
+	<element id="20" value="TRUE"/>
+	<element id="21" value="FALSE"/>
+	<element id="22" value="FALSE"/>
+	<element id="23" value="FALSE"/>
+	<element id="24" value="{3,2}"/>
+	<element id="25" value="TRUE"/>
+	<element id="26" value="FALSE"/>
+	<element id="27" value="TRUE"/>
+	<element id="28" value="TRUE"/>
+	<element id="29" value="FALSE"/>
+	<element id="30" value="TRUE"/>
+	<element id="31" value="FALSE"/>
+	<element id="32" value="{3,2,1}"/>
+	<element id="33" value="TRUE"/>
+	<element id="34" value="TRUE"/>
+	<element id="35" value="TRUE"/>
+	<element id="36" value="TRUE"/>
+	<element id="37" value="TRUE"/>
+	<element id="38" value="TRUE"/>
+	<element id="39" value="TRUE"/>
+	<element id="40" value="{3,2,1,4}"/>
+	<element id="41" value="TRUE"/>
+	<element id="42" value="TRUE"/>
+	<element id="43" value="FALSE"/>
+	<element id="44" value="FALSE"/>
+	<element id="45" value="FALSE"/>
+	<element id="46" value="FALSE"/>
+	<element id="47" value="FALSE"/>
+	<element id="48" value="{3,2,1,4,2}"/>
+	<element id="49" value="FALSE"/>
+	<element id="50" value="FALSE"/>
+	<element id="51" value="FALSE"/>
+	<element id="52" value="FALSE"/>
+	<element id="53" value="FALSE"/>
+	<element id="54" value="FALSE"/>
+	<element id="55" value="FALSE"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="60.0" originX="10" originY="100">
+<visualElement id="43" color="AAAAAA" font="Monospaced-PLAIN-10"/>
+<visualElement id="35" color="00FFFF" font="Monospaced-PLAIN-10"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  Partition( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60;= n; i = i+1)"/>
+<element id="2" value=" 3      FOR (j = 0; j &#60;= s; j = j +1) {"/>
+<element id="3" value=" 4        p[i][j] = FALSE;"/>
+<element id="4" value=" 5      }"/>
+<element id="5" value=" 6    p[0][0] = TRUE;"/>
+<element id="6" value=" 7    FOR (i = 1; i &#60;= n; i = i+1)"/>
+<element id="7" value=" 8      FOR (j = 0; j &#60;= s; j = j+1) {"/>
+<element id="8" value=" 9        IF (p[i-1][j]) {"/>
+<element id="9" value="10          p[i][j] = TRUE;"/>
+<element id="10" value="11        }"/>
+<element id="11" value="12        IF (!p[i][j] &#38;&#38; j>=a[i-1] &#38;&#38; p[i-1][j-a[i-1]]) {"/>
+<element id="12" value="13          p[i][j] = TRUE;"/>
+<element id="13" value="14        }"/>
+<element id="14" value="15      }"/>
+<element id="15" value="16    RETURN p[n][s];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="420.0" originX="510" originY="40">
+<visualMalleableElement id="9" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="420"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="18">
+<structure name="a" type="Array">
+<array size="5" type="IntInformation">
+<element id="0" value="3"/>
+<element id="1" value="2"/>
+<element id="2" value="1"/>
+<element id="3" value="4"/>
+<element id="4" value="2"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="10" originY="50">
+</visualArray>
+<message content="The gray element can be set equal to TRUE since the element immediately above (in azure) is already TRUE.">
+</message>
+</structure>
+<structure name="p" type="Matrix">
+<matrix height="7" width="8" type="StringInformation">
+	<element id="0" value=" "/>
+	<element id="1" value="0"/>
+	<element id="2" value="1"/>
+	<element id="3" value="2"/>
+	<element id="4" value="3"/>
+	<element id="5" value="4"/>
+	<element id="6" value="5"/>
+	<element id="7" value="6"/>
+	<element id="8" value="{}"/>
+	<element id="9" value="TRUE"/>
+	<element id="10" value="FALSE"/>
+	<element id="11" value="FALSE"/>
+	<element id="12" value="FALSE"/>
+	<element id="13" value="FALSE"/>
+	<element id="14" value="FALSE"/>
+	<element id="15" value="FALSE"/>
+	<element id="16" value="{3}"/>
+	<element id="17" value="TRUE"/>
+	<element id="18" value="FALSE"/>
+	<element id="19" value="FALSE"/>
+	<element id="20" value="TRUE"/>
+	<element id="21" value="FALSE"/>
+	<element id="22" value="FALSE"/>
+	<element id="23" value="FALSE"/>
+	<element id="24" value="{3,2}"/>
+	<element id="25" value="TRUE"/>
+	<element id="26" value="FALSE"/>
+	<element id="27" value="TRUE"/>
+	<element id="28" value="TRUE"/>
+	<element id="29" value="FALSE"/>
+	<element id="30" value="TRUE"/>
+	<element id="31" value="FALSE"/>
+	<element id="32" value="{3,2,1}"/>
+	<element id="33" value="TRUE"/>
+	<element id="34" value="TRUE"/>
+	<element id="35" value="TRUE"/>
+	<element id="36" value="TRUE"/>
+	<element id="37" value="TRUE"/>
+	<element id="38" value="TRUE"/>
+	<element id="39" value="TRUE"/>
+	<element id="40" value="{3,2,1,4}"/>
+	<element id="41" value="TRUE"/>
+	<element id="42" value="TRUE"/>
+	<element id="43" value="TRUE"/>
+	<element id="44" value="FALSE"/>
+	<element id="45" value="FALSE"/>
+	<element id="46" value="FALSE"/>
+	<element id="47" value="FALSE"/>
+	<element id="48" value="{3,2,1,4,2}"/>
+	<element id="49" value="FALSE"/>
+	<element id="50" value="FALSE"/>
+	<element id="51" value="FALSE"/>
+	<element id="52" value="FALSE"/>
+	<element id="53" value="FALSE"/>
+	<element id="54" value="FALSE"/>
+	<element id="55" value="FALSE"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="60.0" originX="10" originY="100">
+<visualElement id="44" color="AAAAAA" font="Monospaced-PLAIN-10"/>
+<visualElement id="36" color="00FFFF" font="Monospaced-PLAIN-10"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  Partition( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60;= n; i = i+1)"/>
+<element id="2" value=" 3      FOR (j = 0; j &#60;= s; j = j +1) {"/>
+<element id="3" value=" 4        p[i][j] = FALSE;"/>
+<element id="4" value=" 5      }"/>
+<element id="5" value=" 6    p[0][0] = TRUE;"/>
+<element id="6" value=" 7    FOR (i = 1; i &#60;= n; i = i+1)"/>
+<element id="7" value=" 8      FOR (j = 0; j &#60;= s; j = j+1) {"/>
+<element id="8" value=" 9        IF (p[i-1][j]) {"/>
+<element id="9" value="10          p[i][j] = TRUE;"/>
+<element id="10" value="11        }"/>
+<element id="11" value="12        IF (!p[i][j] &#38;&#38; j>=a[i-1] &#38;&#38; p[i-1][j-a[i-1]]) {"/>
+<element id="12" value="13          p[i][j] = TRUE;"/>
+<element id="13" value="14        }"/>
+<element id="14" value="15      }"/>
+<element id="15" value="16    RETURN p[n][s];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="420.0" originX="510" originY="40">
+<visualMalleableElement id="9" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="420"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="19">
+<structure name="a" type="Array">
+<array size="5" type="IntInformation">
+<element id="0" value="3"/>
+<element id="1" value="2"/>
+<element id="2" value="1"/>
+<element id="3" value="4"/>
+<element id="4" value="2"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="10" originY="50">
+</visualArray>
+<message content="The gray element can be set equal to TRUE since the element immediately above (in azure) is already TRUE.">
+</message>
+</structure>
+<structure name="p" type="Matrix">
+<matrix height="7" width="8" type="StringInformation">
+	<element id="0" value=" "/>
+	<element id="1" value="0"/>
+	<element id="2" value="1"/>
+	<element id="3" value="2"/>
+	<element id="4" value="3"/>
+	<element id="5" value="4"/>
+	<element id="6" value="5"/>
+	<element id="7" value="6"/>
+	<element id="8" value="{}"/>
+	<element id="9" value="TRUE"/>
+	<element id="10" value="FALSE"/>
+	<element id="11" value="FALSE"/>
+	<element id="12" value="FALSE"/>
+	<element id="13" value="FALSE"/>
+	<element id="14" value="FALSE"/>
+	<element id="15" value="FALSE"/>
+	<element id="16" value="{3}"/>
+	<element id="17" value="TRUE"/>
+	<element id="18" value="FALSE"/>
+	<element id="19" value="FALSE"/>
+	<element id="20" value="TRUE"/>
+	<element id="21" value="FALSE"/>
+	<element id="22" value="FALSE"/>
+	<element id="23" value="FALSE"/>
+	<element id="24" value="{3,2}"/>
+	<element id="25" value="TRUE"/>
+	<element id="26" value="FALSE"/>
+	<element id="27" value="TRUE"/>
+	<element id="28" value="TRUE"/>
+	<element id="29" value="FALSE"/>
+	<element id="30" value="TRUE"/>
+	<element id="31" value="FALSE"/>
+	<element id="32" value="{3,2,1}"/>
+	<element id="33" value="TRUE"/>
+	<element id="34" value="TRUE"/>
+	<element id="35" value="TRUE"/>
+	<element id="36" value="TRUE"/>
+	<element id="37" value="TRUE"/>
+	<element id="38" value="TRUE"/>
+	<element id="39" value="TRUE"/>
+	<element id="40" value="{3,2,1,4}"/>
+	<element id="41" value="TRUE"/>
+	<element id="42" value="TRUE"/>
+	<element id="43" value="TRUE"/>
+	<element id="44" value="TRUE"/>
+	<element id="45" value="FALSE"/>
+	<element id="46" value="FALSE"/>
+	<element id="47" value="FALSE"/>
+	<element id="48" value="{3,2,1,4,2}"/>
+	<element id="49" value="FALSE"/>
+	<element id="50" value="FALSE"/>
+	<element id="51" value="FALSE"/>
+	<element id="52" value="FALSE"/>
+	<element id="53" value="FALSE"/>
+	<element id="54" value="FALSE"/>
+	<element id="55" value="FALSE"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="60.0" originX="10" originY="100">
+<visualElement id="45" color="AAAAAA" font="Monospaced-PLAIN-10"/>
+<visualElement id="37" color="00FFFF" font="Monospaced-PLAIN-10"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  Partition( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60;= n; i = i+1)"/>
+<element id="2" value=" 3      FOR (j = 0; j &#60;= s; j = j +1) {"/>
+<element id="3" value=" 4        p[i][j] = FALSE;"/>
+<element id="4" value=" 5      }"/>
+<element id="5" value=" 6    p[0][0] = TRUE;"/>
+<element id="6" value=" 7    FOR (i = 1; i &#60;= n; i = i+1)"/>
+<element id="7" value=" 8      FOR (j = 0; j &#60;= s; j = j+1) {"/>
+<element id="8" value=" 9        IF (p[i-1][j]) {"/>
+<element id="9" value="10          p[i][j] = TRUE;"/>
+<element id="10" value="11        }"/>
+<element id="11" value="12        IF (!p[i][j] &#38;&#38; j>=a[i-1] &#38;&#38; p[i-1][j-a[i-1]]) {"/>
+<element id="12" value="13          p[i][j] = TRUE;"/>
+<element id="13" value="14        }"/>
+<element id="14" value="15      }"/>
+<element id="15" value="16    RETURN p[n][s];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="420.0" originX="510" originY="40">
+<visualMalleableElement id="9" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="420"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="20">
+<structure name="a" type="Array">
+<array size="5" type="IntInformation">
+<element id="0" value="3"/>
+<element id="1" value="2"/>
+<element id="2" value="1"/>
+<element id="3" value="4"/>
+<element id="4" value="2"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="10" originY="50">
+</visualArray>
+<message content="The gray element can be set equal to TRUE since the element immediately above (in azure) is already TRUE.">
+</message>
+</structure>
+<structure name="p" type="Matrix">
+<matrix height="7" width="8" type="StringInformation">
+	<element id="0" value=" "/>
+	<element id="1" value="0"/>
+	<element id="2" value="1"/>
+	<element id="3" value="2"/>
+	<element id="4" value="3"/>
+	<element id="5" value="4"/>
+	<element id="6" value="5"/>
+	<element id="7" value="6"/>
+	<element id="8" value="{}"/>
+	<element id="9" value="TRUE"/>
+	<element id="10" value="FALSE"/>
+	<element id="11" value="FALSE"/>
+	<element id="12" value="FALSE"/>
+	<element id="13" value="FALSE"/>
+	<element id="14" value="FALSE"/>
+	<element id="15" value="FALSE"/>
+	<element id="16" value="{3}"/>
+	<element id="17" value="TRUE"/>
+	<element id="18" value="FALSE"/>
+	<element id="19" value="FALSE"/>
+	<element id="20" value="TRUE"/>
+	<element id="21" value="FALSE"/>
+	<element id="22" value="FALSE"/>
+	<element id="23" value="FALSE"/>
+	<element id="24" value="{3,2}"/>
+	<element id="25" value="TRUE"/>
+	<element id="26" value="FALSE"/>
+	<element id="27" value="TRUE"/>
+	<element id="28" value="TRUE"/>
+	<element id="29" value="FALSE"/>
+	<element id="30" value="TRUE"/>
+	<element id="31" value="FALSE"/>
+	<element id="32" value="{3,2,1}"/>
+	<element id="33" value="TRUE"/>
+	<element id="34" value="TRUE"/>
+	<element id="35" value="TRUE"/>
+	<element id="36" value="TRUE"/>
+	<element id="37" value="TRUE"/>
+	<element id="38" value="TRUE"/>
+	<element id="39" value="TRUE"/>
+	<element id="40" value="{3,2,1,4}"/>
+	<element id="41" value="TRUE"/>
+	<element id="42" value="TRUE"/>
+	<element id="43" value="TRUE"/>
+	<element id="44" value="TRUE"/>
+	<element id="45" value="TRUE"/>
+	<element id="46" value="FALSE"/>
+	<element id="47" value="FALSE"/>
+	<element id="48" value="{3,2,1,4,2}"/>
+	<element id="49" value="FALSE"/>
+	<element id="50" value="FALSE"/>
+	<element id="51" value="FALSE"/>
+	<element id="52" value="FALSE"/>
+	<element id="53" value="FALSE"/>
+	<element id="54" value="FALSE"/>
+	<element id="55" value="FALSE"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="60.0" originX="10" originY="100">
+<visualElement id="46" color="AAAAAA" font="Monospaced-PLAIN-10"/>
+<visualElement id="38" color="00FFFF" font="Monospaced-PLAIN-10"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  Partition( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60;= n; i = i+1)"/>
+<element id="2" value=" 3      FOR (j = 0; j &#60;= s; j = j +1) {"/>
+<element id="3" value=" 4        p[i][j] = FALSE;"/>
+<element id="4" value=" 5      }"/>
+<element id="5" value=" 6    p[0][0] = TRUE;"/>
+<element id="6" value=" 7    FOR (i = 1; i &#60;= n; i = i+1)"/>
+<element id="7" value=" 8      FOR (j = 0; j &#60;= s; j = j+1) {"/>
+<element id="8" value=" 9        IF (p[i-1][j]) {"/>
+<element id="9" value="10          p[i][j] = TRUE;"/>
+<element id="10" value="11        }"/>
+<element id="11" value="12        IF (!p[i][j] &#38;&#38; j>=a[i-1] &#38;&#38; p[i-1][j-a[i-1]]) {"/>
+<element id="12" value="13          p[i][j] = TRUE;"/>
+<element id="13" value="14        }"/>
+<element id="14" value="15      }"/>
+<element id="15" value="16    RETURN p[n][s];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="420.0" originX="510" originY="40">
+<visualMalleableElement id="9" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="420"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="21">
+<structure name="a" type="Array">
+<array size="5" type="IntInformation">
+<element id="0" value="3"/>
+<element id="1" value="2"/>
+<element id="2" value="1"/>
+<element id="3" value="4"/>
+<element id="4" value="2"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="10" originY="50">
+</visualArray>
+<message content="The gray element can be set equal to TRUE since the element immediately above (in azure) is already TRUE.">
+</message>
+</structure>
+<structure name="p" type="Matrix">
+<matrix height="7" width="8" type="StringInformation">
+	<element id="0" value=" "/>
+	<element id="1" value="0"/>
+	<element id="2" value="1"/>
+	<element id="3" value="2"/>
+	<element id="4" value="3"/>
+	<element id="5" value="4"/>
+	<element id="6" value="5"/>
+	<element id="7" value="6"/>
+	<element id="8" value="{}"/>
+	<element id="9" value="TRUE"/>
+	<element id="10" value="FALSE"/>
+	<element id="11" value="FALSE"/>
+	<element id="12" value="FALSE"/>
+	<element id="13" value="FALSE"/>
+	<element id="14" value="FALSE"/>
+	<element id="15" value="FALSE"/>
+	<element id="16" value="{3}"/>
+	<element id="17" value="TRUE"/>
+	<element id="18" value="FALSE"/>
+	<element id="19" value="FALSE"/>
+	<element id="20" value="TRUE"/>
+	<element id="21" value="FALSE"/>
+	<element id="22" value="FALSE"/>
+	<element id="23" value="FALSE"/>
+	<element id="24" value="{3,2}"/>
+	<element id="25" value="TRUE"/>
+	<element id="26" value="FALSE"/>
+	<element id="27" value="TRUE"/>
+	<element id="28" value="TRUE"/>
+	<element id="29" value="FALSE"/>
+	<element id="30" value="TRUE"/>
+	<element id="31" value="FALSE"/>
+	<element id="32" value="{3,2,1}"/>
+	<element id="33" value="TRUE"/>
+	<element id="34" value="TRUE"/>
+	<element id="35" value="TRUE"/>
+	<element id="36" value="TRUE"/>
+	<element id="37" value="TRUE"/>
+	<element id="38" value="TRUE"/>
+	<element id="39" value="TRUE"/>
+	<element id="40" value="{3,2,1,4}"/>
+	<element id="41" value="TRUE"/>
+	<element id="42" value="TRUE"/>
+	<element id="43" value="TRUE"/>
+	<element id="44" value="TRUE"/>
+	<element id="45" value="TRUE"/>
+	<element id="46" value="TRUE"/>
+	<element id="47" value="FALSE"/>
+	<element id="48" value="{3,2,1,4,2}"/>
+	<element id="49" value="FALSE"/>
+	<element id="50" value="FALSE"/>
+	<element id="51" value="FALSE"/>
+	<element id="52" value="FALSE"/>
+	<element id="53" value="FALSE"/>
+	<element id="54" value="FALSE"/>
+	<element id="55" value="FALSE"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="60.0" originX="10" originY="100">
+<visualElement id="47" color="AAAAAA" font="Monospaced-PLAIN-10"/>
+<visualElement id="39" color="00FFFF" font="Monospaced-PLAIN-10"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  Partition( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60;= n; i = i+1)"/>
+<element id="2" value=" 3      FOR (j = 0; j &#60;= s; j = j +1) {"/>
+<element id="3" value=" 4        p[i][j] = FALSE;"/>
+<element id="4" value=" 5      }"/>
+<element id="5" value=" 6    p[0][0] = TRUE;"/>
+<element id="6" value=" 7    FOR (i = 1; i &#60;= n; i = i+1)"/>
+<element id="7" value=" 8      FOR (j = 0; j &#60;= s; j = j+1) {"/>
+<element id="8" value=" 9        IF (p[i-1][j]) {"/>
+<element id="9" value="10          p[i][j] = TRUE;"/>
+<element id="10" value="11        }"/>
+<element id="11" value="12        IF (!p[i][j] &#38;&#38; j>=a[i-1] &#38;&#38; p[i-1][j-a[i-1]]) {"/>
+<element id="12" value="13          p[i][j] = TRUE;"/>
+<element id="13" value="14        }"/>
+<element id="14" value="15      }"/>
+<element id="15" value="16    RETURN p[n][s];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="420.0" originX="510" originY="40">
+<visualMalleableElement id="9" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="420"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="22">
+<structure name="a" type="Array">
+<array size="5" type="IntInformation">
+<element id="0" value="3"/>
+<element id="1" value="2"/>
+<element id="2" value="1"/>
+<element id="3" value="4"/>
+<element id="4" value="2"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="10" originY="50">
+</visualArray>
+<message content="The gray element can be set equal to TRUE since the element immediately above (in azure) is already TRUE.">
+</message>
+</structure>
+<structure name="p" type="Matrix">
+<matrix height="7" width="8" type="StringInformation">
+	<element id="0" value=" "/>
+	<element id="1" value="0"/>
+	<element id="2" value="1"/>
+	<element id="3" value="2"/>
+	<element id="4" value="3"/>
+	<element id="5" value="4"/>
+	<element id="6" value="5"/>
+	<element id="7" value="6"/>
+	<element id="8" value="{}"/>
+	<element id="9" value="TRUE"/>
+	<element id="10" value="FALSE"/>
+	<element id="11" value="FALSE"/>
+	<element id="12" value="FALSE"/>
+	<element id="13" value="FALSE"/>
+	<element id="14" value="FALSE"/>
+	<element id="15" value="FALSE"/>
+	<element id="16" value="{3}"/>
+	<element id="17" value="TRUE"/>
+	<element id="18" value="FALSE"/>
+	<element id="19" value="FALSE"/>
+	<element id="20" value="TRUE"/>
+	<element id="21" value="FALSE"/>
+	<element id="22" value="FALSE"/>
+	<element id="23" value="FALSE"/>
+	<element id="24" value="{3,2}"/>
+	<element id="25" value="TRUE"/>
+	<element id="26" value="FALSE"/>
+	<element id="27" value="TRUE"/>
+	<element id="28" value="TRUE"/>
+	<element id="29" value="FALSE"/>
+	<element id="30" value="TRUE"/>
+	<element id="31" value="FALSE"/>
+	<element id="32" value="{3,2,1}"/>
+	<element id="33" value="TRUE"/>
+	<element id="34" value="TRUE"/>
+	<element id="35" value="TRUE"/>
+	<element id="36" value="TRUE"/>
+	<element id="37" value="TRUE"/>
+	<element id="38" value="TRUE"/>
+	<element id="39" value="TRUE"/>
+	<element id="40" value="{3,2,1,4}"/>
+	<element id="41" value="TRUE"/>
+	<element id="42" value="TRUE"/>
+	<element id="43" value="TRUE"/>
+	<element id="44" value="TRUE"/>
+	<element id="45" value="TRUE"/>
+	<element id="46" value="TRUE"/>
+	<element id="47" value="TRUE"/>
+	<element id="48" value="{3,2,1,4,2}"/>
+	<element id="49" value="FALSE"/>
+	<element id="50" value="FALSE"/>
+	<element id="51" value="FALSE"/>
+	<element id="52" value="FALSE"/>
+	<element id="53" value="FALSE"/>
+	<element id="54" value="FALSE"/>
+	<element id="55" value="FALSE"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="60.0" originX="10" originY="100">
+<visualElement id="49" color="AAAAAA" font="Monospaced-PLAIN-10"/>
+<visualElement id="41" color="00FFFF" font="Monospaced-PLAIN-10"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  Partition( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60;= n; i = i+1)"/>
+<element id="2" value=" 3      FOR (j = 0; j &#60;= s; j = j +1) {"/>
+<element id="3" value=" 4        p[i][j] = FALSE;"/>
+<element id="4" value=" 5      }"/>
+<element id="5" value=" 6    p[0][0] = TRUE;"/>
+<element id="6" value=" 7    FOR (i = 1; i &#60;= n; i = i+1)"/>
+<element id="7" value=" 8      FOR (j = 0; j &#60;= s; j = j+1) {"/>
+<element id="8" value=" 9        IF (p[i-1][j]) {"/>
+<element id="9" value="10          p[i][j] = TRUE;"/>
+<element id="10" value="11        }"/>
+<element id="11" value="12        IF (!p[i][j] &#38;&#38; j>=a[i-1] &#38;&#38; p[i-1][j-a[i-1]]) {"/>
+<element id="12" value="13          p[i][j] = TRUE;"/>
+<element id="13" value="14        }"/>
+<element id="14" value="15      }"/>
+<element id="15" value="16    RETURN p[n][s];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="420.0" originX="510" originY="40">
+<visualMalleableElement id="9" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="420"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="23">
+<structure name="a" type="Array">
+<array size="5" type="IntInformation">
+<element id="0" value="3"/>
+<element id="1" value="2"/>
+<element id="2" value="1"/>
+<element id="3" value="4"/>
+<element id="4" value="2"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="10" originY="50">
+</visualArray>
+<message content="The gray element can be set equal to TRUE since the element immediately above (in azure) is already TRUE.">
+</message>
+</structure>
+<structure name="p" type="Matrix">
+<matrix height="7" width="8" type="StringInformation">
+	<element id="0" value=" "/>
+	<element id="1" value="0"/>
+	<element id="2" value="1"/>
+	<element id="3" value="2"/>
+	<element id="4" value="3"/>
+	<element id="5" value="4"/>
+	<element id="6" value="5"/>
+	<element id="7" value="6"/>
+	<element id="8" value="{}"/>
+	<element id="9" value="TRUE"/>
+	<element id="10" value="FALSE"/>
+	<element id="11" value="FALSE"/>
+	<element id="12" value="FALSE"/>
+	<element id="13" value="FALSE"/>
+	<element id="14" value="FALSE"/>
+	<element id="15" value="FALSE"/>
+	<element id="16" value="{3}"/>
+	<element id="17" value="TRUE"/>
+	<element id="18" value="FALSE"/>
+	<element id="19" value="FALSE"/>
+	<element id="20" value="TRUE"/>
+	<element id="21" value="FALSE"/>
+	<element id="22" value="FALSE"/>
+	<element id="23" value="FALSE"/>
+	<element id="24" value="{3,2}"/>
+	<element id="25" value="TRUE"/>
+	<element id="26" value="FALSE"/>
+	<element id="27" value="TRUE"/>
+	<element id="28" value="TRUE"/>
+	<element id="29" value="FALSE"/>
+	<element id="30" value="TRUE"/>
+	<element id="31" value="FALSE"/>
+	<element id="32" value="{3,2,1}"/>
+	<element id="33" value="TRUE"/>
+	<element id="34" value="TRUE"/>
+	<element id="35" value="TRUE"/>
+	<element id="36" value="TRUE"/>
+	<element id="37" value="TRUE"/>
+	<element id="38" value="TRUE"/>
+	<element id="39" value="TRUE"/>
+	<element id="40" value="{3,2,1,4}"/>
+	<element id="41" value="TRUE"/>
+	<element id="42" value="TRUE"/>
+	<element id="43" value="TRUE"/>
+	<element id="44" value="TRUE"/>
+	<element id="45" value="TRUE"/>
+	<element id="46" value="TRUE"/>
+	<element id="47" value="TRUE"/>
+	<element id="48" value="{3,2,1,4,2}"/>
+	<element id="49" value="TRUE"/>
+	<element id="50" value="FALSE"/>
+	<element id="51" value="FALSE"/>
+	<element id="52" value="FALSE"/>
+	<element id="53" value="FALSE"/>
+	<element id="54" value="FALSE"/>
+	<element id="55" value="FALSE"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="60.0" originX="10" originY="100">
+<visualElement id="50" color="AAAAAA" font="Monospaced-PLAIN-10"/>
+<visualElement id="42" color="00FFFF" font="Monospaced-PLAIN-10"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  Partition( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60;= n; i = i+1)"/>
+<element id="2" value=" 3      FOR (j = 0; j &#60;= s; j = j +1) {"/>
+<element id="3" value=" 4        p[i][j] = FALSE;"/>
+<element id="4" value=" 5      }"/>
+<element id="5" value=" 6    p[0][0] = TRUE;"/>
+<element id="6" value=" 7    FOR (i = 1; i &#60;= n; i = i+1)"/>
+<element id="7" value=" 8      FOR (j = 0; j &#60;= s; j = j+1) {"/>
+<element id="8" value=" 9        IF (p[i-1][j]) {"/>
+<element id="9" value="10          p[i][j] = TRUE;"/>
+<element id="10" value="11        }"/>
+<element id="11" value="12        IF (!p[i][j] &#38;&#38; j>=a[i-1] &#38;&#38; p[i-1][j-a[i-1]]) {"/>
+<element id="12" value="13          p[i][j] = TRUE;"/>
+<element id="13" value="14        }"/>
+<element id="14" value="15      }"/>
+<element id="15" value="16    RETURN p[n][s];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="420.0" originX="510" originY="40">
+<visualMalleableElement id="9" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="420"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="24">
+<structure name="a" type="Array">
+<array size="5" type="IntInformation">
+<element id="0" value="3"/>
+<element id="1" value="2"/>
+<element id="2" value="1"/>
+<element id="3" value="4"/>
+<element id="4" value="2"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="10" originY="50">
+</visualArray>
+<message content="The gray element can be set equal to TRUE since the element immediately above (in azure) is already TRUE.">
+</message>
+</structure>
+<structure name="p" type="Matrix">
+<matrix height="7" width="8" type="StringInformation">
+	<element id="0" value=" "/>
+	<element id="1" value="0"/>
+	<element id="2" value="1"/>
+	<element id="3" value="2"/>
+	<element id="4" value="3"/>
+	<element id="5" value="4"/>
+	<element id="6" value="5"/>
+	<element id="7" value="6"/>
+	<element id="8" value="{}"/>
+	<element id="9" value="TRUE"/>
+	<element id="10" value="FALSE"/>
+	<element id="11" value="FALSE"/>
+	<element id="12" value="FALSE"/>
+	<element id="13" value="FALSE"/>
+	<element id="14" value="FALSE"/>
+	<element id="15" value="FALSE"/>
+	<element id="16" value="{3}"/>
+	<element id="17" value="TRUE"/>
+	<element id="18" value="FALSE"/>
+	<element id="19" value="FALSE"/>
+	<element id="20" value="TRUE"/>
+	<element id="21" value="FALSE"/>
+	<element id="22" value="FALSE"/>
+	<element id="23" value="FALSE"/>
+	<element id="24" value="{3,2}"/>
+	<element id="25" value="TRUE"/>
+	<element id="26" value="FALSE"/>
+	<element id="27" value="TRUE"/>
+	<element id="28" value="TRUE"/>
+	<element id="29" value="FALSE"/>
+	<element id="30" value="TRUE"/>
+	<element id="31" value="FALSE"/>
+	<element id="32" value="{3,2,1}"/>
+	<element id="33" value="TRUE"/>
+	<element id="34" value="TRUE"/>
+	<element id="35" value="TRUE"/>
+	<element id="36" value="TRUE"/>
+	<element id="37" value="TRUE"/>
+	<element id="38" value="TRUE"/>
+	<element id="39" value="TRUE"/>
+	<element id="40" value="{3,2,1,4}"/>
+	<element id="41" value="TRUE"/>
+	<element id="42" value="TRUE"/>
+	<element id="43" value="TRUE"/>
+	<element id="44" value="TRUE"/>
+	<element id="45" value="TRUE"/>
+	<element id="46" value="TRUE"/>
+	<element id="47" value="TRUE"/>
+	<element id="48" value="{3,2,1,4,2}"/>
+	<element id="49" value="TRUE"/>
+	<element id="50" value="TRUE"/>
+	<element id="51" value="FALSE"/>
+	<element id="52" value="FALSE"/>
+	<element id="53" value="FALSE"/>
+	<element id="54" value="FALSE"/>
+	<element id="55" value="FALSE"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="60.0" originX="10" originY="100">
+<visualElement id="51" color="AAAAAA" font="Monospaced-PLAIN-10"/>
+<visualElement id="43" color="00FFFF" font="Monospaced-PLAIN-10"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  Partition( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60;= n; i = i+1)"/>
+<element id="2" value=" 3      FOR (j = 0; j &#60;= s; j = j +1) {"/>
+<element id="3" value=" 4        p[i][j] = FALSE;"/>
+<element id="4" value=" 5      }"/>
+<element id="5" value=" 6    p[0][0] = TRUE;"/>
+<element id="6" value=" 7    FOR (i = 1; i &#60;= n; i = i+1)"/>
+<element id="7" value=" 8      FOR (j = 0; j &#60;= s; j = j+1) {"/>
+<element id="8" value=" 9        IF (p[i-1][j]) {"/>
+<element id="9" value="10          p[i][j] = TRUE;"/>
+<element id="10" value="11        }"/>
+<element id="11" value="12        IF (!p[i][j] &#38;&#38; j>=a[i-1] &#38;&#38; p[i-1][j-a[i-1]]) {"/>
+<element id="12" value="13          p[i][j] = TRUE;"/>
+<element id="13" value="14        }"/>
+<element id="14" value="15      }"/>
+<element id="15" value="16    RETURN p[n][s];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="420.0" originX="510" originY="40">
+<visualMalleableElement id="9" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="420"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="25">
+<structure name="a" type="Array">
+<array size="5" type="IntInformation">
+<element id="0" value="3"/>
+<element id="1" value="2"/>
+<element id="2" value="1"/>
+<element id="3" value="4"/>
+<element id="4" value="2"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="10" originY="50">
+</visualArray>
+<message content="The gray element can be set equal to TRUE since the element immediately above (in azure) is already TRUE.">
+</message>
+</structure>
+<structure name="p" type="Matrix">
+<matrix height="7" width="8" type="StringInformation">
+	<element id="0" value=" "/>
+	<element id="1" value="0"/>
+	<element id="2" value="1"/>
+	<element id="3" value="2"/>
+	<element id="4" value="3"/>
+	<element id="5" value="4"/>
+	<element id="6" value="5"/>
+	<element id="7" value="6"/>
+	<element id="8" value="{}"/>
+	<element id="9" value="TRUE"/>
+	<element id="10" value="FALSE"/>
+	<element id="11" value="FALSE"/>
+	<element id="12" value="FALSE"/>
+	<element id="13" value="FALSE"/>
+	<element id="14" value="FALSE"/>
+	<element id="15" value="FALSE"/>
+	<element id="16" value="{3}"/>
+	<element id="17" value="TRUE"/>
+	<element id="18" value="FALSE"/>
+	<element id="19" value="FALSE"/>
+	<element id="20" value="TRUE"/>
+	<element id="21" value="FALSE"/>
+	<element id="22" value="FALSE"/>
+	<element id="23" value="FALSE"/>
+	<element id="24" value="{3,2}"/>
+	<element id="25" value="TRUE"/>
+	<element id="26" value="FALSE"/>
+	<element id="27" value="TRUE"/>
+	<element id="28" value="TRUE"/>
+	<element id="29" value="FALSE"/>
+	<element id="30" value="TRUE"/>
+	<element id="31" value="FALSE"/>
+	<element id="32" value="{3,2,1}"/>
+	<element id="33" value="TRUE"/>
+	<element id="34" value="TRUE"/>
+	<element id="35" value="TRUE"/>
+	<element id="36" value="TRUE"/>
+	<element id="37" value="TRUE"/>
+	<element id="38" value="TRUE"/>
+	<element id="39" value="TRUE"/>
+	<element id="40" value="{3,2,1,4}"/>
+	<element id="41" value="TRUE"/>
+	<element id="42" value="TRUE"/>
+	<element id="43" value="TRUE"/>
+	<element id="44" value="TRUE"/>
+	<element id="45" value="TRUE"/>
+	<element id="46" value="TRUE"/>
+	<element id="47" value="TRUE"/>
+	<element id="48" value="{3,2,1,4,2}"/>
+	<element id="49" value="TRUE"/>
+	<element id="50" value="TRUE"/>
+	<element id="51" value="TRUE"/>
+	<element id="52" value="FALSE"/>
+	<element id="53" value="FALSE"/>
+	<element id="54" value="FALSE"/>
+	<element id="55" value="FALSE"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="60.0" originX="10" originY="100">
+<visualElement id="52" color="AAAAAA" font="Monospaced-PLAIN-10"/>
+<visualElement id="44" color="00FFFF" font="Monospaced-PLAIN-10"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  Partition( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60;= n; i = i+1)"/>
+<element id="2" value=" 3      FOR (j = 0; j &#60;= s; j = j +1) {"/>
+<element id="3" value=" 4        p[i][j] = FALSE;"/>
+<element id="4" value=" 5      }"/>
+<element id="5" value=" 6    p[0][0] = TRUE;"/>
+<element id="6" value=" 7    FOR (i = 1; i &#60;= n; i = i+1)"/>
+<element id="7" value=" 8      FOR (j = 0; j &#60;= s; j = j+1) {"/>
+<element id="8" value=" 9        IF (p[i-1][j]) {"/>
+<element id="9" value="10          p[i][j] = TRUE;"/>
+<element id="10" value="11        }"/>
+<element id="11" value="12        IF (!p[i][j] &#38;&#38; j>=a[i-1] &#38;&#38; p[i-1][j-a[i-1]]) {"/>
+<element id="12" value="13          p[i][j] = TRUE;"/>
+<element id="13" value="14        }"/>
+<element id="14" value="15      }"/>
+<element id="15" value="16    RETURN p[n][s];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="420.0" originX="510" originY="40">
+<visualMalleableElement id="9" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="420"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="26">
+<structure name="a" type="Array">
+<array size="5" type="IntInformation">
+<element id="0" value="3"/>
+<element id="1" value="2"/>
+<element id="2" value="1"/>
+<element id="3" value="4"/>
+<element id="4" value="2"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="10" originY="50">
+</visualArray>
+<message content="The gray element can be set equal to TRUE since the element immediately above (in azure) is already TRUE.">
+</message>
+</structure>
+<structure name="p" type="Matrix">
+<matrix height="7" width="8" type="StringInformation">
+	<element id="0" value=" "/>
+	<element id="1" value="0"/>
+	<element id="2" value="1"/>
+	<element id="3" value="2"/>
+	<element id="4" value="3"/>
+	<element id="5" value="4"/>
+	<element id="6" value="5"/>
+	<element id="7" value="6"/>
+	<element id="8" value="{}"/>
+	<element id="9" value="TRUE"/>
+	<element id="10" value="FALSE"/>
+	<element id="11" value="FALSE"/>
+	<element id="12" value="FALSE"/>
+	<element id="13" value="FALSE"/>
+	<element id="14" value="FALSE"/>
+	<element id="15" value="FALSE"/>
+	<element id="16" value="{3}"/>
+	<element id="17" value="TRUE"/>
+	<element id="18" value="FALSE"/>
+	<element id="19" value="FALSE"/>
+	<element id="20" value="TRUE"/>
+	<element id="21" value="FALSE"/>
+	<element id="22" value="FALSE"/>
+	<element id="23" value="FALSE"/>
+	<element id="24" value="{3,2}"/>
+	<element id="25" value="TRUE"/>
+	<element id="26" value="FALSE"/>
+	<element id="27" value="TRUE"/>
+	<element id="28" value="TRUE"/>
+	<element id="29" value="FALSE"/>
+	<element id="30" value="TRUE"/>
+	<element id="31" value="FALSE"/>
+	<element id="32" value="{3,2,1}"/>
+	<element id="33" value="TRUE"/>
+	<element id="34" value="TRUE"/>
+	<element id="35" value="TRUE"/>
+	<element id="36" value="TRUE"/>
+	<element id="37" value="TRUE"/>
+	<element id="38" value="TRUE"/>
+	<element id="39" value="TRUE"/>
+	<element id="40" value="{3,2,1,4}"/>
+	<element id="41" value="TRUE"/>
+	<element id="42" value="TRUE"/>
+	<element id="43" value="TRUE"/>
+	<element id="44" value="TRUE"/>
+	<element id="45" value="TRUE"/>
+	<element id="46" value="TRUE"/>
+	<element id="47" value="TRUE"/>
+	<element id="48" value="{3,2,1,4,2}"/>
+	<element id="49" value="TRUE"/>
+	<element id="50" value="TRUE"/>
+	<element id="51" value="TRUE"/>
+	<element id="52" value="TRUE"/>
+	<element id="53" value="FALSE"/>
+	<element id="54" value="FALSE"/>
+	<element id="55" value="FALSE"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="60.0" originX="10" originY="100">
+<visualElement id="53" color="AAAAAA" font="Monospaced-PLAIN-10"/>
+<visualElement id="45" color="00FFFF" font="Monospaced-PLAIN-10"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  Partition( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60;= n; i = i+1)"/>
+<element id="2" value=" 3      FOR (j = 0; j &#60;= s; j = j +1) {"/>
+<element id="3" value=" 4        p[i][j] = FALSE;"/>
+<element id="4" value=" 5      }"/>
+<element id="5" value=" 6    p[0][0] = TRUE;"/>
+<element id="6" value=" 7    FOR (i = 1; i &#60;= n; i = i+1)"/>
+<element id="7" value=" 8      FOR (j = 0; j &#60;= s; j = j+1) {"/>
+<element id="8" value=" 9        IF (p[i-1][j]) {"/>
+<element id="9" value="10          p[i][j] = TRUE;"/>
+<element id="10" value="11        }"/>
+<element id="11" value="12        IF (!p[i][j] &#38;&#38; j>=a[i-1] &#38;&#38; p[i-1][j-a[i-1]]) {"/>
+<element id="12" value="13          p[i][j] = TRUE;"/>
+<element id="13" value="14        }"/>
+<element id="14" value="15      }"/>
+<element id="15" value="16    RETURN p[n][s];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="420.0" originX="510" originY="40">
+<visualMalleableElement id="9" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="420"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="27">
+<structure name="a" type="Array">
+<array size="5" type="IntInformation">
+<element id="0" value="3"/>
+<element id="1" value="2"/>
+<element id="2" value="1"/>
+<element id="3" value="4"/>
+<element id="4" value="2"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="10" originY="50">
+</visualArray>
+<message content="The gray element can be set equal to TRUE since the element immediately above (in azure) is already TRUE.">
+</message>
+</structure>
+<structure name="p" type="Matrix">
+<matrix height="7" width="8" type="StringInformation">
+	<element id="0" value=" "/>
+	<element id="1" value="0"/>
+	<element id="2" value="1"/>
+	<element id="3" value="2"/>
+	<element id="4" value="3"/>
+	<element id="5" value="4"/>
+	<element id="6" value="5"/>
+	<element id="7" value="6"/>
+	<element id="8" value="{}"/>
+	<element id="9" value="TRUE"/>
+	<element id="10" value="FALSE"/>
+	<element id="11" value="FALSE"/>
+	<element id="12" value="FALSE"/>
+	<element id="13" value="FALSE"/>
+	<element id="14" value="FALSE"/>
+	<element id="15" value="FALSE"/>
+	<element id="16" value="{3}"/>
+	<element id="17" value="TRUE"/>
+	<element id="18" value="FALSE"/>
+	<element id="19" value="FALSE"/>
+	<element id="20" value="TRUE"/>
+	<element id="21" value="FALSE"/>
+	<element id="22" value="FALSE"/>
+	<element id="23" value="FALSE"/>
+	<element id="24" value="{3,2}"/>
+	<element id="25" value="TRUE"/>
+	<element id="26" value="FALSE"/>
+	<element id="27" value="TRUE"/>
+	<element id="28" value="TRUE"/>
+	<element id="29" value="FALSE"/>
+	<element id="30" value="TRUE"/>
+	<element id="31" value="FALSE"/>
+	<element id="32" value="{3,2,1}"/>
+	<element id="33" value="TRUE"/>
+	<element id="34" value="TRUE"/>
+	<element id="35" value="TRUE"/>
+	<element id="36" value="TRUE"/>
+	<element id="37" value="TRUE"/>
+	<element id="38" value="TRUE"/>
+	<element id="39" value="TRUE"/>
+	<element id="40" value="{3,2,1,4}"/>
+	<element id="41" value="TRUE"/>
+	<element id="42" value="TRUE"/>
+	<element id="43" value="TRUE"/>
+	<element id="44" value="TRUE"/>
+	<element id="45" value="TRUE"/>
+	<element id="46" value="TRUE"/>
+	<element id="47" value="TRUE"/>
+	<element id="48" value="{3,2,1,4,2}"/>
+	<element id="49" value="TRUE"/>
+	<element id="50" value="TRUE"/>
+	<element id="51" value="TRUE"/>
+	<element id="52" value="TRUE"/>
+	<element id="53" value="TRUE"/>
+	<element id="54" value="FALSE"/>
+	<element id="55" value="FALSE"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="60.0" originX="10" originY="100">
+<visualElement id="54" color="AAAAAA" font="Monospaced-PLAIN-10"/>
+<visualElement id="46" color="00FFFF" font="Monospaced-PLAIN-10"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  Partition( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60;= n; i = i+1)"/>
+<element id="2" value=" 3      FOR (j = 0; j &#60;= s; j = j +1) {"/>
+<element id="3" value=" 4        p[i][j] = FALSE;"/>
+<element id="4" value=" 5      }"/>
+<element id="5" value=" 6    p[0][0] = TRUE;"/>
+<element id="6" value=" 7    FOR (i = 1; i &#60;= n; i = i+1)"/>
+<element id="7" value=" 8      FOR (j = 0; j &#60;= s; j = j+1) {"/>
+<element id="8" value=" 9        IF (p[i-1][j]) {"/>
+<element id="9" value="10          p[i][j] = TRUE;"/>
+<element id="10" value="11        }"/>
+<element id="11" value="12        IF (!p[i][j] &#38;&#38; j>=a[i-1] &#38;&#38; p[i-1][j-a[i-1]]) {"/>
+<element id="12" value="13          p[i][j] = TRUE;"/>
+<element id="13" value="14        }"/>
+<element id="14" value="15      }"/>
+<element id="15" value="16    RETURN p[n][s];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="420.0" originX="510" originY="40">
+<visualMalleableElement id="9" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="420"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="28">
+<structure name="a" type="Array">
+<array size="5" type="IntInformation">
+<element id="0" value="3"/>
+<element id="1" value="2"/>
+<element id="2" value="1"/>
+<element id="3" value="4"/>
+<element id="4" value="2"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="10" originY="50">
+</visualArray>
+<message content="The gray element can be set equal to TRUE since the element immediately above (in azure) is already TRUE.">
+</message>
+</structure>
+<structure name="p" type="Matrix">
+<matrix height="7" width="8" type="StringInformation">
+	<element id="0" value=" "/>
+	<element id="1" value="0"/>
+	<element id="2" value="1"/>
+	<element id="3" value="2"/>
+	<element id="4" value="3"/>
+	<element id="5" value="4"/>
+	<element id="6" value="5"/>
+	<element id="7" value="6"/>
+	<element id="8" value="{}"/>
+	<element id="9" value="TRUE"/>
+	<element id="10" value="FALSE"/>
+	<element id="11" value="FALSE"/>
+	<element id="12" value="FALSE"/>
+	<element id="13" value="FALSE"/>
+	<element id="14" value="FALSE"/>
+	<element id="15" value="FALSE"/>
+	<element id="16" value="{3}"/>
+	<element id="17" value="TRUE"/>
+	<element id="18" value="FALSE"/>
+	<element id="19" value="FALSE"/>
+	<element id="20" value="TRUE"/>
+	<element id="21" value="FALSE"/>
+	<element id="22" value="FALSE"/>
+	<element id="23" value="FALSE"/>
+	<element id="24" value="{3,2}"/>
+	<element id="25" value="TRUE"/>
+	<element id="26" value="FALSE"/>
+	<element id="27" value="TRUE"/>
+	<element id="28" value="TRUE"/>
+	<element id="29" value="FALSE"/>
+	<element id="30" value="TRUE"/>
+	<element id="31" value="FALSE"/>
+	<element id="32" value="{3,2,1}"/>
+	<element id="33" value="TRUE"/>
+	<element id="34" value="TRUE"/>
+	<element id="35" value="TRUE"/>
+	<element id="36" value="TRUE"/>
+	<element id="37" value="TRUE"/>
+	<element id="38" value="TRUE"/>
+	<element id="39" value="TRUE"/>
+	<element id="40" value="{3,2,1,4}"/>
+	<element id="41" value="TRUE"/>
+	<element id="42" value="TRUE"/>
+	<element id="43" value="TRUE"/>
+	<element id="44" value="TRUE"/>
+	<element id="45" value="TRUE"/>
+	<element id="46" value="TRUE"/>
+	<element id="47" value="TRUE"/>
+	<element id="48" value="{3,2,1,4,2}"/>
+	<element id="49" value="TRUE"/>
+	<element id="50" value="TRUE"/>
+	<element id="51" value="TRUE"/>
+	<element id="52" value="TRUE"/>
+	<element id="53" value="TRUE"/>
+	<element id="54" value="TRUE"/>
+	<element id="55" value="FALSE"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="60.0" originX="10" originY="100">
+<visualElement id="55" color="AAAAAA" font="Monospaced-PLAIN-10"/>
+<visualElement id="47" color="00FFFF" font="Monospaced-PLAIN-10"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  Partition( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60;= n; i = i+1)"/>
+<element id="2" value=" 3      FOR (j = 0; j &#60;= s; j = j +1) {"/>
+<element id="3" value=" 4        p[i][j] = FALSE;"/>
+<element id="4" value=" 5      }"/>
+<element id="5" value=" 6    p[0][0] = TRUE;"/>
+<element id="6" value=" 7    FOR (i = 1; i &#60;= n; i = i+1)"/>
+<element id="7" value=" 8      FOR (j = 0; j &#60;= s; j = j+1) {"/>
+<element id="8" value=" 9        IF (p[i-1][j]) {"/>
+<element id="9" value="10          p[i][j] = TRUE;"/>
+<element id="10" value="11        }"/>
+<element id="11" value="12        IF (!p[i][j] &#38;&#38; j>=a[i-1] &#38;&#38; p[i-1][j-a[i-1]]) {"/>
+<element id="12" value="13          p[i][j] = TRUE;"/>
+<element id="13" value="14        }"/>
+<element id="14" value="15      }"/>
+<element id="15" value="16    RETURN p[n][s];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="420.0" originX="510" originY="40">
+<visualMalleableElement id="9" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="420"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+<step number="29">
+<structure name="a" type="Array">
+<array size="5" type="IntInformation">
+<element id="0" value="3"/>
+<element id="1" value="2"/>
+<element id="2" value="1"/>
+<element id="3" value="4"/>
+<element id="4" value="2"/>
+</array>
+<visualArray defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="30.0" originX="10" originY="50">
+</visualArray>
+<message content="All the elements of the matrix have been computed: the result is the azure bottom right value.">
+</message>
+</structure>
+<structure name="p" type="Matrix">
+<matrix height="7" width="8" type="StringInformation">
+	<element id="0" value=" "/>
+	<element id="1" value="0"/>
+	<element id="2" value="1"/>
+	<element id="3" value="2"/>
+	<element id="4" value="3"/>
+	<element id="5" value="4"/>
+	<element id="6" value="5"/>
+	<element id="7" value="6"/>
+	<element id="8" value="{}"/>
+	<element id="9" value="TRUE"/>
+	<element id="10" value="FALSE"/>
+	<element id="11" value="FALSE"/>
+	<element id="12" value="FALSE"/>
+	<element id="13" value="FALSE"/>
+	<element id="14" value="FALSE"/>
+	<element id="15" value="FALSE"/>
+	<element id="16" value="{3}"/>
+	<element id="17" value="TRUE"/>
+	<element id="18" value="FALSE"/>
+	<element id="19" value="FALSE"/>
+	<element id="20" value="TRUE"/>
+	<element id="21" value="FALSE"/>
+	<element id="22" value="FALSE"/>
+	<element id="23" value="FALSE"/>
+	<element id="24" value="{3,2}"/>
+	<element id="25" value="TRUE"/>
+	<element id="26" value="FALSE"/>
+	<element id="27" value="TRUE"/>
+	<element id="28" value="TRUE"/>
+	<element id="29" value="FALSE"/>
+	<element id="30" value="TRUE"/>
+	<element id="31" value="FALSE"/>
+	<element id="32" value="{3,2,1}"/>
+	<element id="33" value="TRUE"/>
+	<element id="34" value="TRUE"/>
+	<element id="35" value="TRUE"/>
+	<element id="36" value="TRUE"/>
+	<element id="37" value="TRUE"/>
+	<element id="38" value="TRUE"/>
+	<element id="39" value="TRUE"/>
+	<element id="40" value="{3,2,1,4}"/>
+	<element id="41" value="TRUE"/>
+	<element id="42" value="TRUE"/>
+	<element id="43" value="TRUE"/>
+	<element id="44" value="TRUE"/>
+	<element id="45" value="TRUE"/>
+	<element id="46" value="TRUE"/>
+	<element id="47" value="TRUE"/>
+	<element id="48" value="{3,2,1,4,2}"/>
+	<element id="49" value="TRUE"/>
+	<element id="50" value="TRUE"/>
+	<element id="51" value="TRUE"/>
+	<element id="52" value="TRUE"/>
+	<element id="53" value="TRUE"/>
+	<element id="54" value="TRUE"/>
+	<element id="55" value="TRUE"/>
+</matrix>
+<visualMatrix defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-10" defaultShapeHeight="30.0" defaultShapeWidth="60.0" originX="10" originY="100">
+<visualElement id="55" color="AAAAAA" font="Monospaced-PLAIN-10"/>
+</visualMatrix>
+<message content="">
+</message>
+</structure>
+<structure name="Pseudo-code" type="Pseudocode">
+<pseudocode size="16">
+<element id="0" value=" 1  Partition( a )"/>
+<element id="1" value=" 2    FOR (i = 0; i &#60;= n; i = i+1)"/>
+<element id="2" value=" 3      FOR (j = 0; j &#60;= s; j = j +1) {"/>
+<element id="3" value=" 4        p[i][j] = FALSE;"/>
+<element id="4" value=" 5      }"/>
+<element id="5" value=" 6    p[0][0] = TRUE;"/>
+<element id="6" value=" 7    FOR (i = 1; i &#60;= n; i = i+1)"/>
+<element id="7" value=" 8      FOR (j = 0; j &#60;= s; j = j+1) {"/>
+<element id="8" value=" 9        IF (p[i-1][j]) {"/>
+<element id="9" value="10          p[i][j] = TRUE;"/>
+<element id="10" value="11        }"/>
+<element id="11" value="12        IF (!p[i][j] &#38;&#38; j>=a[i-1] &#38;&#38; p[i-1][j-a[i-1]]) {"/>
+<element id="12" value="13          p[i][j] = TRUE;"/>
+<element id="13" value="14        }"/>
+<element id="14" value="15      }"/>
+<element id="15" value="16    RETURN p[n][s];"/>
+</pseudocode>
+<visualPseudocode defaultColor="FFFFFF" defaultFont="Monospaced-PLAIN-12" defaultShapeHeight="20.0" defaultShapeWidth="420.0" originX="510" originY="40">
+<visualMalleableElement id="15" color="FFFF00" font="Monospaced-PLAIN-12" shapeHeight="20" shapeWidth="420"/>
+</visualPseudocode>
+<message content="">
+</message>
+</structure>
+</step>
+</algorithm>

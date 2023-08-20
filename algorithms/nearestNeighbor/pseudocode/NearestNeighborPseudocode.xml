@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure name="Nearest neighbor" type="Pseudocode">
+	<pseudocode type="StringInformation" size="8">
+		<element id="0" value=" 1  NearestNeighbor( s )" />
+		<element id="1" value=" 2    c[0] = s;" />
+		<element id="2" value=" 3    v[s] = true;" />
+		<element id="3" value=" 4    FOR (i = 1; i &#60; n; i = i + 1) {" />
+		<element id="4" value=" 5      c[i] = closest point x to c[i-1] such that v[x] is false;" />
+		<element id="5" value=" 6      v[x] = true;" />
+		<element id="6" value=" 7    }" />
+		<element id="7" value=" 8    c[n] = s;" />
+	</pseudocode>
+</structure>
