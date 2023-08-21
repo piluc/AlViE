@@ -9,3 +9,5 @@ This code is not maintained anymore, but it should still work as expected (by us
 
 ## Executing AlViE
 Once imported the repository (either, for example, in Eclipse or in VS Code), executing the class `org.algoritmica.alvie.desktop.Main` will start AlViE (note that the first time AlViE is run, the file `.alvie4settings` is created inside the user's home folder). Once AlViE has been started, an empty window appears with the toolbar shown in the following figure.
+
+![AlViE desktop](img/alvie_desktop.png "The AlViE desktop").
