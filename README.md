@@ -18,6 +18,7 @@ the one shown in the following figure.
 
 ![AlViE information window](img/alvie_info.png "The AlViE information window")
 
+## Showing the visualization of an algorithm
 To show the visualization of an algorithm, you need to select the fourth button from the left (that is, the button whose icon is a television) in the toolbar. In doing so, the user is asked to select the algorithm to display, as shown in the following figure.
 
 ![AlViE algorithm selection](img/alvie_algorithms.png "The AlViE algorithm selection window")
@@ -31,3 +32,50 @@ Once the file to be displayed has been selected and once the `Open` button has b
 ![AlViE LCS visualization](img/alvie_lcs.png "The AlViE LCS visualization")
 
 As a visualization is now loaded, other toolbar buttons are now activated. AlViE provides four buttons for navigating within the running visualization of an algorithm, the first of which returns to the first step display of the execution of the algorithm. The next button allows you to go back one step while the next one allows you to advance one step. The last navigation button allows you to skip to the last step of the algorithm.
+
+## Showing the visualization of an algorithm
+
+AlViE allows (if whoever developed the algorithm did it in appropriate way) the execution of an algorithm with input values selected by the user and, therefore, the visualization of the execution of the algorithm with such input values. AlViE allows you to specify the input values of an algorithm using data structures, the simplest one being an array: for this reason, let us first see how AlViE requires an array being described.
+
+### XML specification of a data structure
+The specification of a data structure is stored into an XML file whose first line must be as follows.
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+```
+
+The XML code must then continue with the structure tag, which is provided with two attributes: name (which specifies the name of the data structure) and type (which specifies the type of the data structure). For example, the XML file of an array could start with the following structure tag
+
+```
+<structure name="Values" type="Array">
+```
+
+and end with the following final tag
+```
+</structure>
+```
+
+In this case, the name of the data structure is `Values` and the type is `Array`. Inside the structure tag the file contains the XML specification of the data structure. This specification depends on the data structure: we describe in detail in the next paragraph the
+XML specification used by AlViE in the case of arrays.
+
+#### XML specification of an array
+
+The XML specification of an array begins with the array tag to which two attributes are associated: the number of elements contained in the array (size attribute) and the type of information that each element stores (type attribute). Next, the XML specification of an array contains as many element tags as are the elements of the array itself: each of these tags has two attributes that specify the location of the element within the array (id attribute) and the value it contains (value attribute). For example, the array containing the eight integers 5, 3, 6, 2, 7, 1, 8, and 4 has the following XML specification.
+
+```
+<structure name="Values" type="Array">
+  <array size="8" type="IntInformation">
+    <element id="0" value="5" />
+    <element id="1" value="3" />
+    <element id="2" value="6" />
+    <element id="3" value="2" />
+    <element id="4" value="7" />
+    <element id="5" value="1" />
+    <element id="6" value="8" />
+    <element id="7" value="4" />
+  </array>
+</structure>
+```
+
+The type of information contained in each element of the array, which is specified by the type attribute of the array tag, must be one of those allowed by AlViE, that is, `BooleanInformation` (to represent the values true and false), `CharInformation` (to represent single characters), `DoubleInformation` (to represent real numbers), `IntInformation` (to represent 32-bit integers), `LongInformation` (to represent 64-bit integers), and `StringInformation` (to represent sequences of characters). Clearly, that type of information must be compatible with the type of the input data of the algorithm we want to run: in other words, we can't run an algorithm that expects in
+input an array of integers, giving as input an array of boolean values.
